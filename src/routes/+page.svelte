@@ -93,25 +93,28 @@
 	];
 </script>
 
-<div class="flex flex-wrap justify-center gap-8 max-w-5xl mx-auto my-10 px-4">
-	{#each games as game}
-		<div>
-			<div class="w-40 rounded-lg overflow-hidden">
-				<div class="bg-blue-600 px-3 py-1 text-white text-md font-bold">PS5</div>
-				<img
-					class="w-full h-48"
-					src="https://images.igdb.com/igdb/image/upload/t_cover_big/co7as5.jpg"
-					alt="cover"
-				/>
-			</div>
-			<div class="flex justify-between py-2 items-center">
-				<div class="avatar placeholder">
-					<div class="bg-neutral text-neutral-content rounded-full w-8 h-8">
-						<span class="text-xs">Ls</span>
-					</div>
+<div class="flex flex-col max-w-5xl mx-auto my-10 px-4">
+	<div class="divider text-3xl font-bold my-10">Dernieres annonces</div>
+	<div class="flex flex-wrap justify-center gap-8">
+		{#each games as game}
+			<div>
+				<div class="w-40 rounded-lg overflow-hidden">
+					<div class="bg-blue-600 px-3 py-1 text-white text-md font-bold">PS5</div>
+					<img
+						class="w-full h-48"
+						src="https://images.igdb.com/igdb/image/upload/t_cover_big/co7as5.jpg"
+						alt="cover"
+					/>
 				</div>
-				<div class="text-2xl font-bold">200 DT</div>
+				<div class="flex justify-between py-2 items-center">
+					<div class="avatar placeholder">
+						<div class="bg-neutral text-neutral-content rounded-full w-8 h-8">
+							<span class="text-xs">Ls</span>
+						</div>
+					</div>
+					<div class="text-2xl font-bold">200 DT</div>
+				</div>
 			</div>
-		</div>
-	{/each}
+		{/each}
+	</div>
 </div>
