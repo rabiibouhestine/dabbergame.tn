@@ -97,8 +97,8 @@
 	<div class="divider text-3xl font-bold">Dernieres annonces</div>
 	<div class="flex flex-wrap justify-center gap-8">
 		{#each games as game}
-			<div>
-				<div class="w-40 rounded-lg overflow-hidden">
+			<div class="w-40">
+				<div class="w-full rounded-lg overflow-hidden">
 					<div class="bg-blue-600 px-3 py-1 text-white text-md font-bold">PS5</div>
 					<img
 						class="w-full h-48"
