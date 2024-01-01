@@ -93,7 +93,7 @@
 	];
 </script>
 
-<div class="flex flex-wrap justify-center gap-2 sm:gap-12 max-w-5xl mx-auto my-10 px-4">
+<div class="flex flex-wrap justify-center gap-12 max-w-5xl mx-auto my-10 px-4">
 	{#each games as game}
 		<div>
 			<div class="w-40 rounded-lg overflow-hidden">
