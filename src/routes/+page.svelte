@@ -117,5 +117,7 @@
 			</div>
 		{/each}
 	</div>
-	<div class="self-center rounded-xl bg-base-300 px-4 py-2 text-xl">Voir toutes les annonces</div>
+	<a href="/" class="self-center rounded-xl bg-base-300 px-4 py-2 text-xl">
+		Voir toutes les annonces
+	</a>
 </div>
