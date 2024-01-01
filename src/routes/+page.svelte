@@ -93,7 +93,7 @@
 	];
 </script>
 
-<div class="flex flex-wrap justify-center gap-12 max-w-5xl mx-auto my-10 px-4">
+<div class="flex flex-wrap justify-center gap-8 max-w-5xl mx-auto my-10 px-4">
 	{#each games as game}
 		<div>
 			<div class="w-40 rounded-lg overflow-hidden">
@@ -104,9 +104,13 @@
 					alt="cover"
 				/>
 			</div>
-			<div class="flex justify-between">
-				<div>Hello</div>
-				<div>200 DT</div>
+			<div class="flex justify-between py-2 items-center">
+				<div class="avatar placeholder">
+					<div class="bg-neutral text-neutral-content rounded-full w-8 h-8">
+						<span class="text-xs">Ls</span>
+					</div>
+				</div>
+				<div class="text-2xl font-bold">200 DT</div>
 			</div>
 		</div>
 	{/each}
