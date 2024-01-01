@@ -95,7 +95,7 @@
 
 <div class="flex flex-col gap-y-10 max-w-5xl mx-auto my-10 px-4">
 	<div class="h-96 flex flex-col justify-center gap-10 items-center">
-		<h2 class="text-8xl font-bold">Dabber Games</h2>
+		<h2 class="text-center text-8xl font-bold">Dabber Games</h2>
 		<input type="text" placeholder="Type here" class="input input-bordered w-full" />
 	</div>
 	<div class="flex flex-col md:flex-row gap-4">
