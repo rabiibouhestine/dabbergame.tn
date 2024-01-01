@@ -133,7 +133,7 @@
 			</div>
 		</div>
 		<div class="min-w-72 flex flex-col gap-8 items-center bg-neutral p-4 rounded-3xl">
-			<h2 class="text-3xl font-bold">Recently Active</h2>
+			<h2 class="text-3xl font-bold">Top Sellers</h2>
 			<div class="">
 				<div>Foulen</div>
 				<div>Foulen</div>
