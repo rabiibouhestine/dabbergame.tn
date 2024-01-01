@@ -111,21 +111,21 @@
 				</a>
 				<a href="/">
 					<img
-						src="https://images.igdb.com/igdb/image/upload/t_cover_big/co7as5.jpg"
+						src="https://images.igdb.com/igdb/image/upload/t_cover_big/co7ctx.jpg"
 						alt="game"
 						class="bg-red-600 rounded-xl w-36"
 					/>
 				</a>
 				<a href="/">
 					<img
-						src="https://images.igdb.com/igdb/image/upload/t_cover_big/co7as5.jpg"
+						src="https://images.igdb.com/igdb/image/upload/t_cover_big/co6lz0.jpg"
 						alt="game"
 						class="bg-red-600 rounded-xl w-36"
 					/>
 				</a>
 				<a href="/">
 					<img
-						src="https://images.igdb.com/igdb/image/upload/t_cover_big/co7as5.jpg"
+						src="https://images.igdb.com/igdb/image/upload/t_cover_big/co6jar.jpg"
 						alt="game"
 						class="bg-red-600 rounded-xl w-36"
 					/>
