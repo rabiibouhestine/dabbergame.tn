@@ -99,7 +99,7 @@
 	<div class="h-64 flex flex-col justify-center gap-10 items-center">
 		<div class="text-center">
 			<h2 class="text-7xl font-bold">Dabber Game</h2>
-			<p class="text-2xl font-medium">Best place to trade video games in Tunisia</p>
+			<p class="text-2xl font-medium">Best place to trade video games in Tunisia!</p>
 		</div>
 		<input type="text" placeholder="Type here" class="input input-bordered w-full" />
 	</div>
