@@ -40,7 +40,7 @@
 		</div>
 	</div>
 
-	<div class="flex-1 flex flex-col gap-y-10 max-w-5xl mx-auto my-10 px-4">
+	<div class="flex-1 flex flex-col gap-y-10 w-full max-w-5xl mx-auto my-10 px-4">
 		<slot />
 	</div>
 
