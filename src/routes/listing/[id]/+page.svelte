@@ -30,9 +30,6 @@
 		<div class="flex justify-between">
 			<div class="flex gap-3">
 				<span class="bg-base-300 rounded-full px-4 py-2 text-center font-bold">
-					Playstation 5
-				</span>
-				<span class="bg-base-300 rounded-full px-4 py-2 text-center font-bold">
 					Condition: New
 				</span>
 				<span class="bg-base-300 rounded-full px-4 py-2 text-center font-bold">Delivery</span>
