@@ -1,7 +1,7 @@
 <script>
 </script>
 
-<div class="flex justify-between">
+<div class="h-72 flex justify-between">
 	<div class="flex gap-2 items-center">
 		<div class="avatar placeholder">
 			<div class="bg-neutral text-neutral-content rounded-full w-24 h-24">
