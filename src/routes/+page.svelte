@@ -149,8 +149,8 @@
 								</div>
 							</div>
 							<div>
-								<h2>Foulen</h2>
-								<p class="text-xs">Mourouj</p>
+								<h2>Foulen Ben Falten</h2>
+								<p class="text-xs">Ben Arous, El Mourouj</p>
 							</div>
 						</div>
 						<div class="text-2xl font-bold">4/5</div>
