@@ -134,7 +134,7 @@
 		</div>
 		<div class="min-w-72 flex flex-col gap-8 bg-neutral p-4 rounded-3xl">
 			<h2 class="text-3xl text-center font-bold">Top Sellers</h2>
-			<div class="flex flex-col gap-2">
+			<div class="flex flex-col gap-3">
 				{#each [1, 2, 3, 4] as seller}
 					<div class="flex items-center justify-between">
 						<div class="flex gap-2 items-center">
