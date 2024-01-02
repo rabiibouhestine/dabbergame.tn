@@ -15,20 +15,26 @@
 				<div class="avatar placeholder">
 					<a
 						href="/listings"
-						class="flex justify-center items-center bg-neutral text-neutral-content rounded-full w-10"
+						class="flex justify-center items-center bg-neutral text-neutral-content rounded-full w-10 h-10"
 					>
 						<span class="text-md">Ls</span>
 					</a>
 				</div>
 				<div class="avatar placeholder">
-					<div class="bg-neutral text-neutral-content rounded-full w-10">
+					<a
+						href="/listings"
+						class="flex justify-center items-center bg-neutral text-neutral-content rounded-full w-10 h-10"
+					>
 						<span class="text-md">Ad</span>
-					</div>
+					</a>
 				</div>
 				<div class="avatar placeholder">
-					<div class="bg-neutral text-neutral-content rounded-full w-10">
+					<a
+						href="/user/1"
+						class="flex justify-center items-center bg-neutral text-neutral-content rounded-full w-10 h-10"
+					>
 						<span class="text-md">Pr</span>
-					</div>
+					</a>
 				</div>
 			</div>
 		</div>
