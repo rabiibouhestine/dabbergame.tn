@@ -132,12 +132,25 @@
 				</a>
 			</div>
 		</div>
-		<div class="min-w-72 flex flex-col gap-8 items-center bg-neutral p-4 rounded-3xl">
-			<h2 class="text-3xl font-bold">Top Sellers</h2>
-			<div class="">
-				<div>Foulen</div>
-				<div>Foulen</div>
-				<div>Foulen</div>
+		<div class="min-w-72 flex flex-col gap-8 bg-neutral p-4 rounded-3xl">
+			<h2 class="text-3xl text-center font-bold">Top Sellers</h2>
+			<div class="flex flex-col gap-2">
+				{#each [1, 2, 3, 4] as seller}
+					<div class="flex items-center justify-between">
+						<div class="flex gap-2 items-center">
+							<div class="avatar placeholder">
+								<div class="bg-base-200 text-neutral-content rounded-full w-10 h-10">
+									<span class="text-xs">Ls</span>
+								</div>
+							</div>
+							<div>
+								<h2>Foulen</h2>
+								<p class="text-xs">Mourouj</p>
+							</div>
+						</div>
+						<div class="text-2xl font-bold">4/5</div>
+					</div>
+				{/each}
 			</div>
 		</div>
 	</div>
