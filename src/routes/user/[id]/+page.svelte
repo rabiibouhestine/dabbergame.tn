@@ -4,7 +4,7 @@
 	let listings = Array.from({ length: 5 }, (_, index) => index + 1);
 </script>
 
-<div class="h-72 bg-neutral py-6">
+<div class="h-60 bg-neutral py-6">
 	<div
 		class="flex flex-col sm:flex-row gap-6 sm:justify-between items-center h-full w-full max-w-5xl mx-auto px-4"
 	>
