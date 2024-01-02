@@ -7,7 +7,7 @@
 		<GameCover />
 		<div class="flex gap-2 items-center">
 			<div class="avatar placeholder">
-				<div class="bg-base-200 text-neutral-content rounded-full w-10 h-10">
+				<div class="bg-neutral text-neutral-content rounded-full w-12 h-12">
 					<span class="text-xs">Ls</span>
 				</div>
 			</div>
