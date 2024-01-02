@@ -20,19 +20,17 @@
 				<p class="text-lg">Last seen 1 month ago</p>
 			</div>
 		</div>
-		<div class="text-4xl">Rating: 4/5</div>
+		<div class="flex flex-col gap-3">
+			<div class="text-2xl">Rating: 4/5</div>
+			<div>
+				<span class="bg-base-300 rounded-full px-4 py-2 text-lg text-center font-bold">Ph</span>
+				<span class="bg-base-300 rounded-full px-4 py-2 text-lg text-center font-bold">Fb</span>
+			</div>
+		</div>
 	</div>
 </div>
-<div class="flex justify-between w-full max-w-5xl mx-auto px-4 -mt-4">
-	<div>
-		<span class="bg-base-300 rounded-full px-6 py-4 text-2xl font-bold">Listings</span>
-	</div>
-	<div>
-		<span class="bg-base-300 rounded-full px-6 py-4 text-2xl font-bold">Ph</span>
-		<span class="bg-base-300 rounded-full px-6 py-4 text-2xl font-bold">Fb</span>
-	</div>
-</div>
-<div class="w-full max-w-5xl mx-auto px-4 my-16">
+<div class="flex flex-col gap-8 w-full max-w-5xl mx-auto px-4 my-8">
+	<div class="divider divider-start text-3xl font-bold">Listings</div>
 	<div class="flex flex-wrap justify-center gap-8">
 		{#each listings as listing}
 			<ListingCard />
