@@ -4,8 +4,10 @@
 	let listings = Array.from({ length: 10 }, (_, index) => index + 1);
 </script>
 
-<div class="h-72 bg-neutral">
-	<div class="flex justify-between items-center h-full w-full max-w-5xl mx-auto px-4">
+<div class="h-72 bg-neutral py-6">
+	<div
+		class="flex flex-col sm:flex-row gap-6 sm:justify-between items-center h-full w-full max-w-5xl mx-auto px-4"
+	>
 		<div class="flex gap-2 items-center">
 			<div class="avatar placeholder">
 				<div class="bg-base-200 text-neutral-content rounded-full w-24 h-24">
@@ -26,8 +28,8 @@
 		<span class="bg-base-300 rounded-full px-6 py-4 text-2xl font-bold">Listings</span>
 	</div>
 	<div>
-		<span class="bg-base-300 rounded-full px-6 py-4 text-2xl font-bold">Phone</span>
-		<span class="bg-base-300 rounded-full px-6 py-4 text-2xl font-bold">Facebook</span>
+		<span class="bg-base-300 rounded-full px-6 py-4 text-2xl font-bold">Ph</span>
+		<span class="bg-base-300 rounded-full px-6 py-4 text-2xl font-bold">Fb</span>
 	</div>
 </div>
 <div class="w-full max-w-5xl mx-auto px-4 my-16">
