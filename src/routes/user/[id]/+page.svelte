@@ -1,7 +1,7 @@
 <script>
 	import ListingCard from '$lib/components/ListingCard.svelte';
 
-	let listings = Array.from({ length: 10 }, (_, index) => index + 1);
+	let listings = Array.from({ length: 5 }, (_, index) => index + 1);
 </script>
 
 <div class="h-72 bg-neutral py-6">
@@ -31,6 +31,12 @@
 </div>
 <div class="flex flex-col gap-8 w-full max-w-5xl mx-auto px-4 my-8">
 	<div class="divider text-3xl font-bold">Listings</div>
+	<div class="flex flex-wrap justify-center gap-8">
+		{#each listings as listing}
+			<ListingCard />
+		{/each}
+	</div>
+	<div class="divider text-3xl font-bold">Wishlist</div>
 	<div class="flex flex-wrap justify-center gap-8">
 		{#each listings as listing}
 			<ListingCard />
