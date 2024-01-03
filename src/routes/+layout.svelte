@@ -5,7 +5,8 @@
 <div class="flex flex-col min-h-screen">
 	<div class="navbar bg-base-300 py-4">
 		<div class="flex flex-wrap flex-1 gap-6 justify-between max-w-5xl mx-auto px-4">
-			<a href="/" class="btn btn-active order-1">Dabber Game</a>
+			<a href="/" class="flex items-center bg-neutral rounded-full px-4 h-10 order-1">Dabber Game</a
+			>
 			<input
 				type="text"
 				placeholder="Type here"
