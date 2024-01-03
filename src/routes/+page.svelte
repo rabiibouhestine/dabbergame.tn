@@ -158,8 +158,9 @@
 							</div>
 						</div>
 						<div
-							class="bg-base-200 text-neutral-content rounded-full w-10 h-10 flex justify-center items-center"
+							class="bg-base-200 text-neutral-content rounded-full px-4 h-10 flex justify-center items-center gap-2"
 						>
+							<span class="text-xs">LSI</span>
 							<span class="text-xs">3</span>
 						</div>
 					</div>
