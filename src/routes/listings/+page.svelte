@@ -7,8 +7,8 @@
 	let listings = Array.from({ length: 15 }, (_, index) => index + 1);
 </script>
 
-<div class="bg-neutral">
-	<div class="grid grid-cols-1 sm:grid-cols-4 gap-10 w-full max-w-5xl mx-auto px-4 py-6">
+<div class="flex flex-col gap-y-4 w-full max-w-5xl mx-auto my-10 px-4">
+	<div class="bg-neutral rounded-3xl grid grid-cols-1 sm:grid-cols-4 gap-10 p-6 mb-8">
 		<div class="col-span-1 flex flex-col justify-center md:justify-start items-center gap-4">
 			<img
 				src="https://images.igdb.com/igdb/image/upload/t_cover_big/co7as5.jpg"
@@ -66,8 +66,6 @@
 			</div>
 		</div>
 	</div>
-</div>
-<div class="flex flex-col gap-y-4 w-full max-w-5xl mx-auto my-10 px-4">
 	<div class="flex justify-between">
 		<div class="flex items-center gap-3">
 			<select class="select select-bordered rounded-full">
@@ -98,7 +96,7 @@
 			<ListingCard />
 		{/each}
 	</div>
-	<div class="join flex my-6">
+	<div class="join flex mt-8">
 		<button class="join-item btn">«</button>
 		<div class="flex flex-1 justify-center bg-neutral rounded-none">
 			<button class="join-item btn">1</button>
