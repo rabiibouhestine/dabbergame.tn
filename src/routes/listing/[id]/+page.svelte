@@ -41,7 +41,7 @@
 	<div class="col-span-3 flex flex-col gap-6">
 		<div class="bg-neutral p-6 rounded-3xl flex flex-col justify-between gap-6 h-full">
 			<div class="flex flex-col gap-6">
-				<div class="divider divider-start text-5xl font-bold">The Finals</div>
+				<div class="divider divider-start text-4xl font-bold">The Finals</div>
 				<div class="flex justify-between">
 					<div class="flex gap-3">
 						<span class="bg-base-300 rounded-full px-4 py-2 text-center font-bold">
@@ -102,8 +102,8 @@
 				</div>
 			</div>
 		</div>
-		<div class="w-full flex flex-col gap-8 items-center bg-neutral p-4 rounded-3xl">
-			<h2 class="text-3xl font-bold">Trades with the following games</h2>
+		<div class="w-full flex flex-col gap-8 items-center bg-neutral p-6 rounded-3xl">
+			<div class="divider divider-start text-4xl font-bold">Games to trade with</div>
 			<div class="flex gap-6">
 				<a href="/listings">
 					<img
