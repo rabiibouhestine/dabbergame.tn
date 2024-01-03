@@ -19,7 +19,7 @@
 			<div class="flex gap-2 order-2 sm:order-3">
 				<div class="avatar placeholder">
 					<a
-						href="/listings"
+						href="/stores"
 						class="flex justify-center items-center bg-neutral text-neutral-content rounded-full w-10 h-10"
 					>
 						<StoreLine />
@@ -35,7 +35,7 @@
 				</div>
 				<div class="avatar placeholder">
 					<a
-						href="/listings"
+						href="/"
 						class="flex justify-center items-center bg-neutral text-neutral-content rounded-full w-10 h-10"
 					>
 						<PlusCircleLine />
