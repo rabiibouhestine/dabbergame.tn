@@ -70,4 +70,15 @@
 			<ListingCard />
 		{/each}
 	</div>
+	<div class="join flex">
+		<button class="join-item btn">«</button>
+		<div class="flex flex-1 justify-center bg-neutral rounded-none">
+			<button class="join-item btn">1</button>
+			<button class="join-item btn">2</button>
+			<button class="join-item btn btn-disabled">...</button>
+			<button class="join-item btn">99</button>
+			<button class="join-item btn">100</button>
+		</div>
+		<button class="join-item btn">»</button>
+	</div>
 </div>
