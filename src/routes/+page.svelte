@@ -142,7 +142,7 @@
 			</div>
 		</div>
 		<div class="min-w-72 flex flex-col gap-8 bg-neutral p-4 rounded-3xl">
-			<h2 class="text-3xl text-center font-bold">Top Sellers</h2>
+			<h2 class="text-3xl text-center font-bold">Recently Active</h2>
 			<div class="flex flex-col gap-3">
 				{#each [1, 2, 3, 4] as seller}
 					<div class="flex items-center justify-between">
@@ -157,7 +157,11 @@
 								<p class="text-xs">Ben Arous, El Mourouj</p>
 							</div>
 						</div>
-						<div class="text-2xl font-bold">4/5</div>
+						<div
+							class="bg-base-200 text-neutral-content rounded-full w-10 h-10 flex justify-center items-center"
+						>
+							<span class="text-xs">3</span>
+						</div>
 					</div>
 				{/each}
 			</div>
