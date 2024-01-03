@@ -5,7 +5,7 @@
 </script>
 
 <div class="bg-neutral">
-	<div class="grid grid-cols-1 md:grid-cols-4 gap-10 w-full max-w-5xl mx-auto px-4 py-6">
+	<div class="grid grid-cols-1 sm:grid-cols-4 gap-10 w-full max-w-5xl mx-auto px-4 py-6">
 		<div class="col-span-1 flex flex-col justify-center md:justify-start items-center gap-4">
 			<img
 				src="https://images.igdb.com/igdb/image/upload/t_cover_big/co7as5.jpg"
