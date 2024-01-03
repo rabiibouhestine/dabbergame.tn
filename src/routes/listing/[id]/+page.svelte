@@ -3,6 +3,8 @@
 	import Steam from '~icons/mdi/steam';
 	import Twitch from '~icons/mdi/twitch';
 	import Reddit from '~icons/mdi/reddit';
+	import CheckCircleOutlineRounded from '~icons/material-symbols/check-circle-outline-rounded';
+	import CancelOutlineRounded from '~icons/material-symbols/cancel-outline-rounded';
 </script>
 
 <div class="grid grid-cols-1 md:grid-cols-4 gap-10 w-full max-w-5xl mx-auto my-10 px-4">
@@ -44,14 +46,22 @@
 				<div class="divider divider-start text-4xl font-bold">The Finals</div>
 				<div class="flex justify-between">
 					<div class="flex gap-3">
-						<span class="bg-base-200 rounded-full px-4 py-2 text-center font-bold">
+						<div class="flex items-center bg-base-200 rounded-full px-4 py-2 text-center font-bold">
 							Condition: New
-						</span>
-						<span class="bg-base-200 rounded-full px-4 py-2 text-center font-bold">Delivery</span>
-						<span class="bg-base-200 rounded-full px-4 py-2 text-center font-bold">Trade</span>
+						</div>
+						<div
+							class="flex items-center gap-1 bg-base-200 rounded-full px-4 py-2 text-center font-bold"
+						>
+							<CheckCircleOutlineRounded />Delivery
+						</div>
+						<div
+							class="flex items-center gap-1 bg-base-200 rounded-full px-4 py-2 text-center font-bold"
+						>
+							<CancelOutlineRounded />Trade
+						</div>
 					</div>
-					<div class="flex gap-3">
-						<span class="bg-base-200 rounded-full px-4 py-2 text-center font-bold">200 DT</span>
+					<div class="flex items-center bg-base-200 rounded-full px-4 py-2 text-center font-bold">
+						200 DT
 					</div>
 				</div>
 				<div class="flex flex-col gap-4">
@@ -103,7 +113,7 @@
 			</div>
 		</div>
 		<div class="w-full flex flex-col gap-8 items-center bg-neutral p-6 rounded-3xl">
-			<div class="divider divider-start text-4xl font-bold">Games to trade with</div>
+			<div class="divider divider-start text-4xl font-bold">Trade</div>
 			<div class="flex gap-6">
 				<a href="/listings">
 					<img
