@@ -1,5 +1,8 @@
 <script>
 	import GameCover from '$lib/components/GameCover.svelte';
+	import Steam from '~icons/mdi/steam';
+	import Twitch from '~icons/mdi/twitch';
+	import Reddit from '~icons/mdi/reddit';
 </script>
 
 <div class="grid grid-cols-1 md:grid-cols-4 gap-10 w-full max-w-5xl mx-auto my-10 px-4">
@@ -65,19 +68,19 @@
 					href="/listings"
 					class="flex justify-center items-center bg-neutral text-neutral-content rounded-full w-10 h-10"
 				>
-					<span class="text-md">S</span>
+					<Steam />
 				</a>
 				<a
 					href="/listings"
 					class="flex justify-center items-center bg-neutral text-neutral-content rounded-full w-10 h-10"
 				>
-					<span class="text-md">W</span>
+					<Twitch />
 				</a>
 				<a
 					href="/listings"
 					class="flex justify-center items-center bg-neutral text-neutral-content rounded-full w-10 h-10"
 				>
-					<span class="text-md">T</span>
+					<Reddit />
 				</a>
 			</div>
 			<div class="flex gap-3">
