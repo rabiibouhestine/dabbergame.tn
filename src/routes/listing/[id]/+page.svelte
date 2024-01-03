@@ -44,14 +44,14 @@
 				<div class="divider divider-start text-4xl font-bold">The Finals</div>
 				<div class="flex justify-between">
 					<div class="flex gap-3">
-						<span class="bg-base-300 rounded-full px-4 py-2 text-center font-bold">
+						<span class="bg-base-200 rounded-full px-4 py-2 text-center font-bold">
 							Condition: New
 						</span>
-						<span class="bg-base-300 rounded-full px-4 py-2 text-center font-bold">Delivery</span>
-						<span class="bg-base-300 rounded-full px-4 py-2 text-center font-bold">Trade</span>
+						<span class="bg-base-200 rounded-full px-4 py-2 text-center font-bold">Delivery</span>
+						<span class="bg-base-200 rounded-full px-4 py-2 text-center font-bold">Trade</span>
 					</div>
 					<div class="flex gap-3">
-						<span class="bg-base-300 rounded-full px-4 py-2 text-center font-bold">200 DT</span>
+						<span class="bg-base-200 rounded-full px-4 py-2 text-center font-bold">200 DT</span>
 					</div>
 				</div>
 				<div class="flex flex-col gap-4">
