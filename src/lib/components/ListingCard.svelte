@@ -2,7 +2,7 @@
 	import GameCover from './GameCover.svelte';
 </script>
 
-<a href="/listing/1" class="min-w-40 flex-1">
+<a href="/listing/1" class="min-w-40 max-w-44 flex-1">
 	<GameCover />
 	<div class="flex flex-col gap-2 py-2">
 		<div class="bg-neutral py-1 px-4 rounded-full w-full text-center text-2xl font-bold">
