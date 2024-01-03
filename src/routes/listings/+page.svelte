@@ -85,8 +85,8 @@
 		</div>
 		<select class="select select-bordered rounded-full">
 			<option disabled selected>Sort by date</option>
-			<option>by price</option>
-			<option>by date</option>
+			<option>Sort by price</option>
+			<option>Sort by date</option>
 		</select>
 	</div>
 	<div class="divider"></div>
