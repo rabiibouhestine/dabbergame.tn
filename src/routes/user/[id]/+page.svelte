@@ -25,18 +25,6 @@
 		<div class="flex justify-center gap-3">
 			<a
 				href="/listings"
-				class="flex justify-center items-center bg-base-300 text-neutral-content rounded-full px-4"
-			>
-				<div class="rating">
-					<input type="radio" name="rating-1" class="mask mask-star" />
-					<input type="radio" name="rating-1" class="mask mask-star" checked />
-					<input type="radio" name="rating-1" class="mask mask-star" />
-					<input type="radio" name="rating-1" class="mask mask-star" />
-					<input type="radio" name="rating-1" class="mask mask-star" />
-				</div>
-			</a>
-			<a
-				href="/listings"
 				class="flex justify-center items-center bg-base-300 text-neutral-content rounded-full w-14 h-14"
 			>
 				<Phone class="text-2xl" />
@@ -46,6 +34,18 @@
 				class="flex justify-center items-center bg-base-300 text-neutral-content rounded-full w-14 h-14"
 			>
 				<Facebook class="text-2xl" />
+			</a>
+			<a
+				href="/listings"
+				class="flex justify-center items-center bg-base-300 text-neutral-content rounded-full px-4"
+			>
+				<div class="rating">
+					<input type="radio" name="rating-1" class="mask mask-star" />
+					<input type="radio" name="rating-1" class="mask mask-star" checked />
+					<input type="radio" name="rating-1" class="mask mask-star" />
+					<input type="radio" name="rating-1" class="mask mask-star" />
+					<input type="radio" name="rating-1" class="mask mask-star" />
+				</div>
 			</a>
 		</div>
 	</div>
