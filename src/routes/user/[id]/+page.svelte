@@ -10,12 +10,12 @@
 	>
 		<div class="flex gap-4 items-center">
 			<div class="avatar placeholder">
-				<div class="bg-base-200 text-neutral-content rounded-full w-28 h-28">
+				<div class="bg-base-200 text-neutral-content rounded-full w-24 h-24">
 					<span class="text-xs">Ls</span>
 				</div>
 			</div>
 			<div>
-				<h2 class="text-5xl font-bold">Foulen Ben Falten</h2>
+				<h2 class="text-4xl font-bold">Foulen Ben Falten</h2>
 				<p class="text-lg font-bold">Ben Arous, El Mourouj</p>
 				<p class="text-lg">Last seen 1 month ago</p>
 			</div>
