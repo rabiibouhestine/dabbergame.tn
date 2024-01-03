@@ -39,63 +39,67 @@
 		</div>
 	</div>
 	<div class="col-span-3 flex flex-col gap-6">
-		<div class="divider divider-start text-5xl font-bold">The Finals</div>
-		<div class="flex justify-between">
-			<div class="flex gap-3">
-				<span class="bg-base-300 rounded-full px-4 py-2 text-center font-bold">
-					Condition: New
-				</span>
-				<span class="bg-base-300 rounded-full px-4 py-2 text-center font-bold">Delivery</span>
-				<span class="bg-base-300 rounded-full px-4 py-2 text-center font-bold">Trade</span>
+		<div class="bg-neutral p-6 rounded-3xl flex flex-col justify-between gap-6 h-full">
+			<div class="flex flex-col gap-6">
+				<div class="divider divider-start text-5xl font-bold">The Finals</div>
+				<div class="flex justify-between">
+					<div class="flex gap-3">
+						<span class="bg-base-300 rounded-full px-4 py-2 text-center font-bold">
+							Condition: New
+						</span>
+						<span class="bg-base-300 rounded-full px-4 py-2 text-center font-bold">Delivery</span>
+						<span class="bg-base-300 rounded-full px-4 py-2 text-center font-bold">Trade</span>
+					</div>
+					<div class="flex gap-3">
+						<span class="bg-base-300 rounded-full px-4 py-2 text-center font-bold">200 DT</span>
+					</div>
+				</div>
+				<div class="flex flex-col gap-4">
+					<p>
+						Join The Finals, the world-famous, free-to-play, combat-centered game show! Fight
+						alongside your teammates in virtual arenas that you can alter, exploit, and even
+						destroy. Build your own playstyle in this first-person shooter to win escalating
+						tournaments and lasting fame. Can you reach The Finals?
+					</p>
+					<p>Genre: Shooter, Tactical</p>
+					<p>Platforms: PlayStation 5, PC (Microsoft Windows), Xbox Series X|S</p>
+				</div>
 			</div>
-			<div class="flex gap-3">
-				<span class="bg-base-300 rounded-full px-4 py-2 text-center font-bold">200 DT</span>
-			</div>
-		</div>
-		<div class="flex flex-col gap-4">
-			<p>
-				Join The Finals, the world-famous, free-to-play, combat-centered game show! Fight alongside
-				your teammates in virtual arenas that you can alter, exploit, and even destroy. Build your
-				own playstyle in this first-person shooter to win escalating tournaments and lasting fame.
-				Can you reach The Finals?
-			</p>
-			<p>Genre: Shooter, Tactical</p>
-			<p>Platforms: PlayStation 5, PC (Microsoft Windows), Xbox Series X|S</p>
-		</div>
-		<div class="flex justify-between">
-			<div class="flex gap-3">
-				<a
-					href="/listings"
-					class="flex justify-center items-center bg-neutral text-neutral-content rounded-full w-10 h-10"
-				>
-					<Steam />
-				</a>
-				<a
-					href="/listings"
-					class="flex justify-center items-center bg-neutral text-neutral-content rounded-full w-10 h-10"
-				>
-					<Twitch />
-				</a>
-				<a
-					href="/listings"
-					class="flex justify-center items-center bg-neutral text-neutral-content rounded-full w-10 h-10"
-				>
-					<Reddit />
-				</a>
-			</div>
-			<div class="flex gap-3">
-				<a
-					href="/listings"
-					class="flex justify-center items-center bg-neutral text-neutral-content rounded-full w-10 h-10"
-				>
-					<span class="text-md">89</span>
-				</a>
-				<a
-					href="/listings"
-					class="flex justify-center items-center bg-neutral text-neutral-content rounded-full w-10 h-10"
-				>
-					<span class="text-md">87</span>
-				</a>
+			<div class="flex justify-between">
+				<div class="flex gap-3">
+					<a
+						href="/listings"
+						class="flex justify-center items-center bg-base-200 text-neutral-content rounded-full w-10 h-10"
+					>
+						<Steam />
+					</a>
+					<a
+						href="/listings"
+						class="flex justify-center items-center bg-base-200 text-neutral-content rounded-full w-10 h-10"
+					>
+						<Twitch />
+					</a>
+					<a
+						href="/listings"
+						class="flex justify-center items-center bg-base-200 text-neutral-content rounded-full w-10 h-10"
+					>
+						<Reddit />
+					</a>
+				</div>
+				<div class="flex gap-3">
+					<a
+						href="/listings"
+						class="flex justify-center items-center bg-base-200 text-neutral-content rounded-full w-10 h-10"
+					>
+						<span class="text-md">89</span>
+					</a>
+					<a
+						href="/listings"
+						class="flex justify-center items-center bg-base-200 text-neutral-content rounded-full w-10 h-10"
+					>
+						<span class="text-md">87</span>
+					</a>
+				</div>
 			</div>
 		</div>
 		<div class="w-full flex flex-col gap-8 items-center bg-neutral p-4 rounded-3xl">
