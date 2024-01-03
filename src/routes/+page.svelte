@@ -104,7 +104,7 @@
 		</div>
 		<input
 			type="text"
-			placeholder="Type here to search a game..."
+			placeholder="Enter game title..."
 			class="input input-bordered rounded-full w-full max-w-[32rem]"
 		/>
 	</div>

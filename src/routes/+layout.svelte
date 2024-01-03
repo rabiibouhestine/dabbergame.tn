@@ -13,7 +13,7 @@
 			>
 			<input
 				type="text"
-				placeholder="Type here to search a game..."
+				placeholder="Enter game title..."
 				class="input input-bordered rounded-full flex-1 order-3 sm:order-2"
 			/>
 			<div class="flex gap-2 order-2 sm:order-3">
