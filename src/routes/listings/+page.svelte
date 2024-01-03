@@ -65,16 +65,28 @@
 	</div>
 </div>
 <div class="flex flex-col gap-y-4 w-full max-w-5xl mx-auto my-10 px-4">
-	<div class="flex gap-3">
+	<div class="flex justify-between">
+		<div class="flex gap-3">
+			<select class="select select-bordered rounded-full">
+				<option disabled selected>All States</option>
+				<option>Tunis</option>
+				<option>Sousse</option>
+			</select>
+			<select class="select select-bordered rounded-full">
+				<option disabled selected>All Platforms</option>
+				<option>PS5</option>
+				<option>XBSX</option>
+			</select>
+			<select class="select select-bordered rounded-full">
+				<option disabled selected>All Sellers</option>
+				<option>People</option>
+				<option>Stores</option>
+			</select>
+		</div>
 		<select class="select select-bordered rounded-full">
-			<option disabled selected>All States</option>
-			<option>Tunis</option>
-			<option>Sousse</option>
-		</select>
-		<select class="select select-bordered rounded-full">
-			<option disabled selected>All Platforms</option>
-			<option>PS5</option>
-			<option>XBSX</option>
+			<option disabled selected>Sort by date</option>
+			<option>by price</option>
+			<option>by date</option>
 		</select>
 	</div>
 	<div class="divider"></div>
