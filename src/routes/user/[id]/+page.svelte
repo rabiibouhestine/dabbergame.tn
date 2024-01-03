@@ -8,24 +8,43 @@
 	<div
 		class="flex flex-col sm:flex-row gap-6 sm:justify-between items-center h-full w-full max-w-5xl mx-auto px-4"
 	>
-		<div class="flex gap-2 items-center">
+		<div class="flex gap-4 items-center">
 			<div class="avatar placeholder">
-				<div class="bg-base-200 text-neutral-content rounded-full w-24 h-24">
+				<div class="bg-base-200 text-neutral-content rounded-full w-28 h-28">
 					<span class="text-xs">Ls</span>
 				</div>
 			</div>
 			<div>
-				<h2 class="text-3xl font-bold">Foulen Ben Falten</h2>
+				<h2 class="text-5xl font-bold">Foulen Ben Falten</h2>
 				<p class="text-lg font-bold">Ben Arous, El Mourouj</p>
 				<p class="text-lg">Last seen 1 month ago</p>
 			</div>
 		</div>
-		<div class="flex flex-col gap-3">
-			<div class="text-2xl">Rating: 4/5</div>
-			<div>
-				<span class="bg-base-300 rounded-full px-4 py-2 text-lg text-center font-bold">Ph</span>
-				<span class="bg-base-300 rounded-full px-4 py-2 text-lg text-center font-bold">Fb</span>
-			</div>
+		<div class="flex justify-center gap-3">
+			<a
+				href="/listings"
+				class="flex justify-center items-center bg-base-300 text-neutral-content rounded-full px-4"
+			>
+				<div class="rating">
+					<input type="radio" name="rating-1" class="mask mask-star" />
+					<input type="radio" name="rating-1" class="mask mask-star" checked />
+					<input type="radio" name="rating-1" class="mask mask-star" />
+					<input type="radio" name="rating-1" class="mask mask-star" />
+					<input type="radio" name="rating-1" class="mask mask-star" />
+				</div>
+			</a>
+			<a
+				href="/listings"
+				class="flex justify-center items-center bg-base-300 text-neutral-content rounded-full w-14 h-14"
+			>
+				Pd
+			</a>
+			<a
+				href="/listings"
+				class="flex justify-center items-center bg-base-300 text-neutral-content rounded-full w-14 h-14"
+			>
+				Fb
+			</a>
 		</div>
 	</div>
 </div>
