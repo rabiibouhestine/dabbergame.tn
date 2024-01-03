@@ -1,5 +1,6 @@
 <script>
 	import ListingCard from '$lib/components/ListingCard.svelte';
+	import TagsLine from '~icons/clarity/tags-line';
 
 	const games = [
 		{
@@ -158,10 +159,10 @@
 							</div>
 						</div>
 						<div
-							class="bg-base-200 text-neutral-content rounded-full px-4 h-10 flex justify-center items-center gap-2"
+							class="bg-base-200 text-neutral-content rounded-full px-4 h-10 flex justify-center items-center gap-1"
 						>
-							<span class="text-xs">LSI</span>
-							<span class="text-xs">3</span>
+							<span class="text-md">3</span>
+							<TagsLine />
 						</div>
 					</div>
 				{/each}
@@ -174,7 +175,11 @@
 			<ListingCard />
 		{/each}
 	</div>
-	<a href="/listings" class="self-center rounded-full bg-base-300 px-4 py-2 text-xl">
+	<a
+		href="/listings"
+		class="self-center rounded-full bg-base-300 px-4 py-2 text-xl flex gap-2 items-center"
+	>
+		<TagsLine />
 		See all listings
 	</a>
 </div>

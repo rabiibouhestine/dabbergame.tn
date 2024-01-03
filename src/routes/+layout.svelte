@@ -1,5 +1,9 @@
 <script>
 	import '../app.css';
+	import TagsLine from '~icons/clarity/tags-line';
+	import StoreLine from '~icons/clarity/store-line';
+	import PlusCircleLine from '~icons/clarity/plus-circle-line';
+	import UserLine from '~icons/clarity/user-line';
 </script>
 
 <div class="flex flex-col min-h-screen">
@@ -18,7 +22,7 @@
 						href="/listings"
 						class="flex justify-center items-center bg-neutral text-neutral-content rounded-full w-10 h-10"
 					>
-						<span class="text-md">St</span>
+						<StoreLine />
 					</a>
 				</div>
 				<div class="avatar placeholder">
@@ -26,7 +30,7 @@
 						href="/listings"
 						class="flex justify-center items-center bg-neutral text-neutral-content rounded-full w-10 h-10"
 					>
-						<span class="text-md">Ls</span>
+						<TagsLine />
 					</a>
 				</div>
 				<div class="avatar placeholder">
@@ -34,7 +38,7 @@
 						href="/listings"
 						class="flex justify-center items-center bg-neutral text-neutral-content rounded-full w-10 h-10"
 					>
-						<span class="text-md">Ad</span>
+						<PlusCircleLine />
 					</a>
 				</div>
 				<div class="avatar placeholder">
@@ -42,7 +46,7 @@
 						href="/user/1"
 						class="flex justify-center items-center bg-neutral text-neutral-content rounded-full w-10 h-10"
 					>
-						<span class="text-md">Pr</span>
+						<UserLine />
 					</a>
 				</div>
 			</div>

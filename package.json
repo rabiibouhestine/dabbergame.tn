@@ -10,6 +10,7 @@
 		"format": "prettier --write ."
 	},
 	"devDependencies": {
+		"@iconify/json": "^2.2.164",
 		"@sveltejs/adapter-auto": "^3.0.0",
 		"@sveltejs/kit": "^2.0.0",
 		"@sveltejs/vite-plugin-svelte": "^3.0.0",
@@ -24,6 +25,7 @@
 		"prettier-plugin-svelte": "^3.1.2",
 		"svelte": "^4.2.7",
 		"tailwindcss": "^3.4.0",
+		"unplugin-icons": "^0.18.1",
 		"vite": "^5.0.3"
 	},
 	"type": "module"

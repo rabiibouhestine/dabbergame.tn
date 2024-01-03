@@ -1,5 +1,7 @@
 <script>
 	import ListingCard from '$lib/components/ListingCard.svelte';
+	import Facebook from '~icons/mdi/facebook';
+	import Phone from '~icons/mdi/phone';
 
 	let listings = Array.from({ length: 5 }, (_, index) => index + 1);
 </script>
@@ -37,13 +39,13 @@
 				href="/listings"
 				class="flex justify-center items-center bg-base-300 text-neutral-content rounded-full w-14 h-14"
 			>
-				Pd
+				<Phone class="text-2xl" />
 			</a>
 			<a
 				href="/listings"
 				class="flex justify-center items-center bg-base-300 text-neutral-content rounded-full w-14 h-14"
 			>
-				Fb
+				<Facebook class="text-2xl" />
 			</a>
 		</div>
 	</div>

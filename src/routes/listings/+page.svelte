@@ -1,5 +1,8 @@
 <script>
 	import ListingCard from '$lib/components/ListingCard.svelte';
+	import Steam from '~icons/mdi/steam';
+	import Twitch from '~icons/mdi/twitch';
+	import Reddit from '~icons/mdi/reddit';
 
 	let listings = Array.from({ length: 15 }, (_, index) => index + 1);
 </script>
@@ -31,19 +34,19 @@
 						href="/listings"
 						class="flex justify-center items-center bg-base-200 text-neutral-content rounded-full w-10 h-10"
 					>
-						<span class="text-md">S</span>
+						<Steam />
 					</a>
 					<a
 						href="/listings"
 						class="flex justify-center items-center bg-base-200 text-neutral-content rounded-full w-10 h-10"
 					>
-						<span class="text-md">W</span>
+						<Twitch />
 					</a>
 					<a
 						href="/listings"
 						class="flex justify-center items-center bg-base-200 text-neutral-content rounded-full w-10 h-10"
 					>
-						<span class="text-md">T</span>
+						<Reddit />
 					</a>
 				</div>
 				<div class="flex gap-3">
