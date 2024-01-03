@@ -2,21 +2,23 @@
 	import GameCover from '$lib/components/GameCover.svelte';
 </script>
 
-<div class="grid grid-cols-1 sm:grid-cols-4 gap-10 w-full max-w-5xl mx-auto my-10 px-4">
-	<div class="col-span-1 flex flex-col gap-4">
-		<GameCover />
-		<div class="flex gap-2 items-center">
-			<div class="avatar placeholder">
-				<div class="bg-neutral text-neutral-content rounded-full w-12 h-12">
-					<span class="text-xs">Ls</span>
-				</div>
-			</div>
-			<div>
-				<h2 class="text-lg font-bold">Foulen Ben Falten</h2>
-				<p class="text-sm font-bold">Ben Arous, El Mourouj</p>
-			</div>
+<div class="grid grid-cols-1 md:grid-cols-4 gap-10 w-full max-w-5xl mx-auto my-10 px-4">
+	<div class="col-span-1 flex flex-col justify-center md:justify-start items-center gap-4">
+		<div class="min-w-40 max-w-60">
+			<GameCover />
 		</div>
 		<div class="flex flex-col gap-3">
+			<div class="flex gap-2 items-center">
+				<div class="avatar placeholder">
+					<div class="bg-neutral text-neutral-content rounded-full w-12 h-12">
+						<span class="text-xs">Ls</span>
+					</div>
+				</div>
+				<div>
+					<h2 class="text-lg font-bold">Foulen Ben Falten</h2>
+					<p class="text-sm font-bold">Ben Arous, El Mourouj</p>
+				</div>
+			</div>
 			<span
 				class="flex justify-center items-center bg-base-300 rounded-full px-4 py-2 text-lg text-center font-bold"
 			>
