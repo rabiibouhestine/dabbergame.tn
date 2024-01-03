@@ -9,7 +9,7 @@
 			<input
 				type="text"
 				placeholder="Type here"
-				class="input input-bordered flex-1 order-3 sm:order-2"
+				class="input input-bordered rounded-full flex-1 order-3 sm:order-2"
 			/>
 			<div class="flex gap-2 order-2 sm:order-3">
 				<div class="avatar placeholder">

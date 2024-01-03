@@ -101,7 +101,7 @@
 			<h2 class="text-7xl font-bold">Dabber Game</h2>
 			<p class="text-2xl font-medium">Best place to trade video games in Tunisia!</p>
 		</div>
-		<input type="text" placeholder="Type here" class="input input-bordered w-full" />
+		<input type="text" placeholder="Type here" class="input input-bordered rounded-full w-full" />
 	</div>
 	<div class="flex flex-col md:flex-row gap-4">
 		<div class="w-full flex flex-col gap-8 items-center bg-neutral p-4 rounded-3xl">
