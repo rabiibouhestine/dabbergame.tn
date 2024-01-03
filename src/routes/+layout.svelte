@@ -18,6 +18,14 @@
 						href="/listings"
 						class="flex justify-center items-center bg-neutral text-neutral-content rounded-full w-10 h-10"
 					>
+						<span class="text-md">St</span>
+					</a>
+				</div>
+				<div class="avatar placeholder">
+					<a
+						href="/listings"
+						class="flex justify-center items-center bg-neutral text-neutral-content rounded-full w-10 h-10"
+					>
 						<span class="text-md">Ls</span>
 					</a>
 				</div>
