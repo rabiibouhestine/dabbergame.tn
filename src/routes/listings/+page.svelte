@@ -64,13 +64,26 @@
 		</div>
 	</div>
 </div>
-<div class="flex flex-col gap-y-10 w-full max-w-5xl mx-auto my-10 px-4">
+<div class="flex flex-col gap-y-4 w-full max-w-5xl mx-auto my-10 px-4">
+	<div class="flex gap-3">
+		<select class="select select-bordered rounded-full">
+			<option disabled selected>All States</option>
+			<option>Tunis</option>
+			<option>Sousse</option>
+		</select>
+		<select class="select select-bordered rounded-full">
+			<option disabled selected>All Platforms</option>
+			<option>PS5</option>
+			<option>XBSX</option>
+		</select>
+	</div>
+	<div class="divider"></div>
 	<div class="flex flex-wrap justify-center gap-8">
 		{#each listings as listing}
 			<ListingCard />
 		{/each}
 	</div>
-	<div class="join flex">
+	<div class="join flex my-6">
 		<button class="join-item btn">«</button>
 		<div class="flex flex-1 justify-center bg-neutral rounded-none">
 			<button class="join-item btn">1</button>
