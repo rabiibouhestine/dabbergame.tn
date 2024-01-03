@@ -174,7 +174,7 @@
 			<ListingCard />
 		{/each}
 	</div>
-	<a href="/listings" class="self-center rounded-xl bg-base-300 px-4 py-2 text-xl">
+	<a href="/listings" class="self-center rounded-full bg-base-300 px-4 py-2 text-xl">
 		See all listings
 	</a>
 </div>
