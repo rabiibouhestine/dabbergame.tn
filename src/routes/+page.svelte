@@ -142,7 +142,7 @@
 			</div>
 		</div>
 		<div class="min-w-72 flex flex-col gap-8 bg-neutral p-4 rounded-3xl">
-			<h2 class="text-3xl text-center font-bold">Recently Active</h2>
+			<h2 class="text-3xl text-center font-bold">Featured</h2>
 			<div class="flex flex-col gap-3">
 				{#each [1, 2, 3, 4] as seller}
 					<div class="flex items-center justify-between">
