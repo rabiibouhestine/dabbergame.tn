@@ -22,7 +22,7 @@
 		<div class="col-span-3 flex flex-col gap-6">
 			<div class="divider divider-start text-5xl font-bold">{data.game[0].result[0].name}</div>
 			<div class="flex flex-col gap-4">
-				<p>{data.game[0].result[0].summary}</p>
+				<p class="line-clamp-4">{data.game[0].result[0].summary}</p>
 				<p>Genre: {data.game[0].result[0].genres}</p>
 				<p>Platforms: {data.game[0].result[0].platforms}</p>
 			</div>
