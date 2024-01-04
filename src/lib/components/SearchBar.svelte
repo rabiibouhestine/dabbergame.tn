@@ -54,6 +54,13 @@
 		placeholder="Enter game title..."
 		class="input input-bordered rounded-full w-full"
 	/>
+	{#if searching}
+		<ul class="absolute w-full mt-2 z-[1] menu p-2 shadow bg-base-100 rounded-box">
+			<li>
+				<div>Searching...</div>
+			</li>
+		</ul>
+	{/if}
 	{#if products.length}
 		<ul class="absolute w-full mt-2 z-[1] menu p-2 shadow bg-base-100 rounded-box">
 			{#each products as product}
@@ -63,10 +70,6 @@
 					</a>
 				</li>
 			{/each}
-			<!-- <li>
-				<a href="/listings">Item kjgb ;ukgj b; iug ;khjg i gl yjfv ;yfv1</a>
-			</li>
-			<li><a href="/listings">Item 2</a></li> -->
 		</ul>
 	{/if}
 </div>
