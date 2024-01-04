@@ -169,7 +169,7 @@
 			</div>
 		</div>
 	</div>
-	<div class="divider text-3xl font-bold">Latest Listings</div>
+	<div class="divider divider-start text-4xl font-bold">Latest Listings</div>
 	<div class="flex flex-wrap justify-center gap-8">
 		{#each games as game}
 			<ListingCard />

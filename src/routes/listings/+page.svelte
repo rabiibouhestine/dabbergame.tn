@@ -7,7 +7,7 @@
 	let listings = Array.from({ length: 15 }, (_, index) => index + 1);
 </script>
 
-<div class="flex flex-col gap-y-4 w-full max-w-5xl mx-auto my-10 px-4">
+<div class="flex flex-col gap-y-8 w-full max-w-5xl mx-auto my-10 px-4">
 	<div class="bg-neutral rounded-3xl grid grid-cols-1 sm:grid-cols-4 gap-10 p-6 mb-8">
 		<div class="col-span-1 flex flex-col justify-center md:justify-start items-center gap-4">
 			<img
@@ -90,7 +90,8 @@
 			<option>Sort by date</option>
 		</select>
 	</div>
-	<div class="divider"></div>
+	<!-- <div class="divider"></div> -->
+	<div class="divider divider-start text-4xl font-bold">Listings</div>
 	<div class="flex flex-wrap justify-center gap-8">
 		{#each listings as listing}
 			<ListingCard />
