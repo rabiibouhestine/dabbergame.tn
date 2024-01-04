@@ -7,33 +7,31 @@
 </script>
 
 <div class="flex flex-col gap-8 w-full max-w-5xl mx-auto px-4 my-10">
-	<div
-		class="bg-neutral flex flex-col sm:flex-row gap-6 sm:justify-between items-center min-h-60 p-6 rounded-3xl"
-	>
-		<div class="flex gap-4 items-center">
+	<div class="bg-neutral flex flex-col gap-6 items-center p-6 rounded-3xl">
+		<div class="flex flex-col gap-4 items-center">
 			<div class="avatar placeholder">
 				<div class="bg-base-200 text-neutral-content rounded-full w-24 h-24">
 					<span class="text-xs">Ls</span>
 				</div>
 			</div>
-			<div>
+			<div class="text-center">
 				<h2 class="text-4xl font-bold">Foulen Ben Falten</h2>
 				<p class="text-lg font-bold">Ben Arous, El Mourouj</p>
-				<p class="text-lg">Last seen 1 month ago</p>
+				<p class="text-lg">Joined 1 month ago</p>
 			</div>
 		</div>
 		<div class="flex justify-center gap-3">
 			<a
 				href="/listings"
-				class="flex justify-center items-center bg-base-300 text-neutral-content rounded-full w-14 h-14"
+				class="flex justify-center items-center bg-base-300 text-neutral-content rounded-full w-10 h-10"
 			>
-				<Phone class="text-2xl" />
+				<Phone class="text-xl" />
 			</a>
 			<a
 				href="/listings"
-				class="flex justify-center items-center bg-base-300 text-neutral-content rounded-full w-14 h-14"
+				class="flex justify-center items-center bg-base-300 text-neutral-content rounded-full w-10 h-10"
 			>
-				<Facebook class="text-2xl" />
+				<Facebook class="text-xl" />
 			</a>
 			<a
 				href="/listings"
