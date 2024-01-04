@@ -20,7 +20,9 @@
 			/>
 		</div>
 		<div class="col-span-3 flex flex-col gap-6">
-			<div class="divider divider-start text-5xl font-bold">{data.game[0].result[0].name}</div>
+			<h2 class="text-5xl font-bold line-clamp-1 leading-tight">
+				{data.game[0].result[0].name}
+			</h2>
 			<div class="flex flex-col gap-4">
 				<p class="line-clamp-4">{data.game[0].result[0].summary}</p>
 				<p>Genre: {data.game[0].result[0].genres}</p>
