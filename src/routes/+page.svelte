@@ -109,8 +109,8 @@
 		/>
 	</div>
 	<div class="flex flex-col md:flex-row gap-4">
-		<div class="w-full flex flex-col gap-8 items-center bg-neutral p-4 rounded-3xl">
-			<div class="divider text-3xl font-bold">Popular Games</div>
+		<div class="w-full flex flex-col gap-8 items-center bg-neutral p-6 rounded-3xl">
+			<div class="divider divider-start text-4xl font-bold">Popular Games</div>
 			<div class="flex gap-6">
 				<a href="/listings">
 					<img
@@ -142,8 +142,8 @@
 				</a>
 			</div>
 		</div>
-		<div class="min-w-72 flex flex-col gap-8 bg-neutral p-4 rounded-3xl">
-			<div class="divider text-3xl font-bold">Featured</div>
+		<div class="min-w-80 flex flex-col gap-8 bg-neutral p-6 rounded-3xl">
+			<div class="divider divider-start text-4xl font-bold">Featured</div>
 			<div class="flex flex-col gap-3">
 				{#each [1, 2, 3, 4] as seller}
 					<div class="flex items-center justify-between">
