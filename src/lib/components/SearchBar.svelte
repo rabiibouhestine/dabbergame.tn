@@ -60,7 +60,7 @@
 			{#each products as product}
 				<li>
 					<a href="/listings/1" on:click={reset}>
-						{product.name} ({product.first_release_date})
+						{product.name} ({new Date(product.first_release_date * 1000).getFullYear()})
 					</a>
 				</li>
 			{/each}
