@@ -59,7 +59,7 @@
 		<ul class="absolute w-full mt-2 z-[1] menu p-2 shadow bg-base-100 rounded-box">
 			{#each products as product}
 				<li>
-					<a on:click={reset} href={'/listings/' + product.slug}>
+					<a on:click={reset} href={'/listings/' + product.id}>
 						{product.name} ({new Date(product.first_release_date * 1000).getFullYear()})
 					</a>
 				</li>
