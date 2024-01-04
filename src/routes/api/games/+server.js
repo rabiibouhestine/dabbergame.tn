@@ -1,9 +1,11 @@
 import { json } from '@sveltejs/kit';
 
-export async function GET() {
+export async function GET({ url }) {
+
+    let search = url.searchParams.get('search');
 
     // URL of the API endpoint
-    const apiUrl = "https://api.igdb.com/v4/games?search=call of duty&fields=id,slug,name,first_release_date";
+    const apiUrl = "https://api.igdb.com/v4/games?search=" + search + "&fields=id,slug,name,first_release_date";
 
     // Headers to be set in the request
     const headers = {
