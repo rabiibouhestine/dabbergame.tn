@@ -111,28 +111,28 @@
 		<div class="w-full flex flex-col gap-8 items-center bg-neutral p-6 rounded-3xl">
 			<div class="divider divider-start text-4xl font-bold">Popular Games</div>
 			<div class="flex gap-6">
-				<a href="/listings">
+				<a href="/listings/1">
 					<img
 						src="https://images.igdb.com/igdb/image/upload/t_cover_big/co7as5.jpg"
 						alt="game"
 						class="bg-red-600 rounded-xl w-36"
 					/>
 				</a>
-				<a href="/listings">
+				<a href="/listings/1">
 					<img
 						src="https://images.igdb.com/igdb/image/upload/t_cover_big/co7ctx.jpg"
 						alt="game"
 						class="bg-red-600 rounded-xl w-36"
 					/>
 				</a>
-				<a href="/listings">
+				<a href="/listings/1">
 					<img
 						src="https://images.igdb.com/igdb/image/upload/t_cover_big/co6lz0.jpg"
 						alt="game"
 						class="bg-red-600 rounded-xl w-36"
 					/>
 				</a>
-				<a href="/listings">
+				<a href="/listings/1">
 					<img
 						src="https://images.igdb.com/igdb/image/upload/t_cover_big/co6jar.jpg"
 						alt="game"
