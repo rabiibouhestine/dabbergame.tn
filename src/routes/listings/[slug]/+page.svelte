@@ -4,6 +4,7 @@
 	import Twitch from '~icons/mdi/twitch';
 	import Reddit from '~icons/mdi/reddit';
 
+	export let data;
 	let listings = Array.from({ length: 15 }, (_, index) => index + 1);
 </script>
 
@@ -17,7 +18,7 @@
 			/>
 		</div>
 		<div class="col-span-3 flex flex-col gap-6">
-			<div class="divider divider-start text-5xl font-bold">The Finals</div>
+			<div class="divider divider-start text-5xl font-bold">{data.slug}</div>
 			<div class="flex flex-col gap-4">
 				<p>
 					Join The Finals, the world-famous, free-to-play, combat-centered game show! Fight
