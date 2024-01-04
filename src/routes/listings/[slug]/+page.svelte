@@ -18,7 +18,7 @@
 			/>
 		</div>
 		<div class="col-span-3 flex flex-col gap-6">
-			<div class="divider divider-start text-5xl font-bold">{data.slug}</div>
+			<div class="divider divider-start text-5xl font-bold">{data.game.slug}</div>
 			<div class="flex flex-col gap-4">
 				<p>
 					Join The Finals, the world-famous, free-to-play, combat-centered game show! Fight
