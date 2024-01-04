@@ -1,5 +1,6 @@
 <script>
 	import '../app.css';
+	import SearchBar from '$lib/components/SearchBar.svelte';
 	import TagsLine from '~icons/clarity/tags-line';
 	import StoreLine from '~icons/clarity/store-line';
 	import PlusCircleLine from '~icons/clarity/plus-circle-line';
@@ -11,11 +12,9 @@
 		<div class="flex flex-wrap flex-1 gap-6 justify-between max-w-5xl mx-auto px-4">
 			<a href="/" class="flex items-center bg-neutral rounded-full px-4 h-10 order-1">Dabber Game</a
 			>
-			<input
-				type="text"
-				placeholder="Enter game title..."
-				class="input input-bordered rounded-full flex-1 order-3 sm:order-2"
-			/>
+			<div class="flex-1 order-3 sm:order-2 min-w-60">
+				<SearchBar />
+			</div>
 			<div class="flex gap-2 order-2 sm:order-3">
 				<div class="avatar placeholder">
 					<a

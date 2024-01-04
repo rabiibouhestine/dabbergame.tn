@@ -1,6 +1,7 @@
 <script>
 	import ListingCard from '$lib/components/ListingCard.svelte';
 	import TagsLine from '~icons/clarity/tags-line';
+	import SearchBar from '$lib/components/SearchBar.svelte';
 
 	const games = [
 		{
@@ -102,11 +103,9 @@
 			<h2 class="text-7xl font-bold">Dabber Game</h2>
 			<p class="text-2xl font-medium">Best place to trade video games in Tunisia!</p>
 		</div>
-		<input
-			type="text"
-			placeholder="Enter game title..."
-			class="input input-bordered rounded-full w-full max-w-[32rem]"
-		/>
+		<div class="w-full max-w-[32rem]">
+			<SearchBar />
+		</div>
 	</div>
 	<div class="flex flex-col md:flex-row gap-4">
 		<div class="w-full flex flex-col gap-8 items-center bg-neutral p-6 rounded-3xl">
