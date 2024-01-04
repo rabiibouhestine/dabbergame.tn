@@ -20,7 +20,7 @@
 			/>
 		</div>
 		<div class="col-span-3 flex flex-col gap-6">
-			<h2 class="text-5xl font-bold line-clamp-1 leading-tight">
+			<h2 class="text-5xl font-bold">
 				{data.game[0].result[0].name}
 			</h2>
 			<div class="flex flex-col gap-4">
