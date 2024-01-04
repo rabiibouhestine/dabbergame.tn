@@ -21,37 +21,10 @@
 			return;
 		}
 
-		// URL of the API endpoint
-		const apiUrl = 'https://api.igdb.com/v4/games';
-
-		// Data to be sent in the POST request (replace with your actual data)
-		const postData = {
-			search: search,
-			fields: 'id,slug,name,first_release_date'
-		};
-
-		// Headers to be set in the request
-		const headers = {
-			Accept: 'application/json',
-			Authorization: 'Bearer x0ps462fbuojuod51mzufgt6tjs9ne',
-			'Client-ID': 'd65avpcxntyv4ok3mj1ud2cf3ufy02'
-		};
-
-		// const data = await fetch(apiUrl, {
-		// 	method: 'POST',
-		// 	headers: headers,
-		// 	body: JSON.stringify(postData)
-		// })
-		const data = await fetch('https://dummyjson.com/products/search?q=' + search)
-			.then((res) => {
-				if (!res.ok) {
-					handleError();
-					return;
-				}
-				return res.json();
-			})
-			.catch((e) => handleError(e));
-		products = data?.products || [];
+		const response = await fetch('/api/games');
+		const data = await response.json();
+		console.log(data);
+		products = data ? data : [];
 		searching = false;
 	}
 
@@ -87,7 +60,7 @@
 			{#each products as product}
 				<li>
 					<a href="/listings/1" on:click={reset}>
-						{product.title} ({product.price}€)
+						{product.name} ({product.first_release_date})
 					</a>
 				</li>
 			{/each}
