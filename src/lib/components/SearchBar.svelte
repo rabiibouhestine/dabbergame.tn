@@ -53,7 +53,9 @@
 		</ul>
 	{/if}
 	{#if games.length}
-		<ul class="absolute w-full mt-2 z-[1] menu p-2 shadow bg-base-100 rounded-box">
+		<ul
+			class="absolute w-full mt-2 z-[1] p-4 shadow bg-base-100 rounded-box max-h-80 flex flex-col gap-4 overflow-y-scroll"
+		>
 			{#each games as game}
 				<li>
 					<a on:click={reset} href={'/listings/' + game.id} class="flex gap-3">
