@@ -24,8 +24,8 @@
 			</h2>
 			<div class="flex flex-col gap-4">
 				<p class="line-clamp-4">{data.game.summary}</p>
-				<p>Genre: {data.game.genres}</p>
-				<p>Platforms: {data.game.platforms}</p>
+				<p>Genres: {data.game.genres.map((genre) => genre.name).join(', ')}</p>
+				<p>Platforms: {data.game.platforms.map((platform) => platform.name).join(', ')}</p>
 			</div>
 			<div class="flex justify-between">
 				<div class="flex gap-3">
