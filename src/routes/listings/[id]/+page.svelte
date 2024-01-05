@@ -5,7 +5,7 @@
 	import Reddit from '~icons/mdi/reddit';
 
 	export let data;
-
+	console.log(data);
 	let listings = Array.from({ length: 15 }, (_, index) => index + 1);
 </script>
 
@@ -28,26 +28,55 @@
 				<p>Platforms: {data.game.platforms.map((platform) => platform.name).join(', ')}</p>
 			</div>
 			<div class="flex justify-between">
-				<div class="flex gap-3">
-					<a
-						href="/listings"
-						class="flex justify-center items-center bg-base-200 text-neutral-content rounded-full w-10 h-10"
-					>
-						<Steam />
-					</a>
-					<a
-						href="/listings"
-						class="flex justify-center items-center bg-base-200 text-neutral-content rounded-full w-10 h-10"
-					>
-						<Twitch />
-					</a>
-					<a
-						href="/listings"
-						class="flex justify-center items-center bg-base-200 text-neutral-content rounded-full w-10 h-10"
-					>
-						<Reddit />
-					</a>
-				</div>
+				{#if data.game.websites}
+					<div class="flex gap-3">
+						{#if data.game.websites.find((site) => site.category === 1)}
+							<a
+								href={data.game.websites.find((site) => site.category === 1).url}
+								target="_blank"
+								class="flex justify-center items-center bg-base-200 text-neutral-content rounded-full w-10 h-10"
+							>
+								<Steam />
+							</a>
+						{/if}
+						{#if data.game.websites.find((site) => site.category === 3)}
+							<a
+								href={data.game.websites.find((site) => site.category === 3).url}
+								target="_blank"
+								class="flex justify-center items-center bg-base-200 text-neutral-content rounded-full w-10 h-10"
+							>
+								<Twitch />
+							</a>
+						{/if}
+						{#if data.game.websites.find((site) => site.category === 9)}
+							<a
+								href={data.game.websites.find((site) => site.category === 9).url}
+								target="_blank"
+								class="flex justify-center items-center bg-base-200 text-neutral-content rounded-full w-10 h-10"
+							>
+								<Twitch />
+							</a>
+						{/if}
+						{#if data.game.websites.find((site) => site.category === 13)}
+							<a
+								href={data.game.websites.find((site) => site.category === 13).url}
+								target="_blank"
+								class="flex justify-center items-center bg-base-200 text-neutral-content rounded-full w-10 h-10"
+							>
+								<Twitch />
+							</a>
+						{/if}
+						{#if data.game.websites.find((site) => site.category === 16)}
+							<a
+								href={data.game.websites.find((site) => site.category === 16).url}
+								target="_blank"
+								class="flex justify-center items-center bg-base-200 text-neutral-content rounded-full w-10 h-10"
+							>
+								<Reddit />
+							</a>
+						{/if}
+					</div>
+				{/if}
 				<div class="flex gap-3">
 					{#if data.game.aggregated_rating}
 						<a
