@@ -13,7 +13,7 @@ export async function load({ params }) {
 	};
 
 	// Body
-	const body = "fields id,cover.image_id,name,first_release_date,summary,genres.name,platforms.name,rating,aggregated_rating,websites.category,websites.url;\nwhere id = " + id + ";"
+	const body = "fields id,cover.image_id,name,first_release_date,summary,genres.name,platforms.name,aggregated_rating,websites.category,websites.url;\nwhere id = " + id + ";"
 	
 	const response = await fetch(apiUrl, {
 		method: 'POST',

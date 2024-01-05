@@ -1,8 +1,10 @@
 <script>
 	import ListingCard from '$lib/components/ListingCard.svelte';
+	import Launch from '~icons/mdi/launch';
+	import Wikipedia from '~icons/mdi/wikipedia';
+	import Youtube from '~icons/mdi/youtube';
 	import Steam from '~icons/mdi/steam';
-	import Twitch from '~icons/mdi/twitch';
-	import Reddit from '~icons/mdi/reddit';
+	import Epicgames from '~icons/simple-icons/epicgames';
 
 	export let data;
 	console.log(data);
@@ -36,7 +38,7 @@
 								target="_blank"
 								class="flex justify-center items-center bg-base-200 text-neutral-content rounded-full w-10 h-10"
 							>
-								<Steam />
+								<Launch />
 							</a>
 						{/if}
 						{#if data.game.websites.find((site) => site.category === 3)}
@@ -45,7 +47,7 @@
 								target="_blank"
 								class="flex justify-center items-center bg-base-200 text-neutral-content rounded-full w-10 h-10"
 							>
-								<Twitch />
+								<Wikipedia />
 							</a>
 						{/if}
 						{#if data.game.websites.find((site) => site.category === 9)}
@@ -54,7 +56,7 @@
 								target="_blank"
 								class="flex justify-center items-center bg-base-200 text-neutral-content rounded-full w-10 h-10"
 							>
-								<Twitch />
+								<Youtube />
 							</a>
 						{/if}
 						{#if data.game.websites.find((site) => site.category === 13)}
@@ -63,7 +65,7 @@
 								target="_blank"
 								class="flex justify-center items-center bg-base-200 text-neutral-content rounded-full w-10 h-10"
 							>
-								<Twitch />
+								<Steam />
 							</a>
 						{/if}
 						{#if data.game.websites.find((site) => site.category === 16)}
@@ -72,7 +74,7 @@
 								target="_blank"
 								class="flex justify-center items-center bg-base-200 text-neutral-content rounded-full w-10 h-10"
 							>
-								<Reddit />
+								<Epicgames />
 							</a>
 						{/if}
 					</div>
@@ -81,17 +83,9 @@
 					{#if data.game.aggregated_rating}
 						<a
 							href="/listings"
-							class="flex justify-center items-center bg-base-200 text-neutral-content rounded-full w-10 h-10"
+							class="flex justify-center items-center bg-base-200 text-neutral-content rounded-full px-4 h-10"
 						>
-							<span class="text-md">{Math.round(data.game.aggregated_rating)}</span>
-						</a>
-					{/if}
-					{#if data.game.rating}
-						<a
-							href="/listings"
-							class="flex justify-center items-center bg-base-200 text-neutral-content rounded-full w-10 h-10"
-						>
-							<span class="text-md">{Math.round(data.game.rating)}</span>
+							<span class="text-md">Rating: {Math.round(data.game.aggregated_rating)}</span>
 						</a>
 					{/if}
 				</div>
