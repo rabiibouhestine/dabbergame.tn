@@ -59,12 +59,16 @@
 			{#each games as game}
 				<li>
 					<a on:click={reset} href={'/listings/' + game.id} class="flex gap-3">
-						<img
-							src="https://images.igdb.com/igdb/image/upload/t_cover_small/{game.cover
-								.image_id}.jpg"
-							alt="game"
-							class="rounded-md max-w-12"
-						/>
+						{#if game.cover}
+							<img
+								src="https://images.igdb.com/igdb/image/upload/t_cover_small/{game.cover
+									.image_id}.jpg"
+								alt="game"
+								class="rounded-md max-w-12"
+							/>
+						{:else}
+							<img src="https://placehold.co/90x120" alt="game" class="rounded-md max-w-12" />
+						{/if}
 						<div class="flex flex-col items-start">
 							<h2 class="text-xl font-bold">
 								{game.name}
@@ -72,9 +76,11 @@
 									({new Date(game.first_release_date * 1000).getFullYear()})
 								{/if}
 							</h2>
-							<p>
-								{game.platforms.map((platform) => platform.name).join(', ')}
-							</p>
+							{#if game.platforms}
+								<p class="line-clamp-1">
+									{game.platforms.map((platform) => platform.name).join(', ')}
+								</p>
+							{/if}
 						</div>
 					</a>
 				</li>
