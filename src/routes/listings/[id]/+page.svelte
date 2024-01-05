@@ -5,7 +5,7 @@
 	import Reddit from '~icons/mdi/reddit';
 
 	export let data;
-	console.log(data);
+
 	let listings = Array.from({ length: 15 }, (_, index) => index + 1);
 </script>
 
@@ -13,20 +13,19 @@
 	<div class="bg-neutral rounded-3xl grid grid-cols-1 sm:grid-cols-4 gap-10 p-6 mb-8">
 		<div class="col-span-1 flex flex-col justify-center md:justify-start items-center gap-4">
 			<img
-				src="https://images.igdb.com/igdb/image/upload/t_cover_big/{data.game[1].result[0]
-					.image_id}.jpg"
+				src="https://images.igdb.com/igdb/image/upload/t_cover_big/{data.game.cover.image_id}.jpg"
 				alt="game"
 				class="bg-red-600 rounded-xl w-full"
 			/>
 		</div>
 		<div class="col-span-3 flex flex-col gap-6">
 			<h2 class="text-5xl font-bold">
-				{data.game[0].result[0].name}
+				{data.game.name}
 			</h2>
 			<div class="flex flex-col gap-4">
-				<p class="line-clamp-4">{data.game[0].result[0].summary}</p>
-				<p>Genre: {data.game[0].result[0].genres}</p>
-				<p>Platforms: {data.game[0].result[0].platforms}</p>
+				<p class="line-clamp-4">{data.game.summary}</p>
+				<p>Genre: {data.game.genres}</p>
+				<p>Platforms: {data.game.platforms}</p>
 			</div>
 			<div class="flex justify-between">
 				<div class="flex gap-3">
@@ -54,13 +53,13 @@
 						href="/listings"
 						class="flex justify-center items-center bg-base-200 text-neutral-content rounded-full w-10 h-10"
 					>
-						<span class="text-md">{Math.round(data.game[0].result[0].aggregated_rating)}</span>
+						<span class="text-md">{Math.round(data.game.aggregated_rating)}</span>
 					</a>
 					<a
 						href="/listings"
 						class="flex justify-center items-center bg-base-200 text-neutral-content rounded-full w-10 h-10"
 					>
-						<span class="text-md">{Math.round(data.game[0].result[0].rating)}</span>
+						<span class="text-md">{Math.round(data.game.rating)}</span>
 					</a>
 				</div>
 			</div>

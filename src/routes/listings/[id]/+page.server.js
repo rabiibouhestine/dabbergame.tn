@@ -3,7 +3,7 @@ export async function load({ params }) {
     const id = params.id;
 
 	// URL of the API endpoint
-	const apiUrl = "https://api.igdb.com/v4/multiquery";
+	const apiUrl = "https://api.igdb.com/v4/games";
 
 	// Headers to be set in the request
 	const headers = {
@@ -12,37 +12,18 @@ export async function load({ params }) {
 		'Client-ID': 'd65avpcxntyv4ok3mj1ud2cf3ufy02'
 	};
 
-	// Queries
-	const rawQueries = {
-		games: `
-		  query games "Game Info" {
-			fields id, cover, name, first_release_date, summary, genres, platforms, rating, aggregated_rating, websites;
-			where id = ${id};
-		  };
-		`,
-		covers: `
-		  query covers "Game Cover" {
-			fields image_id;
-			where game = ${id};
-		  };
-		`,
-		websites: `
-		  query websites "Game Websites" {
-			fields category, url;
-			where game = ${id};
-		  };
-		`,
-	};
+	// Body
+	const body = "fields id,cover.image_id,name,first_release_date,summary,genres.name,platforms.name,rating,aggregated_rating,websites.category, websites.url;\nwhere id = " + id + ";"
 	
 	const response = await fetch(apiUrl, {
 		method: 'POST',
 		headers: headers,
-		body: Object.values(rawQueries).join('\n\n')
+		body: body
 	})
 
 	const data = await response.json();
 		
 	return {
-		game: data
+		game: data[0]
 	};
 }
