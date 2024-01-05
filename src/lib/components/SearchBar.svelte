@@ -1,9 +1,6 @@
 <script>
-	import CheckCircleOutlineRounded from '~icons/material-symbols/check-circle-outline-rounded';
-	import CancelOutlineRounded from '~icons/material-symbols/cancel-outline-rounded';
-
 	let search = '';
-	let products = [];
+	let games = [];
 	let timeout;
 	let searching = false;
 
@@ -12,10 +9,10 @@
 		if (timeout) {
 			clearTimeout(timeout);
 		}
-		timeout = setTimeout(get_products, 300);
+		timeout = setTimeout(get_games, 300);
 	}
 
-	async function get_products() {
+	async function get_games() {
 		if (!search) {
 			reset();
 			return;
@@ -24,7 +21,7 @@
 		const response = await fetch('/api/games?search=' + search);
 		const data = await response.json();
 
-		products = data ? data : [];
+		games = data ? data : [];
 		searching = false;
 	}
 
@@ -35,7 +32,7 @@
 
 	function reset() {
 		search = '';
-		products = [];
+		games = [];
 		searching = false;
 	}
 </script>
@@ -55,12 +52,12 @@
 			</li>
 		</ul>
 	{/if}
-	{#if products.length}
+	{#if games.length}
 		<ul class="absolute w-full mt-2 z-[1] menu p-2 shadow bg-base-100 rounded-box">
-			{#each products as product}
+			{#each games as game}
 				<li>
-					<a on:click={reset} href={'/listings/' + product.id}>
-						{product.name} ({new Date(product.first_release_date * 1000).getFullYear()})
+					<a on:click={reset} href={'/listings/' + game.id}>
+						{game.name} ({new Date(game.first_release_date * 1000).getFullYear()})
 					</a>
 				</li>
 			{/each}

@@ -5,7 +5,7 @@ export async function GET({ url }) {
     let search = url.searchParams.get('search');
 
     // URL of the API endpoint
-    const apiUrl = "https://api.igdb.com/v4/games?search=" + search + "&fields=id,slug,name,first_release_date,summary";
+    const apiUrl = "https://api.igdb.com/v4/games?search=" + search + "&fields=id,cover.image_id,name,first_release_date,platforms.name";
 
     // Headers to be set in the request
     const headers = {
