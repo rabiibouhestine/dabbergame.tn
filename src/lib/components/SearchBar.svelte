@@ -56,8 +56,24 @@
 		<ul class="absolute w-full mt-2 z-[1] menu p-2 shadow bg-base-100 rounded-box">
 			{#each games as game}
 				<li>
-					<a on:click={reset} href={'/listings/' + game.id}>
-						{game.name} ({new Date(game.first_release_date * 1000).getFullYear()})
+					<a on:click={reset} href={'/listings/' + game.id} class="flex gap-3">
+						<img
+							src="https://images.igdb.com/igdb/image/upload/t_cover_small/{game.cover
+								.image_id}.jpg"
+							alt="game"
+							class="rounded-md max-w-12"
+						/>
+						<div class="flex flex-col items-start">
+							<h2 class="text-xl font-bold">
+								{game.name}
+								{#if game.first_release_date}
+									({new Date(game.first_release_date * 1000).getFullYear()})
+								{/if}
+							</h2>
+							<p>
+								{game.platforms.map((platform) => platform.name).join(', ')}
+							</p>
+						</div>
 					</a>
 				</li>
 			{/each}

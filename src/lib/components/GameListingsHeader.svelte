@@ -13,7 +13,7 @@
 		<img
 			src="https://images.igdb.com/igdb/image/upload/t_cover_big/{game.cover.image_id}.jpg"
 			alt="game"
-			class="bg-red-600 rounded-xl w-full"
+			class="rounded-xl w-full"
 		/>
 	</div>
 	<div class="col-span-3 flex flex-col gap-6">
