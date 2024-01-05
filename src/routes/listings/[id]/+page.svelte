@@ -49,18 +49,22 @@
 					</a>
 				</div>
 				<div class="flex gap-3">
-					<a
-						href="/listings"
-						class="flex justify-center items-center bg-base-200 text-neutral-content rounded-full w-10 h-10"
-					>
-						<span class="text-md">{Math.round(data.game.aggregated_rating)}</span>
-					</a>
-					<a
-						href="/listings"
-						class="flex justify-center items-center bg-base-200 text-neutral-content rounded-full w-10 h-10"
-					>
-						<span class="text-md">{Math.round(data.game.rating)}</span>
-					</a>
+					{#if data.game.aggregated_rating}
+						<a
+							href="/listings"
+							class="flex justify-center items-center bg-base-200 text-neutral-content rounded-full w-10 h-10"
+						>
+							<span class="text-md">{Math.round(data.game.aggregated_rating)}</span>
+						</a>
+					{/if}
+					{#if data.game.rating}
+						<a
+							href="/listings"
+							class="flex justify-center items-center bg-base-200 text-neutral-content rounded-full w-10 h-10"
+						>
+							<span class="text-md">{Math.round(data.game.rating)}</span>
+						</a>
+					{/if}
 				</div>
 			</div>
 		</div>
