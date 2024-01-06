@@ -24,7 +24,7 @@
 	];
 </script>
 
-<div class="flex gap-10">
+<div class="flex items-center md:items-start flex-col md:flex-row gap-10">
 	<div class="min-w-52 flex flex-col justify-center md:justify-start items-center gap-4">
 		<div class="min-w-40 max-w-60">
 			<GameCover />
@@ -51,8 +51,8 @@
 		<div class="rounded-container flex flex-col justify-between gap-6 h-full">
 			<div class="flex flex-col gap-6">
 				<h2 class="text-4xl font-bold">The Finals</h2>
-				<div class="flex justify-between">
-					<div class="flex gap-3">
+				<div class="flex flex-wrap gap-3 justify-between">
+					<div class="flex flex-wrap gap-3">
 						<div class="flex items-center bg-base-200 rounded-full px-4 py-2 text-center font-bold">
 							Condition: New
 						</div>
