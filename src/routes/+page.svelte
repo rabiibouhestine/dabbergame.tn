@@ -1,8 +1,9 @@
 <script>
+	import TagsLine from '~icons/clarity/tags-line';
 	import ListingCard from '$lib/components/ListingCard.svelte';
 	import SearchBar from '$lib/components/SearchBar.svelte';
+	import UserInfo from '$lib/components/UserInfo.svelte';
 	import { getGameCover } from '$lib/utils/igdbUtils';
-	import TagsLine from '~icons/clarity/tags-line';
 
 	const popular = [
 		{
@@ -139,17 +140,9 @@
 			<div class="flex flex-col gap-3">
 				{#each [1, 2, 3, 4] as seller}
 					<div class="flex items-center justify-between">
-						<div class="flex gap-2 items-center">
-							<div class="avatar placeholder">
-								<div class="bg-base-200 text-neutral-content rounded-full w-10 h-10">
-									<span class="text-xs">Ls</span>
-								</div>
-							</div>
-							<div>
-								<h2>Foulen Ben Falten</h2>
-								<p class="text-xs">Ben Arous, El Mourouj</p>
-							</div>
-						</div>
+						<UserInfo
+							user={{ name: 'Foulen Ben Falten', state: 'Ben Arous', city: 'El Mourouj' }}
+						/>
 						<div
 							class="bg-base-200 text-neutral-content rounded-full px-4 h-10 flex justify-center items-center gap-1"
 						>
