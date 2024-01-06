@@ -1,7 +1,23 @@
 <script>
 	import ListingCard from '$lib/components/ListingCard.svelte';
-	import TagsLine from '~icons/clarity/tags-line';
 	import SearchBar from '$lib/components/SearchBar.svelte';
+	import { getGameCover } from '$lib/utils/igdbUtils';
+	import TagsLine from '~icons/clarity/tags-line';
+
+	const popular = [
+		{
+			image_id: 'co7as5'
+		},
+		{
+			image_id: 'co7ctx'
+		},
+		{
+			image_id: 'co6lz0'
+		},
+		{
+			image_id: 'co6jar'
+		}
+	];
 
 	const games = [
 		{
@@ -111,34 +127,11 @@
 		<div class="w-full flex flex-col gap-8 items-center bg-neutral p-6 rounded-3xl">
 			<div class="divider divider-start text-4xl font-bold">Popular Games</div>
 			<div class="h-full flex flex-wrap justify-center items-center gap-6">
-				<a href="/listings/1">
-					<img
-						src="https://images.igdb.com/igdb/image/upload/t_cover_big/co7as5.jpg"
-						alt="game"
-						class="rounded-xl w-32"
-					/>
-				</a>
-				<a href="/listings/1">
-					<img
-						src="https://images.igdb.com/igdb/image/upload/t_cover_big/co7ctx.jpg"
-						alt="game"
-						class="rounded-xl w-32"
-					/>
-				</a>
-				<a href="/listings/1">
-					<img
-						src="https://images.igdb.com/igdb/image/upload/t_cover_big/co6lz0.jpg"
-						alt="game"
-						class="rounded-xl w-32"
-					/>
-				</a>
-				<a href="/listings/1">
-					<img
-						src="https://images.igdb.com/igdb/image/upload/t_cover_big/co6jar.jpg"
-						alt="game"
-						class="rounded-xl w-32"
-					/>
-				</a>
+				{#each popular as game}
+					<a href="/listings/1">
+						<img src={getGameCover(game.image_id)} alt="game" class="rounded-xl w-32" />
+					</a>
+				{/each}
 			</div>
 		</div>
 		<div class="min-w-80 flex flex-col gap-8 bg-neutral p-6 rounded-3xl">
