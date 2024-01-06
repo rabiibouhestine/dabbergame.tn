@@ -48,7 +48,7 @@
 				</a>
 			</div>
 		</div>
-		<div class="flex-[1.5] min-w-96 rounded-container"></div>
+		<div class="flex-[1.6] min-w-96 rounded-container"></div>
 	</div>
 	<div class="divider divider-start text-4xl font-bold">Listings</div>
 	<div class="flex flex-wrap justify-center gap-8">
