@@ -9,7 +9,7 @@
 		</div>
 	</div>
 	<div>
-		<h2 class="line-clamp-1">{user.name}</h2>
+		<h2 class="line-clamp-1 font-bold">{user.name}</h2>
 		<p class="line-clamp-1 text-xs">{user.state + ', ' + user.city}</p>
 	</div>
 </div>

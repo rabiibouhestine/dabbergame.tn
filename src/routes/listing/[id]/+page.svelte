@@ -1,29 +1,36 @@
 <script>
+	import UserInfo from '$lib/components/UserInfo.svelte';
 	import GameCover from '$lib/components/GameCover.svelte';
 	import Steam from '~icons/mdi/steam';
 	import Twitch from '~icons/mdi/twitch';
 	import Reddit from '~icons/mdi/reddit';
 	import CheckCircleOutlineRounded from '~icons/material-symbols/check-circle-outline-rounded';
 	import CancelOutlineRounded from '~icons/material-symbols/cancel-outline-rounded';
+	import { getGameCover } from '$lib/utils/igdbUtils';
+
+	const popular = [
+		{
+			image_id: 'co7as5'
+		},
+		{
+			image_id: 'co7ctx'
+		},
+		{
+			image_id: 'co6lz0'
+		},
+		{
+			image_id: 'co6jar'
+		}
+	];
 </script>
 
-<div class="grid grid-cols-1 md:grid-cols-4 gap-10">
-	<div class="col-span-1 flex flex-col justify-center md:justify-start items-center gap-4">
+<div class="flex gap-10">
+	<div class="min-w-52 flex flex-col justify-center md:justify-start items-center gap-4">
 		<div class="min-w-40 max-w-60">
 			<GameCover />
 		</div>
-		<div class="flex flex-col gap-3">
-			<div class="flex gap-2 items-center">
-				<div class="avatar placeholder">
-					<div class="bg-neutral text-neutral-content rounded-full w-12 h-12">
-						<span class="text-xs">Ls</span>
-					</div>
-				</div>
-				<div>
-					<h2 class="text-lg font-bold">Foulen Ben Falten</h2>
-					<p class="text-sm font-bold">Ben Arous, El Mourouj</p>
-				</div>
-			</div>
+		<UserInfo user={{ name: 'Foulen Ben Falten', state: 'Ben Arous', city: 'El Mourouj' }} />
+		<div class="w-full flex flex-col gap-3">
 			<span
 				class="flex justify-center items-center bg-base-300 rounded-full px-4 py-2 text-lg text-center font-bold"
 			>
@@ -40,7 +47,7 @@
 			<span class="bg-base-300 rounded-full px-4 py-2 text-lg text-center font-bold">Buy Now</span>
 		</div>
 	</div>
-	<div class="col-span-3 flex flex-col gap-6">
+	<div class="flex flex-col gap-6">
 		<div class="rounded-container flex flex-col justify-between gap-6 h-full">
 			<div class="flex flex-col gap-6">
 				<h2 class="text-4xl font-bold">The Finals</h2>
@@ -112,37 +119,14 @@
 				</div>
 			</div>
 		</div>
-		<div class="w-full flex flex-col gap-8 items-center rounded-container">
-			<div class="divider divider-start text-4xl font-bold">Trade</div>
-			<div class="flex gap-6">
-				<a href="/listings">
-					<img
-						src="https://images.igdb.com/igdb/image/upload/t_cover_big/co7as5.jpg"
-						alt="game"
-						class="bg-red-600 rounded-xl w-36"
-					/>
-				</a>
-				<a href="/listings">
-					<img
-						src="https://images.igdb.com/igdb/image/upload/t_cover_big/co7ctx.jpg"
-						alt="game"
-						class="bg-red-600 rounded-xl w-36"
-					/>
-				</a>
-				<a href="/listings">
-					<img
-						src="https://images.igdb.com/igdb/image/upload/t_cover_big/co6lz0.jpg"
-						alt="game"
-						class="bg-red-600 rounded-xl w-36"
-					/>
-				</a>
-				<a href="/listings">
-					<img
-						src="https://images.igdb.com/igdb/image/upload/t_cover_big/co6jar.jpg"
-						alt="game"
-						class="bg-red-600 rounded-xl w-36"
-					/>
-				</a>
+		<div class="w-full flex flex-col gap-8 rounded-container">
+			<div class="divider divider-start text-4xl font-bold">Trade Games</div>
+			<div class="h-full flex flex-wrap justify-center items-center gap-6">
+				{#each popular as game}
+					<a href="/listings/1">
+						<img src={getGameCover(game.image_id)} alt="game" class="rounded-xl w-32" />
+					</a>
+				{/each}
 			</div>
 		</div>
 	</div>
