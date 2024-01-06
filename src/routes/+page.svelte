@@ -97,7 +97,7 @@
 	];
 </script>
 
-<div class="flex flex-col gap-y-10 w-full max-w-5xl mx-auto my-10 px-4">
+<div class="flex flex-col gap-y-10">
 	<div class="min-h-64 flex flex-col justify-center gap-10 items-center">
 		<div class="text-center">
 			<h2 class="text-7xl font-bold">Dabber Game</h2>

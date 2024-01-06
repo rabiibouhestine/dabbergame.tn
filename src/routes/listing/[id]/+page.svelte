@@ -7,7 +7,7 @@
 	import CancelOutlineRounded from '~icons/material-symbols/cancel-outline-rounded';
 </script>
 
-<div class="grid grid-cols-1 md:grid-cols-4 gap-10 w-full max-w-5xl mx-auto my-10 px-4">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-10">
 	<div class="col-span-1 flex flex-col justify-center md:justify-start items-center gap-4">
 		<div class="min-w-40 max-w-60">
 			<GameCover />

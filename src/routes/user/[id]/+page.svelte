@@ -6,7 +6,7 @@
 	let listings = Array.from({ length: 5 }, (_, index) => index + 1);
 </script>
 
-<div class="flex flex-col gap-8 w-full max-w-5xl mx-auto px-4 my-10">
+<div class="flex flex-col gap-8">
 	<div class="bg-neutral flex flex-col gap-6 items-center p-6 rounded-3xl">
 		<div class="flex flex-col gap-4 items-center">
 			<div class="avatar placeholder">
