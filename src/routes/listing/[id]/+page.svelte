@@ -25,7 +25,7 @@
 </script>
 
 <div class="flex items-center md:items-start flex-col md:flex-row gap-10">
-	<div class="min-w-52 flex flex-col justify-center md:justify-start items-center gap-4">
+	<div class="min-w-52 flex flex-col justify-center items-center gap-4">
 		<div class="min-w-40 max-w-60">
 			<GameCover />
 		</div>
