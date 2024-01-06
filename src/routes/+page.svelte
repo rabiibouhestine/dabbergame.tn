@@ -107,7 +107,7 @@
 			<SearchBar />
 		</div>
 	</div>
-	<div class="flex flex-col md:flex-row gap-4">
+	<div class="flex flex-col lg:flex-row gap-4">
 		<div class="w-full flex flex-col gap-8 items-center bg-neutral p-6 rounded-3xl">
 			<div class="divider divider-start text-4xl font-bold">Popular Games</div>
 			<div class="flex gap-6">
