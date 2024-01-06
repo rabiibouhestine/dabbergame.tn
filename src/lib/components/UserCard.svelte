@@ -6,11 +6,11 @@
 
 <div class="rounded-container flex flex-col md:flex-row justify-between gap-8">
 	<div class="flex flex-col md:flex-row gap-4 items-center">
-		<div class="avatar placeholder">
-			<div class="bg-base-200 text-neutral-content rounded-full w-24 h-24">
-				<span class="text-xs">Ls</span>
-			</div>
-		</div>
+		<img
+			src={'https://gravatar.com/avatar/' + 'hashedEmail'}
+			alt="profile"
+			class="rounded-full w-24 h-24"
+		/>
 		<div class="text-center md:text-start">
 			<h2 class="text-4xl font-bold">Foulen BenFalten</h2>
 			<p class="text-lg font-bold">Ben Arous, El Mourouj</p>
