@@ -123,8 +123,8 @@
 			<SearchBar />
 		</div>
 	</div>
-	<div class="flex flex-col lg:flex-row gap-4">
-		<div class="w-full flex flex-col gap-8 items-center bg-neutral p-6 rounded-3xl">
+	<div class="flex flex-col lg:flex-row gap-6">
+		<div class="w-full flex flex-col gap-8 bg-neutral p-6 rounded-3xl">
 			<div class="divider divider-start text-4xl font-bold">Popular Games</div>
 			<div class="h-full flex flex-wrap justify-center items-center gap-6">
 				{#each popular as game}

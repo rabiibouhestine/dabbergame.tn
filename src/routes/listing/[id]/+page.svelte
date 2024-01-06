@@ -43,7 +43,7 @@
 	<div class="col-span-3 flex flex-col gap-6">
 		<div class="bg-neutral p-6 rounded-3xl flex flex-col justify-between gap-6 h-full">
 			<div class="flex flex-col gap-6">
-				<div class="divider divider-start text-4xl font-bold">The Finals</div>
+				<h2 class="text-4xl font-bold">The Finals</h2>
 				<div class="flex justify-between">
 					<div class="flex gap-3">
 						<div class="flex items-center bg-base-200 rounded-full px-4 py-2 text-center font-bold">
