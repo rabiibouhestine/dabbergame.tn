@@ -124,7 +124,7 @@
 		</div>
 	</div>
 	<div class="flex flex-col lg:flex-row gap-6">
-		<div class="w-full flex flex-col gap-8 bg-neutral p-6 rounded-3xl">
+		<div class="w-full flex flex-col gap-8 rounded-container">
 			<div class="divider divider-start text-4xl font-bold">Popular Games</div>
 			<div class="h-full flex flex-wrap justify-center items-center gap-6">
 				{#each popular as game}
@@ -134,7 +134,7 @@
 				{/each}
 			</div>
 		</div>
-		<div class="min-w-80 flex flex-col gap-8 bg-neutral p-6 rounded-3xl">
+		<div class="min-w-80 flex flex-col gap-8 rounded-container">
 			<div class="divider divider-start text-4xl font-bold">Featured</div>
 			<div class="flex flex-col gap-3">
 				{#each [1, 2, 3, 4] as seller}

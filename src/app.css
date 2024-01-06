@@ -1,3 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer utilities {
+	.rounded-container {
+		@apply bg-neutral p-6 rounded-3xl;
+	}
+}
