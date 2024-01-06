@@ -52,7 +52,7 @@
 		</div>
 	</div>
 
-	<div class="flex-1 max-w-5xl mx-auto px-4 my-10">
+	<div class="flex-1 w-full max-w-5xl mx-auto px-4 my-10">
 		<slot />
 	</div>
 
