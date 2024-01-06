@@ -8,7 +8,7 @@
 	export let game;
 </script>
 
-<div class="bg-neutral rounded-3xl grid grid-cols-1 sm:grid-cols-4 gap-10 p-6 mb-8">
+<div class="rounded-container grid grid-cols-1 sm:grid-cols-4 gap-10 mb-8">
 	<div class="col-span-1 flex flex-col justify-center md:justify-start items-center gap-4">
 		<img
 			src="https://images.igdb.com/igdb/image/upload/t_cover_big/{game.cover.image_id}.jpg"

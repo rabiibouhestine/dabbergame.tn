@@ -41,7 +41,7 @@
 		</div>
 	</div>
 	<div class="col-span-3 flex flex-col gap-6">
-		<div class="bg-neutral p-6 rounded-3xl flex flex-col justify-between gap-6 h-full">
+		<div class="rounded-container flex flex-col justify-between gap-6 h-full">
 			<div class="flex flex-col gap-6">
 				<h2 class="text-4xl font-bold">The Finals</h2>
 				<div class="flex justify-between">
@@ -112,7 +112,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="w-full flex flex-col gap-8 items-center bg-neutral p-6 rounded-3xl">
+		<div class="w-full flex flex-col gap-8 items-center rounded-container">
 			<div class="divider divider-start text-4xl font-bold">Trade</div>
 			<div class="flex gap-6">
 				<a href="/listings">

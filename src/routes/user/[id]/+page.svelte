@@ -7,7 +7,7 @@
 </script>
 
 <div class="flex flex-col gap-8">
-	<div class="bg-neutral flex flex-col gap-6 items-center p-6 rounded-3xl">
+	<div class="rounded-container flex flex-col gap-6 items-center">
 		<div class="flex flex-col gap-4 items-center">
 			<div class="avatar placeholder">
 				<div class="bg-base-200 text-neutral-content rounded-full w-24 h-24">
