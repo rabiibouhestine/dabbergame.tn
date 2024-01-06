@@ -76,7 +76,7 @@
 				</div>
 			{/if}
 			{#if game.aggregated_rating}
-				<div class="flex items-center bg-base-200 rounded-full px-4 py-2 text-center">
+				<div class="flex items-center bg-base-200 rounded-full px-4 py-2 text-center font-bold">
 					Rating: {Math.round(game.aggregated_rating)}
 				</div>
 			{/if}

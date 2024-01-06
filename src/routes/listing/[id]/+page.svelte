@@ -103,7 +103,7 @@
 						<Reddit />
 					</a>
 				</div>
-				<div class="flex items-center bg-base-200 rounded-full px-4 py-2 text-center">
+				<div class="flex items-center bg-base-200 rounded-full px-4 py-2 text-center font-bold">
 					Rating: 90
 				</div>
 			</div>
