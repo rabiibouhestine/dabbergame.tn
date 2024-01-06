@@ -8,8 +8,8 @@
 </script>
 
 <div class="flex flex-col gap-y-8">
-	<div class="flex justify-between">
-		<div class="flex items-center gap-3">
+	<div class="flex flex-wrap gap-3 justify-between">
+		<div class="flex flex-wrap items-center gap-3">
 			<select class="select select-bordered rounded-full">
 				<option disabled selected>All States</option>
 				<option>Tunis</option>
