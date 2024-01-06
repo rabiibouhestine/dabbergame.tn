@@ -1,19 +1,23 @@
 <script>
-	import GameCover from './GameCover.svelte';
+	import UserInfo from '$lib/components/UserInfo.svelte';
+	export let showPrice = true;
 </script>
 
 <a href="/listing/1" class="flex flex-col gap-3 min-w-40 max-w-44 flex-1">
-	<GameCover />
-	<div class="bg-neutral py-1 px-4 rounded-full w-full text-center text-2xl font-bold">200 DT</div>
-	<div class="flex gap-2 items-center">
-		<div class="avatar placeholder">
-			<div class="bg-neutral text-neutral-content rounded-full w-10 h-10">
-				<span class="text-xs">Ls</span>
-			</div>
+	<div class="w-full aspect-[5/7] rounded-lg overflow-hidden">
+		<div class="w-full h-[15%] flex items-center bg-blue-600 px-3 py-1 text-white font-bold">
+			PS5
 		</div>
-		<div>
-			<h2>Foulen Falten</h2>
-			<p class="text-xs">Ben Arous</p>
-		</div>
+		<img
+			class="w-full"
+			src="https://images.igdb.com/igdb/image/upload/t_cover_big/co7as5.jpg"
+			alt="cover"
+		/>
 	</div>
+	{#if showPrice}
+		<div class="bg-neutral py-1 px-4 rounded-full w-full text-center text-2xl font-bold">
+			200 DT
+		</div>
+	{/if}
+	<UserInfo user={{ name: 'Foulen Ben Falten', state: 'Ben Arous', city: 'El Mourouj' }} />
 </a>
