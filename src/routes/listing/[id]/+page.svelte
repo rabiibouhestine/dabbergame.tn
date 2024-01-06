@@ -1,6 +1,5 @@
 <script>
-	import UserInfo from '$lib/components/UserInfo.svelte';
-	import GameCover from '$lib/components/GameCover.svelte';
+	import ListingCard from '$lib/components/ListingCard.svelte';
 	import Steam from '~icons/mdi/steam';
 	import Twitch from '~icons/mdi/twitch';
 	import Reddit from '~icons/mdi/reddit';
@@ -26,10 +25,7 @@
 
 <div class="flex items-center md:items-start flex-col md:flex-row gap-10">
 	<div class="min-w-52 flex flex-col justify-center items-center gap-4">
-		<div class="min-w-40 max-w-60">
-			<GameCover />
-		</div>
-		<UserInfo user={{ name: 'Foulen Ben Falten', state: 'Ben Arous', city: 'El Mourouj' }} />
+		<ListingCard showPrice={false} />
 		<div class="w-full flex flex-col gap-3">
 			<span
 				class="flex justify-center items-center bg-base-300 rounded-full px-4 py-2 text-lg text-center font-bold"
