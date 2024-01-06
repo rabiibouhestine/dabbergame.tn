@@ -82,8 +82,8 @@
 					<p>Platforms: PlayStation 5, PC (Microsoft Windows), Xbox Series X|S</p>
 				</div>
 			</div>
-			<div class="flex justify-between">
-				<div class="flex gap-3">
+			<div class="flex flex-wrap justify-between">
+				<div class="flex flex-wrap gap-3">
 					<a
 						href="/listings"
 						class="flex justify-center items-center bg-base-200 text-neutral-content rounded-full w-10 h-10"
@@ -103,19 +103,8 @@
 						<Reddit />
 					</a>
 				</div>
-				<div class="flex gap-3">
-					<a
-						href="/listings"
-						class="flex justify-center items-center bg-base-200 text-neutral-content rounded-full w-10 h-10"
-					>
-						<span class="text-md">89</span>
-					</a>
-					<a
-						href="/listings"
-						class="flex justify-center items-center bg-base-200 text-neutral-content rounded-full w-10 h-10"
-					>
-						<span class="text-md">87</span>
-					</a>
+				<div class="flex items-center bg-base-200 rounded-full px-4 py-2 text-center">
+					Rating: 90
 				</div>
 			</div>
 		</div>

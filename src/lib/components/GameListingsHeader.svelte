@@ -75,16 +75,11 @@
 					{/if}
 				</div>
 			{/if}
-			<div class="flex gap-3">
-				{#if game.aggregated_rating}
-					<a
-						href="/listings"
-						class="flex justify-center items-center bg-base-200 text-neutral-content rounded-full px-4 h-10"
-					>
-						<span class="text-md">Rating: {Math.round(game.aggregated_rating)}</span>
-					</a>
-				{/if}
-			</div>
+			{#if game.aggregated_rating}
+				<div class="flex items-center bg-base-200 rounded-full px-4 py-2 text-center">
+					Rating: {Math.round(game.aggregated_rating)}
+				</div>
+			{/if}
 		</div>
 	</div>
 </div>
