@@ -1,5 +1,6 @@
 <script>
 	import ListingCard from '$lib/components/ListingCard.svelte';
+	import UserCard from '$lib/components/UserCard.svelte';
 	import Facebook from '~icons/mdi/facebook';
 	import Phone from '~icons/mdi/phone';
 	import Cog from '~icons/mdi/cog';
@@ -8,6 +9,7 @@
 </script>
 
 <div class="flex flex-col gap-8">
+	<UserCard />
 	<div class="rounded-container flex flex-col gap-6 items-center">
 		<div class="flex flex-col gap-4 items-center">
 			<div class="avatar placeholder">
