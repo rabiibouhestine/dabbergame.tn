@@ -10,44 +10,23 @@
 <div class="flex flex-col min-h-screen">
 	<div class="navbar bg-base-300 py-4">
 		<div class="flex flex-wrap flex-1 gap-6 justify-between max-w-5xl mx-auto px-4">
-			<a href="/" class="flex items-center bg-neutral rounded-full px-4 h-10 order-1">Dabber Game</a
-			>
+			<a href="/" class="btn btn-neutral rounded-full"> Dabber Game </a>
 			<div class="flex-1 order-3 sm:order-2 min-w-60">
 				<SearchBar />
 			</div>
 			<div class="flex gap-2 order-2 sm:order-3">
-				<div class="avatar placeholder">
-					<a
-						href="/stores"
-						class="flex justify-center items-center bg-neutral text-neutral-content rounded-full w-10 h-10"
-					>
-						<StoreLine />
-					</a>
-				</div>
-				<div class="avatar placeholder">
-					<a
-						href="/listings"
-						class="flex justify-center items-center bg-neutral text-neutral-content rounded-full w-10 h-10"
-					>
-						<TagsLine />
-					</a>
-				</div>
-				<div class="avatar placeholder">
-					<a
-						href="/"
-						class="flex justify-center items-center bg-neutral text-neutral-content rounded-full w-10 h-10"
-					>
-						<PlusCircleLine />
-					</a>
-				</div>
-				<div class="avatar placeholder">
-					<a
-						href="/user/1"
-						class="flex justify-center items-center bg-neutral text-neutral-content rounded-full w-10 h-10"
-					>
-						<UserLine />
-					</a>
-				</div>
+				<a href="/" class="btn btn-circle btn-neutral">
+					<PlusCircleLine />
+				</a>
+				<a href="/stores" class="btn btn-circle btn-neutral">
+					<StoreLine />
+				</a>
+				<a href="/listings" class="btn btn-circle btn-neutral">
+					<TagsLine />
+				</a>
+				<a href="/user/1" class="btn btn-circle btn-neutral">
+					<UserLine />
+				</a>
 			</div>
 		</div>
 	</div>
