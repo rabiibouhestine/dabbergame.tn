@@ -143,11 +143,9 @@
 						<UserInfo
 							user={{ name: 'Foulen Ben Falten', state: 'Ben Arous', city: 'El Mourouj' }}
 						/>
-						<div
-							class="bg-base-200 text-neutral-content rounded-full px-4 h-10 flex justify-center items-center gap-1"
-						>
-							<span class="text-md">3</span>
+						<div class="flex justify-center items-center gap-1 bg-base-100 rounded-full px-4 h-10">
 							<TagsLine />
+							<span class="font-bold">3</span>
 						</div>
 					</div>
 				{/each}
