@@ -114,7 +114,7 @@
 	];
 </script>
 
-<div class="flex flex-col gap-y-10">
+<div class="flex flex-col items-center gap-y-10">
 	<div class="min-h-64 flex flex-col justify-center gap-10 items-center">
 		<div class="text-center">
 			<h2 class="text-7xl font-bold">Dabber Game</h2>
@@ -160,10 +160,7 @@
 			<ListingCard />
 		{/each}
 	</div>
-	<a
-		href="/listings"
-		class="self-center rounded-full bg-base-300 px-4 py-2 text-xl flex gap-2 items-center"
-	>
+	<a href="/listings" class="rounded-full bg-base-300 px-4 py-2 text-xl flex gap-2 items-center">
 		<TagsLine />
 		See all listings
 	</a>
