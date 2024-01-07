@@ -32,7 +32,7 @@
 						<a
 							href={game.websites.find((site) => site.category === 1).url}
 							target="_blank"
-							class="flex justify-center items-center bg-base-200 text-neutral-content rounded-full w-10 h-10"
+							class="btn btn-circle"
 						>
 							<Launch />
 						</a>
@@ -41,7 +41,7 @@
 						<a
 							href={game.websites.find((site) => site.category === 3).url}
 							target="_blank"
-							class="flex justify-center items-center bg-base-200 text-neutral-content rounded-full w-10 h-10"
+							class="btn btn-circle"
 						>
 							<Wikipedia />
 						</a>
@@ -50,7 +50,7 @@
 						<a
 							href={game.websites.find((site) => site.category === 9).url}
 							target="_blank"
-							class="flex justify-center items-center bg-base-200 text-neutral-content rounded-full w-10 h-10"
+							class="btn btn-circle"
 						>
 							<Youtube />
 						</a>
@@ -59,7 +59,7 @@
 						<a
 							href={game.websites.find((site) => site.category === 13).url}
 							target="_blank"
-							class="flex justify-center items-center bg-base-200 text-neutral-content rounded-full w-10 h-10"
+							class="btn btn-circle"
 						>
 							<Steam />
 						</a>
@@ -68,7 +68,7 @@
 						<a
 							href={game.websites.find((site) => site.category === 16).url}
 							target="_blank"
-							class="flex justify-center items-center bg-base-200 text-neutral-content rounded-full w-10 h-10"
+							class="btn btn-circle"
 						>
 							<Epicgames />
 						</a>
@@ -76,7 +76,7 @@
 				</div>
 			{/if}
 			{#if game.aggregated_rating}
-				<div class="flex items-center bg-base-200 rounded-full px-4 py-2 text-center font-bold">
+				<div class="flex items-center bg-base-100 rounded-full px-4 py-2 text-center font-bold">
 					Rating: {Math.round(game.aggregated_rating)}
 				</div>
 			{/if}
