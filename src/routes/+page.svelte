@@ -160,7 +160,7 @@
 			<ListingCard />
 		{/each}
 	</div>
-	<a href="/listings" class="rounded-full bg-base-300 px-4 py-2 text-xl flex gap-2 items-center">
+	<a href="/listings" class="btn btn-lg btn-neutral rounded-full">
 		<TagsLine />
 		See all listings
 	</a>
