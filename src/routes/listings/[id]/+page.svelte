@@ -1,6 +1,6 @@
 <script>
 	import GameListingsHeader from '$lib/components/GameListingsHeader.svelte';
-	import ListingCard from '$lib/components/ListingCard.svelte';
+	import ListingBanner from '$lib/components/ListingBanner.svelte';
 
 	export let data;
 
@@ -34,9 +34,9 @@
 		</select>
 	</div>
 	<div class="divider divider-start text-4xl font-bold">Listings</div>
-	<div class="flex flex-wrap justify-center gap-8">
+	<div class="flex flex-col justify-center gap-4">
 		{#each listings as listing}
-			<ListingCard />
+			<ListingBanner />
 		{/each}
 	</div>
 	<div class="join flex mt-8">
