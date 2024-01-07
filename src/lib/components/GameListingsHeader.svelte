@@ -25,7 +25,7 @@
 			<p>Genres: {game.genres.map((genre) => genre.name).join(', ')}</p>
 			<p>Platforms: {game.platforms.map((platform) => platform.name).join(', ')}</p>
 		</div>
-		<div class="flex justify-between">
+		<div class="flex flex-wrap gap-3 justify-between">
 			{#if game.websites}
 				<div class="flex gap-3">
 					{#if game.websites.find((site) => site.category === 1)}

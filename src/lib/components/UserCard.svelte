@@ -19,22 +19,13 @@
 	</div>
 	<div class="flex flex-col gap-3 justify-between items-center md:items-right">
 		<div class="flex justify-center gap-3">
-			<a
-				href="/listings"
-				class="flex justify-center items-center bg-base-200 text-neutral-content rounded-full w-10 h-10"
-			>
+			<a href="/listings" class="btn btn-circle">
 				<Phone class="text-xl" />
 			</a>
-			<a
-				href="/listings"
-				class="flex justify-center items-center bg-base-200 text-neutral-content rounded-full w-10 h-10"
-			>
+			<a href="/listings" class="btn btn-circle">
 				<Facebook class="text-xl" />
 			</a>
-			<a
-				href="/listings"
-				class="flex justify-center items-center bg-base-200 text-neutral-content rounded-full w-10 h-10"
-			>
+			<a href="/listings" class="btn btn-circle">
 				<Cog class="text-xl" />
 			</a>
 		</div>
