@@ -34,7 +34,7 @@
 							target="_blank"
 							class="btn btn-circle"
 						>
-							<Launch />
+							<Launch class="text-xl" />
 						</a>
 					{/if}
 					{#if game.websites.find((site) => site.category === 3)}
@@ -43,7 +43,7 @@
 							target="_blank"
 							class="btn btn-circle"
 						>
-							<Wikipedia />
+							<Wikipedia class="text-xl" />
 						</a>
 					{/if}
 					{#if game.websites.find((site) => site.category === 9)}
@@ -52,7 +52,7 @@
 							target="_blank"
 							class="btn btn-circle"
 						>
-							<Youtube />
+							<Youtube class="text-xl" />
 						</a>
 					{/if}
 					{#if game.websites.find((site) => site.category === 13)}
@@ -61,7 +61,7 @@
 							target="_blank"
 							class="btn btn-circle"
 						>
-							<Steam />
+							<Steam class="text-xl" />
 						</a>
 					{/if}
 					{#if game.websites.find((site) => site.category === 16)}
@@ -70,7 +70,7 @@
 							target="_blank"
 							class="btn btn-circle"
 						>
-							<Epicgames />
+							<Epicgames class="text-xl" />
 						</a>
 					{/if}
 				</div>

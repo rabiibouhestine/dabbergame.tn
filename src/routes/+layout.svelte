@@ -16,16 +16,16 @@
 			</div>
 			<div class="flex gap-2 order-2 sm:order-3">
 				<a href="/" class="btn btn-circle btn-neutral">
-					<PlusCircleLine />
+					<PlusCircleLine class="text-xl" />
 				</a>
 				<a href="/stores" class="btn btn-circle btn-neutral">
-					<StoreLine />
+					<StoreLine class="text-xl" />
 				</a>
 				<a href="/listings" class="btn btn-circle btn-neutral">
-					<TagsLine />
+					<TagsLine class="text-xl" />
 				</a>
 				<a href="/user/1" class="btn btn-circle btn-neutral">
-					<UserLine />
+					<UserLine class="text-xl" />
 				</a>
 			</div>
 		</div>
