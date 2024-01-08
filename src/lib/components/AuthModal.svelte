@@ -12,7 +12,7 @@
 
 <dialog bind:this={authModal} class="modal">
 	<div class="modal-box">
-		<form class="flex flex-col gap-4" method="POST">
+		<form class="flex flex-col gap-4" method="POST" action="?/register">
 			<button
 				on:click={closeModal}
 				type="button"
@@ -20,7 +20,7 @@
 			>
 				✕
 			</button>
-			<label class="form-control w-full max-w-xs">
+			<label class="form-control w-full">
 				<div class="label">
 					<span class="label-text">Email</span>
 				</div>
@@ -28,10 +28,10 @@
 					name="email"
 					type="email"
 					placeholder="Type here"
-					class="input input-bordered w-full max-w-xs"
+					class="input input-bordered w-full"
 				/>
 			</label>
-			<label class="form-control w-full max-w-xs">
+			<label class="form-control w-full">
 				<div class="label">
 					<span class="label-text">Password</span>
 				</div>
@@ -39,10 +39,10 @@
 					name="password"
 					type="password"
 					placeholder="Type here"
-					class="input input-bordered w-full max-w-xs"
+					class="input input-bordered w-full"
 				/>
 			</label>
-			<button type="submit" class="btn btn-neutral">Log in</button>
+			<button class="btn btn-neutral">Signup</button>
 		</form>
 	</div>
 </dialog>

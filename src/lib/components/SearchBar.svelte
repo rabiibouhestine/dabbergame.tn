@@ -18,7 +18,7 @@
 			return;
 		}
 
-		const response = await fetch('/api/games?search=' + search);
+		const response = await fetch('/games?search=' + search);
 		const data = await response.json();
 
 		games = data ? data : [];
