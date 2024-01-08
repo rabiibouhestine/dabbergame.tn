@@ -1,4 +1,12 @@
-<dialog id="authModal" class="modal">
+<script>
+	let authModal;
+
+	export function showModal() {
+		authModal.showModal();
+	}
+</script>
+
+<dialog bind:this={authModal} class="modal">
 	<div class="modal-box">
 		<form method="dialog">
 			<button class="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</button>

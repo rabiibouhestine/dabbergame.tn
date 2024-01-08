@@ -11,6 +11,8 @@
 
 	import { goto } from '$app/navigation';
 
+	let authModal;
+
 	function handleProfile() {
 		// goto('/user/1');
 		authModal.showModal();
@@ -58,4 +60,4 @@
 	</footer>
 </div>
 
-<AuthModal />
+<AuthModal bind:this={authModal} />
