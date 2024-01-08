@@ -12,10 +12,7 @@ export const actions = {
                 email: email,
                 password: password,
                 options: {
-                    data: {
-                        first_name: 'John',
-                        age: 27,
-                    }
+                    emailRedirectTo: 'http://localhost:5173/'
                 }
             }
         )
