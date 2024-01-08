@@ -1,3 +1,4 @@
+import { IGDB_CLIENT_ID, IGDB_TOKEN } from '$env/static/private';
 
 export async function load({ params }) {
     const id = params.id;
@@ -8,8 +9,8 @@ export async function load({ params }) {
 	// Headers to be set in the request
 	const headers = {
 		'Accept': 'application/json',
-		'Authorization': 'Bearer x0ps462fbuojuod51mzufgt6tjs9ne',
-		'Client-ID': 'd65avpcxntyv4ok3mj1ud2cf3ufy02'
+        'Authorization': 'Bearer ' + IGDB_TOKEN,
+        'Client-ID': IGDB_CLIENT_ID
 	};
 
 	// Body
