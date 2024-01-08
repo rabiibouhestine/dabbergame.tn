@@ -1,5 +1,5 @@
 <script>
-	import '../app.css';
+	import '../../app.css';
 	import SearchBar from '$lib/components/SearchBar.svelte';
 	import TagsLine from '~icons/clarity/tags-line';
 	import StoreLine from '~icons/clarity/store-line';
