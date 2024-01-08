@@ -1,10 +1,20 @@
 <script>
 	import '../../app.css';
+
 	import SearchBar from '$lib/components/SearchBar.svelte';
+	import AuthModal from '$lib/components/AuthModal.svelte';
+
 	import TagsLine from '~icons/clarity/tags-line';
 	import StoreLine from '~icons/clarity/store-line';
 	import PlusCircleLine from '~icons/clarity/plus-circle-line';
 	import UserLine from '~icons/clarity/user-line';
+
+	import { goto } from '$app/navigation';
+
+	function handleProfile() {
+		// goto('/user/1');
+		authModal.showModal();
+	}
 </script>
 
 <div class="flex flex-col min-h-screen">
@@ -24,9 +34,9 @@
 				<a href="/listings" class="btn btn-circle btn-neutral">
 					<TagsLine class="text-xl" />
 				</a>
-				<a href="/user/1" class="btn btn-circle btn-neutral">
+				<button class="btn btn-circle btn-neutral" on:click={handleProfile}>
 					<UserLine class="text-xl" />
-				</a>
+				</button>
 			</div>
 		</div>
 	</div>
@@ -47,3 +57,5 @@
 		</aside>
 	</footer>
 </div>
+
+<AuthModal />
