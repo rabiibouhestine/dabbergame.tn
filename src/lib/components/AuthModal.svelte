@@ -44,9 +44,12 @@
 					class="input input-bordered w-full"
 				/>
 			</label>
-			<p class="py-4">Reset your password?</p>
+			<button class="py-4 self-start">Reset your password?</button>
 			<button class="btn btn-neutral">Signup</button>
 		</form>
-		<p class="py-4">Don't have an account? Sign up</p>
+		<span>
+			Don't have an account?
+			<button on:click={closeModal} class="py-4"> Sign up</button>
+		</span>
 	</div>
 </dialog>
