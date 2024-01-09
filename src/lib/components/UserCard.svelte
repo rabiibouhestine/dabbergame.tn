@@ -25,7 +25,7 @@
 			<a href="/listings" class="btn btn-circle">
 				<Facebook class="text-xl" />
 			</a>
-			<a href="/listings" class="btn btn-circle">
+			<a href="/user-settings" class="btn btn-circle">
 				<Cog class="text-xl" />
 			</a>
 		</div>
