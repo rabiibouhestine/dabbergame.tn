@@ -97,7 +97,7 @@
 			<input name="phone" type="text" placeholder="Phone" class="input input-bordered w-full" />
 		</label>
 		{#if form?.error}<p class="error">Invalid credentials!</p>{/if}
-		<button class="btn btn-neutral">Signup</button>
+		<button type="submit" class="btn btn-neutral">Signup</button>
 	</form>
 	<span>
 		Already have an account?

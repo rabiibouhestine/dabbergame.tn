@@ -31,7 +31,7 @@
 			/>
 		</label>
 		{#if form?.error}<p class="error">{form.error}</p>{/if}
-		<button class="btn btn-neutral">Sign in</button>
+		<button type="submit" class="btn btn-neutral">Sign in</button>
 	</form>
 	<div class="text-center">
 		Don't have an account?
