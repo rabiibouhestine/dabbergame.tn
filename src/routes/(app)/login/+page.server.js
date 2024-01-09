@@ -1,5 +1,5 @@
 import { AuthApiError } from "@supabase/supabase-js";
-import { fail } from "@sveltejs/kit";
+import { fail, redirect } from "@sveltejs/kit";
 
 export const actions = {
   login: async (event) => {
@@ -39,5 +39,7 @@ export const actions = {
             message: "Server error. Try again later.",
         })
     }
+
+    throw redirect(303, "/");
   }
 };
