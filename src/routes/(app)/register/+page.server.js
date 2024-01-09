@@ -2,7 +2,7 @@ import { AuthApiError } from "@supabase/supabase-js";
 import { fail, redirect } from "@sveltejs/kit";
 
 export const actions = {
-	register: async (event) => {
+	default: async (event) => {
 		const { request, url, locals: { supabase } } = event;
 
     const formData = await request.formData();

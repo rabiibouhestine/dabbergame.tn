@@ -4,7 +4,7 @@
 
 <div class="flex flex-col">
 	<h3 class="font-bold text-lg">Signup</h3>
-	<form class="flex flex-col gap-4" method="POST" action="?/register">
+	<form class="flex flex-col gap-4" method="POST" action="/register">
 		<label class="form-control w-full">
 			<div class="label">
 				<span class="label-text">Email</span>

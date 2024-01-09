@@ -6,7 +6,7 @@
 <div class="flex flex-col">
 	<h3 class="font-bold text-lg">Login to your account</h3>
 	<p class="py-4">You must be logged in to perform this action.</p>
-	<form class="flex flex-col gap-4" method="POST" action="?/login" use:enhance>
+	<form class="flex flex-col gap-4" method="POST" action="/login" use:enhance>
 		<label class="form-control w-full">
 			<div class="label">
 				<span class="label-text">Email</span>
