@@ -3,8 +3,8 @@
 	export let form;
 </script>
 
-<div class="flex flex-col">
-	<h2 class="font-bold text-lg">Login to your account</h2>
+<div class="flex flex-col max-w-md mx-auto">
+	<h2 class="font-bold text-lg">Sign in to your account</h2>
 	<form class="flex flex-col gap-4" method="POST" action="/login" use:enhance>
 		<label class="form-control w-full">
 			<div class="label">
