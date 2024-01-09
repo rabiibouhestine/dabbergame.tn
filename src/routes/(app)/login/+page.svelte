@@ -15,6 +15,7 @@
 				type="email"
 				placeholder="Email Address"
 				class="input input-bordered w-full"
+				value={form?.email ?? ''}
 			/>
 		</label>
 		<label class="form-control w-full">
@@ -29,7 +30,7 @@
 			/>
 		</label>
 		<button class="py-4 self-start">Reset your password?</button>
-		{#if form?.error}<p class="error">Invalid credentials!</p>{/if}
+		{#if form?.error}<p class="error">{form.error}</p>{/if}
 		<button class="btn btn-neutral">Login</button>
 	</form>
 	<span>
