@@ -136,7 +136,7 @@
 						<span class="label-text">State</span>
 					</div>
 					<select class="select select-bordered">
-						<option disabled selected>State</option>
+						<option selected>Tunis</option>
 						<option>Star Wars</option>
 						<option>Harry Potter</option>
 						<option>Lord of the Rings</option>
@@ -149,7 +149,7 @@
 						<span class="label-text">City</span>
 					</div>
 					<select class="select select-bordered">
-						<option disabled selected>City</option>
+						<option selected>Tunis</option>
 						<option>Star Wars</option>
 						<option>Harry Potter</option>
 						<option>Lord of the Rings</option>
