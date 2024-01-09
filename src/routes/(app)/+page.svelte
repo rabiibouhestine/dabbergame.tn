@@ -5,6 +5,10 @@
 	import UserInfo from '$lib/components/UserInfo.svelte';
 	import { getGameCover } from '$lib/utils/igdbUtils';
 
+	export let data;
+	let { supabase } = data;
+	$: ({ supabase } = data);
+
 	const popular = [
 		{
 			image_id: 'co7as5'
