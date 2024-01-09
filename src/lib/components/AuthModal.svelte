@@ -1,20 +1,28 @@
 <script>
-	let authModal;
+	let loginModal;
+	let signupModal;
 
-	export function showModal() {
-		authModal.showModal();
+	export function showLoginModal() {
+		signupModal.close();
+		loginModal.showModal();
+	}
+
+	export function showSignupModal() {
+		loginModal.close();
+		signupModal.showModal();
 	}
 
 	function closeModal() {
-		authModal.close();
+		loginModal.close();
+		signupModal.close();
 	}
 </script>
 
-<dialog bind:this={authModal} class="modal">
+<dialog bind:this={loginModal} class="modal">
 	<div class="modal-box">
 		<h3 class="font-bold text-lg">Login to your account</h3>
 		<p class="py-4">You must be logged in to perform this action.</p>
-		<form class="flex flex-col gap-4" method="POST" action="?/register">
+		<form class="flex flex-col gap-4" method="POST" action="?/login">
 			<button
 				on:click={closeModal}
 				type="button"
@@ -45,11 +53,53 @@
 				/>
 			</label>
 			<button class="py-4 self-start">Reset your password?</button>
-			<button class="btn btn-neutral">Signup</button>
+			<button class="btn btn-neutral">Login</button>
 		</form>
 		<span>
 			Don't have an account?
-			<button on:click={closeModal} class="py-4"> Sign up</button>
+			<button on:click={showSignupModal} class="py-4"> Sign up</button>
+		</span>
+	</div>
+</dialog>
+
+<dialog bind:this={signupModal} class="modal">
+	<div class="modal-box">
+		<h3 class="font-bold text-lg">Signup</h3>
+		<form class="flex flex-col gap-4" method="POST" action="?/register">
+			<button
+				on:click={closeModal}
+				type="button"
+				class="btn btn-sm btn-circle btn-ghost absolute right-2 top-2"
+			>
+				✕
+			</button>
+			<label class="form-control w-full">
+				<div class="label">
+					<span class="label-text">Email</span>
+				</div>
+				<input
+					name="email"
+					type="email"
+					placeholder="Email Address"
+					class="input input-bordered w-full"
+				/>
+			</label>
+			<label class="form-control w-full">
+				<div class="label">
+					<span class="label-text">Password</span>
+				</div>
+				<input
+					name="password"
+					type="password"
+					placeholder="Password"
+					class="input input-bordered w-full"
+				/>
+			</label>
+			<button class="btn btn-neutral">Signup</button>
+		</form>
+		<span>
+			Already have an account?
+			<button on:click={showLoginModal} class="py-4"> Login</button>
 		</span>
 	</div>
 </dialog>

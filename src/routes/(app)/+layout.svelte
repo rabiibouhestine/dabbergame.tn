@@ -15,7 +15,7 @@
 
 	function handleProfile() {
 		// goto('/user/1');
-		authModal.showModal();
+		authModal.showLoginModal();
 	}
 </script>
 
