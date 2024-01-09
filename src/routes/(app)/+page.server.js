@@ -18,7 +18,8 @@ export const actions = {
     )
   
 	},
-  login: async ({ request }) => {
+  login: async (event) => {
+    const { request, url, locals: { supabase } } = event;
 		
     const formData = await request.formData();
     const email = formData.get('email');
