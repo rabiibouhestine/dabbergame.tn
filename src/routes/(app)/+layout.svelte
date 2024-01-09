@@ -29,7 +29,7 @@
 				<SearchBar />
 			</div>
 			<div class="flex gap-2 order-2 sm:order-3">
-				<a href="/" class="btn btn-circle btn-neutral">
+				<a href="/post-listing" class="btn btn-circle btn-neutral">
 					<PlusCircleLine class="text-xl" />
 				</a>
 				<a href="/stores" class="btn btn-circle btn-neutral">
