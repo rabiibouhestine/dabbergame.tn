@@ -18,7 +18,7 @@
 	];
 </script>
 
-<div class="flex flex-col gap-8">
+<div class="flex flex-col gap-8 max-w-lg mx-auto">
 	<SearchBar />
 	<h2 class="text-4xl font-bold">Suggestions</h2>
 	<div class="w-full flex flex-col gap-8 rounded-container">
