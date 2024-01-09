@@ -2,6 +2,8 @@
 	let loginModal;
 	let signupModal;
 
+	export let form;
+
 	export function showLoginModal() {
 		signupModal.close();
 		loginModal.showModal();
@@ -53,6 +55,7 @@
 				/>
 			</label>
 			<button class="py-4 self-start">Reset your password?</button>
+			{#if form?.error}<p class="error">Invalid credentials!</p>{/if}
 			<button class="btn btn-neutral">Login</button>
 		</form>
 		<span>
