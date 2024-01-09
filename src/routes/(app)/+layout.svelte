@@ -6,7 +6,6 @@
 	import TagMultiple from '~icons/mdi/tag-multiple';
 	import Store from '~icons/mdi/store';
 	import PlusCircle from '~icons/mdi/plus-circle';
-	import Account from '~icons/mdi/account';
 	import AccountArrowRight from '~icons/mdi/account-arrow-right';
 	import AccountPlus from '~icons/mdi/account-plus';
 
