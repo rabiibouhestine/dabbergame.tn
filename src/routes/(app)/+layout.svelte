@@ -3,22 +3,14 @@
 
 	import SearchBar from '$lib/components/SearchBar.svelte';
 
-	import TagsLine from '~icons/clarity/tags-line';
-	import StoreLine from '~icons/clarity/store-line';
-	import PlusCircleLine from '~icons/clarity/plus-circle-line';
-	import UserLine from '~icons/clarity/user-line';
-
-	import { goto } from '$app/navigation';
+	import TagMultiple from '~icons/mdi/tag-multiple';
+	import Store from '~icons/mdi/store';
+	import PlusCircle from '~icons/mdi/plus-circle';
+	import Account from '~icons/mdi/account';
+	import AccountArrowRight from '~icons/mdi/account-arrow-right';
+	import AccountPlus from '~icons/mdi/account-plus';
 
 	export let data;
-
-	function handleProfile() {
-		if (data.session) {
-			goto('/user/1');
-		} else {
-			goto('/login');
-		}
-	}
 </script>
 
 <div class="flex flex-col min-h-screen">
@@ -29,18 +21,36 @@
 				<SearchBar />
 			</div>
 			<div class="flex gap-2 order-2 sm:order-3">
-				<a href="/post-listing" class="btn btn-circle btn-neutral">
-					<PlusCircleLine class="text-xl" />
-				</a>
+				{#if data.session}
+					<a href="/post-listing" class="btn btn-circle btn-neutral">
+						<PlusCircle class="text-xl" />
+					</a>
+				{/if}
 				<a href="/stores" class="btn btn-circle btn-neutral">
-					<StoreLine class="text-xl" />
+					<Store class="text-xl" />
 				</a>
 				<a href="/listings" class="btn btn-circle btn-neutral">
-					<TagsLine class="text-xl" />
+					<TagMultiple class="text-xl" />
 				</a>
-				<button class="btn btn-circle btn-neutral" on:click={handleProfile}>
-					<UserLine class="text-xl" />
-				</button>
+				{#if data.session}
+					<a href="/user/1">
+						<img
+							src={'https://gravatar.com/avatar/' + 'hashedEmail'}
+							alt="profile"
+							class="btn btn-circle"
+						/>
+					</a>
+				{/if}
+				{#if !data.session}
+					<div class="flex">
+						<a href="/login" class="btn rounded-l-full px-3">
+							<AccountArrowRight class="text-xl" />Sign in
+						</a>
+						<a href="/register" class="btn rounded-r-full btn-neutral px-3">
+							<AccountPlus class="text-xl" />
+						</a>
+					</div>
+				{/if}
 			</div>
 		</div>
 	</div>
