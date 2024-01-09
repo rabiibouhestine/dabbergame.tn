@@ -11,11 +11,16 @@
 
 	import { goto } from '$app/navigation';
 
+	export let data;
+
 	let authModal;
 
 	function handleProfile() {
-		// goto('/user/1');
-		authModal.showLoginModal();
+		if (data.session) {
+			goto('/user/1');
+		} else {
+			authModal.showLoginModal();
+		}
 	}
 </script>
 
