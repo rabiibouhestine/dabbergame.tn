@@ -2,7 +2,7 @@
 	export let form;
 </script>
 
-<div class="flex flex-col">
+<div class="flex flex-col max-w-md mx-auto">
 	<h3 class="font-bold text-lg">Signup</h3>
 	<form class="flex flex-col gap-4" method="POST" action="/register">
 		<label class="form-control w-full">
