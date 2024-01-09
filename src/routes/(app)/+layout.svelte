@@ -25,11 +25,11 @@
 						<TagPlus class="text-xl" />
 					</a>
 				{/if}
-				<a href="/stores" class="btn btn-circle btn-neutral">
-					<Store class="text-xl" />
-				</a>
 				<a href="/listings" class="btn btn-circle btn-neutral">
 					<TagMultiple class="text-xl" />
+				</a>
+				<a href="/stores" class="btn btn-circle btn-neutral">
+					<Store class="text-xl" />
 				</a>
 				{#if data.session}
 					<a href="/user/1">
