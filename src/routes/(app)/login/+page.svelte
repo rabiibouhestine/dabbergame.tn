@@ -34,6 +34,6 @@
 	</form>
 	<span>
 		Don't have an account?
-		<button class="py-4"> Sign up</button>
+		<a href="/register" class="py-4"> Sign up</a>
 	</span>
 </div>

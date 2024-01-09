@@ -2,7 +2,6 @@
 	import '../../app.css';
 
 	import SearchBar from '$lib/components/SearchBar.svelte';
-	import AuthModal from '$lib/components/AuthModal.svelte';
 
 	import TagsLine from '~icons/clarity/tags-line';
 	import StoreLine from '~icons/clarity/store-line';
@@ -13,13 +12,11 @@
 
 	export let data;
 
-	let authModal;
-
 	function handleProfile() {
 		if (data.session) {
 			goto('/user/1');
 		} else {
-			authModal.showLoginModal();
+			goto('/login');
 		}
 	}
 </script>
@@ -64,5 +61,3 @@
 		</aside>
 	</footer>
 </div>
-
-<AuthModal bind:this={authModal} />
