@@ -1,15 +1,8 @@
-import { supabase } from "$lib/utils/supabaseClient";
-
-export async function load() {
-  const { data } = await supabase.from("countries").select();
-  return {
-    countries: data ?? [],
-  };
-}
 
 export const actions = {
-	register: async ({ request }) => {
-		
+	register: async (event) => {
+		const { request, url, locals: { supabase } } = event;
+
     const formData = await request.formData();
 		const email = formData.get('email');
 		const password = formData.get('password');

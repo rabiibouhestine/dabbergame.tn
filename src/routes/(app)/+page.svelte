@@ -5,8 +5,6 @@
 	import UserInfo from '$lib/components/UserInfo.svelte';
 	import { getGameCover } from '$lib/utils/igdbUtils';
 
-	export let data;
-
 	const popular = [
 		{
 			image_id: 'co7as5'
@@ -126,11 +124,6 @@
 			<SearchBar />
 		</div>
 	</div>
-	<ul>
-		{#each data.countries as country}
-			<li>{country.name}</li>
-		{/each}
-	</ul>
 	<div class="flex flex-col lg:flex-row gap-6">
 		<div class="w-full flex flex-col gap-8 rounded-container">
 			<div class="divider divider-start text-4xl font-bold">Popular Games</div>
