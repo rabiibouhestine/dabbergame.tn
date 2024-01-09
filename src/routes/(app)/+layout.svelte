@@ -5,7 +5,7 @@
 
 	import TagMultiple from '~icons/mdi/tag-multiple';
 	import Store from '~icons/mdi/store';
-	import PlusCircle from '~icons/mdi/plus-circle';
+	import TagPlus from '~icons/mdi/tag-plus';
 	import AccountArrowRight from '~icons/mdi/account-arrow-right';
 	import AccountPlus from '~icons/mdi/account-plus';
 
@@ -22,7 +22,7 @@
 			<div class="flex gap-2 order-2 sm:order-3">
 				{#if data.session}
 					<a href="/post-listing" class="btn btn-circle btn-neutral">
-						<PlusCircle class="text-xl" />
+						<TagPlus class="text-xl" />
 					</a>
 				{/if}
 				<a href="/stores" class="btn btn-circle btn-neutral">
