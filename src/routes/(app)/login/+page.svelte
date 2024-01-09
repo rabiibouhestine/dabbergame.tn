@@ -3,8 +3,8 @@
 	export let form;
 </script>
 
-<div class="flex flex-col max-w-md mx-auto">
-	<h2 class="font-bold text-lg">Sign in to your account</h2>
+<div class="flex flex-col gap-4 max-w-md mx-auto">
+	<h2 class="font-bold text-3xl text-center">Sign in to your account</h2>
 	<form class="flex flex-col gap-4" method="POST" action="/login" use:enhance>
 		<label class="form-control w-full">
 			<div class="label">
@@ -21,6 +21,7 @@
 		<label class="form-control w-full">
 			<div class="label">
 				<span class="label-text">Password</span>
+				<span class="label-text-alt"><a href="/">Forgot your password?</a></span>
 			</div>
 			<input
 				name="password"
@@ -29,12 +30,11 @@
 				class="input input-bordered w-full"
 			/>
 		</label>
-		<button class="py-4 self-start">Reset your password?</button>
 		{#if form?.error}<p class="error">{form.error}</p>{/if}
 		<button class="btn btn-neutral">Login</button>
 	</form>
-	<span>
+	<div class="text-center">
 		Don't have an account?
 		<a href="/register" class="py-4"> Sign up</a>
-	</span>
+	</div>
 </div>
