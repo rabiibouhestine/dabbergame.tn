@@ -1,4 +1,6 @@
 <script>
+	import { goto } from '$app/navigation';
+
 	let search = '';
 	let games = [];
 	let timeout;
@@ -26,8 +28,13 @@
 	}
 
 	function handleError(e) {
-		alert('Something went wrong.' + e);
 		reset();
+		alert('Something went wrong.' + e);
+	}
+
+	function handleClick(game_id) {
+		reset();
+		goto('/listings/' + game_id);
 	}
 
 	function reset() {
@@ -58,7 +65,12 @@
 		>
 			{#each games as game}
 				<li>
-					<a on:click={reset} href={'/listings/' + game.id} class="flex gap-3">
+					<button
+						on:click={() => {
+							handleClick(game.id);
+						}}
+						class="flex gap-3"
+					>
 						{#if game.cover}
 							<img
 								src="https://images.igdb.com/igdb/image/upload/t_cover_small/{game.cover
@@ -82,7 +94,7 @@
 								</p>
 							{/if}
 						</div>
-					</a>
+					</button>
 				</li>
 			{/each}
 		</ul>
