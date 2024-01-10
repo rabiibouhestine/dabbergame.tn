@@ -42,5 +42,50 @@
 		</div>
 	{:else}
 		<h2>{game_id}</h2>
+		<form class="flex flex-col gap-4" method="POST" action="/login">
+			<div class="flex gap-3">
+				<label class="form-control w-full">
+					<div class="label">
+						<span class="label-text">Platform</span>
+					</div>
+					<select class="select select-bordered" name="platform">
+						<option selected value="0">Playstation 5</option>
+						<option value="1">Playstation 4</option>
+						<option value="2">Playstation 3</option>
+					</select>
+				</label>
+				<label class="form-control w-full">
+					<div class="label">
+						<span class="label-text">Condition</span>
+					</div>
+					<select class="select select-bordered" name="condition">
+						<option selected value={0}>New</option>
+						<option value={1}>Open</option>
+						<option value={2}>Used</option>
+					</select>
+				</label>
+				<label class="form-control w-full">
+					<div class="label">
+						<span class="label-text">Delivery</span>
+					</div>
+					<select class="select select-bordered" name="delivery">
+						<option selected value={true}>Yes</option>
+						<option value={false}>No</option>
+					</select>
+				</label>
+				<label class="form-control w-full">
+					<div class="label">
+						<span class="label-text">Price</span>
+					</div>
+					<input
+						name="price"
+						type="text"
+						placeholder="100 DT"
+						class="input input-bordered w-full"
+					/>
+				</label>
+			</div>
+			<button type="submit" class="btn btn-neutral">Publish Listing</button>
+		</form>
 	{/if}
 </div>
