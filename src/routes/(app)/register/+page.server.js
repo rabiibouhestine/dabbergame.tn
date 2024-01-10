@@ -23,6 +23,7 @@ export const actions = {
         const city = formData.get('city');
         const phone = formData.get('phone');
 
+        console.log(state);
         const { data, signupError } = await supabase.auth.signUp(
             {
                 email: email,
