@@ -44,7 +44,7 @@
 					<span class="label-text">First Name</span>
 				</div>
 				<input
-					name="first name"
+					name="first_name"
 					type="text"
 					placeholder="First Name"
 					class="input input-bordered w-full"
@@ -55,7 +55,7 @@
 					<span class="label-text">Last Name</span>
 				</div>
 				<input
-					name="last name"
+					name="last_name"
 					type="text"
 					placeholder="Last Name"
 					class="input input-bordered w-full"

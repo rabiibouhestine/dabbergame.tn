@@ -6,10 +6,15 @@ export const actions = {
 		const { request, url, locals: { supabase } } = event;
 
         const formData = await request.formData();
-            const email = formData.get('email');
-            const password = formData.get('password');
+        const email = formData.get('email');
+        const password = formData.get('password');
+        const first_name = formData.get('first_name');
+        const last_name = formData.get('last_name');
+        const state = formData.get('state');
+        const city = formData.get('city');
+        const phone = formData.get('phone');
 
-        const { data, error } = await supabase.auth.signUp(
+        const { data, signupError } = await supabase.auth.signUp(
             {
                 email: email,
                 password: password,
@@ -18,6 +23,15 @@ export const actions = {
                 }
             }
         )
+
+        if (!signupError) {
+            const { insertProfileError } = await supabase
+            .from('profiles')
+            .insert({
+                id: data.user.id,
+                first_name: 'Denmark'
+            })
+        }
   
 	}
 };
