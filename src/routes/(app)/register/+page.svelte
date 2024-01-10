@@ -71,7 +71,7 @@
 				<div class="label">
 					<span class="label-text">State</span>
 				</div>
-				<select class="select select-bordered" name="state" bind:value={selectedState}>
+				<select class="select select-bordered" bind:value={selectedState}>
 					{#each uniqueStates as state}
 						<option>{state}</option>
 					{/each}
@@ -81,9 +81,9 @@
 				<div class="label">
 					<span class="label-text">City</span>
 				</div>
-				<select class="select select-bordered" name="city">
+				<select class="select select-bordered" name="city_id">
 					{#each data.cities.filter((city) => city.state === selectedState) as city}
-						<option>{city.city}</option>
+						<option value={city.id}>{city.city}</option>
 					{/each}
 				</select>
 			</label>

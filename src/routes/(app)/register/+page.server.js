@@ -19,8 +19,7 @@ export const actions = {
         const password = formData.get('password');
         const first_name = formData.get('first_name');
         const last_name = formData.get('last_name');
-        const state = formData.get('state');
-        const city = formData.get('city');
+        const city_id = formData.get('city_id');
         const phone = formData.get('phone');
 
         console.log(formData);
