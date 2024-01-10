@@ -2,6 +2,8 @@
 	import Facebook from '~icons/mdi/facebook';
 	import Phone from '~icons/mdi/phone';
 	import Cog from '~icons/mdi/cog';
+
+	export let profile;
 </script>
 
 <div class="rounded-container flex flex-col md:flex-row justify-between gap-8">
@@ -12,8 +14,8 @@
 			class="rounded-full w-24 h-24"
 		/>
 		<div class="text-center md:text-start">
-			<h2 class="text-4xl font-bold">Foulen BenFalten</h2>
-			<p class="text-lg font-bold">Ben Arous, El Mourouj</p>
+			<h2 class="text-4xl font-bold">{profile.first_name + ' ' + profile.last_name}</h2>
+			<p class="text-lg font-bold">{profile.city_id}</p>
 			<p class="text-lg">Joined 1 month ago</p>
 		</div>
 	</div>

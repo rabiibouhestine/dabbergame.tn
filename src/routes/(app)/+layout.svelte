@@ -32,7 +32,7 @@
 					<Store class="text-xl" />
 				</a>
 				{#if data.session}
-					<a href="/user/1">
+					<a href={'/user/' + data.session.user.id}>
 						<img
 							src={'https://gravatar.com/avatar/' + 'hashedEmail'}
 							alt="profile"
