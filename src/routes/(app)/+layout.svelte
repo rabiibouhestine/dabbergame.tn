@@ -13,7 +13,7 @@
 	export let data;
 
 	function handleSearchClick(event) {
-		goto('listings/' + event.detail);
+		goto('listings/' + event.detail.id);
 	}
 </script>
 

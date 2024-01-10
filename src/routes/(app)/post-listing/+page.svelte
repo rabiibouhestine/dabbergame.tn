@@ -3,11 +3,11 @@
 	import { getGameCover } from '$lib/utils/igdbUtils';
 
 	let gameSelected = false;
-	let game_id = '';
+	let selectedGameDetails = {};
 
 	function handleGameSelection(event) {
 		gameSelected = true;
-		game_id = event.detail;
+		selectedGameDetails = event.detail;
 	}
 
 	const popular = [
@@ -41,49 +41,87 @@
 			</div>
 		</div>
 	{:else}
-		<h2>{game_id}</h2>
+		<div class="flex gap-3">
+			{#if selectedGameDetails.cover}
+				<img
+					src="https://images.igdb.com/igdb/image/upload/t_cover_small/{selectedGameDetails.cover
+						.image_id}.jpg"
+					alt="game"
+					class="rounded-md max-w-12"
+				/>
+			{:else}
+				<img src="https://placehold.co/90x120" alt="game" class="rounded-md max-w-12" />
+			{/if}
+			<div class="flex flex-col items-start">
+				<h2 class="text-xl font-bold">
+					{selectedGameDetails.name}
+					{#if selectedGameDetails.first_release_date}
+						({new Date(selectedGameDetails.first_release_date * 1000).getFullYear()})
+					{/if}
+				</h2>
+				{#if selectedGameDetails.platforms}
+					<p class="line-clamp-1">
+						{selectedGameDetails.platforms.map((platform) => platform.name).join(', ')}
+					</p>
+				{/if}
+			</div>
+		</div>
 		<form class="flex flex-col gap-4" method="POST" action="/login">
 			<div class="flex gap-3">
-				<label class="form-control w-full">
-					<div class="label">
-						<span class="label-text">Platform</span>
-					</div>
-					<select class="select select-bordered" name="platform">
-						<option selected value="0">Playstation 5</option>
-						<option value="1">Playstation 4</option>
-						<option value="2">Playstation 3</option>
-					</select>
-				</label>
-				<label class="form-control w-full">
-					<div class="label">
-						<span class="label-text">Condition</span>
-					</div>
-					<select class="select select-bordered" name="condition">
-						<option selected value={0}>New</option>
-						<option value={1}>Open</option>
-						<option value={2}>Used</option>
-					</select>
-				</label>
-				<label class="form-control w-full">
-					<div class="label">
-						<span class="label-text">Delivery</span>
-					</div>
-					<select class="select select-bordered" name="delivery">
-						<option selected value={true}>Yes</option>
-						<option value={false}>No</option>
-					</select>
-				</label>
-				<label class="form-control w-full">
-					<div class="label">
-						<span class="label-text">Price</span>
-					</div>
-					<input
-						name="price"
-						type="text"
-						placeholder="100 DT"
-						class="input input-bordered w-full"
-					/>
-				</label>
+				<div class="flex-1">
+					{#if selectedGameDetails.cover}
+						<img
+							src="https://images.igdb.com/igdb/image/upload/t_cover_big/{selectedGameDetails.cover
+								.image_id}.jpg"
+							alt="game"
+							class="rounded-md"
+						/>
+					{:else}
+						<img src="https://placehold.co/90x120" alt="game" class="rounded-md" />
+					{/if}
+				</div>
+				<div class="flex-1 flex flex-col gap-4">
+					<label class="form-control w-full">
+						<div class="label">
+							<span class="label-text">Platform</span>
+						</div>
+						<select class="select select-bordered" name="platform">
+							{#each selectedGameDetails.platforms as platform}
+								<option value={platform.id}>{platform.name}</option>
+							{/each}
+						</select>
+					</label>
+					<label class="form-control w-full">
+						<div class="label">
+							<span class="label-text">Condition</span>
+						</div>
+						<select class="select select-bordered" name="condition">
+							<option selected value={0}>New</option>
+							<option value={1}>Open</option>
+							<option value={2}>Used</option>
+						</select>
+					</label>
+					<label class="form-control w-full">
+						<div class="label">
+							<span class="label-text">Delivery</span>
+						</div>
+						<select class="select select-bordered" name="delivery">
+							<option selected value={true}>Yes</option>
+							<option value={false}>No</option>
+						</select>
+					</label>
+					<label class="form-control w-full">
+						<div class="label">
+							<span class="label-text">Price</span>
+						</div>
+						<input
+							name="price"
+							type="text"
+							placeholder="100 DT"
+							class="input input-bordered w-full"
+						/>
+					</label>
+				</div>
 			</div>
 			<button type="submit" class="btn btn-neutral">Publish Listing</button>
 		</form>

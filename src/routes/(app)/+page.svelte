@@ -8,7 +8,7 @@
 	import { getGameCover } from '$lib/utils/igdbUtils';
 
 	function handleSearchClick(event) {
-		goto('listings/' + event.detail);
+		goto('listings/' + event.detail.id);
 	}
 
 	const popular = [

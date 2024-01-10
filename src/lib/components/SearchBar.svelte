@@ -65,7 +65,7 @@
 					<button
 						on:click={() => {
 							reset();
-							dispatch('click', game.id);
+							dispatch('click', game);
 						}}
 						class="flex gap-3"
 					>
