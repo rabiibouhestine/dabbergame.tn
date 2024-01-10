@@ -36,7 +36,7 @@
 				<span class="label-text">Confirm Password</span>
 			</div>
 			<input
-				name="confirm password"
+				name="confirm_password"
 				type="password"
 				placeholder="Password"
 				class="input input-bordered w-full"
@@ -71,7 +71,7 @@
 				<div class="label">
 					<span class="label-text">State</span>
 				</div>
-				<select class="select select-bordered" bind:value={selectedState}>
+				<select class="select select-bordered" name="state" bind:value={selectedState}>
 					{#each uniqueStates as state}
 						<option>{state}</option>
 					{/each}
@@ -81,7 +81,7 @@
 				<div class="label">
 					<span class="label-text">City</span>
 				</div>
-				<select class="select select-bordered">
+				<select class="select select-bordered" name="city">
 					{#each data.cities.filter((city) => city.state === selectedState) as city}
 						<option>{city.city}</option>
 					{/each}

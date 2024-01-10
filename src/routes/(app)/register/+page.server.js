@@ -23,7 +23,15 @@ export const actions = {
         const city = formData.get('city');
         const phone = formData.get('phone');
 
-        console.log(state);
+        console.log(formData);
+
+        if (!email) {
+            return fail(400, {
+                email,
+                error: "Missing Email"
+            });
+        }
+
         const { data, signupError } = await supabase.auth.signUp(
             {
                 email: email,
