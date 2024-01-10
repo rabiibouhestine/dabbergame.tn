@@ -46,9 +46,12 @@ export const actions = {
             .from('profiles')
             .insert({
                 id: data.user.id,
-                first_name: 'Denmark'
+                first_name: first_name,
+                last_name: last_name,
+                city_id: city_id,
+                phone: phone
             })
         }
-  
+
 	}
 };
