@@ -1,5 +1,9 @@
 <script>
 	export let form;
+	export let data;
+
+	const uniqueStates = [...new Set(data.cities.map((city) => city.state))];
+	let selectedState;
 </script>
 
 <div class="flex flex-col max-w-md mx-auto">
@@ -67,13 +71,10 @@
 				<div class="label">
 					<span class="label-text">State</span>
 				</div>
-				<select class="select select-bordered">
-					<option selected>Tunis</option>
-					<option>Star Wars</option>
-					<option>Harry Potter</option>
-					<option>Lord of the Rings</option>
-					<option>Planet of the Apes</option>
-					<option>Star Trek</option>
+				<select class="select select-bordered" bind:value={selectedState}>
+					{#each uniqueStates as state}
+						<option>{state}</option>
+					{/each}
 				</select>
 			</label>
 			<label class="form-control w-full">
@@ -81,12 +82,9 @@
 					<span class="label-text">City</span>
 				</div>
 				<select class="select select-bordered">
-					<option selected>Tunis</option>
-					<option>Star Wars</option>
-					<option>Harry Potter</option>
-					<option>Lord of the Rings</option>
-					<option>Planet of the Apes</option>
-					<option>Star Trek</option>
+					{#each data.cities.filter((city) => city.state === selectedState) as city}
+						<option>{city.city}</option>
+					{/each}
 				</select>
 			</label>
 		</div>

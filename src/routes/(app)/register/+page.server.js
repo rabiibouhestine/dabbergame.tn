@@ -1,6 +1,15 @@
 import { AuthApiError } from "@supabase/supabase-js";
 import { fail, redirect } from "@sveltejs/kit";
 
+export async function load(event) {
+    const { request, url, locals: { supabase } } = event;
+
+    const { data } = await supabase.from("cities").select();
+    return {
+      cities: data ?? [],
+    };
+}
+
 export const actions = {
 	default: async (event) => {
 		const { request, url, locals: { supabase } } = event;
