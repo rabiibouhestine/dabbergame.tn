@@ -1,20 +1,22 @@
 <script>
-	import { goto } from '$app/navigation';
+	import { createEventDispatcher } from 'svelte';
 
 	let search = '';
 	let games = [];
 	let timeout;
 	let searching = false;
 
-	function handle_search() {
+	const dispatch = createEventDispatcher();
+
+	function handleSearch() {
 		searching = true;
 		if (timeout) {
 			clearTimeout(timeout);
 		}
-		timeout = setTimeout(get_games, 300);
+		timeout = setTimeout(getGames, 300);
 	}
 
-	async function get_games() {
+	async function getGames() {
 		if (!search) {
 			reset();
 			return;
@@ -32,11 +34,6 @@
 		alert('Something went wrong.' + e);
 	}
 
-	function handleClick(game_id) {
-		reset();
-		goto('/listings/' + game_id);
-	}
-
 	function reset() {
 		search = '';
 		games = [];
@@ -47,7 +44,7 @@
 <div class="w-full relative">
 	<input
 		bind:value={search}
-		on:input={handle_search}
+		on:input={handleSearch}
 		type="text"
 		placeholder="Enter game title..."
 		class="input input-bordered rounded-full w-full"
@@ -67,7 +64,8 @@
 				<li>
 					<button
 						on:click={() => {
-							handleClick(game.id);
+							reset();
+							dispatch('click', game.id);
 						}}
 						class="flex gap-3"
 					>

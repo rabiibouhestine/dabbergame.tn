@@ -1,6 +1,7 @@
 <script>
 	import '../../app.css';
 
+	import { goto } from '$app/navigation';
 	import SearchBar from '$lib/components/SearchBar.svelte';
 
 	import TagMultiple from '~icons/mdi/tag-multiple';
@@ -10,6 +11,10 @@
 	import AccountPlus from '~icons/mdi/account-plus';
 
 	export let data;
+
+	function handleSearchClick(event) {
+		goto('listings/' + event.detail);
+	}
 </script>
 
 <div class="flex flex-col min-h-screen">
@@ -17,7 +22,7 @@
 		<div class="flex flex-wrap flex-1 gap-6 justify-between max-w-5xl mx-auto px-4">
 			<a href="/" class="btn btn-neutral rounded-full"> Dabber Game </a>
 			<div class="flex-1 order-3 sm:order-2 min-w-60">
-				<SearchBar />
+				<SearchBar on:click={handleSearchClick} />
 			</div>
 			<div class="flex gap-2 order-2 sm:order-3">
 				{#if data.session}
