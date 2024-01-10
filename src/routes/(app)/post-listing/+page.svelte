@@ -54,7 +54,7 @@
 						({new Date(selectedGameDetails.first_release_date * 1000).getFullYear()})
 					{/if}
 				</h2>
-				<div class="flex gap-3">
+				<div class="flex flex-col sm:flex-row gap-3">
 					<div class="flex-1">
 						{#if selectedGameDetails.cover}
 							<img
