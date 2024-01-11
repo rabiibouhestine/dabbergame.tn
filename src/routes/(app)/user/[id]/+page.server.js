@@ -5,7 +5,7 @@ export async function load({ params, locals }) {
 
     const profileQuery = await supabase
     .from('profiles')
-    .select()
+    .select(`*, cities (state, city)`)
     .eq('id', id)
 
     const listingsQuery = await supabase

@@ -15,7 +15,7 @@
 		/>
 		<div class="text-center md:text-start">
 			<h2 class="text-4xl font-bold">{profile.first_name + ' ' + profile.last_name}</h2>
-			<p class="text-lg font-bold">{profile.city_id}</p>
+			<p class="text-lg font-bold">{profile.cities.state + ', ' + profile.cities.city}</p>
 			<p class="text-lg">Joined 1 month ago</p>
 		</div>
 	</div>
