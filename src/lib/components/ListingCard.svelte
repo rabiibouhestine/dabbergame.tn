@@ -7,8 +7,10 @@
 
 <a href="/listing/{listing.id}" class="flex flex-col gap-3 min-w-40 max-w-52 flex-1">
 	<div class="w-full aspect-[5/7] rounded-lg overflow-hidden">
-		<div class="w-full h-[15%] flex items-center bg-blue-600 px-3 py-1 text-white font-bold">
-			{listing.listing_platform}
+		<div class="w-full h-[15%] flex items-center bg-playstation px-3 py-1">
+			<p class="text-white font-bold line-clamp-1">
+				{listing.listing_platform}
+			</p>
 		</div>
 		<img
 			class="w-full"
