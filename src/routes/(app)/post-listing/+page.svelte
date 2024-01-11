@@ -50,7 +50,7 @@
 			</div>
 		</div>
 	{:else}
-		<form class="flex flex-col gap-4" method="POST" action="/login">
+		<form class="flex flex-col gap-4" method="POST" action="/post-listing">
 			<div class="flex flex-col gap-6 rounded-container">
 				<h2 class="text-3xl font-bold">
 					{selectedGameDetails.name}
@@ -114,6 +114,12 @@
 						</label>
 					</div>
 				</div>
+				<label class="form-control w-full">
+					<div class="label">
+						<span class="label-text">Store Link</span>
+					</div>
+					<input name="store_link" type="text" placeholder="" class="input input-bordered w-full" />
+				</label>
 			</div>
 			<div class="w-full flex flex-col gap-8 rounded-container">
 				<div class="divider divider-start text-4xl font-bold">Trade</div>
