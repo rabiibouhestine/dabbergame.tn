@@ -32,8 +32,11 @@ export const actions = {
         const data = await response.json();
         const game = data[0];
 
+        // Get Session
+        const session = await event.locals.getSession();
+
         // Save Listing in the database
-        console.log(game);
+        console.log(session);
 
 	}
 };
