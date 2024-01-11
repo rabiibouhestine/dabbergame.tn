@@ -110,6 +110,7 @@
 								type="text"
 								placeholder="100 DT"
 								class="input input-bordered w-full"
+								value={0}
 							/>
 						</label>
 					</div>

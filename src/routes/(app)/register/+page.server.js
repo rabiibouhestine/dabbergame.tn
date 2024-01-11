@@ -22,8 +22,6 @@ export const actions = {
         const city_id = formData.get('city_id');
         const phone = formData.get('phone');
 
-        console.log(formData);
-
         if (!email) {
             return fail(400, {
                 email,

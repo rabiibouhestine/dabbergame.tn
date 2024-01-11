@@ -29,14 +29,38 @@ export const actions = {
             headers: headers,
             body: body
         })
-        const data = await response.json();
-        const game = data[0];
+        const responseData = await response.json();
+        const game = responseData[0];
 
         // Get Session
         const session = await event.locals.getSession();
 
         // Save Listing in the database
-        console.log(session);
+        const { data, error } = await supabase
+        .from('listings')
+        .insert({
+            user_id: session.user.id,
+            game_id: game_id,
+            game_cover: game.cover.image_id,
+            game_name: game.name,
+            game_description: game.summary,
+            game_genres: game.genres,
+            game_platforms: game.platforms,
+            game_rating: game.aggregated_rating,
+            // game_website text,
+            // game_wikipedia text,
+            // game_youtube text,
+            // game_steam text,
+            // game_epicgames text,
+            listing_platform: platform,
+            listing_condition: condition,
+            listing_delivery: delivery,
+            listing_price: price,
+            listing_trade: trade,
+            listing_store_link: store_link,
+        })
+        .select()
 
+        throw redirect(303, "/listing/" + data[0].id);
 	}
 };
