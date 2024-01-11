@@ -139,6 +139,8 @@
 					{/each}
 				</div>
 			</div>
+			<input name="game_id" type="text" class="hidden" bind:value={selectedGameDetails.id} />
+			<input name="trade" type="text" class="hidden" value={JSON.stringify(tradeGames)} />
 			<button type="submit" class="btn btn-neutral rounded-full">Publish Listing</button>
 		</form>
 	{/if}
