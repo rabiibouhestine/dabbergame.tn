@@ -52,7 +52,7 @@
 				<div class="flex flex-wrap gap-3 justify-between">
 					<div class="flex flex-wrap gap-3">
 						<div class="flex items-center bg-base-200 rounded-full px-4 py-2 text-center font-bold">
-							Condition: New
+							Condition: {data.listing.listing_condition}
 						</div>
 						<div
 							class="flex items-center gap-1 bg-base-200 rounded-full px-4 py-2 text-center font-bold"
@@ -66,18 +66,17 @@
 						</div>
 					</div>
 					<div class="flex items-center bg-base-200 rounded-full px-4 py-2 text-center font-bold">
-						200 DT
+						{data.listing.listing_price} DT
 					</div>
 				</div>
 				<div class="flex flex-col gap-4">
 					<p>
-						Join The Finals, the world-famous, free-to-play, combat-centered game show! Fight
-						alongside your teammates in virtual arenas that you can alter, exploit, and even
-						destroy. Build your own playstyle in this first-person shooter to win escalating
-						tournaments and lasting fame. Can you reach The Finals?
+						{data.listing.game_description}
 					</p>
-					<p>Genre: Shooter, Tactical</p>
-					<p>Platforms: PlayStation 5, PC (Microsoft Windows), Xbox Series X|S</p>
+					<p>Genre: {data.listing.game_genres.map((genre) => genre.name).join(', ')}</p>
+					<p>
+						Platforms: {data.listing.game_platforms.map((platform) => platform.name).join(', ')}
+					</p>
 				</div>
 			</div>
 			<div class="flex flex-wrap justify-between">
@@ -102,7 +101,7 @@
 					</a>
 				</div>
 				<div class="flex items-center bg-base-200 rounded-full px-4 py-2 text-center font-bold">
-					Rating: 90
+					Rating: {Math.round(data.listing.game_rating)}
 				</div>
 			</div>
 		</div>
