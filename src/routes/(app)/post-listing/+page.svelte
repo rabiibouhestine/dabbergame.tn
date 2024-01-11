@@ -15,6 +15,10 @@
 		tradeGames = [...tradeGames, event.detail];
 	}
 
+	function removeGameTrade(id) {
+		tradeGames = tradeGames.filter((game) => game.id !== id);
+	}
+
 	const popular = [
 		{
 			image_id: 'co7as5'
@@ -116,7 +120,16 @@
 				<SearchBar on:click={handleGameTrade} />
 				<div class="h-full flex flex-wrap justify-center items-center gap-6">
 					{#each tradeGames as game}
-						<img src={getGameCover(game.cover.image_id)} alt="game" class="rounded-xl w-32" />
+						<div class="flex flex-col gap-2">
+							<img src={getGameCover(game.cover.image_id)} alt="game" class="rounded-xl w-32" />
+							<button
+								on:click={() => {
+									removeGameTrade(game.id);
+								}}
+								type="button"
+								class="btn rounded-full">Remove</button
+							>
+						</div>
 					{/each}
 				</div>
 			</div>
