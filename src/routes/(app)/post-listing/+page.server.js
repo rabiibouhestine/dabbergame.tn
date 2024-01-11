@@ -40,6 +40,7 @@ export const actions = {
         .from('listings')
         .insert({
             user_id: session.user.id,
+            profile_id: session.user.id,
             game_id: game_id,
             game_cover: game.cover.image_id,
             game_name: game.name,

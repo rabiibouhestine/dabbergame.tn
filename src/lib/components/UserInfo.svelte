@@ -9,7 +9,7 @@
 		class="rounded-full w-10 h-10"
 	/>
 	<div>
-		<h2 class="line-clamp-1 font-bold">{user.name}</h2>
-		<p class="line-clamp-1 text-xs">{user.state + ', ' + user.city}</p>
+		<h2 class="line-clamp-1 font-bold">{user?.first_name + ' ' + user?.last_name}</h2>
+		<p class="line-clamp-1 text-xs">{user?.cities.state + ', ' + user?.cities.city}</p>
 	</div>
 </div>

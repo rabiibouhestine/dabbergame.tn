@@ -7,6 +7,9 @@
 	import UserInfo from '$lib/components/UserInfo.svelte';
 	import { getGameCover } from '$lib/utils/igdbUtils';
 
+	export let data;
+	console.log(data);
+
 	function handleSearchClick(event) {
 		goto('listings/' + event.detail.id);
 	}
@@ -23,99 +26,6 @@
 		},
 		{
 			image_id: 'co6jar'
-		}
-	];
-
-	const games = [
-		{
-			name: 'REGICIDE SOLITAIRE',
-			href: '/regicide-solitaire',
-			time: 8,
-			weight: 1.94
-		},
-		{
-			name: 'SCOUNDREL',
-			href: '/scoundrel',
-			time: 5,
-			weight: 1.0
-		},
-		{
-			name: 'CLEAR THE DUNGEON',
-			href: '/clear-the-dungeon',
-			time: 3,
-			weight: 1.0
-		},
-		{
-			name: 'MERCHANT SOLITAIRE',
-			href: '/merchant-solitaire',
-			time: 5,
-			weight: 1.0
-		},
-		{
-			name: 'CARD CAPTURE',
-			href: '/card-capture',
-			time: 5,
-			weight: 1.4
-		},
-		{
-			name: 'AREA 52',
-			href: '/area-52',
-			time: 5,
-			weight: 1.3
-		},
-		{
-			name: 'REGICIDE SOLITAIRE',
-			href: '/regicide-solitaire',
-			time: 8,
-			weight: 1.94
-		},
-		{
-			name: 'SCOUNDREL',
-			href: '/scoundrel',
-			time: 5,
-			weight: 1.0
-		},
-		{
-			name: 'CLEAR THE DUNGEON',
-			href: '/clear-the-dungeon',
-			time: 3,
-			weight: 1.0
-		},
-		{
-			name: 'MERCHANT SOLITAIRE',
-			href: '/merchant-solitaire',
-			time: 5,
-			weight: 1.0
-		},
-		{
-			name: 'CARD CAPTURE',
-			href: '/card-capture',
-			time: 5,
-			weight: 1.4
-		},
-		{
-			name: 'AREA 52',
-			href: '/area-52',
-			time: 5,
-			weight: 1.3
-		},
-		{
-			name: 'MERCHANT SOLITAIRE',
-			href: '/merchant-solitaire',
-			time: 5,
-			weight: 1.0
-		},
-		{
-			name: 'CARD CAPTURE',
-			href: '/card-capture',
-			time: 5,
-			weight: 1.4
-		},
-		{
-			name: 'AREA 52',
-			href: '/area-52',
-			time: 5,
-			weight: 1.3
 		}
 	];
 </script>
@@ -146,9 +56,7 @@
 			<div class="flex flex-col gap-3">
 				{#each [1, 2, 3, 4] as seller}
 					<div class="flex items-center justify-between">
-						<UserInfo
-							user={{ name: 'Foulen Ben Falten', state: 'Ben Arous', city: 'El Mourouj' }}
-						/>
+						<UserInfo />
 						<div class="flex justify-center items-center gap-1 bg-base-100 rounded-full px-4 h-10">
 							<TagsLine />
 							<span class="font-bold">3</span>
@@ -160,8 +68,8 @@
 	</div>
 	<div class="divider divider-start text-4xl font-bold">Latest Listings</div>
 	<div class="flex flex-wrap justify-center gap-8">
-		{#each games as game}
-			<ListingCard />
+		{#each data.listings as listing}
+			<ListingCard {listing} />
 		{/each}
 	</div>
 	<a href="/listings" class="btn btn-lg btn-neutral rounded-full">

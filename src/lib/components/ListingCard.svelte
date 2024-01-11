@@ -22,6 +22,6 @@
 		</div>
 	{/if}
 	{#if showUserInfo}
-		<UserInfo user={{ name: 'Foulen Ben Falten', state: 'Ben Arous', city: 'El Mourouj' }} />
+		<UserInfo user={listing.profiles} />
 	{/if}
 </a>
