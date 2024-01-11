@@ -7,6 +7,8 @@
 	import CancelOutlineRounded from '~icons/material-symbols/cancel-outline-rounded';
 	import { getGameCover } from '$lib/utils/igdbUtils';
 
+	export let data;
+
 	const popular = [
 		{
 			image_id: 'co7as5'
@@ -25,7 +27,7 @@
 
 <div class="flex items-center md:items-start flex-col md:flex-row gap-10">
 	<div class="min-w-52 flex flex-col justify-center items-center gap-4">
-		<ListingCard showPrice={false} />
+		<ListingCard showPrice={false} listing={data.listing} />
 		<div class="w-full flex flex-col gap-3">
 			<span
 				class="flex justify-center items-center bg-base-300 rounded-full px-4 py-2 text-lg text-center font-bold"
@@ -46,7 +48,7 @@
 	<div class="flex flex-col gap-6">
 		<div class="rounded-container flex flex-col justify-between gap-6 h-full">
 			<div class="flex flex-col gap-6">
-				<h2 class="text-4xl font-bold">The Finals</h2>
+				<h2 class="text-4xl font-bold">{data.listing.game_name}</h2>
 				<div class="flex flex-wrap gap-3 justify-between">
 					<div class="flex flex-wrap gap-3">
 						<div class="flex items-center bg-base-200 rounded-full px-4 py-2 text-center font-bold">
