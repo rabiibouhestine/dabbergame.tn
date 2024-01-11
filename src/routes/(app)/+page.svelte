@@ -8,7 +8,6 @@
 	import { getGameCover } from '$lib/utils/igdbUtils';
 
 	export let data;
-	console.log(data);
 
 	function handleSearchClick(event) {
 		goto('listings/' + event.detail.id);

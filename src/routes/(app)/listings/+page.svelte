@@ -1,10 +1,7 @@
 <script>
 	import ListingCard from '$lib/components/ListingCard.svelte';
-	import Steam from '~icons/mdi/steam';
-	import Twitch from '~icons/mdi/twitch';
-	import Reddit from '~icons/mdi/reddit';
 
-	let listings = Array.from({ length: 15 }, (_, index) => index + 1);
+	export let data;
 </script>
 
 <div class="flex flex-col gap-y-8">
@@ -34,8 +31,8 @@
 	</div>
 	<div class="divider divider-start text-4xl font-bold">Listings</div>
 	<div class="flex flex-wrap justify-center gap-8">
-		{#each listings as listing}
-			<ListingCard />
+		{#each data.listings as listing}
+			<ListingCard {listing} />
 		{/each}
 	</div>
 	<div class="join flex mt-8">
