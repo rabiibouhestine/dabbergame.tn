@@ -78,7 +78,7 @@
 							</div>
 							<select class="select select-bordered" name="platform">
 								{#each selectedGameDetails.platforms as platform}
-									<option value={platform.id}>{platform.name}</option>
+									<option>{platform.name}</option>
 								{/each}
 							</select>
 						</label>
