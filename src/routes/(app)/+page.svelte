@@ -10,7 +10,7 @@
 	export let data;
 
 	function handleSearchClick(event) {
-		goto('listings/' + event.detail.id);
+		goto('/listings/' + event.detail.id);
 	}
 
 	const popular = [
