@@ -29,19 +29,7 @@
 	<div class="min-w-52 flex flex-col justify-center items-center gap-4">
 		<ListingCard showPrice={false} listing={data.listing} />
 		<div class="w-full flex flex-col gap-3">
-			<span
-				class="flex justify-center items-center bg-base-300 rounded-full px-4 py-2 text-lg text-center font-bold"
-			>
-				<div class="rating">
-					<input type="radio" name="rating-1" class="mask mask-star" />
-					<input type="radio" name="rating-1" class="mask mask-star" checked />
-					<input type="radio" name="rating-1" class="mask mask-star" />
-					<input type="radio" name="rating-1" class="mask mask-star" />
-					<input type="radio" name="rating-1" class="mask mask-star" />
-				</div>
-			</span>
 			<span class="bg-base-300 rounded-full px-4 py-2 text-lg text-center font-bold">Phone</span>
-			<span class="bg-base-300 rounded-full px-4 py-2 text-lg text-center font-bold">Facebook</span>
 			<span class="bg-base-300 rounded-full px-4 py-2 text-lg text-center font-bold">Buy Now</span>
 		</div>
 	</div>
