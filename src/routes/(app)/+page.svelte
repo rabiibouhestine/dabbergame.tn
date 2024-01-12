@@ -1,17 +1,10 @@
 <script>
-	import { goto } from '$app/navigation';
-
 	import TagsLine from '~icons/clarity/tags-line';
 	import ListingCard from '$lib/components/ListingCard.svelte';
-	import SearchBar from '$lib/components/SearchBar.svelte';
 	import UserInfo from '$lib/components/UserInfo.svelte';
 	import { getGameCover } from '$lib/utils/igdbUtils';
 
 	export let data;
-
-	function handleSearchClick(event) {
-		goto('/listings/' + event.detail.id);
-	}
 
 	const popular = [
 		{
@@ -34,9 +27,6 @@
 		<div class="text-center">
 			<h2 class="text-7xl font-bold">Dabber Game</h2>
 			<p class="text-2xl font-medium">Best place to trade video games in Tunisia!</p>
-		</div>
-		<div class="w-full max-w-[32rem]">
-			<SearchBar on:click={handleSearchClick} />
 		</div>
 	</div>
 	<div class="flex flex-col lg:flex-row gap-6">
