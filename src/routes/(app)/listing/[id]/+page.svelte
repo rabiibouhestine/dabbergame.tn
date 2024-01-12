@@ -74,13 +74,16 @@
 						{data.listing.game_description}
 					</p>
 					<p>
-						Release Date: {data.listing.game_release_date?.split('T')[0]}
+						<span class="font-bold">Release Date: </span>
+						{data.listing.game_release_date?.split('T')[0]}
 					</p>
 					<p>
-						Genre: {data.listing.game_genres.map((genre) => genre.name).join(', ')}
+						<span class="font-bold">Genre: </span>
+						{data.listing.game_genres.map((genre) => genre.name).join(', ')}
 					</p>
 					<p>
-						Platforms: {data.listing.game_platforms.map((platform) => platform.name).join(', ')}
+						<span class="font-bold">Platforms: </span>
+						{data.listing.game_platforms.map((platform) => platform.name).join(', ')}
 					</p>
 				</div>
 			</div>
