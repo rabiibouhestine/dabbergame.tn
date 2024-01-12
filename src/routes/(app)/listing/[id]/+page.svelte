@@ -70,7 +70,7 @@
 					</div>
 				</div>
 				<div class="flex flex-col gap-4">
-					<p>
+					<p class="line-clamp-4">
 						{data.listing.game_description}
 					</p>
 					<p>
