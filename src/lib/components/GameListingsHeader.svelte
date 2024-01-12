@@ -22,6 +22,7 @@
 		</h2>
 		<div class="flex flex-col gap-4">
 			<p class="line-clamp-4">{game.summary}</p>
+			<p>Release Date: {new Date(game.first_release_date * 1000).toISOString().split('T')[0]}</p>
 			<p>Genres: {game.genres.map((genre) => genre.name).join(', ')}</p>
 			<p>Platforms: {game.platforms.map((platform) => platform.name).join(', ')}</p>
 		</div>
