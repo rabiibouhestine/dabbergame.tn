@@ -18,7 +18,7 @@
 </script>
 
 <div class="flex flex-col min-h-screen bg-base-300">
-	<div class="navbar bg-base-100 py-4">
+	<div class="navbar bg-base-100 py-3">
 		<div class="flex flex-wrap flex-1 gap-6 justify-between max-w-5xl mx-auto px-4">
 			<a href="/" class="btn btn-neutral rounded-full"> Dabber Game </a>
 			<div class="flex-1 order-3 sm:order-2 min-w-60">
