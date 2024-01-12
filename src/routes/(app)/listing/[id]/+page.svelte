@@ -41,11 +41,11 @@
 				<h2 class="text-4xl font-bold">{data.listing.game_name}</h2>
 				<div class="flex flex-wrap gap-3 justify-between">
 					<div class="flex flex-wrap gap-3">
-						<div class="flex items-center bg-base-200 rounded-full px-4 py-2 text-center font-bold">
+						<div class="flex items-center bg-neutral rounded-full px-4 py-2 text-center font-bold">
 							Condition: {data.listing.listing_condition}
 						</div>
 						<div
-							class="flex items-center gap-1 bg-base-200 rounded-full px-4 py-2 text-center font-bold"
+							class="flex items-center gap-1 bg-neutral rounded-full px-4 py-2 text-center font-bold"
 						>
 							{#if data.listing.listing_delivery}
 								<CheckCircleOutlineRounded />
@@ -55,7 +55,7 @@
 							Delivery
 						</div>
 						<div
-							class="flex items-center gap-1 bg-base-200 rounded-full px-4 py-2 text-center font-bold"
+							class="flex items-center gap-1 bg-neutral rounded-full px-4 py-2 text-center font-bold"
 						>
 							{#if data.listing.listing_trade.length}
 								<CheckCircleOutlineRounded />
@@ -65,7 +65,7 @@
 							Trade
 						</div>
 					</div>
-					<div class="flex items-center bg-base-200 rounded-full px-4 py-2 text-center font-bold">
+					<div class="flex items-center bg-neutral rounded-full px-4 py-2 text-center font-bold">
 						{data.listing.listing_price} DT
 					</div>
 				</div>
@@ -87,32 +87,40 @@
 			<div class="flex flex-wrap justify-between">
 				<div class="flex flex-wrap gap-3">
 					{#if data.listing.game_website}
-						<a href={data.listing.game_website} target="_blank" class="btn btn-circle">
+						<a href={data.listing.game_website} target="_blank" class="btn btn-neutral btn-circle">
 							<Launch class="text-xl" />
 						</a>
 					{/if}
 					{#if data.listing.game_wikipedia}
-						<a href={data.listing.game_wikipedia} target="_blank" class="btn btn-circle">
+						<a
+							href={data.listing.game_wikipedia}
+							target="_blank"
+							class="btn btn-neutral btn-circle"
+						>
 							<Wikipedia class="text-xl" />
 						</a>
 					{/if}
 					{#if data.listing.game_youtube}
-						<a href={data.listing.game_youtube} target="_blank" class="btn btn-circle">
+						<a href={data.listing.game_youtube} target="_blank" class="btn btn-neutral btn-circle">
 							<Youtube class="text-xl" />
 						</a>
 					{/if}
 					{#if data.listing.game_steam}
-						<a href={data.listing.game_steam} target="_blank" class="btn btn-circle">
+						<a href={data.listing.game_steam} target="_blank" class="btn btn-neutral btn-circle">
 							<Steam class="text-xl" />
 						</a>
 					{/if}
 					{#if data.listing.game_epicgames}
-						<a href={data.listing.game_epicgames} target="_blank" class="btn btn-circle">
+						<a
+							href={data.listing.game_epicgames}
+							target="_blank"
+							class="btn btn-neutral btn-circle"
+						>
 							<Epicgames class="text-xl" />
 						</a>
 					{/if}
 				</div>
-				<div class="flex items-center bg-base-200 rounded-full px-4 py-2 text-center font-bold">
+				<div class="flex items-center bg-neutral rounded-full px-4 py-2 text-center font-bold">
 					Rating: {Math.round(data.listing.game_rating)}
 				</div>
 			</div>

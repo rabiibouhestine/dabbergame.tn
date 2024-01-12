@@ -17,8 +17,8 @@
 	}
 </script>
 
-<div class="flex flex-col min-h-screen">
-	<div class="navbar bg-base-300 py-4">
+<div class="flex flex-col min-h-screen bg-base-300">
+	<div class="navbar bg-base-100 py-4">
 		<div class="flex flex-wrap flex-1 gap-6 justify-between max-w-5xl mx-auto px-4">
 			<a href="/" class="btn btn-neutral rounded-full"> Dabber Game </a>
 			<div class="flex-1 order-3 sm:order-2 min-w-60">
@@ -63,7 +63,7 @@
 		<slot />
 	</div>
 
-	<footer class="footer footer-center p-10 bg-base-300 text-base-content rounded">
+	<footer class="footer footer-center p-10 bg-base-100 text-base-content rounded">
 		<nav class="grid grid-flow-col gap-4">
 			<a href="/" class="link link-hover">About us</a>
 			<a href="/" class="link link-hover">Contact</a>

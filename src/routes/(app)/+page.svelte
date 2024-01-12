@@ -46,7 +46,7 @@
 				{#each [1, 2, 3, 4] as seller}
 					<div class="flex items-center justify-between">
 						<UserInfo />
-						<div class="flex justify-center items-center gap-1 bg-base-100 rounded-full px-4 h-10">
+						<div class="flex justify-center items-center gap-1 bg-neutral rounded-full px-4 h-10">
 							<TagsLine />
 							<span class="font-bold">3</span>
 						</div>

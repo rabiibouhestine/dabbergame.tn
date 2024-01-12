@@ -4,6 +4,6 @@
 
 @layer utilities {
 	.rounded-container {
-		@apply bg-neutral p-6 rounded-3xl;
+		@apply bg-base-100 p-6 rounded-3xl;
 	}
 }
