@@ -45,7 +45,12 @@
 						<div
 							class="flex items-center gap-1 bg-base-200 rounded-full px-4 py-2 text-center font-bold"
 						>
-							<CheckCircleOutlineRounded />Delivery
+							{#if data.listing.listing_delivery}
+								<CheckCircleOutlineRounded />
+							{:else}
+								<CancelOutlineRounded />
+							{/if}
+							Delivery
 						</div>
 						<div
 							class="flex items-center gap-1 bg-base-200 rounded-full px-4 py-2 text-center font-bold"
