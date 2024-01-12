@@ -78,7 +78,7 @@
 						{data.listing.game_release_date?.split('T')[0]}
 					</p>
 					<p>
-						<span class="font-bold">Genre: </span>
+						<span class="font-bold">Genres: </span>
 						{data.listing.game_genres.map((genre) => genre.name).join(', ')}
 					</p>
 					<p>
