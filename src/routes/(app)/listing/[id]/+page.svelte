@@ -1,8 +1,10 @@
 <script>
 	import ListingCard from '$lib/components/ListingCard.svelte';
+	import Launch from '~icons/mdi/launch';
+	import Wikipedia from '~icons/mdi/wikipedia';
+	import Youtube from '~icons/mdi/youtube';
 	import Steam from '~icons/mdi/steam';
-	import Twitch from '~icons/mdi/twitch';
-	import Reddit from '~icons/mdi/reddit';
+	import Epicgames from '~icons/simple-icons/epicgames';
 	import CheckCircleOutlineRounded from '~icons/material-symbols/check-circle-outline-rounded';
 	import CancelOutlineRounded from '~icons/material-symbols/cancel-outline-rounded';
 	import { getGameCover } from '$lib/utils/igdbUtils';
@@ -55,7 +57,12 @@
 						<div
 							class="flex items-center gap-1 bg-base-200 rounded-full px-4 py-2 text-center font-bold"
 						>
-							<CancelOutlineRounded />Trade
+							{#if data.listing.listing_trade.length}
+								<CheckCircleOutlineRounded />
+							{:else}
+								<CancelOutlineRounded />
+							{/if}
+							Trade
 						</div>
 					</div>
 					<div class="flex items-center bg-base-200 rounded-full px-4 py-2 text-center font-bold">
@@ -74,24 +81,31 @@
 			</div>
 			<div class="flex flex-wrap justify-between">
 				<div class="flex flex-wrap gap-3">
-					<a
-						href="/listings"
-						class="flex justify-center items-center bg-base-200 text-neutral-content rounded-full w-10 h-10"
-					>
-						<Steam />
-					</a>
-					<a
-						href="/listings"
-						class="flex justify-center items-center bg-base-200 text-neutral-content rounded-full w-10 h-10"
-					>
-						<Twitch />
-					</a>
-					<a
-						href="/listings"
-						class="flex justify-center items-center bg-base-200 text-neutral-content rounded-full w-10 h-10"
-					>
-						<Reddit />
-					</a>
+					{#if data.listing.game_website}
+						<a href={data.listing.game_website} target="_blank" class="btn btn-circle">
+							<Launch class="text-xl" />
+						</a>
+					{/if}
+					{#if data.listing.game_wikipedia}
+						<a href={data.listing.game_wikipedia} target="_blank" class="btn btn-circle">
+							<Wikipedia class="text-xl" />
+						</a>
+					{/if}
+					{#if data.listing.game_youtube}
+						<a href={data.listing.game_youtube} target="_blank" class="btn btn-circle">
+							<Youtube class="text-xl" />
+						</a>
+					{/if}
+					{#if data.listing.game_steam}
+						<a href={data.listing.game_steam} target="_blank" class="btn btn-circle">
+							<Steam class="text-xl" />
+						</a>
+					{/if}
+					{#if data.listing.game_epicgames}
+						<a href={data.listing.game_epicgames} target="_blank" class="btn btn-circle">
+							<Epicgames class="text-xl" />
+						</a>
+					{/if}
 				</div>
 				<div class="flex items-center bg-base-200 rounded-full px-4 py-2 text-center font-bold">
 					Rating: {Math.round(data.listing.game_rating)}
