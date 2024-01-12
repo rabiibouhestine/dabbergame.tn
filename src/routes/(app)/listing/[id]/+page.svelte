@@ -73,7 +73,12 @@
 					<p>
 						{data.listing.game_description}
 					</p>
-					<p>Genre: {data.listing.game_genres.map((genre) => genre.name).join(', ')}</p>
+					<p>
+						Release Date: {data.listing.game_release_date}
+					</p>
+					<p>
+						Genre: {data.listing.game_genres.map((genre) => genre.name).join(', ')}
+					</p>
 					<p>
 						Platforms: {data.listing.game_platforms.map((platform) => platform.name).join(', ')}
 					</p>

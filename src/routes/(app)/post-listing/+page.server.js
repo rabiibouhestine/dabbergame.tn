@@ -44,6 +44,7 @@ export const actions = {
             game_id: game_id,
             game_cover: game.cover.image_id,
             game_name: game.name,
+            game_release_date: new Date(game.first_release_date * 1000).toISOString(),
             game_description: game.summary,
             game_genres: game.genres,
             game_platforms: game.platforms,
