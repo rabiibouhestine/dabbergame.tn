@@ -9,6 +9,7 @@
 	import TagPlus from '~icons/mdi/tag-plus';
 	import AccountArrowRight from '~icons/mdi/account-arrow-right';
 	import AccountPlus from '~icons/mdi/account-plus';
+	import Account from '~icons/mdi/account';
 
 	export let data;
 
@@ -37,12 +38,8 @@
 					<Store class="text-xl" />
 				</a>
 				{#if data.session}
-					<a href={'/user/' + data.session.user.id}>
-						<img
-							src={'https://gravatar.com/avatar/' + 'hashedEmail'}
-							alt="profile"
-							class="btn btn-circle"
-						/>
+					<a href={'/user/' + data.session.user.id} class="btn btn-circle btn-neutral">
+						<Account class="text-xl" />
 					</a>
 				{/if}
 				{#if !data.session}
