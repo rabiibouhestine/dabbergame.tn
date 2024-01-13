@@ -18,7 +18,7 @@
 			/>
 		</div>
 		<div class="col-span-3 flex flex-col gap-6">
-			<h2 class="text-5xl font-bold">
+			<h2 class="text-4xl font-bold">
 				{game.name}
 			</h2>
 			<GameDetails
