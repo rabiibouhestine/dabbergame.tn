@@ -42,9 +42,11 @@
 		</div>
 		<div class="min-w-80 flex flex-col gap-8 rounded-container">
 			<div class="divider divider-start text-4xl font-bold">Featured</div>
-			<div class="flex flex-col gap-3">
+			<div class="flex flex-col gap-2">
 				{#each [1, 2, 3, 4] as seller}
-					<div class="flex items-center justify-between">
+					<div
+						class="flex items-center justify-between border-neutral border-b last:border-0 pb-2 last:pb-0"
+					>
 						<UserInfo />
 						<div class="badge badge-neutral gap-1 p-4 font-bold">
 							<TagsLine />
