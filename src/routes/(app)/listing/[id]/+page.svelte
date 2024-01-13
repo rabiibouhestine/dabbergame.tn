@@ -8,6 +8,7 @@
 	import CancelOutlineRounded from '~icons/material-symbols/cancel-outline-rounded';
 
 	export let data;
+	let listing = data.listing;
 
 	const popular = [
 		{
@@ -27,7 +28,7 @@
 
 <div class="flex items-center md:items-start flex-col md:flex-row gap-10">
 	<div class="min-w-52 flex flex-col justify-center items-center gap-4">
-		<ListingCard showPrice={false} listing={data.listing} />
+		<ListingCard showPrice={false} {listing} />
 		<div class="w-full flex flex-col gap-3">
 			<span class="btn btn-outline btn-primary rounded-full text-lg font-bold"> Phone </span>
 			<span class="btn btn-outline btn-secondary rounded-full text-lg font-bold"> Buy Now </span>
@@ -35,14 +36,14 @@
 	</div>
 	<div class="flex flex-col gap-6">
 		<div class="rounded-container flex flex-col justify-between gap-6 h-full">
-			<h2 class="text-4xl font-bold">{data.listing.game_name}</h2>
+			<h2 class="text-4xl font-bold">{listing.game_name}</h2>
 			<div class="flex flex-wrap gap-3 justify-between">
 				<div class="flex flex-wrap gap-3">
 					<div class="badge badge-neutral p-4 font-bold">
-						Condition: {data.listing.listing_condition}
+						Condition: {listing.listing_condition}
 					</div>
 					<div class="badge badge-neutral gap-1 p-4 font-bold">
-						{#if data.listing.listing_delivery}
+						{#if listing.listing_delivery}
 							<CheckCircleOutlineRounded />
 						{:else}
 							<CancelOutlineRounded />
@@ -50,7 +51,7 @@
 						Delivery
 					</div>
 					<div class="badge badge-neutral gap-1 p-4 font-bold">
-						{#if data.listing.listing_trade.length}
+						{#if listing.listing_trade.length}
 							<CheckCircleOutlineRounded />
 						{:else}
 							<CancelOutlineRounded />
@@ -59,20 +60,20 @@
 					</div>
 				</div>
 				<div class="badge badge-neutral p-4 font-bold">
-					{data.listing.listing_price} DT
+					{listing.listing_price} DT
 				</div>
 			</div>
 			<GameDetails
-				summary={data.listing.game_description}
-				release_date={data.listing.game_release_date?.split('T')[0]}
-				genres={data.listing.game_genres}
-				platforms={data.listing.game_platforms}
-				website={data.listing.game_website}
-				wikipedia={data.listing.game_wikipedia}
-				youtube={data.listing.game_youtube}
-				steam={data.listing.game_steam}
-				epicgames={data.listing.game_epicgames}
-				rating={Math.round(data.listing.game_rating)}
+				summary={listing.game_description}
+				release_date={listing.game_release_date?.split('T')[0]}
+				genres={listing.game_genres}
+				platforms={listing.game_platforms}
+				website={listing.game_website}
+				wikipedia={listing.game_wikipedia}
+				youtube={listing.game_youtube}
+				steam={listing.game_steam}
+				epicgames={listing.game_epicgames}
+				rating={Math.round(listing.game_rating)}
 			/>
 		</div>
 		<div class="w-full flex flex-col gap-8 rounded-container">

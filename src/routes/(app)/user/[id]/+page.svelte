@@ -6,7 +6,7 @@
 	import Cog from '~icons/mdi/cog';
 
 	export let data;
-	const profile = data.profile;
+	let profile = data.profile;
 </script>
 
 <div class="flex flex-col gap-8">

@@ -9,7 +9,7 @@
 	import Epicgames from '~icons/simple-icons/epicgames';
 
 	export let data;
-	const game = data.game;
+	let game = data.game;
 
 	let listings = Array.from({ length: 15 }, (_, index) => index + 1);
 </script>
