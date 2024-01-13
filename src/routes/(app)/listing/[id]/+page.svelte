@@ -91,7 +91,7 @@
 					</p>
 				</div>
 			</div>
-			<div class="flex flex-wrap justify-between items-center">
+			<div class="flex flex-wrap justify-between items-end">
 				<div class="flex flex-wrap gap-3">
 					{#if data.listing.game_website}
 						<a href={data.listing.game_website} target="_blank" class="btn btn-neutral btn-circle">
