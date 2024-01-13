@@ -24,10 +24,10 @@
 			</div>
 		</div>
 		<div class="flex justify-center gap-3">
-			<a href="/listings" class="btn btn-circle">
+			<a href="/listings" class="btn btn-neutral btn-circle">
 				<Phone class="text-xl" />
 			</a>
-			<a href="/listings" class="btn btn-circle">
+			<a href="/listings" class="btn btn-neutral btn-circle">
 				<Facebook class="text-xl" />
 			</a>
 			<a href="/user-settings" class="btn btn-outline btn-accent btn-circle">
