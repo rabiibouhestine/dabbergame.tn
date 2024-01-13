@@ -49,12 +49,10 @@
 				<h2 class="text-4xl font-bold">{data.listing.game_name}</h2>
 				<div class="flex flex-wrap gap-3 justify-between">
 					<div class="flex flex-wrap gap-3">
-						<div class="flex items-center bg-neutral rounded-full px-4 py-2 text-center font-bold">
+						<div class="badge badge-neutral p-4 font-bold">
 							Condition: {data.listing.listing_condition}
 						</div>
-						<div
-							class="flex items-center gap-1 bg-neutral rounded-full px-4 py-2 text-center font-bold"
-						>
+						<div class="badge badge-neutral gap-1 p-4 font-bold">
 							{#if data.listing.listing_delivery}
 								<CheckCircleOutlineRounded />
 							{:else}
@@ -62,9 +60,7 @@
 							{/if}
 							Delivery
 						</div>
-						<div
-							class="flex items-center gap-1 bg-neutral rounded-full px-4 py-2 text-center font-bold"
-						>
+						<div class="badge badge-neutral gap-1 p-4 font-bold">
 							{#if data.listing.listing_trade.length}
 								<CheckCircleOutlineRounded />
 							{:else}
@@ -73,7 +69,7 @@
 							Trade
 						</div>
 					</div>
-					<div class="flex items-center bg-neutral rounded-full px-4 py-2 text-center font-bold">
+					<div class="badge badge-neutral p-4 font-bold">
 						{data.listing.listing_price} DT
 					</div>
 				</div>
@@ -95,7 +91,7 @@
 					</p>
 				</div>
 			</div>
-			<div class="flex flex-wrap justify-between">
+			<div class="flex flex-wrap justify-between items-center">
 				<div class="flex flex-wrap gap-3">
 					{#if data.listing.game_website}
 						<a href={data.listing.game_website} target="_blank" class="btn btn-neutral btn-circle">
@@ -131,7 +127,7 @@
 						</a>
 					{/if}
 				</div>
-				<div class="flex items-center bg-neutral rounded-full px-4 py-2 text-center font-bold">
+				<div class="badge badge-neutral p-4 font-bold">
 					Rating: {Math.round(data.listing.game_rating)}
 				</div>
 			</div>
