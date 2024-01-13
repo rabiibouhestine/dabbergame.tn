@@ -33,11 +33,11 @@
 			<h2 class="text-7xl font-bold">Dabber Game</h2>
 			<p class="text-3xl">Best place to buy, sell and trade video games in Tunisia!</p>
 		</div>
-		<div class="w-full flex justify-between text-6xl">
+		<div class="w-full flex justify-between items-center text-6xl">
 			<a href="/" class="hover:text-pc hover:scale-105">
 				<Windows />
 			</a>
-			<a href="/" class="hover:text-playstation hover:scale-105">
+			<a href="/" class="hover:text-playstation hover:scale-105 text-7xl">
 				<Playstation />
 			</a>
 			<a href="/" class="hover:text-xbox hover:scale-105">
