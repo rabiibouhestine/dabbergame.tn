@@ -1,4 +1,9 @@
 <script>
+	import Windows from '~icons/cib/windows';
+	import Playstation from '~icons/cib/playstation';
+	import Xbox from '~icons/cib/xbox';
+	import Nintendo from '~icons/cib/nintendo';
+
 	import TagsLine from '~icons/clarity/tags-line';
 	import ListingCard from '$lib/components/ListingCard.svelte';
 	import UserInfo from '$lib/components/UserInfo.svelte';
@@ -27,6 +32,20 @@
 		<div class="text-center">
 			<h2 class="text-7xl font-bold">Dabber Game</h2>
 			<p class="text-3xl">Best place to buy, sell and trade video games in Tunisia!</p>
+		</div>
+		<div class="w-full flex justify-between text-6xl">
+			<a href="/" class="hover:text-pc hover:scale-105">
+				<Windows />
+			</a>
+			<a href="/" class="hover:text-playstation hover:scale-105">
+				<Playstation />
+			</a>
+			<a href="/" class="hover:text-xbox hover:scale-105">
+				<Xbox />
+			</a>
+			<a href="/" class="hover:text-nintendo hover:scale-105">
+				<Nintendo />
+			</a>
 		</div>
 	</div>
 	<div class="flex flex-col lg:flex-row gap-6">
