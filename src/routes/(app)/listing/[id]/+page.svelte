@@ -8,7 +8,7 @@
 	import CancelOutlineRounded from '~icons/material-symbols/cancel-outline-rounded';
 
 	export let data;
-	let listing = data.listing;
+	$: listing = data.listing;
 
 	const popular = [
 		{
