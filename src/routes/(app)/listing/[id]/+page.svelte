@@ -22,6 +22,12 @@
 		},
 		{
 			image_id: 'co6jar'
+		},
+		{
+			image_id: 'co6lz0'
+		},
+		{
+			image_id: 'co6jar'
 		}
 	];
 </script>
