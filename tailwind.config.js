@@ -12,9 +12,9 @@ export default {
     },
   },
   plugins: [require("daisyui")],
-  // daisyui: {
-	// 	themes: ["night"],
-	// 	darkTheme: "night",
-	// },
+  daisyui: {
+		themes: ["dracula"],
+		darkTheme: "dracula",
+	},
 }
 

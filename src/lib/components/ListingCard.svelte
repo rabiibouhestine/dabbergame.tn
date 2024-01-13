@@ -19,7 +19,7 @@
 		/>
 	</div>
 	{#if showPrice}
-		<div class="badge badge-outline p-4 w-full text-2xl font-bold">
+		<div class="badge badge-neutral p-4 w-full text-2xl font-bold">
 			{listing.listing_price} DT
 		</div>
 	{/if}

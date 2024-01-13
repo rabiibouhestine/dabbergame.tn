@@ -61,7 +61,7 @@
 			<ListingCard {listing} />
 		{/each}
 	</div>
-	<a href="/listings" class="btn btn-lg btn-neutral rounded-full">
+	<a href="/listings" class="btn btn-neutral rounded-full">
 		<TagsLine />
 		See all listings
 	</a>

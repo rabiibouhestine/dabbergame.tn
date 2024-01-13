@@ -31,11 +31,13 @@
 	<div class="min-w-52 flex flex-col justify-center items-center gap-4">
 		<ListingCard showPrice={false} listing={data.listing} />
 		<div class="w-full flex flex-col gap-3">
-			<span class="btn btn-outline btn-accent rounded-full px-4 py-2 text-lg text-center font-bold">
+			<span
+				class="btn btn-outline btn-primary rounded-full px-4 py-2 text-lg text-center font-bold"
+			>
 				Phone
 			</span>
 			<span
-				class="btn btn-outline btn-primary rounded-full px-4 py-2 text-lg text-center font-bold"
+				class="btn btn-outline btn-secondary rounded-full px-4 py-2 text-lg text-center font-bold"
 			>
 				Buy Now
 			</span>
