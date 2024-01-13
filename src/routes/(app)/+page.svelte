@@ -49,7 +49,7 @@
 		</div>
 	</div>
 	<div class="flex flex-col lg:flex-row gap-6">
-		<div class="w-full flex flex-col gap-8 rounded-container">
+		<div class="w-full flex flex-col gap-8 rounded-container justify-between">
 			<div class="divider divider-start text-4xl font-bold">Popular Games</div>
 			<div class="grid grid-cols-2 sm:grid-cols-4 gap-4">
 				{#each popular as game}
