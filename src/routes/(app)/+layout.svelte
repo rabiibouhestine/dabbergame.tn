@@ -4,6 +4,7 @@
 	import { goto } from '$app/navigation';
 	import SearchBar from '$lib/components/SearchBar.svelte';
 
+	import GamepadVariantOutline from '~icons/mdi/gamepad-variant-outline';
 	import TagMultiple from '~icons/mdi/tag-multiple';
 	import Store from '~icons/mdi/store';
 	import TagPlus from '~icons/mdi/tag-plus';
@@ -21,7 +22,9 @@
 <div class="flex flex-col min-h-screen bg-base-300">
 	<div class="navbar bg-base-100 py-3">
 		<div class="flex flex-wrap flex-1 gap-6 justify-between max-w-5xl mx-auto px-4">
-			<a href="/" class="btn btn-neutral rounded-full"> Dabber Game </a>
+			<a href="/" class="btn btn-neutral rounded-full">
+				<GamepadVariantOutline class="text-xl" />DabberGame
+			</a>
 			<div class="flex-1 order-3 sm:order-2 min-w-60">
 				<SearchBar on:click={handleSearchClick} />
 			</div>
