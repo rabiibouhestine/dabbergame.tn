@@ -2,14 +2,8 @@
 	import GameDetails from '$lib/components/GameDetails.svelte';
 	import ListingBanner from '$lib/components/ListingBanner.svelte';
 
-	import Launch from '~icons/mdi/launch';
-	import Wikipedia from '~icons/mdi/wikipedia';
-	import Youtube from '~icons/mdi/youtube';
-	import Steam from '~icons/mdi/steam';
-	import Epicgames from '~icons/simple-icons/epicgames';
-
 	export let data;
-	let game = data.game;
+	$: game = data.game;
 
 	let listings = Array.from({ length: 15 }, (_, index) => index + 1);
 </script>
