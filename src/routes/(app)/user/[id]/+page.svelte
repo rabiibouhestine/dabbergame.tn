@@ -36,7 +36,7 @@
 		</div>
 	</div>
 	<div class="divider divider-start text-4xl font-bold">Listings</div>
-	<div class="flex flex-wrap justify-center gap-8">
+	<div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6">
 		{#each data.listings as listing}
 			<ListingCard {listing} showUserInfo={false} />
 		{/each}

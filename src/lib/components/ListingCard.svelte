@@ -5,9 +5,9 @@
 	export let listing = {};
 </script>
 
-<a href="/listing/{listing.id}" class="flex flex-col gap-3 min-w-40 max-w-52 flex-1">
-	<div class="w-full aspect-[5/7] rounded-lg overflow-hidden">
-		<div class="w-full h-[15%] flex items-center bg-playstation px-3 py-1">
+<a href="/listing/{listing.id}" class="flex flex-col gap-3">
+	<div class="aspect-[5/7] rounded-lg overflow-hidden">
+		<div class="h-[15%] flex items-center bg-playstation px-3 py-1">
 			<p class="text-slate-200 font-bold line-clamp-1">
 				{listing.listing_platform}
 			</p>
