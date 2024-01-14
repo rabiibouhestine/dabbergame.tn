@@ -6,7 +6,8 @@ export default {
       colors: {
         'playstation': '#00439C',
         'xbox': '#107C10',
-        'nintendo': '#E4000F'
+        'nintendo': '#E4000F',
+        'windows': '#00A4EF'
       }
     },
   },

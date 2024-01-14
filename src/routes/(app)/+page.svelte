@@ -38,7 +38,7 @@
 			</p>
 		</div>
 		<div class="w-full px-6 flex justify-between items-center text-4xl md:text-6xl">
-			<a href="/listings" class="hover:text-pc transition ease-in-out hover:scale-125">
+			<a href="/listings" class="hover:text-windows transition ease-in-out hover:scale-125">
 				<Windows />
 			</a>
 			<a
