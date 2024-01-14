@@ -95,7 +95,7 @@
 			<div class="divider divider-start text-4xl font-bold">Trade Games</div>
 			<div class="grid grid-cols-2 sm:grid-cols-4 gap-4">
 				{#each popular as game}
-					<a href="/listings/1">
+					<a href="/listings/1" class="transition ease-in-out hover:scale-105">
 						<img src={getGameCover(game.image_id)} alt="game" class="rounded-lg" />
 					</a>
 				{/each}
