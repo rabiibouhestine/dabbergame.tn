@@ -5,6 +5,7 @@
 	import Playstation from '~icons/cib/playstation';
 	import Xbox from '~icons/cib/xbox';
 	import Nintendo from '~icons/simple-icons/nintendo';
+	import NintendoSwitch from '~icons/cib/nintendo-switch';
 
 	export let platform;
 	export let coverImageId;
