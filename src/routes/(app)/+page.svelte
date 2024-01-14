@@ -4,7 +4,9 @@
 	import Xbox from '~icons/cib/xbox';
 	import NintendoSwitch from '~icons/cib/nintendo-switch';
 
-	import TagsLine from '~icons/clarity/tags-line';
+	import TagMultiple from '~icons/mdi/tag-multiple';
+	import ArrowRight from '~icons/mdi/arrow-right-bold';
+
 	import ListingCard from '$lib/components/ListingCard.svelte';
 	import UserInfo from '$lib/components/UserInfo.svelte';
 	import { getGameCover } from '$lib/utils/igdbUtils';
@@ -28,10 +30,10 @@
 </script>
 
 <div class="flex flex-col items-center gap-y-10">
-	<div class="min-h-64 flex flex-col justify-center gap-10 items-center">
+	<div class="flex flex-col justify-center gap-10 items-center my-32">
 		<div class="text-center">
 			<h2 class="text-6xl md:text-7xl font-bold">Dabber Game</h2>
-			<p class="text-md md:text-3xl text-neutral-content">
+			<p class="text-md md:text-3xl text-neutral-content my-8">
 				Best place to buy, sell and trade video games in Tunisia!
 			</p>
 		</div>
@@ -81,7 +83,7 @@
 						<div
 							class="badge badge-neutral gap-1 p-4 font-bold transition ease-in-out group-hover:scale-105 group-hover:badge-secondary"
 						>
-							<TagsLine />
+							<TagMultiple />
 							<span class="font-bold">3</span>
 						</div>
 					</a>
@@ -89,14 +91,19 @@
 			</div>
 		</div>
 	</div>
-	<div class="divider divider-start text-4xl font-bold">Latest Listings</div>
-	<div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6">
+	<div class="w-full flex justify-between pb-2 border-b border-neutral mt-8">
+		<h2 class="text-4xl font-bold">Latest Listings</h2>
+		<a href="/listings" class="btn btn-circle btn-ghost text-3xl font-bold">
+			<ArrowRight />
+		</a>
+	</div>
+	<div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-8">
 		{#each data.listings as listing}
 			<ListingCard {listing} />
 		{/each}
 	</div>
-	<a href="/listings" class="btn btn-neutral rounded-full">
-		<TagsLine />
+	<a href="/listings" class="btn btn-outline rounded-full text-lg font-bold">
+		<TagMultiple />
 		See all listings
 	</a>
 </div>
