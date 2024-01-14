@@ -4,7 +4,7 @@
 	import Windows from '~icons/cib/windows';
 	import Playstation from '~icons/cib/playstation';
 	import Xbox from '~icons/cib/xbox';
-	import NintendoSwitch from '~icons/cib/nintendo-switch';
+	import Nintendo from '~icons/simple-icons/nintendo';
 
 	export let platform;
 	export let coverImageId;
@@ -22,7 +22,7 @@
 			case 'Xbox One':
 				return Xbox;
 			case 'Nintendo Switch':
-				return NintendoSwitch;
+				return Nintendo;
 			default:
 				return Windows;
 		}
