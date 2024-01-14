@@ -31,7 +31,7 @@
 				<SearchBar on:click={handleSearchClick} />
 			</div>
 			<div class="flex md:hidden">
-				<a href="/post-listing" class="btn btn-circle btn-neutral">
+				<a href="/" class="btn btn-circle btn-neutral">
 					<Menu class="text-xl" />
 				</a>
 			</div>
