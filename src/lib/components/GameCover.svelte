@@ -23,7 +23,7 @@
 			case 'Xbox One':
 				return Xbox;
 			case 'Nintendo Switch':
-				return Nintendo;
+				return NintendoSwitch;
 			default:
 				return Other;
 		}
