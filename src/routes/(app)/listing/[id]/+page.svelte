@@ -45,8 +45,8 @@
 			</a>
 		</div>
 		<div class="w-full flex flex-col gap-3">
-			<span class="btn btn-outline btn-primary rounded-full text-lg font-bold"> Phone </span>
-			<span class="btn btn-outline btn-secondary rounded-full text-lg font-bold"> Buy Now </span>
+			<span class="btn btn-outline btn-secondary rounded-full text-lg font-bold"> Phone </span>
+			<span class="btn btn-outline btn-primary rounded-full text-lg font-bold"> Buy Now </span>
 		</div>
 	</div>
 	<div class="flex flex-col gap-6">
