@@ -30,7 +30,7 @@
 <div class="flex flex-col items-center gap-y-10">
 	<div class="min-h-64 flex flex-col justify-center gap-10 items-center">
 		<div class="text-center">
-			<h2 class="text-5xl md:text-7xl font-bold">Dabber Game</h2>
+			<h2 class="text-6xl md:text-7xl font-bold">Dabber Game</h2>
 			<p class="text-md md:text-3xl">Best place to buy, sell and trade video games in Tunisia!</p>
 		</div>
 		<div class="w-full flex justify-between items-center text-4xl md:text-6xl">
