@@ -5,7 +5,10 @@
 </script>
 
 <div class="flex flex-col gap-y-8">
-	<div class="flex flex-wrap gap-3 justify-between">
+	<h2 class="w-full flex justify-between pb-2 border-b border-neutral text-4xl font-bold">
+		Listings
+	</h2>
+	<div class="flex flex-wrap gap-3 justify-between -mt-4">
 		<div class="flex flex-wrap items-center gap-3">
 			<select class="select select-bordered rounded-full">
 				<option disabled selected>All States</option>
@@ -29,7 +32,6 @@
 			<option>Sort by date</option>
 		</select>
 	</div>
-	<div class="divider divider-start text-4xl font-bold">Listings</div>
 	<div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-6">
 		{#each data.listings as listing}
 			<ListingCard {listing} />
