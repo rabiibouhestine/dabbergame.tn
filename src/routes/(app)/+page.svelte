@@ -79,7 +79,7 @@
 							<UserInfo />
 						</div>
 						<div
-							class="badge badge-neutral gap-1 p-4 font-bold group-hover:scale-105 group-hover:badge-secondary"
+							class="badge badge-neutral gap-1 p-4 font-bold transition ease-in-out group-hover:scale-105 group-hover:badge-secondary"
 						>
 							<TagsLine />
 							<span class="font-bold">3</span>
