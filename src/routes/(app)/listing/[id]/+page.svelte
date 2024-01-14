@@ -1,5 +1,7 @@
 <script>
 	import ListingCard from '$lib/components/ListingCard.svelte';
+	import GameCover from '$lib/components/GameCover.svelte';
+	import UserInfo from '$lib/components/UserInfo.svelte';
 	import GameDetails from '$lib/components/GameDetails.svelte';
 
 	import { getGameCover } from '$lib/utils/igdbUtils';
@@ -34,7 +36,14 @@
 
 <div class="flex items-center md:items-start flex-col md:flex-row gap-10">
 	<div class="min-w-52 flex flex-col justify-center items-center gap-4">
-		<ListingCard showPrice={false} {listing} />
+		<div class="flex flex-col gap-3">
+			<a href="/listing/{listing.id}" class="transition ease-in-out hover:scale-105">
+				<GameCover platform={listing.listing_platform} coverImageId={listing.game_cover} />
+			</a>
+			<a href="/" class="transition ease-in-out hover:scale-105 hover:text-secondary">
+				<UserInfo user={listing.profiles} />
+			</a>
+		</div>
 		<div class="w-full flex flex-col gap-3">
 			<span class="btn btn-outline btn-primary rounded-full text-lg font-bold"> Phone </span>
 			<span class="btn btn-outline btn-secondary rounded-full text-lg font-bold"> Buy Now </span>
