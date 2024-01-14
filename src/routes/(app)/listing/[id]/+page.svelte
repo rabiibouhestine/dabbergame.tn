@@ -91,8 +91,8 @@
 				rating={Math.round(listing.game_rating)}
 			/>
 		</div>
-		<div class="w-full flex flex-col gap-8 rounded-container">
-			<div class="divider divider-start text-4xl font-bold">Trade Games</div>
+		<div class="w-full flex flex-col gap-6 rounded-container">
+			<h2 class="text-4xl font-bold">Trade Games</h2>
 			<div class="grid grid-cols-2 sm:grid-cols-4 gap-4">
 				{#each popular as game}
 					<a href="/listings/1" class="transition ease-in-out hover:scale-105">

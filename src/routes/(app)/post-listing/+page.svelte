@@ -39,8 +39,8 @@
 	<div class="divider divider-start text-4xl font-bold">Create Listing</div>
 	<SearchBar on:click={handleGameSelection} />
 	{#if !gameSelected}
-		<div class="w-full flex flex-col gap-8 rounded-container">
-			<div class="divider divider-start text-4xl font-bold">Popular Games</div>
+		<div class="w-full flex flex-col gap-6 rounded-container">
+			<h2 class="text-4xl font-bold">Popular Games</h2>
 			<div class="grid grid-cols-2 sm:grid-cols-4 gap-4">
 				{#each popular as game}
 					<a href="/listings/1" class="transition ease-in-out hover:scale-105">
@@ -122,8 +122,8 @@
 					<input name="store_link" type="text" placeholder="" class="input input-bordered w-full" />
 				</label>
 			</div>
-			<div class="w-full flex flex-col gap-8 rounded-container">
-				<div class="divider divider-start text-4xl font-bold">Trade</div>
+			<div class="w-full flex flex-col gap-6 rounded-container">
+				<h2 class="text-4xl font-bold">Trade Games</h2>
 				<SearchBar on:click={handleGameTrade} />
 				<div class="grid grid-cols-2 sm:grid-cols-4 gap-4">
 					{#each tradeGames as game}
