@@ -61,7 +61,7 @@
 	<div class="flex flex-col lg:flex-row gap-6">
 		<div class="w-full flex flex-col gap-6 rounded-container justify-between">
 			<h2 class="text-4xl font-bold">Popular Games</h2>
-			<div class="grid grid-cols-3 sm:grid-cols-5 gap-4">
+			<div class="grid grid-cols-3 md:grid-cols-5 gap-4">
 				{#each popular as game}
 					<a href="/listings/1" class="transition ease-in-out hover:scale-105">
 						<img src={getGameCover(game.image_id)} alt="game" class="rounded-lg" />
