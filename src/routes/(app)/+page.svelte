@@ -25,6 +25,9 @@
 		},
 		{
 			image_id: 'co6jar'
+		},
+		{
+			image_id: 'co6jar'
 		}
 	];
 </script>
@@ -57,11 +60,8 @@
 	</div>
 	<div class="flex flex-col lg:flex-row gap-6">
 		<div class="w-full flex flex-col gap-6 rounded-container justify-between">
-			<div>
-				<h2 class="text-4xl font-bold">Popular Games</h2>
-				<p class="text-neutral-content">Based on the number of game listings.</p>
-			</div>
-			<div class="grid grid-cols-2 sm:grid-cols-4 gap-4">
+			<h2 class="text-4xl font-bold">Popular Games</h2>
+			<div class="grid grid-cols-3 sm:grid-cols-5 gap-4">
 				{#each popular as game}
 					<a href="/listings/1" class="transition ease-in-out hover:scale-105">
 						<img src={getGameCover(game.image_id)} alt="game" class="rounded-lg" />
