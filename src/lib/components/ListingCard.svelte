@@ -20,7 +20,7 @@
 			</div>
 		{/if}
 	</a>
-	<a href="/" class="transition ease-in-out hover:scale-105 hover:text-secondary">
+	<a href="/" class="transition ease-in-out hover:scale-105">
 		{#if showUserInfo}
 			<UserInfo user={listing.profiles} />
 		{/if}

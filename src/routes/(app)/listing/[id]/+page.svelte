@@ -40,7 +40,7 @@
 			<a href="/listing/{listing.id}" class="transition ease-in-out hover:scale-105">
 				<GameCover platform={listing.listing_platform} coverImageId={listing.game_cover} />
 			</a>
-			<a href="/" class="transition ease-in-out hover:scale-105 hover:text-secondary">
+			<a href="/" class="transition ease-in-out hover:scale-105">
 				<UserInfo user={listing.profiles} />
 			</a>
 		</div>
