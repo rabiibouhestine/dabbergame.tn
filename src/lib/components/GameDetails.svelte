@@ -18,20 +18,22 @@
 </script>
 
 <div class="flex flex-col gap-4">
-	<p class="line-clamp-4">
+	<p class="line-clamp-4 text-neutral-content">
 		{summary}
 	</p>
 	<p>
 		<span class="font-bold">Release Date: </span>
-		{release_date}
+		<span class="text-neutral-content">{release_date}</span>
 	</p>
 	<p>
 		<span class="font-bold">Genres: </span>
-		{genres.map((genre) => genre.name).join(', ')}
+		<span class="text-neutral-content">{genres.map((genre) => genre.name).join(', ')}</span>
 	</p>
 	<p>
 		<span class="font-bold">Platforms: </span>
-		{platforms.map((platform) => platform.name).join(', ')}
+		<span class="text-neutral-content">
+			{platforms.map((platform) => platform.name).join(', ')}
+		</span>
 	</p>
 </div>
 <div class="flex flex-wrap justify-between items-end">

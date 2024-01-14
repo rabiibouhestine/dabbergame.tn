@@ -52,8 +52,11 @@
 		</div>
 	</div>
 	<div class="flex flex-col lg:flex-row gap-6">
-		<div class="w-full flex flex-col gap-8 rounded-container justify-between">
-			<div class="divider divider-start text-4xl font-bold">Popular Games</div>
+		<div class="w-full flex flex-col gap-6 rounded-container justify-between">
+			<div>
+				<h2 class="text-4xl font-bold">Popular Games</h2>
+				<p class="text-neutral-content">Based on the number of listings for each game.</p>
+			</div>
 			<div class="grid grid-cols-2 sm:grid-cols-4 gap-4">
 				{#each popular as game}
 					<a href="/listings/1" class="transition ease-in-out hover:scale-105">
@@ -62,8 +65,8 @@
 				{/each}
 			</div>
 		</div>
-		<div class="min-w-80 flex flex-col gap-8 rounded-container">
-			<div class="divider divider-start text-4xl font-bold">Featured</div>
+		<div class="min-w-80 flex flex-col gap-6 rounded-container">
+			<h2 class="text-4xl font-bold">Featured</h2>
 			<div class="flex flex-col gap-2">
 				{#each [1, 2, 3, 4] as seller}
 					<a
