@@ -23,17 +23,42 @@
 <div class="flex flex-col min-h-screen bg-base-300">
 	<div class="navbar bg-base-100 py-3">
 		<div class="flex-1 flex gap-2 justify-between max-w-5xl mx-auto px-4">
-			<a href="/" class="btn btn-neutral rounded-full">
+			<a href="/" class="btn btn-neutral rounded-full hidden md:flex">
 				<GamepadVariantOutline class="text-xl" />
-				<span class="hidden md:flex">DabberGame</span>
+				DabberGame
+			</a>
+			<a href="/" class="btn btn-neutral btn-circle flex md:hidden">
+				<GamepadVariantOutline class="text-xl" />
 			</a>
 			<div class="w-full">
 				<SearchBar on:click={handleSearchClick} />
 			</div>
-			<div class="flex md:hidden">
-				<a href="/" class="btn btn-circle btn-neutral">
+			<div class="dropdown dropdown-left flex md:hidden">
+				<div tabindex="0" role="button" class="btn btn-circle btn-neutral">
 					<Menu class="text-xl" />
-				</a>
+				</div>
+				<ul
+					class="menu menu-lg dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
+				>
+					{#if data.session}
+						<li><a href="/post-listing"><TagPlus class="text-lg" />Post Listing</a></li>
+					{/if}
+					<li><a href="/listings"><TagMultiple class="text-lg" />Listings</a></li>
+					<li><a href="/stores"><Store class="text-lg" />Stores</a></li>
+					{#if data.session}
+						<li>
+							<a href={'/user/' + data.session.user.id}><Account class="text-lg" />Account</a>
+						</li>
+					{/if}
+					{#if !data.session}
+						<li>
+							<a href="/login"><AccountArrowRight class="text-lg" />Sign in</a>
+						</li>
+						<li>
+							<a href="/register"><AccountPlus class="text-lg" />Signup</a>
+						</li>
+					{/if}
+				</ul>
 			</div>
 			<div class="hidden md:flex gap-2">
 				{#if data.session}
