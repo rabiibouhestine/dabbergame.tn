@@ -9,7 +9,7 @@
 </script>
 
 <div class="flex flex-col gap-y-8">
-	<div class="rounded-container grid grid-cols-1 sm:grid-cols-4 gap-10 mb-8">
+	<div class="rounded-container grid grid-cols-1 sm:grid-cols-4 gap-10">
 		<div class="col-span-1 flex flex-col justify-center md:justify-start items-center gap-4">
 			<img
 				src="https://images.igdb.com/igdb/image/upload/t_cover_big/{game.cover.image_id}.jpg"
@@ -35,10 +35,18 @@
 			/>
 		</div>
 	</div>
-	<div class="flex flex-wrap gap-3 justify-between">
-		<div class="flex flex-wrap items-center gap-3">
+	<h2 class="w-full flex justify-between pb-2 border-b border-neutral text-4xl font-bold">
+		Listings
+	</h2>
+	<div class="flex flex-col md:flex-row gap-3 justify-between -mt-4">
+		<div class="flex flex-col md:flex-row gap-3">
 			<select class="select select-bordered rounded-full">
 				<option disabled selected>All States</option>
+				<option>Tunis</option>
+				<option>Sousse</option>
+			</select>
+			<select class="select select-bordered rounded-full">
+				<option disabled selected>All Cities</option>
 				<option>Tunis</option>
 				<option>Sousse</option>
 			</select>
@@ -59,7 +67,6 @@
 			<option>Sort by date</option>
 		</select>
 	</div>
-	<div class="divider divider-start text-4xl font-bold">Listings</div>
 	<div class="flex flex-col justify-center gap-4">
 		{#each listings as listing}
 			<ListingBanner />

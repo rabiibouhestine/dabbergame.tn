@@ -8,10 +8,15 @@
 	<h2 class="w-full flex justify-between pb-2 border-b border-neutral text-4xl font-bold">
 		Listings
 	</h2>
-	<div class="flex flex-col sm:flex-row gap-3 justify-between -mt-4">
-		<div class="flex flex-col sm:flex-row gap-3">
+	<div class="flex flex-col md:flex-row gap-3 justify-between -mt-4">
+		<div class="flex flex-col md:flex-row gap-3">
 			<select class="select select-bordered rounded-full">
 				<option disabled selected>All States</option>
+				<option>Tunis</option>
+				<option>Sousse</option>
+			</select>
+			<select class="select select-bordered rounded-full">
+				<option disabled selected>All Cities</option>
 				<option>Tunis</option>
 				<option>Sousse</option>
 			</select>
