@@ -34,16 +34,19 @@
 			<p class="text-3xl">Best place to buy, sell and trade video games in Tunisia!</p>
 		</div>
 		<div class="w-full flex justify-between items-center text-6xl">
-			<a href="/listings" class="hover:text-pc hover:scale-105">
+			<a href="/listings" class="hover:text-pc transition ease-in-out hover:scale-125">
 				<Windows />
 			</a>
-			<a href="/listings" class="hover:text-playstation hover:scale-105 text-7xl">
+			<a
+				href="/listings"
+				class="hover:text-playstation transition ease-in-out hover:scale-125 text-7xl"
+			>
 				<Playstation />
 			</a>
-			<a href="/listings" class="hover:text-xbox hover:scale-105">
+			<a href="/listings" class="hover:text-xbox transition ease-in-out hover:scale-125">
 				<Xbox />
 			</a>
-			<a href="/listings" class="hover:text-nintendo hover:scale-105">
+			<a href="/listings" class="hover:text-nintendo transition ease-in-out hover:scale-125">
 				<Nintendo />
 			</a>
 		</div>
