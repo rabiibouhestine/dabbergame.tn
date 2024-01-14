@@ -1,7 +1,7 @@
 <script>
 	import { getGameCover } from '$lib/utils/igdbUtils';
 
-	import Windows from '~icons/cib/windows';
+	import Other from '~icons/ion/game-controller';
 	import Playstation from '~icons/cib/playstation';
 	import Xbox from '~icons/cib/xbox';
 	import Nintendo from '~icons/simple-icons/nintendo';
@@ -24,7 +24,7 @@
 			case 'Nintendo Switch':
 				return Nintendo;
 			default:
-				return Windows;
+				return Other;
 		}
 	}
 
@@ -41,7 +41,7 @@
 			case 'Nintendo Switch':
 				return 'bg-nintendo';
 			default:
-				return 'bg-pc';
+				return 'bg-yellow-700';
 		}
 	}
 </script>
