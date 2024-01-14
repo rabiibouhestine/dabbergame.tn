@@ -35,7 +35,7 @@
 				Best place to buy, sell and trade video games in Tunisia!
 			</p>
 		</div>
-		<div class="w-full flex justify-between items-center text-4xl md:text-6xl">
+		<div class="w-full px-6 flex justify-between items-center text-4xl md:text-6xl">
 			<a href="/listings" class="hover:text-pc transition ease-in-out hover:scale-125">
 				<Windows />
 			</a>
