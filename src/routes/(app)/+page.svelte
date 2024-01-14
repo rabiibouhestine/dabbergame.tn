@@ -63,15 +63,16 @@
 			<div class="divider divider-start text-4xl font-bold">Featured</div>
 			<div class="flex flex-col gap-2">
 				{#each [1, 2, 3, 4] as seller}
-					<div
-						class="flex items-center justify-between border-neutral border-b last:border-0 pb-2 last:pb-0"
+					<a
+						href="/"
+						class="flex items-center justify-between border-neutral border-b last:border-0 pb-2 last:pb-0 group transition ease-in-out hover:scale-105 hover:text-secondary"
 					>
 						<UserInfo />
-						<div class="badge badge-neutral gap-1 p-4 font-bold">
+						<div class="badge badge-neutral gap-1 p-4 font-bold group-hover:badge-secondary">
 							<TagsLine />
 							<span class="font-bold">3</span>
 						</div>
-					</div>
+					</a>
 				{/each}
 			</div>
 		</div>
