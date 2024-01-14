@@ -11,6 +11,7 @@
 	import AccountArrowRight from '~icons/mdi/account-arrow-right';
 	import AccountPlus from '~icons/mdi/account-plus';
 	import Account from '~icons/mdi/account';
+	import Menu from '~icons/mdi/menu';
 
 	export let data;
 
@@ -21,14 +22,20 @@
 
 <div class="flex flex-col min-h-screen bg-base-300">
 	<div class="navbar bg-base-100 py-3">
-		<div class="flex flex-wrap flex-1 gap-6 justify-between max-w-5xl mx-auto px-4">
+		<div class="flex-1 flex gap-2 justify-between max-w-5xl mx-auto px-4">
 			<a href="/" class="btn btn-neutral rounded-full">
-				<GamepadVariantOutline class="text-xl" />DabberGame
+				<GamepadVariantOutline class="text-xl" />
+				<span class="hidden md:flex">DabberGame</span>
 			</a>
-			<div class="flex-1 order-3 sm:order-2 min-w-60">
+			<div class="w-full">
 				<SearchBar on:click={handleSearchClick} />
 			</div>
-			<div class="flex gap-2 order-2 sm:order-3">
+			<div class="flex md:hidden">
+				<a href="/post-listing" class="btn btn-circle btn-neutral">
+					<Menu class="text-xl" />
+				</a>
+			</div>
+			<div class="hidden md:flex gap-2">
 				{#if data.session}
 					<a href="/post-listing" class="btn btn-circle btn-neutral">
 						<TagPlus class="text-xl" />

@@ -2,7 +2,7 @@
 	import Windows from '~icons/cib/windows';
 	import Playstation from '~icons/cib/playstation';
 	import Xbox from '~icons/cib/xbox';
-	import Nintendo from '~icons/cib/nintendo';
+	import NintendoSwitch from '~icons/cib/nintendo-switch';
 
 	import TagsLine from '~icons/clarity/tags-line';
 	import ListingCard from '$lib/components/ListingCard.svelte';
@@ -47,7 +47,7 @@
 				<Xbox />
 			</a>
 			<a href="/listings" class="hover:text-nintendo transition ease-in-out hover:scale-125">
-				<Nintendo />
+				<NintendoSwitch />
 			</a>
 		</div>
 	</div>
