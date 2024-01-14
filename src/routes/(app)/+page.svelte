@@ -33,7 +33,7 @@
 	<div class="flex flex-col justify-center gap-10 items-center my-32">
 		<div class="text-center">
 			<h2 class="text-6xl md:text-7xl font-bold">Dabber Game</h2>
-			<p class="text-md md:text-3xl text-neutral-content my-8">
+			<p class="text-md md:text-3xl text-neutral-content">
 				Best place to buy, sell and trade video games in Tunisia!
 			</p>
 		</div>
