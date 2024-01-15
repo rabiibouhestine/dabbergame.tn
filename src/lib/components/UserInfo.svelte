@@ -1,6 +1,4 @@
 <script>
-	export let user;
-
 	export let first_name = 'John';
 	export let last_name = 'Doe';
 	export let state = 'Tunis';
