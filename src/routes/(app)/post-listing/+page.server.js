@@ -9,7 +9,7 @@ export const actions = {
         // Get Listing Form Data
         const formData = await request.formData();
         const game_id = formData.get('game_id');
-        const platform = formData.get('platform');
+        const platform = JSON.parse(formData.get('platform'));
         const condition = formData.get('condition');
         const delivery = formData.get('delivery');
         const price = formData.get('price');
@@ -54,7 +54,8 @@ export const actions = {
             game_youtube: game.websites.find((site) => site.category === 9)?.url || "",
             game_steam: game.websites.find((site) => site.category === 13)?.url || "",
             game_epicgames: game.websites.find((site) => site.category === 16)?.url || "",
-            listing_platform: platform,
+            listing_platform: platform.name,
+            listing_platform_family: platform.platform_family?.name,
             listing_condition: condition,
             listing_delivery: delivery,
             listing_price: price,
