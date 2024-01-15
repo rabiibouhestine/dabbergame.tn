@@ -34,14 +34,14 @@
 <div class="flex items-center md:items-start flex-col md:flex-row gap-10">
 	<div class="min-w-52 flex flex-col justify-center items-center gap-4">
 		<div class="flex flex-col gap-3">
-			<a href="/listing/{listing.id}" class="transition ease-in-out hover:scale-105">
+			<a href="/listings" class="transition ease-in-out hover:scale-105">
 				<GameCover
 					platform={listing.listing_platform}
 					platformFamily={listing.listing_platform_family}
 					coverImageId={listing.game_cover}
 				/>
 			</a>
-			<a href="/" class="transition ease-in-out hover:scale-105">
+			<a href="/user/{listing.profiles.id}" class="transition ease-in-out hover:scale-105">
 				<UserInfo
 					first_name={listing.profiles.first_name}
 					last_name={listing.profiles.last_name}
