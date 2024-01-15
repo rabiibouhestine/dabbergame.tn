@@ -26,7 +26,12 @@
 	</a>
 	<a href="/user/{listing?.profiles?.id}" class="transition ease-in-out hover:scale-105">
 		{#if showUserInfo}
-			<UserInfo user={listing.profiles} />
+			<UserInfo
+				first_name={listing?.profiles?.first_name}
+				last_name={listing?.profiles?.last_name}
+				state={listing?.profiles?.state}
+				city={listing?.profiles?.city}
+			/>
 		{/if}
 	</a>
 </div>

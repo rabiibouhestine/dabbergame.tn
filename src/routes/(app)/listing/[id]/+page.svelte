@@ -38,7 +38,12 @@
 				<GameCover platform={listing.listing_platform} coverImageId={listing.game_cover} />
 			</a>
 			<a href="/" class="transition ease-in-out hover:scale-105">
-				<UserInfo user={listing.profiles} />
+				<UserInfo
+					first_name={listing.profiles.first_name}
+					last_name={listing.profiles.last_name}
+					state={listing.profiles.cities.state}
+					city={listing.profiles.cities.city}
+				/>
 			</a>
 		</div>
 		<div class="w-full flex flex-col gap-3">

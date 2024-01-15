@@ -75,23 +75,12 @@
 						class="flex items-center justify-between border-neutral border-b last:border-0 pb-2 last:pb-0 group"
 					>
 						<div class="transition ease-in-out group-hover:scale-105">
-							<UserInfo user={store} />
-						</div>
-						<div
-							class="badge badge-neutral gap-1 p-4 font-bold transition ease-in-out group-hover:scale-105"
-						>
-							<TagMultiple />
-							<span class="font-bold">{store.num_listings} listings</span>
-						</div>
-					</a>
-				{/each}
-				{#each data.featured as store}
-					<a
-						href="/user/{store.id}"
-						class="flex items-center justify-between border-neutral border-b last:border-0 pb-2 last:pb-0 group"
-					>
-						<div class="transition ease-in-out group-hover:scale-105">
-							<UserInfo user={store} />
+							<UserInfo
+								first_name={store.first_name}
+								last_name={store.last_name}
+								state={store.state}
+								city={store.city}
+							/>
 						</div>
 						<div
 							class="badge badge-neutral gap-1 p-4 font-bold transition ease-in-out group-hover:scale-105"
