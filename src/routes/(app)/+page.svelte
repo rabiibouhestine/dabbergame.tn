@@ -70,6 +70,22 @@
 						</div>
 					</a>
 				{/each}
+				{#each data.featured as store}
+					<a
+						href="/user/{store.id}"
+						class="flex items-center justify-between border-neutral border-b last:border-0 pb-2 last:pb-0 group"
+					>
+						<div class="transition ease-in-out group-hover:scale-105">
+							<UserInfo user={store} />
+						</div>
+						<div
+							class="badge badge-neutral gap-1 p-4 font-bold transition ease-in-out group-hover:scale-105 group-hover:badge-secondary"
+						>
+							<TagMultiple />
+							<span class="font-bold">{store.num_listings} listings</span>
+						</div>
+					</a>
+				{/each}
 			</div>
 		</div>
 	</div>
