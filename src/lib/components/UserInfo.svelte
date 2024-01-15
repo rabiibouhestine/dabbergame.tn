@@ -11,7 +11,7 @@
 	<div>
 		<h2 class="line-clamp-1 font-bold text-sm">{user?.first_name + ' ' + user?.last_name}</h2>
 		<p class="line-clamp-1 text-xs text-neutral-content">
-			{user?.cities.state + ', ' + user?.cities.city}
+			{user?.cities?.state + ', ' + user?.cities?.city}
 		</p>
 	</div>
 </div>

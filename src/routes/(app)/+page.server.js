@@ -9,8 +9,11 @@ export async function load({ locals }) {
 
     const popularQuery = await supabase.rpc('popular_games');
 
+    const storesQuery = await supabase.rpc('featured_stores');
+
     return {
         listings: listingsQuery.data,
-        popular: popularQuery.data
+        popular: popularQuery.data,
+        featured: storesQuery.data
     };
 }

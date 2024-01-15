@@ -12,21 +12,6 @@
 	import { getGameCover } from '$lib/utils/igdbUtils';
 
 	export let data;
-
-	const popular = [
-		{
-			image_id: 'co7as5'
-		},
-		{
-			image_id: 'co7ctx'
-		},
-		{
-			image_id: 'co6lz0'
-		},
-		{
-			image_id: 'co6jar'
-		}
-	];
 </script>
 
 <div class="flex flex-col items-center gap-y-10">
@@ -69,19 +54,19 @@
 		<div class="lg:col-span-2 flex flex-col gap-6 rounded-container">
 			<h2 class="text-4xl font-bold">Featured</h2>
 			<div class="flex flex-col gap-2">
-				{#each [1, 2, 3, 4] as seller}
+				{#each data.featured as store}
 					<a
-						href="/"
+						href="/user/{store.id}"
 						class="flex items-center justify-between border-neutral border-b last:border-0 pb-2 last:pb-0 group"
 					>
 						<div class="transition ease-in-out group-hover:scale-105">
-							<UserInfo />
+							<UserInfo user={store} />
 						</div>
 						<div
 							class="badge badge-neutral gap-1 p-4 font-bold transition ease-in-out group-hover:scale-105 group-hover:badge-secondary"
 						>
 							<TagMultiple />
-							<span class="font-bold">3 listings</span>
+							<span class="font-bold">{store.num_listings} listings</span>
 						</div>
 					</a>
 				{/each}
