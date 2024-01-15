@@ -37,7 +37,7 @@
 		</div>
 	</div>
 	<div class="flex flex-col gap-6">
-		<div class="rounded-container flex flex-col justify-between gap-6 h-full">
+		<div class="rounded-container flex flex-col justify-between gap-6">
 			<h2 class="text-4xl font-bold">{listing.game_name}</h2>
 			<div class="flex flex-wrap gap-3 justify-between">
 				<div class="flex flex-wrap gap-3">
