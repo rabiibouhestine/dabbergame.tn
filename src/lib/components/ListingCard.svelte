@@ -24,7 +24,7 @@
 			</div>
 		{/if}
 	</a>
-	<a href="/" class="transition ease-in-out hover:scale-105">
+	<a href="/user/{listing?.profiles?.id}" class="transition ease-in-out hover:scale-105">
 		{#if showUserInfo}
 			<UserInfo user={listing.profiles} />
 		{/if}
