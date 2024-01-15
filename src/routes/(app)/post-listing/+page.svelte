@@ -1,5 +1,7 @@
 <script>
 	import SearchBar from '$lib/components/SearchBar.svelte';
+	import FeaturedGames from '$lib/components/FeaturedGames.svelte';
+
 	import { getGameCover } from '$lib/utils/igdbUtils';
 
 	let gameSelected = false;
@@ -18,37 +20,13 @@
 	function removeGameTrade(id) {
 		tradeGames = tradeGames.filter((game) => game.id !== id);
 	}
-
-	const popular = [
-		{
-			image_id: 'co7as5'
-		},
-		{
-			image_id: 'co7ctx'
-		},
-		{
-			image_id: 'co6lz0'
-		},
-		{
-			image_id: 'co6jar'
-		}
-	];
 </script>
 
 <div class="flex flex-col gap-8 max-w-2xl mx-auto">
 	<div class="divider divider-start text-4xl font-bold">Create Listing</div>
 	<SearchBar on:click={handleGameSelection} />
 	{#if !gameSelected}
-		<div class="w-full flex flex-col gap-6 rounded-container">
-			<h2 class="text-4xl font-bold">Popular Games</h2>
-			<div class="grid grid-cols-2 sm:grid-cols-4 gap-4">
-				{#each popular as game}
-					<a href="/listings/1" class="transition ease-in-out hover:scale-105">
-						<img src={getGameCover(game.image_id)} alt="game" class="rounded-lg" />
-					</a>
-				{/each}
-			</div>
-		</div>
+		<FeaturedGames />
 	{:else}
 		<form class="flex flex-col gap-4" method="POST" action="/post-listing">
 			<div class="flex flex-col gap-6 rounded-container">
