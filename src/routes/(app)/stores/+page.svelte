@@ -10,7 +10,7 @@
 			<StoreCard />
 		{/each}
 	</div>
-	<div role="alert" class="alert">
+	<div role="alert" class="alert bg-base-100">
 		<InfoIcon />
 		<span>
 			Upgrade to a <a href="/" class="link link-primary">Store Account</a> for free (forever) and benefit
