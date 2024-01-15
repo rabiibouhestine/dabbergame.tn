@@ -52,7 +52,7 @@
 							class="rounded-lg transition ease-in-out group-hover:scale-105"
 						/>
 						<div
-							class="absolute -mb-4 badge badge-secondary gap-1 p-4 font-bold transition ease-in-out opacity-0 group-hover:opacity-100 group-hover:-translate-y-4"
+							class="absolute -mb-4 badge badge-neutral gap-1 p-4 font-bold transition ease-in-out opacity-0 group-hover:opacity-100 group-hover:-translate-y-4"
 						>
 							<TagMultiple />
 							<span class="font-bold">{game.num_listings} listings</span>
@@ -78,7 +78,7 @@
 							<UserInfo user={store} />
 						</div>
 						<div
-							class="badge badge-neutral gap-1 p-4 font-bold transition ease-in-out group-hover:scale-105 group-hover:badge-secondary"
+							class="badge badge-neutral gap-1 p-4 font-bold transition ease-in-out group-hover:scale-105"
 						>
 							<TagMultiple />
 							<span class="font-bold">{store.num_listings} listings</span>
@@ -94,7 +94,7 @@
 							<UserInfo user={store} />
 						</div>
 						<div
-							class="badge badge-neutral gap-1 p-4 font-bold transition ease-in-out group-hover:scale-105 group-hover:badge-secondary"
+							class="badge badge-neutral gap-1 p-4 font-bold transition ease-in-out group-hover:scale-105"
 						>
 							<TagMultiple />
 							<span class="font-bold">{store.num_listings} listings</span>
