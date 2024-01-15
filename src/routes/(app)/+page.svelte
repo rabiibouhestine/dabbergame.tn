@@ -52,7 +52,12 @@
 			</div>
 		</div>
 		<div class="lg:col-span-2 flex flex-col gap-6 rounded-container">
-			<h2 class="text-4xl font-bold">Featured</h2>
+			<div class="flex justify-between">
+				<h2 class="text-4xl font-bold">Stores</h2>
+				<a href="/stores" class="btn btn-circle btn-ghost text-3xl font-bold">
+					<ArrowRight />
+				</a>
+			</div>
 			<div class="flex flex-col gap-2">
 				{#each data.featured as store}
 					<a
