@@ -54,8 +54,7 @@
 						<div
 							class="absolute -mb-4 badge badge-neutral gap-1 p-4 font-bold transition ease-in-out opacity-0 group-hover:opacity-100 group-hover:-translate-y-4"
 						>
-							<TagMultiple />
-							<span class="font-bold">{game.num_listings} listings</span>
+							Rating: {Math.round(game.num_listings)}
 						</div>
 					</a>
 				{/each}
