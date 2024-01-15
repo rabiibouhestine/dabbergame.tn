@@ -27,9 +27,6 @@
 		},
 		{
 			image_id: 'co6lz0'
-		},
-		{
-			image_id: 'co6lz0'
 		}
 	];
 </script>
@@ -93,7 +90,7 @@
 		</div>
 		<div class="w-full flex flex-col gap-6 rounded-container">
 			<h2 class="text-4xl font-bold">Trade Games</h2>
-			<div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4">
+			<div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4">
 				{#each popular as game}
 					<a href="/listings/1" class="transition ease-in-out hover:scale-105">
 						<img src={getGameCover(game.image_id)} alt="game" class="rounded-lg" />

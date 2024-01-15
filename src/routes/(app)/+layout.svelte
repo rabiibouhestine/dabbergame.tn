@@ -22,7 +22,7 @@
 
 <div class="flex flex-col min-h-screen bg-base-300">
 	<div class="navbar bg-base-100 py-3">
-		<div class="flex-1 flex gap-2 justify-between max-w-7xl mx-auto px-4">
+		<div class="flex-1 flex gap-2 justify-between max-w-6xl mx-auto px-4">
 			<a href="/" class="btn btn-neutral rounded-full hidden md:flex">
 				<GamepadVariantOutline class="text-xl" />
 				DabberGame
@@ -91,7 +91,7 @@
 		</div>
 	</div>
 
-	<div class="flex-1 w-full max-w-7xl mx-auto px-4 my-10">
+	<div class="flex-1 w-full max-w-6xl mx-auto px-4 my-10">
 		<slot />
 	</div>
 
