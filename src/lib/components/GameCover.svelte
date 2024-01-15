@@ -6,40 +6,43 @@
 	import Xbox from '~icons/cib/xbox';
 	import Nintendo from '~icons/simple-icons/nintendo';
 	import NintendoSwitch from '~icons/cib/nintendo-switch';
+	import Windows from '~icons/cib/windows';
 
-	export let platform;
-	export let coverImageId;
+	export let platform = '';
+	export let platformFamily = '';
+	export let coverImageId = '';
 
-	$: Logo = getLogo(platform);
+	$: Logo = getLogo(platform, platformFamily);
+	$: BackgoundColor = getBG(platformFamily);
 
-	function getLogo(platform) {
-		switch (platform) {
-			case 'PlayStation 4':
+	function getLogo(platform, platformFamily) {
+		switch (platformFamily) {
+			case 'PlayStation':
 				return Playstation;
-			case 'PlayStation 5':
-				return Playstation;
-			case 'Xbox Series X|S':
+			case 'Xbox':
 				return Xbox;
-			case 'Xbox One':
-				return Xbox;
-			case 'Nintendo Switch':
-				return NintendoSwitch;
+			case 'Nintendo':
+				if (platform === 'Nintendo Switch') {
+					return NintendoSwitch;
+				} else {
+					return Nintendo;
+				}
 			default:
-				return Other;
+				if (platform === 'PC (Microsoft Windows)') {
+					return Windows;
+				} else {
+					return Other;
+				}
 		}
 	}
 
-	function getBG(platform) {
-		switch (platform) {
-			case 'PlayStation 4':
+	function getBG(platformFamily) {
+		switch (platformFamily) {
+			case 'PlayStation':
 				return 'bg-playstation';
-			case 'PlayStation 5':
-				return 'bg-playstation';
-			case 'Xbox Series X|S':
+			case 'Xbox':
 				return 'bg-xbox';
-			case 'Xbox One':
-				return 'bg-xbox';
-			case 'Nintendo Switch':
+			case 'Nintendo':
 				return 'bg-nintendo';
 			default:
 				return 'bg-yellow-700';
@@ -49,9 +52,7 @@
 
 <div class="aspect-[5/7] rounded-lg overflow-hidden">
 	<div
-		class="h-[15%] flex gap-1 items-center {getBG(
-			platform
-		)} px-3 py-1 text-sm text-slate-200 font-bold"
+		class="h-[15%] flex gap-1 items-center {BackgoundColor} px-3 py-1 text-sm text-slate-200 font-bold"
 	>
 		<Logo />
 		<p class="line-clamp-1">{platform}</p>

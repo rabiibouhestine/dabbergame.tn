@@ -10,7 +10,11 @@
 <div class="flex flex-col gap-3">
 	<a href="/listing/{listing.id}" class="flex flex-col gap-3 group">
 		<div class="transition ease-in-out group-hover:scale-110">
-			<GameCover platform={listing.listing_platform} coverImageId={listing.game_cover} />
+			<GameCover
+				platform={listing.listing_platform}
+				platformFamily={listing.listing_platform_family}
+				coverImageId={listing.game_cover}
+			/>
 		</div>
 		{#if showPrice}
 			<div
