@@ -72,7 +72,7 @@
 						Delivery
 					</div>
 					<div class="badge badge-neutral gap-1 p-4 font-bold">
-						{#if listing.listing_trade.length}
+						{#if JSON.parse(listing.listing_trade).length}
 							<CheckCircleOutlineRounded />
 						{:else}
 							<CancelOutlineRounded />
@@ -97,15 +97,17 @@
 				rating={Math.round(listing.game_rating)}
 			/>
 		</div>
-		<div class="w-full flex flex-col gap-6 rounded-container">
-			<h2 class="text-4xl font-bold">Trade Games</h2>
-			<div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4">
-				{#each popular as game}
-					<a href="/listings/1" class="transition ease-in-out hover:scale-105">
-						<img src={getGameCover(game.image_id)} alt="game" class="rounded-lg" />
-					</a>
-				{/each}
+		{#if JSON.parse(listing.listing_trade).length}
+			<div class="w-full flex flex-col gap-6 rounded-container">
+				<h2 class="text-4xl font-bold">Trade Games</h2>
+				<div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4">
+					{#each JSON.parse(listing.listing_trade) as game}
+						<a href="/listings/{game.id}" class="transition ease-in-out hover:scale-105">
+							<img src={getGameCover(game.cover.image_id)} alt="game" class="rounded-lg" />
+						</a>
+					{/each}
+				</div>
 			</div>
-		</div>
+		{/if}
 	</div>
 </div>
