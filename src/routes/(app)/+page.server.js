@@ -7,13 +7,10 @@ export async function load({ locals }) {
     .select(`*, profiles (id, first_name, last_name, cities (id, state, city))`)
     .limit(18)
 
-    const popularQuery = await supabase.rpc('popular_games');
-
     const storesQuery = await supabase.rpc('featured_stores');
 
     return {
         listings: listingsQuery.data,
-        popular: popularQuery.data,
         featured: storesQuery.data
     };
 }
