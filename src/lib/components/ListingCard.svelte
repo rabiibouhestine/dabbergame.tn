@@ -29,8 +29,8 @@
 			<UserInfo
 				first_name={listing?.profiles?.first_name}
 				last_name={listing?.profiles?.last_name}
-				state={listing?.profiles?.state}
-				city={listing?.profiles?.city}
+				state={listing?.profiles?.cities?.state}
+				city={listing?.profiles?.cities?.city}
 			/>
 		{/if}
 	</a>
