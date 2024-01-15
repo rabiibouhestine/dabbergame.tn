@@ -35,7 +35,11 @@
 	<div class="min-w-52 flex flex-col justify-center items-center gap-4">
 		<div class="flex flex-col gap-3">
 			<a href="/listing/{listing.id}" class="transition ease-in-out hover:scale-105">
-				<GameCover platform={listing.listing_platform} coverImageId={listing.game_cover} />
+				<GameCover
+					platform={listing.listing_platform}
+					platformFamily={listing.listing_platform_family}
+					coverImageId={listing.game_cover}
+				/>
 			</a>
 			<a href="/" class="transition ease-in-out hover:scale-105">
 				<UserInfo
