@@ -6,7 +6,7 @@
 
 <div class="flex flex-col gap-y-8">
 	<h2 class="w-full flex justify-between pb-2 border-b border-neutral text-4xl font-bold">
-		Listings
+		All Listings
 	</h2>
 	<div class="flex flex-col md:flex-row gap-3 justify-between -mt-4">
 		<div class="flex flex-col md:flex-row gap-3">
