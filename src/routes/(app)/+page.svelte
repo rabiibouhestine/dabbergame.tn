@@ -42,7 +42,7 @@
 	</div>
 	<div class="grid grid-cols-1 lg:grid-cols-5 gap-5">
 		<div class="lg:col-span-3 flex flex-col gap-6 rounded-container justify-between">
-			<h2 class="text-4xl font-bold">Most Listed Games</h2>
+			<h2 class="text-4xl font-bold">Featured Games</h2>
 			<div class="grid grid-cols-2 sm:grid-cols-4 gap-4">
 				{#each data.popular as game}
 					<a href="/listings/{game.game_id}" class="relative flex justify-center items-end group">
