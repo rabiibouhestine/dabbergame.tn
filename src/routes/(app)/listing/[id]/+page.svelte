@@ -11,24 +11,6 @@
 
 	export let data;
 	$: listing = data.listing;
-
-	const popular = [
-		{
-			image_id: 'co7as5'
-		},
-		{
-			image_id: 'co7ctx'
-		},
-		{
-			image_id: 'co6lz0'
-		},
-		{
-			image_id: 'co6jar'
-		},
-		{
-			image_id: 'co6lz0'
-		}
-	];
 </script>
 
 <div class="flex items-center md:items-start flex-col md:flex-row gap-10">
