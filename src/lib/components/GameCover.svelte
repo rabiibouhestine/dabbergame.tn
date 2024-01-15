@@ -45,7 +45,11 @@
 			case 'Nintendo':
 				return 'bg-nintendo';
 			default:
-				return 'bg-yellow-700';
+				if (platform === 'PC (Microsoft Windows)') {
+					return 'bg-windows';
+				} else {
+					return 'bg-yellow-700';
+				}
 		}
 	}
 </script>
