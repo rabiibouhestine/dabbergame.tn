@@ -1,5 +1,4 @@
 <script>
-	import ListingCard from '$lib/components/ListingCard.svelte';
 	import GameCover from '$lib/components/GameCover.svelte';
 	import UserInfo from '$lib/components/UserInfo.svelte';
 	import GameDetails from '$lib/components/GameDetails.svelte';
