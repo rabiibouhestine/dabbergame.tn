@@ -45,8 +45,18 @@
 			<h2 class="text-4xl font-bold">Most Listed Games</h2>
 			<div class="grid grid-cols-2 sm:grid-cols-4 gap-4">
 				{#each data.popular as game}
-					<a href="/listings/{game.game_id}" class="transition ease-in-out hover:scale-105">
-						<img src={getGameCover(game.game_cover)} alt="game" class="rounded-lg" />
+					<a href="/listings/{game.game_id}" class="relative flex justify-center items-end group">
+						<img
+							src={getGameCover(game.game_cover)}
+							alt="game"
+							class="rounded-lg transition ease-in-out group-hover:scale-105"
+						/>
+						<div
+							class="absolute -mb-4 badge badge-secondary gap-1 p-4 font-bold transition ease-in-out opacity-0 group-hover:opacity-100 group-hover:-translate-y-4"
+						>
+							<TagMultiple />
+							<span class="font-bold">{game.num_listings} listings</span>
+						</div>
 					</a>
 				{/each}
 			</div>
