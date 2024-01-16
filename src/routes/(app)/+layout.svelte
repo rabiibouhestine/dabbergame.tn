@@ -92,7 +92,12 @@
 		</div>
 	</div>
 
-	<progress class="h-2 sticky top-0 z-10 w-full {$navigating ? 'progress visible' : 'invisible'}">
+	<progress
+		class="h-2 sticky top-0 z-10 w-full"
+		class:progress={$navigating}
+		class:visible={$navigating}
+		class:invisible={!$navigating}
+	>
 	</progress>
 
 	<div class="flex-1 w-full max-w-6xl mx-auto px-4 my-10">
