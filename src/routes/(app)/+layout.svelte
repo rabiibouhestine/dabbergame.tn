@@ -92,8 +92,11 @@
 		</div>
 	</div>
 
-	<progress class="sticky top-0 z-10 progress w-full {$navigating ? 'visible' : 'invisible'}">
-	</progress>
+	{#if $navigating}
+		<progress class="sticky top-0 z-10 progress w-full"></progress>
+	{:else}
+		<progress class="sticky top-0 z-10 progress w-full invisible" value="0" max="100"></progress>
+	{/if}
 
 	<div class="flex-1 w-full max-w-6xl mx-auto px-4 my-10">
 		<slot />
