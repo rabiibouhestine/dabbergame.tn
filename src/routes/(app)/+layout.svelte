@@ -1,11 +1,11 @@
 <script>
 	import '../../app.css';
-
+	// Sveltekit imports
 	import { goto } from '$app/navigation';
 	import { navigating } from '$app/stores';
-
+	// Custom Components imports
 	import SearchBar from '$lib/components/SearchBar.svelte';
-
+	// Icons imports
 	import GamepadVariantOutline from '~icons/mdi/gamepad-variant-outline';
 	import TagMultiple from '~icons/mdi/tag-multiple';
 	import Store from '~icons/mdi/store';
