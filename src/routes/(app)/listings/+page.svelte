@@ -12,20 +12,42 @@
 </script>
 
 <div class="flex flex-col gap-y-8">
-	<h2 class="w-full flex justify-between pb-2 border-b border-neutral text-4xl font-bold">
-		All Listings
-	</h2>
-	<div class=" rounded-container flex flex-col md:flex-row gap-3 justify-between -mt-4">
-		<div class="flex flex-col md:flex-row gap-3">
-			<button
-				class="btn btn-neutral rounded-full"
-				on:click={() => {
-					filtersModal.showModal();
-				}}
-			>
-				<FilterIcon />
-				Filters
-			</button>
+	<div class="w-full flex justify-between pb-2 border-b border-neutral mt-8">
+		<h2 class="text-4xl font-bold">All Listings</h2>
+		<button
+			class="btn btn-outline rounded-full"
+			on:click={() => {
+				filtersModal.showModal();
+			}}
+		>
+			<FilterIcon />
+			Filters
+		</button>
+	</div>
+	<div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-6">
+		{#each data.listings as listing}
+			<ListingCard {listing} />
+		{/each}
+	</div>
+	<div class="join flex mt-8">
+		<button class="join-item btn">«</button>
+		<div class="flex flex-1 justify-center bg-neutral rounded-none">
+			<button class="join-item btn">1</button>
+			<button class="join-item btn">2</button>
+			<button class="join-item btn btn-disabled">...</button>
+			<button class="join-item btn">99</button>
+			<button class="join-item btn">100</button>
+		</div>
+		<button class="join-item btn">»</button>
+	</div>
+</div>
+
+<dialog bind:this={filtersModal} class="modal">
+	<div class="modal-box">
+		<form method="dialog">
+			<button class="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</button>
+		</form>
+		<div class="flex flex-col gap-3 my-10">
 			<select
 				class="select select-bordered rounded-full"
 				bind:value={selectedState}
@@ -52,43 +74,11 @@
 				<option>People</option>
 				<option>Stores</option>
 			</select>
+			<select class="select select-bordered rounded-full">
+				<option disabled selected>Sort by date</option>
+				<option>Sort by price</option>
+				<option>Sort by date</option>
+			</select>
 		</div>
-		<select class="select select-bordered rounded-full">
-			<option disabled selected>Sort by date</option>
-			<option>Sort by price</option>
-			<option>Sort by date</option>
-		</select>
-	</div>
-	<div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-6">
-		{#each data.listings as listing}
-			<ListingCard {listing} />
-		{/each}
-	</div>
-	<div class="join flex mt-8">
-		<button class="join-item btn">«</button>
-		<div class="flex flex-1 justify-center bg-neutral rounded-none">
-			<button class="join-item btn">1</button>
-			<button class="join-item btn">2</button>
-			<button class="join-item btn btn-disabled">...</button>
-			<button class="join-item btn">99</button>
-			<button class="join-item btn">100</button>
-		</div>
-		<button class="join-item btn">»</button>
-	</div>
-</div>
-
-<button
-	class="btn"
-	on:click={() => {
-		filtersModal.showModal();
-	}}>open modal</button
->
-<dialog bind:this={filtersModal} class="modal">
-	<div class="modal-box">
-		<form method="dialog">
-			<button class="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</button>
-		</form>
-		<h3 class="font-bold text-lg">Hello!</h3>
-		<p class="py-4">Press ESC key or click on ✕ button to close</p>
 	</div>
 </dialog>
