@@ -70,15 +70,15 @@
 		</a>
 	</div>
 	<div class="join flex mt-8">
-		<button class="join-item btn">«</button>
+		<button class="join-item btn btn-neutral">«</button>
 		<div class="flex flex-1 justify-center bg-base-100 rounded-none">
-			<a href="/listings?page=1" class="join-item btn">1</a>
-			<a href="/listings?page=2" class="join-item btn">2</a>
-			<a href="/listings?page=3" class="join-item btn">3</a>
-			<a href="/listings?page=4" class="join-item btn">4</a>
-			<a href="/listings?page=5" class="join-item btn">5</a>
+			<a href="/listings?page=1" class="join-item btn btn-neutral">1</a>
+			<a href="/listings?page=2" class="join-item btn btn-neutral">2</a>
+			<a href="/listings?page=3" class="join-item btn btn-neutral">3</a>
+			<a href="/listings?page=4" class="join-item btn btn-neutral">4</a>
+			<a href="/listings?page=5" class="join-item btn btn-neutral">5</a>
 		</div>
-		<button class="join-item btn">»</button>
+		<button class="join-item btn btn-neutral">»</button>
 	</div>
 </div>
 
