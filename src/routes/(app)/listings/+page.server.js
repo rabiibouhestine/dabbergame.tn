@@ -1,7 +1,7 @@
 
 export async function load({ url, locals }) {
 
-    const page = url.searchParams.get('page') || 1;
+    const page = Number(url.searchParams.get('page')) || 1;
     const limit = 6;
     const skip = limit * (page - 1);
 
@@ -15,7 +15,8 @@ export async function load({ url, locals }) {
     const citiesQuery = await supabase.from("cities").select();
 
     return {
-        count: listingsQuery.count,
+        currentPage: page,
+        totalPages: Math.ceil(listingsQuery.count / limit),
         listings: listingsQuery.data,
         cities: citiesQuery.data
     };

@@ -6,6 +6,8 @@
 
 	export let data;
 
+	console.log(typeof data.currentPage);
+
 	const uniqueStates = [...new Set(data.cities.map((city) => city.state))];
 	let selectedState;
 	let selectedCity;
@@ -51,9 +53,17 @@
 		{/each}
 	</div>
 	<div class="join">
-		<button class="join-item btn btn-outline btn-neutral">«</button>
-		<button class="join-item btn btn-outline btn-neutral">Page 22 {data.count}</button>
-		<button class="join-item btn btn-outline btn-neutral">»</button>
+		{#if data.currentPage > 1}
+			<a href="listings/?page={data.currentPage - 1}" class="join-item btn btn-outline btn-neutral"
+				>«</a
+			>
+		{/if}
+		<button class="join-item btn btn-outline btn-neutral">Page {data.currentPage}</button>
+		{#if data.currentPage < data.totalPages}
+			<a href="listings/?page={data.currentPage + 1}" class="join-item btn btn-outline btn-neutral"
+				>»</a
+			>
+		{/if}
 	</div>
 	<div class="join flex mt-8">
 		<button class="join-item btn">«</button>
