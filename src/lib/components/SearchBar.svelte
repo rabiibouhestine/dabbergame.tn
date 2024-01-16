@@ -21,6 +21,10 @@
 	}
 
 	async function getGames() {
+		if (!search) {
+			reset();
+			return;
+		}
 		const response = await fetch('/games?search=' + search);
 		const data = await response.json();
 
