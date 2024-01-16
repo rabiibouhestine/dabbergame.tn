@@ -10,7 +10,7 @@ export async function load({ params, locals }) {
 
     const listingsQuery = await supabase
     .from('listings')
-    .select()
+    .select('id, game_cover, listing_platform_family, listing_platform, listing_price')
     .eq('user_id', id)
 
     return {

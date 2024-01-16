@@ -5,6 +5,7 @@
 	import SortIcon from '~icons/mdi/sort';
 
 	export let data;
+	console.log(data);
 
 	const uniqueStates = [...new Set(data.cities.map((city) => city.state))];
 	let selectedState;
@@ -50,14 +51,19 @@
 			<ListingCard {listing} />
 		{/each}
 	</div>
+	<div class="join">
+		<button class="join-item btn btn-outline btn-neutral">«</button>
+		<button class="join-item btn btn-outline btn-neutral">Page 22 {data.listings.count}</button>
+		<button class="join-item btn btn-outline btn-neutral">»</button>
+	</div>
 	<div class="join flex mt-8">
 		<button class="join-item btn">«</button>
 		<div class="flex flex-1 justify-center bg-base-100 rounded-none">
 			<a href="/listings?page=1" class="join-item btn">1</a>
 			<a href="/listings?page=2" class="join-item btn">2</a>
-			<button class="join-item btn btn-disabled">...</button>
-			<button class="join-item btn">99</button>
-			<button class="join-item btn">100</button>
+			<a href="/listings?page=3" class="join-item btn">3</a>
+			<a href="/listings?page=4" class="join-item btn">4</a>
+			<a href="/listings?page=5" class="join-item btn">5</a>
 		</div>
 		<button class="join-item btn">»</button>
 	</div>
