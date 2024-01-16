@@ -3,6 +3,7 @@
 
 	import { goto } from '$app/navigation';
 	import { navigating } from '$app/stores';
+
 	import SearchBar from '$lib/components/SearchBar.svelte';
 
 	import GamepadVariantOutline from '~icons/mdi/gamepad-variant-outline';
