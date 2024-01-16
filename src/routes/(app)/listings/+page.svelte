@@ -1,5 +1,7 @@
 <script>
 	import ListingCard from '$lib/components/ListingCard.svelte';
+
+	import TagMultiple from '~icons/mdi/tag-multiple';
 	import SortIcon from '~icons/mdi/sort';
 
 	export let data;
@@ -15,9 +17,11 @@
 </script>
 
 <div class="flex flex-col gap-y-8">
-	<div class="w-full flex gap-4 justify-between items-end pb-4 border-b border-neutral">
+	<div
+		class="w-full flex gap-4 flex-col sm:flex-row justify-between sm:items-end pb-4 border-b border-neutral"
+	>
 		<div>
-			<h2 class="text-4xl font-bold">All Listings</h2>
+			<h2 class="flex gap-2 text-4xl font-bold"><TagMultiple />All Listings</h2>
 			<p class="mt-2 text-neutral-content text-sm">
 				{selectedState +
 					', ' +
