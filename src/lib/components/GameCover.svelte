@@ -54,7 +54,7 @@
 	}
 </script>
 
-<div class="aspect-[5/7] rounded-lg overflow-hidden">
+<div class="aspect-[5/7] rounded-lg overflow-hidden bg-neutral">
 	<div
 		class="h-[15%] flex gap-1 items-center {BackgoundColor} px-3 py-1 text-sm text-slate-200 font-bold"
 	>
