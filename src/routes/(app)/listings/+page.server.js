@@ -6,7 +6,10 @@ export async function load({ locals }) {
     .from('listings')
     .select(`*, profiles (id, first_name, last_name, cities (state, city))`)
 
+    const citiesQuery = await supabase.from("cities").select();
+
     return {
-        listings: listingsQuery.data
+        listings: listingsQuery.data,
+        cities: citiesQuery.data
     };
 }
