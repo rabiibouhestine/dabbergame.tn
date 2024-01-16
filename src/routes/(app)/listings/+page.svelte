@@ -11,7 +11,7 @@
 	<h2 class="w-full flex justify-between pb-2 border-b border-neutral text-4xl font-bold">
 		All Listings
 	</h2>
-	<div class="flex flex-col md:flex-row gap-3 justify-between -mt-4 rounded-container">
+	<div class=" rounded-container flex flex-col md:flex-row gap-3 justify-between -mt-4">
 		<div class="flex flex-col md:flex-row gap-3">
 			<select class="select select-bordered rounded-full" bind:value={selectedState}>
 				<option selected>All States</option>
