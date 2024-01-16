@@ -1,4 +1,6 @@
 <script>
+	import { goto } from '$app/navigation';
+
 	import ListingCard from '$lib/components/ListingCard.svelte';
 
 	import TagMultiple from '~icons/mdi/tag-multiple';
@@ -17,6 +19,11 @@
 	let maxPrice = 300;
 
 	let filtersModal;
+
+	function applyFilters() {
+		filtersModal.close();
+		goto('/listings?page=2');
+	}
 </script>
 
 <div class="flex flex-col gap-y-8">
@@ -124,7 +131,7 @@
 					<option>Sorted by ascending price</option>
 				</select>
 			</div>
-			<button class="btn btn-neutral rounded-full"> Apply </button>
+			<button class="btn btn-neutral rounded-full" on:click={applyFilters}> Apply </button>
 		</div>
 	</div>
 </dialog>
