@@ -1,6 +1,6 @@
 <script>
 	import ListingCard from '$lib/components/ListingCard.svelte';
-	import FilterIcon from '~icons/mdi/filter';
+	import SortIcon from '~icons/mdi/sort';
 
 	export let data;
 
@@ -20,8 +20,8 @@
 				filtersModal.showModal();
 			}}
 		>
-			<FilterIcon />
-			Filters
+			<SortIcon />
+			Sort & Filter
 		</button>
 	</div>
 	<div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-6">
