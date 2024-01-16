@@ -7,16 +7,27 @@
 	const uniqueStates = [...new Set(data.cities.map((city) => city.state))];
 	let selectedState;
 	let selectedCity;
+	let selectedPlatform;
+	let selectedSellers;
+	let selectedSort;
 
 	let filtersModal;
 </script>
 
 <div class="flex flex-col gap-y-8">
-	<div class="w-full flex justify-between items-end pb-2 border-b border-neutral mt-8">
+	<div class="w-full flex justify-between items-end pb-2 border-b border-neutral">
 		<div>
 			<h2 class="text-4xl font-bold">All Listings</h2>
 			<p class="mt-2 text-neutral-content text-sm">
-				All States, All Cities, All Platforms, All Sellers, Sorted by descending price
+				{selectedState +
+					', ' +
+					selectedCity +
+					', ' +
+					selectedPlatform +
+					', ' +
+					selectedSellers +
+					', ' +
+					selectedSort}
 			</p>
 		</div>
 		<button
@@ -69,20 +80,21 @@
 					<option value={city.id}>{city.city}</option>
 				{/each}
 			</select>
-			<select class="select select-bordered rounded-full">
+			<select class="select select-bordered rounded-full" bind:value={selectedPlatform}>
 				<option disabled selected>All Platforms</option>
 				<option>PlayStation 5</option>
 				<option>Xbox Series X|S</option>
 			</select>
-			<select class="select select-bordered rounded-full">
+			<select class="select select-bordered rounded-full" bind:value={selectedSellers}>
 				<option disabled selected>All Sellers</option>
 				<option>People</option>
 				<option>Stores</option>
 			</select>
-			<select class="select select-bordered rounded-full">
-				<option disabled selected>Sort by date</option>
-				<option>Sort by price</option>
-				<option>Sort by date</option>
+			<select class="select select-bordered rounded-full" bind:value={selectedSort}>
+				<option selected>Sorted by descending date</option>
+				<option>Sorted by ascending date</option>
+				<option>Sorted by descending price</option>
+				<option>Sorted by ascending price</option>
 			</select>
 		</div>
 	</div>
