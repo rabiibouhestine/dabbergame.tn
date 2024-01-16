@@ -53,8 +53,8 @@
 	<div class="join flex mt-8">
 		<button class="join-item btn">«</button>
 		<div class="flex flex-1 justify-center bg-base-100 rounded-none">
-			<button class="join-item btn">1</button>
-			<button class="join-item btn">2</button>
+			<a href="/listings?page=1" class="join-item btn">1</a>
+			<a href="/listings?page=2" class="join-item btn">2</a>
 			<button class="join-item btn btn-disabled">...</button>
 			<button class="join-item btn">99</button>
 			<button class="join-item btn">100</button>
