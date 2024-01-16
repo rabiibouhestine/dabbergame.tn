@@ -52,33 +52,24 @@
 			<ListingCard {listing} />
 		{/each}
 	</div>
-	<div class="join">
+	<div class="join flex mt-8">
 		<a
 			href="listings/?page={data.currentPage - 1}"
 			class="join-item btn {data.currentPage > 1 ? '' : 'btn-disabled'} btn-neutral"
 		>
-			« Previous
+			«
 		</a>
-		<div class="join-item btn btn-neutral">
+		<div
+			class="flex flex-1 justify-center items-center text-sm text-neutral-content bg-base-100 rounded-none"
+		>
 			Page {data.currentPage + ' / ' + data.totalPages}
 		</div>
 		<a
 			href="listings/?page={data.currentPage + 1}"
 			class="join-item btn {data.currentPage < data.totalPages ? '' : 'btn-disabled'} btn-neutral"
 		>
-			Next »
+			»
 		</a>
-	</div>
-	<div class="join flex mt-8">
-		<button class="join-item btn btn-neutral">«</button>
-		<div class="flex flex-1 justify-center bg-base-100 rounded-none">
-			<a href="/listings?page=1" class="join-item btn btn-neutral">1</a>
-			<a href="/listings?page=2" class="join-item btn btn-neutral">2</a>
-			<a href="/listings?page=3" class="join-item btn btn-neutral">3</a>
-			<a href="/listings?page=4" class="join-item btn btn-neutral">4</a>
-			<a href="/listings?page=5" class="join-item btn btn-neutral">5</a>
-		</div>
-		<button class="join-item btn btn-neutral">»</button>
 	</div>
 </div>
 
