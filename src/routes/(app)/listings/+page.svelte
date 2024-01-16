@@ -12,8 +12,13 @@
 </script>
 
 <div class="flex flex-col gap-y-8">
-	<div class="w-full flex justify-between pb-2 border-b border-neutral mt-8">
-		<h2 class="text-4xl font-bold">All Listings</h2>
+	<div class="w-full flex justify-between items-end pb-2 border-b border-neutral mt-8">
+		<div>
+			<h2 class="text-4xl font-bold">All Listings</h2>
+			<p class="text-neutral-content text-sm">
+				All States, All Cities, All Platforms, All Sellers, Sorted by descending price
+			</p>
+		</div>
 		<button
 			class="btn btn-outline rounded-full"
 			on:click={() => {
