@@ -76,7 +76,7 @@
 			</div>
 		</div>
 	</div>
-	<div class="w-full flex justify-between pb-2 border-b border-neutral mt-8">
+	<div class="w-full flex justify-between pb-1 border-b border-neutral mt-8">
 		<h2 class="text-4xl font-bold">Latest Listings</h2>
 		<a href="/listings" class="btn btn-circle btn-ghost text-3xl font-bold">
 			<ArrowRight />
