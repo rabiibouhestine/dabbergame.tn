@@ -2,6 +2,7 @@
 	import '../../app.css';
 
 	import { goto } from '$app/navigation';
+	import { navigating } from '$app/stores';
 	import SearchBar from '$lib/components/SearchBar.svelte';
 
 	import GamepadVariantOutline from '~icons/mdi/gamepad-variant-outline';
@@ -91,6 +92,7 @@
 		</div>
 	</div>
 
+	<progress class="progress w-full {$navigating ? 'visible' : 'invisible'}"></progress>
 	<div class="flex-1 w-full max-w-6xl mx-auto px-4 my-10">
 		<slot />
 	</div>
