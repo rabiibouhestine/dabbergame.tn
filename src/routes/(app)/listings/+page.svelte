@@ -60,22 +60,24 @@
 	<div class="join flex mt-8">
 		<a
 			href="listings/?page={data.currentPage - 1}"
-			class="join-item btn {data.currentPage > 1 ? '' : 'btn-disabled'} btn-neutral"
+			class="join-item btn {data.currentPage > 1 ? '' : 'btn-disabled'} btn-neutral w-16"
 		>
 			«
 		</a>
-		<a href="listings/?page=1" class="join-item btn btn-neutral"> 1 </a>
+		<a href="listings/?page=1" class="join-item btn btn-neutral w-16"> 1 </a>
 		<div
 			class="flex flex-1 justify-center items-center text-sm text-neutral-content bg-base-100 rounded-none"
 		>
 			Page {data.currentPage + ' / ' + data.totalPages}
 		</div>
-		<a href="listings/?page={data.totalPages}" class="join-item btn btn-neutral">
+		<a href="listings/?page={data.totalPages}" class="join-item btn btn-neutral w-16">
 			{data.totalPages}
 		</a>
 		<a
 			href="listings/?page={data.currentPage + 1}"
-			class="join-item btn {data.currentPage < data.totalPages ? '' : 'btn-disabled'} btn-neutral"
+			class="join-item btn {data.currentPage < data.totalPages
+				? ''
+				: 'btn-disabled'} btn-neutral w-16"
 		>
 			»
 		</a>
