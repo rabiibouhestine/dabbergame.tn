@@ -32,8 +32,8 @@
 			</select>
 			<select class="select select-bordered rounded-full">
 				<option disabled selected>All Platforms</option>
-				<option>PS5</option>
-				<option>XBSX</option>
+				<option>PlayStation 5</option>
+				<option>Xbox Series X|S</option>
 			</select>
 			<select class="select select-bordered rounded-full">
 				<option disabled selected>All Sellers</option>
