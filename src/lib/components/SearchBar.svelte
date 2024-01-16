@@ -9,6 +9,10 @@
 	const dispatch = createEventDispatcher();
 
 	function handleSearch() {
+		if (!search) {
+			reset();
+			return;
+		}
 		searching = true;
 		if (timeout) {
 			clearTimeout(timeout);
@@ -17,11 +21,6 @@
 	}
 
 	async function getGames() {
-		if (!search) {
-			reset();
-			return;
-		}
-
 		const response = await fetch('/games?search=' + search);
 		const data = await response.json();
 
