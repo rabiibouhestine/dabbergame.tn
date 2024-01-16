@@ -1,5 +1,6 @@
 <script>
 	import { createEventDispatcher } from 'svelte';
+	import { getGameCover } from '$lib/utils/igdbUtils';
 
 	let search = '';
 	let games = [];
@@ -74,8 +75,7 @@
 					>
 						{#if game.cover}
 							<img
-								src="https://images.igdb.com/igdb/image/upload/t_cover_small/{game.cover
-									.image_id}.jpg"
+								src={getGameCover(game.cover.image_id, false)}
 								alt="game"
 								class="rounded-md max-w-12"
 							/>
