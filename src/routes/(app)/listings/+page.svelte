@@ -53,19 +53,21 @@
 		{/each}
 	</div>
 	<div class="join">
-		{#if data.currentPage > 1}
-			<a href="listings/?page={data.currentPage - 1}" class="join-item btn btn-outline btn-neutral"
-				>«</a
-			>
-		{/if}
-		<button class="join-item btn btn-outline btn-neutral"
-			>Page {data.currentPage + ' / ' + data.totalPages}</button
+		<a
+			href="listings/?page={data.currentPage - 1}"
+			class="join-item btn {data.currentPage > 1 ? '' : 'btn-disabled'} btn-neutral"
 		>
-		{#if data.currentPage < data.totalPages}
-			<a href="listings/?page={data.currentPage + 1}" class="join-item btn btn-outline btn-neutral"
-				>»</a
-			>
-		{/if}
+			« Previous
+		</a>
+		<div class="join-item btn btn-neutral">
+			Page {data.currentPage + ' / ' + data.totalPages}
+		</div>
+		<a
+			href="listings/?page={data.currentPage + 1}"
+			class="join-item btn {data.currentPage < data.totalPages ? '' : 'btn-disabled'} btn-neutral"
+		>
+			Next »
+		</a>
 	</div>
 	<div class="join flex mt-8">
 		<button class="join-item btn">«</button>
