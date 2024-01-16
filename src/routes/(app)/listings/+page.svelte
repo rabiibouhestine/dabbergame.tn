@@ -64,11 +64,15 @@
 		>
 			«
 		</a>
+		<a href="listings/?page=1" class="join-item btn btn-neutral"> 1 </a>
 		<div
 			class="flex flex-1 justify-center items-center text-sm text-neutral-content bg-base-100 rounded-none"
 		>
 			Page {data.currentPage + ' / ' + data.totalPages}
 		</div>
+		<a href="listings/?page={data.totalPages}" class="join-item btn btn-neutral">
+			{data.totalPages}
+		</a>
 		<a
 			href="listings/?page={data.currentPage + 1}"
 			class="join-item btn {data.currentPage < data.totalPages ? '' : 'btn-disabled'} btn-neutral"
