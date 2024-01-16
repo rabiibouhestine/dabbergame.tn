@@ -52,11 +52,11 @@
 	{#if searching}
 		<ul class="absolute w-full mt-2 z-[1] menu p-2 shadow bg-base-100 rounded-box">
 			<li>
-				<div>Searching...</div>
+				<div><span class="loading loading-ring loading-sm"></span>Searching...</div>
 			</li>
 		</ul>
 	{/if}
-	{#if games.length}
+	{#if games.length && !searching}
 		<ul
 			class="absolute w-full mt-2 z-[1] p-4 shadow bg-base-100 rounded-box max-h-80 flex flex-col gap-4 overflow-y-scroll"
 		>
