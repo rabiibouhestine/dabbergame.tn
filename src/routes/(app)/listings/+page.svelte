@@ -8,8 +8,6 @@
 
 	export let data;
 
-	console.log(typeof data.currentPage);
-
 	const uniqueStates = [...new Set(data.cities.map((city) => city.state))];
 	let selectedState;
 	let selectedCity;
