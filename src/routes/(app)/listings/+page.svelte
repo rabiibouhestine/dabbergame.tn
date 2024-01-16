@@ -58,7 +58,9 @@
 				>«</a
 			>
 		{/if}
-		<button class="join-item btn btn-outline btn-neutral">Page {data.currentPage}</button>
+		<button class="join-item btn btn-outline btn-neutral"
+			>Page {data.currentPage + ' / ' + data.totalPages}</button
+		>
 		{#if data.currentPage < data.totalPages}
 			<a href="listings/?page={data.currentPage + 1}" class="join-item btn btn-outline btn-neutral"
 				>»</a
