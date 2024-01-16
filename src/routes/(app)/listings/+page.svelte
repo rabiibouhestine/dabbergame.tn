@@ -67,39 +67,46 @@
 		<form method="dialog">
 			<button class="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</button>
 		</form>
-		<div class="flex flex-col gap-3 my-10">
-			<select
-				class="select select-bordered rounded-full"
-				bind:value={selectedState}
-				on:change={() => (selectedCity = 'All Cities')}
-			>
-				<option selected>All States</option>
-				{#each uniqueStates as state}
-					<option>{state}</option>
-				{/each}
-			</select>
-			<select class="select select-bordered rounded-full" name="city_id" bind:value={selectedCity}>
-				<option value="All Cities" selected>All Cities</option>
-				{#each data.cities.filter((city) => city.state === selectedState) as city}
-					<option value={city.id}>{city.city}</option>
-				{/each}
-			</select>
-			<select class="select select-bordered rounded-full" bind:value={selectedPlatform}>
-				<option disabled selected>All Platforms</option>
-				<option>PlayStation 5</option>
-				<option>Xbox Series X|S</option>
-			</select>
-			<select class="select select-bordered rounded-full" bind:value={selectedSellers}>
-				<option disabled selected>All Sellers</option>
-				<option>People</option>
-				<option>Stores</option>
-			</select>
-			<select class="select select-bordered rounded-full" bind:value={selectedSort}>
-				<option selected>Sorted by descending date</option>
-				<option>Sorted by ascending date</option>
-				<option>Sorted by descending price</option>
-				<option>Sorted by ascending price</option>
-			</select>
+		<div class="flex flex-col">
+			<div class="flex flex-col gap-3 py-10">
+				<select
+					class="select select-bordered rounded-full"
+					bind:value={selectedState}
+					on:change={() => (selectedCity = 'All Cities')}
+				>
+					<option selected>All States</option>
+					{#each uniqueStates as state}
+						<option>{state}</option>
+					{/each}
+				</select>
+				<select
+					class="select select-bordered rounded-full"
+					name="city_id"
+					bind:value={selectedCity}
+				>
+					<option value="All Cities" selected>All Cities</option>
+					{#each data.cities.filter((city) => city.state === selectedState) as city}
+						<option value={city.id}>{city.city}</option>
+					{/each}
+				</select>
+				<select class="select select-bordered rounded-full" bind:value={selectedPlatform}>
+					<option disabled selected>All Platforms</option>
+					<option>PlayStation 5</option>
+					<option>Xbox Series X|S</option>
+				</select>
+				<select class="select select-bordered rounded-full" bind:value={selectedSellers}>
+					<option disabled selected>All Sellers</option>
+					<option>People</option>
+					<option>Stores</option>
+				</select>
+				<select class="select select-bordered rounded-full" bind:value={selectedSort}>
+					<option selected>Sorted by descending date</option>
+					<option>Sorted by ascending date</option>
+					<option>Sorted by descending price</option>
+					<option>Sorted by ascending price</option>
+				</select>
+			</div>
+			<button class="btn btn-neutral rounded-full"> Apply </button>
 		</div>
 	</div>
 </dialog>
