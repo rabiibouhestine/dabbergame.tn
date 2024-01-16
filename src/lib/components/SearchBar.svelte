@@ -13,7 +13,7 @@
 		if (timeout) {
 			clearTimeout(timeout);
 		}
-		timeout = setTimeout(getGames, 300);
+		timeout = setTimeout(getGames, 600);
 	}
 
 	async function getGames() {
