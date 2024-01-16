@@ -15,7 +15,7 @@
 </script>
 
 <div class="flex flex-col gap-y-8">
-	<div class="w-full flex justify-between items-end pb-2 border-b border-neutral">
+	<div class="w-full flex gap-4 justify-between items-end pb-2 border-b border-neutral">
 		<div>
 			<h2 class="text-4xl font-bold">All Listings</h2>
 			<p class="mt-2 text-neutral-content text-sm">
