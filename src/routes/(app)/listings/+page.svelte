@@ -12,6 +12,7 @@
 	let selectedPlatform;
 	let selectedSellers;
 	let selectedSort;
+	let maxPrice = 300;
 
 	let filtersModal;
 </script>
@@ -67,8 +68,15 @@
 		<form method="dialog">
 			<button class="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</button>
 		</form>
-		<div class="flex flex-col">
-			<div class="flex flex-col gap-3 py-10">
+		<div class="flex flex-col gap-6 mt-6">
+			<label class="form-control w-full">
+				<div class="label">
+					<span class="label-text">Max Price</span>
+					<span class="label-text-alt">{maxPrice} DT</span>
+				</div>
+				<input type="range" min="0" max="300" bind:value={maxPrice} class="range" />
+			</label>
+			<div class="flex flex-col gap-3">
 				<select
 					class="select select-bordered rounded-full"
 					bind:value={selectedState}
