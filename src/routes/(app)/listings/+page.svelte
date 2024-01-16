@@ -25,11 +25,6 @@
 					<option value={city.id}>{city.city}</option>
 				{/each}
 			</select>
-			<!-- <select class="select select-bordered rounded-full">
-				<option disabled selected>All States</option>
-				<option>Tunis</option>
-				<option>Sousse</option>
-			</select> -->
 			<select class="select select-bordered rounded-full">
 				<option disabled selected>All Platforms</option>
 				<option>PS5</option>
