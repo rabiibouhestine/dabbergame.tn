@@ -1,11 +1,14 @@
 <script>
 	import ListingCard from '$lib/components/ListingCard.svelte';
+	import FilterIcon from '~icons/mdi/filter';
 
 	export let data;
 
 	const uniqueStates = [...new Set(data.cities.map((city) => city.state))];
 	let selectedState;
 	let selectedCity;
+
+	let filtersModal;
 </script>
 
 <div class="flex flex-col gap-y-8">
@@ -14,6 +17,15 @@
 	</h2>
 	<div class=" rounded-container flex flex-col md:flex-row gap-3 justify-between -mt-4">
 		<div class="flex flex-col md:flex-row gap-3">
+			<button
+				class="btn btn-neutral rounded-full"
+				on:click={() => {
+					filtersModal.showModal();
+				}}
+			>
+				<FilterIcon />
+				Filters
+			</button>
 			<select
 				class="select select-bordered rounded-full"
 				bind:value={selectedState}
@@ -64,3 +76,19 @@
 		<button class="join-item btn">»</button>
 	</div>
 </div>
+
+<button
+	class="btn"
+	on:click={() => {
+		filtersModal.showModal();
+	}}>open modal</button
+>
+<dialog bind:this={filtersModal} class="modal">
+	<div class="modal-box">
+		<form method="dialog">
+			<button class="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</button>
+		</form>
+		<h3 class="font-bold text-lg">Hello!</h3>
+		<p class="py-4">Press ESC key or click on ✕ button to close</p>
+	</div>
+</dialog>
