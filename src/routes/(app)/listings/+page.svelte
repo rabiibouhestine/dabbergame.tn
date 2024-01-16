@@ -51,7 +51,7 @@
 	</div>
 	<div class="join flex mt-8">
 		<button class="join-item btn">«</button>
-		<div class="flex flex-1 justify-center bg-neutral rounded-none">
+		<div class="flex flex-1 justify-center bg-base-100 rounded-none">
 			<button class="join-item btn">1</button>
 			<button class="join-item btn">2</button>
 			<button class="join-item btn btn-disabled">...</button>
