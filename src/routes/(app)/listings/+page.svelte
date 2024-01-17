@@ -144,7 +144,7 @@
 					bind:value={selectedCityId}
 				>
 					<option value={0} selected>All Cities</option>
-					{#each data.cities as city (city.id)}
+					{#each data.cities.filter((city) => city.state === selectedState) as city (city.id)}
 						<option value={city.id}>{city.state + ', ' + city.city}</option>
 					{/each}
 				</select>
