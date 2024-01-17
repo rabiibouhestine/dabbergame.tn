@@ -35,12 +35,20 @@ export const actions = {
         // Get Session
         const session = await event.locals.getSession();
 
+        const userCityQuery = await supabase
+        .from('profiles')
+        .select('city_id')
+        .eq('id', session.user.id)
+        .limit(1)
+        .single()
+
         // Save Listing in the database
         const { data, error } = await supabase
         .from('listings')
         .insert({
             user_id: session.user.id,
             profile_id: session.user.id,
+            city_id: userCityQuery.data.city_id,
             game_id: game_id,
             game_cover: game.cover.image_id,
             game_name: game.name,
