@@ -38,7 +38,19 @@
 	<div class="divider divider-start text-4xl font-bold">Listings</div>
 	<div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-6">
 		{#each data.listings as listing}
-			<ListingCard {listing} showUserInfo={false} />
+			<ListingCard
+				showUserInfo={false}
+				id={listing.id}
+				platform={listing.listing_platform}
+				platformFamily={listing.listing_platform_family}
+				coverImageId={listing.game_cover}
+				price={listing.listing_price}
+				userId={listing?.profiles?.id}
+				userFirstName={listing?.profiles?.first_name}
+				userLastName={listing?.profiles?.last_name}
+				userState={listing?.profiles?.cities?.state}
+				userCity={listing?.profiles?.cities?.city}
+			/>
 		{/each}
 	</div>
 </div>
