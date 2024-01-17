@@ -7,6 +7,7 @@ export async function load({ params, locals }) {
     .from('profiles')
     .select(`*, cities (state, city)`)
     .eq('id', id)
+    .single()
 
     const listingsQuery = await supabase
     .from('listings')
@@ -14,7 +15,7 @@ export async function load({ params, locals }) {
     .eq('user_id', id)
 
     return {
-        profile: profileQuery.data[0],
+        profile: profileQuery.data,
         listings: listingsQuery.data
     };
 }
