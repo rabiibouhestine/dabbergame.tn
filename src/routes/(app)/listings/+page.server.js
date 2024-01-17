@@ -10,6 +10,8 @@ export async function load({ url, locals }) {
 
     const supabase = locals.supabase;
 
+    const citiesQuery = await supabase.from("cities").select();
+
     let listingsQuery = supabase
     .from('listings')
     .select('id, game_cover, listing_platform_family, listing_platform, listing_price, profiles (id, first_name, last_name, cities (id, state, city))', { count: 'exact' })
@@ -25,11 +27,9 @@ export async function load({ url, locals }) {
   
     listingsQuery = await listingsQuery;
 
-    const citiesQuery = await supabase.from("cities").select();
-
     return {
+        cities: citiesQuery.data,
         totalPages: Math.ceil(listingsQuery.count / limit),
-        listings: listingsQuery.data,
-        cities: citiesQuery.data
+        listings: listingsQuery.data
     };
 }
