@@ -25,8 +25,10 @@
 	$: city = cityId ? data.cities.filter((city) => city.id === cityId)[0].city : 'All Cities';
 
 	$: selectedMaxPrice = maxPrice;
-	$: selectedCityId = cityId;
-	$: selectedState = data.cities.filter((city) => city.id === cityId)[0].state;
+	$: selectedCityId = cityId ? cityId : 0;
+	$: selectedState = cityId
+		? data.cities.filter((city) => city.id === cityId)[0].state
+		: 'All States';
 
 	$: paramString = `maxPrice=${selectedMaxPrice}&cityId=${selectedCityId}`;
 
