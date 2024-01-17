@@ -6,10 +6,10 @@
 
 	import SortIcon from '~icons/mdi/sort';
 	import ListingsIcon from '~icons/mdi/tag-multiple';
-	import LastPageIcon from '~icons/mdi/chevron-triple-right';
 	import NextPAgeIcon from '~icons/mdi/chevron-right';
-	import FirstPageIcon from '~icons/mdi/chevron-triple-left';
 	import PreviousPageIcon from '~icons/mdi/chevron-left';
+	import LastPageIcon from '~icons/mdi/chevron-triple-right';
+	import FirstPageIcon from '~icons/mdi/chevron-triple-left';
 
 	const PRICE_RANGE_MAX = 300;
 
