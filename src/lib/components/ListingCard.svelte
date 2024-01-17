@@ -33,8 +33,8 @@
 	<a href="/user/{userId}" class="transition ease-in-out hover:scale-105">
 		{#if showUserInfo}
 			<UserInfo
-				first_name={userFirstName}
-				last_name={userLastName}
+				firstName={userFirstName}
+				lastName={userLastName}
 				state={userState}
 				city={userCity}
 			/>

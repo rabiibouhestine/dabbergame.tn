@@ -59,8 +59,8 @@
 					>
 						<div class="transition ease-in-out group-hover:scale-105">
 							<UserInfo
-								first_name={store.first_name}
-								last_name={store.last_name}
+								firstName={store.first_name}
+								lastName={store.last_name}
 								state={store.state}
 								city={store.city}
 							/>

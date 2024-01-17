@@ -24,8 +24,8 @@
 			</a>
 			<a href="/user/{listing.profiles.id}" class="transition ease-in-out hover:scale-105">
 				<UserInfo
-					first_name={listing.profiles.first_name}
-					last_name={listing.profiles.last_name}
+					firstName={listing.profiles.first_name}
+					lastName={listing.profiles.last_name}
 					state={listing.profiles.cities.state}
 					city={listing.profiles.cities.city}
 				/>
