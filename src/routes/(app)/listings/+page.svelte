@@ -6,6 +6,10 @@
 
 	import TagMultiple from '~icons/mdi/tag-multiple';
 	import SortIcon from '~icons/mdi/sort';
+	import LastPageIcon from '~icons/mdi/chevron-triple-right';
+	import NextPAgeIcon from '~icons/mdi/chevron-double-right';
+	import FirstPageIcon from '~icons/mdi/chevron-triple-left';
+	import PreviousPageIcon from '~icons/mdi/chevron-double-left';
 
 	const PRICE_RANGE_MAX = 300;
 
@@ -82,31 +86,33 @@
 		{/each}
 	</div>
 	<div class="join flex mt-8">
+		<a href="/listings/?page=1&{paramString}" class="join-item btn btn-neutral w-16">
+			<FirstPageIcon />
+		</a>
 		<a
 			href="/listings/?page={currentPage - 1}&{paramString}"
 			class="join-item btn btn-neutral w-16"
 			class:btn-disabled={currentPage <= 1}
 		>
-			«
+			<PreviousPageIcon />
 		</a>
-		<a href="/listings/?page=1&{paramString}" class="join-item btn btn-neutral w-16"> 1 </a>
 		<div
 			class="flex flex-1 justify-center items-center text-sm text-neutral-content bg-base-100 rounded-none"
 		>
 			Page {currentPage + ' / ' + data.totalPages}
 		</div>
 		<a
-			href="/listings/?page={data.totalPages}&{paramString}"
-			class="join-item btn btn-neutral w-16"
-		>
-			{data.totalPages}
-		</a>
-		<a
 			href="/listings/?page={currentPage + 1}&{paramString}"
 			class="join-item btn btn-neutral w-16"
 			class:btn-disabled={currentPage >= data.totalPages}
 		>
-			»
+			<NextPAgeIcon />
+		</a>
+		<a
+			href="/listings/?page={data.totalPages}&{paramString}"
+			class="join-item btn btn-neutral w-16"
+		>
+			<LastPageIcon />
 		</a>
 	</div>
 </div>
