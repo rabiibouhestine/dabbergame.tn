@@ -4,8 +4,8 @@
 
 	import ListingCard from '$lib/components/ListingCard.svelte';
 
-	import ListingsIcon from '~icons/mdi/tag-multiple';
 	import SortIcon from '~icons/mdi/sort';
+	import ListingsIcon from '~icons/mdi/tag-multiple';
 	import LastPageIcon from '~icons/mdi/chevron-triple-right';
 	import NextPAgeIcon from '~icons/mdi/chevron-double-right';
 	import FirstPageIcon from '~icons/mdi/chevron-triple-left';
