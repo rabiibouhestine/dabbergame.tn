@@ -140,7 +140,7 @@
 				>
 					<option value={0} selected>All Cities</option>
 					{#each data.cities.filter((city) => city.state === selectedState) as city (city.id)}
-						<option value={city.id}>{city.state + ', ' + city.city}</option>
+						<option value={city.id}>{city.city}</option>
 					{/each}
 				</select>
 				<select class="select select-bordered rounded-full" bind:value={selectedPlatform}>
