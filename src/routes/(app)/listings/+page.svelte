@@ -4,7 +4,7 @@
 
 	import ListingCard from '$lib/components/ListingCard.svelte';
 
-	import TagMultiple from '~icons/mdi/tag-multiple';
+	import ListingsIcon from '~icons/mdi/tag-multiple';
 	import SortIcon from '~icons/mdi/sort';
 	import LastPageIcon from '~icons/mdi/chevron-triple-right';
 	import NextPAgeIcon from '~icons/mdi/chevron-double-right';
@@ -46,7 +46,7 @@
 		class="w-full flex gap-4 flex-col sm:flex-row justify-between sm:items-end pb-4 border-b border-neutral"
 	>
 		<div>
-			<h2 class="flex gap-2 text-4xl font-bold"><TagMultiple />All Listings</h2>
+			<h2 class="flex gap-2 text-4xl font-bold"><ListingsIcon />All Listings</h2>
 			<p class="mt-2 text-neutral-content text-xs sm:text-sm">
 				{'state' +
 					', ' +
