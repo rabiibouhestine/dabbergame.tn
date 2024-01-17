@@ -19,7 +19,9 @@
 
 	$: currentPage = Number($page.url.searchParams.get('page')) || 1;
 	$: maxPrice = Number($page.url.searchParams.get('maxPrice')) || PRICE_RANGE_MAX;
-	$: cityId = Number($page.url.searchParams.get('cityId')) || 18;
+	$: cityId = Number($page.url.searchParams.get('cityId'));
+	$: state = cityId ? data.cities.filter((city) => city.id === cityId)[0].state : 'All States';
+	$: city = cityId ? data.cities.filter((city) => city.id === cityId)[0].city : 'All Cities';
 
 	$: selectedMaxPrice = maxPrice;
 	$: selectedCityId = cityId;
@@ -42,9 +44,9 @@
 		<div>
 			<h2 class="flex gap-2 text-4xl font-bold"><TagMultiple />All Listings</h2>
 			<p class="mt-2 text-neutral-content text-xs sm:text-sm">
-				{data.cities.filter((city) => city.id === Number(cityId))[0].state +
+				{state +
 					', ' +
-					data.cities.filter((city) => city.id === Number(cityId))[0].city +
+					city +
 					', ' +
 					selectedPlatform +
 					', ' +
