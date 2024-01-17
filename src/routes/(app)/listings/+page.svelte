@@ -123,16 +123,6 @@
 				/>
 			</label>
 			<div class="flex flex-col gap-3">
-				<!-- <select
-					class="select select-bordered rounded-full"
-					bind:value={selectedState}
-					on:change={() => (selectedCityId = 0)}
-				>
-					<option selected>All States</option>
-					{#each uniqueStates as state}
-						<option>{state}</option>
-					{/each}
-				</select> -->
 				<select
 					class="select select-bordered rounded-full"
 					on:change={() => (selectedCityId = 0)}
