@@ -19,7 +19,7 @@
 
 	$: currentPage = Number($page.url.searchParams.get('page')) || 1;
 	$: maxPrice = Number($page.url.searchParams.get('maxPrice')) || PRICE_RANGE_MAX;
-	$: cityId = $page.url.searchParams.get('cityId') || 0;
+	$: cityId = $page.url.searchParams.get('cityId') || 18;
 
 	$: selectedMaxPrice = maxPrice;
 	$: selectedCityId = Number(cityId);
