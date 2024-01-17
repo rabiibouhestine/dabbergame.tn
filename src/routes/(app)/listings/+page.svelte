@@ -19,11 +19,11 @@
 
 	$: currentPage = Number($page.url.searchParams.get('page')) || 1;
 	$: maxPrice = Number($page.url.searchParams.get('maxPrice')) || PRICE_RANGE_MAX;
-	$: cityId = $page.url.searchParams.get('cityId') || 18;
+	$: cityId = Number($page.url.searchParams.get('cityId')) || 18;
 
 	$: selectedMaxPrice = maxPrice;
-	$: selectedCityId = Number(cityId);
-	$: selectedState = data.cities.filter((city) => city.id === Number(cityId))[0].state;
+	$: selectedCityId = cityId;
+	$: selectedState = data.cities.filter((city) => city.id === cityId)[0].state;
 
 	$: paramString = `maxPrice=${selectedMaxPrice}&cityId=${selectedCityId}`;
 
