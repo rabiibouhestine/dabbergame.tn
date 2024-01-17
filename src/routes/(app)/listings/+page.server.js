@@ -26,7 +26,7 @@ export async function load({ url, locals }) {
     .lt('listing_price', maxPrice)
     .order('listing_price', { ascending: false })
     .range(skip, skip + limit - 1);
-  
+
     listingsQuery = await listingsQuery;
 
     let listingsViewQuery = await supabase
