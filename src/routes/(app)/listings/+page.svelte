@@ -7,6 +7,8 @@
 	import TagMultiple from '~icons/mdi/tag-multiple';
 	import SortIcon from '~icons/mdi/sort';
 
+	const PRICE_RANGE_MAX = 300;
+
 	export let data;
 
 	const uniqueStates = [...new Set(data.cities.map((city) => city.state))];
@@ -17,7 +19,7 @@
 	let selectedSort;
 
 	$: currentPage = Number($page.url.searchParams.get('page')) || 1;
-	$: maxPrice = Number($page.url.searchParams.get('maxPrice')) || 300;
+	$: maxPrice = Number($page.url.searchParams.get('maxPrice')) || PRICE_RANGE_MAX;
 
 	$: selectedMaxPrice = maxPrice;
 
@@ -105,7 +107,13 @@
 					<span class="label-text">Max Price</span>
 					<span class="label-text-alt">{selectedMaxPrice} DT</span>
 				</div>
-				<input type="range" min="0" max="300" bind:value={selectedMaxPrice} class="range" />
+				<input
+					type="range"
+					min="0"
+					max={PRICE_RANGE_MAX}
+					class="range"
+					bind:value={selectedMaxPrice}
+				/>
 			</label>
 			<div class="flex flex-col gap-3">
 				<select
