@@ -22,11 +22,16 @@ export async function load({ url, locals }) {
     }
 
     listingsQuery = listingsQuery
+    .eq('profiles.cities.id', 18)
     .lt('listing_price', maxPrice)
     .order('listing_price', { ascending: false })
     .range(skip, skip + limit - 1);
   
     listingsQuery = await listingsQuery;
+
+    let listingsFullQuery = await supabase
+    .from('listings_full')
+    .select('*')
 
     return {
         cities: citiesQuery.data,
