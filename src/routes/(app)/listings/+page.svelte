@@ -19,18 +19,15 @@
 
 	$: currentPage = Number($page.url.searchParams.get('page')) || 1;
 	$: maxPrice = Number($page.url.searchParams.get('maxPrice')) || PRICE_RANGE_MAX;
-	$: cityId = Number($page.url.searchParams.get('cityId'));
-
-	$: state = cityId ? data.cities.filter((city) => city.id === cityId)[0].state : 'All States';
-	$: city = cityId ? data.cities.filter((city) => city.id === cityId)[0].city : 'All Cities';
+	$: city = $page.url.searchParams.get('city') || 'All Cities';
 
 	$: selectedMaxPrice = maxPrice;
-	$: selectedCityId = cityId ? cityId : 0;
-	$: selectedState = cityId
-		? data.cities.filter((city) => city.id === cityId)[0].state
-		: 'All States';
+	$: selectedCity = city;
+	// $: selectedState = cityId
+	// 	? data.cities.filter((city) => city.id === cityId)[0].state
+	// 	: 'All States';
 
-	$: paramString = `maxPrice=${selectedMaxPrice}&cityId=${selectedCityId}`;
+	$: paramString = `maxPrice=${selectedMaxPrice}&city=${selectedCity}`;
 
 	let filtersModal;
 
@@ -47,7 +44,7 @@
 		<div>
 			<h2 class="flex gap-2 text-4xl font-bold"><TagMultiple />All Listings</h2>
 			<p class="mt-2 text-neutral-content text-xs sm:text-sm">
-				{state +
+				{'state' +
 					', ' +
 					city +
 					', ' +
@@ -123,7 +120,7 @@
 				/>
 			</label>
 			<div class="flex flex-col gap-3">
-				<select
+				<!-- <select
 					class="select select-bordered rounded-full"
 					on:change={() => (selectedCityId = 0)}
 					bind:value={selectedState}
@@ -132,15 +129,15 @@
 					{#each uniqueStates as state}
 						<option>{state}</option>
 					{/each}
-				</select>
+				</select> -->
 				<select
 					class="select select-bordered rounded-full"
 					name="city_id"
-					bind:value={selectedCityId}
+					bind:value={selectedCity}
 				>
-					<option value={0} selected>All Cities</option>
-					{#each data.cities.filter((city) => city.state === selectedState) as city (city.id)}
-						<option value={city.id}>{city.city}</option>
+					<option selected>All Cities</option>
+					{#each data.cities as city (city.id)}
+						<option>{city.city}</option>
 					{/each}
 				</select>
 				<select class="select select-bordered rounded-full" bind:value={selectedPlatform}>
