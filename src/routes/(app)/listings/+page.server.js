@@ -38,7 +38,7 @@ export async function load({ url, locals }) {
 
     return {
         cities: citiesQuery.data,
-        totalPages: Math.ceil(listingsQuery.count / limit),
-        listings: listingsQuery.data
+        totalPages: Math.ceil(listingsViewQuery.count / limit),
+        listings: listingsViewQuery.data
     };
 }

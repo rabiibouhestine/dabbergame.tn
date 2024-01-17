@@ -68,17 +68,16 @@
 	<div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-6">
 		{#each data.listings as listing (listing.id)}
 			<ListingCard
-				showUserInfo={false}
 				id={listing.id}
 				platform={listing.listing_platform}
 				platformFamily={listing.listing_platform_family}
 				coverImageId={listing.game_cover}
 				price={listing.listing_price}
-				userId={listing?.profiles?.id}
-				userFirstName={listing?.profiles?.first_name}
-				userLastName={listing?.profiles?.last_name}
-				userState={listing?.profiles?.cities?.state}
-				userCity={listing?.profiles?.cities?.city}
+				userId={listing.profile_id}
+				userFirstName={listing.first_name}
+				userLastName={listing.last_name}
+				userState={listing.state}
+				userCity={listing.city}
 			/>
 		{/each}
 	</div>
