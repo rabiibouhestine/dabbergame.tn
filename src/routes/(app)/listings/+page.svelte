@@ -119,7 +119,7 @@
 				<select
 					class="select select-bordered rounded-full"
 					bind:value={selectedState}
-					on:change={() => (selectedCity = 'All Cities')}
+					on:change={() => (selectedCity = '0')}
 				>
 					<option selected>All States</option>
 					{#each uniqueStates as state}
@@ -131,8 +131,8 @@
 					name="city_id"
 					bind:value={selectedCity}
 				>
-					<option value="All Cities" selected>All Cities</option>
-					{#each data.cities.filter((city) => city.state === selectedState) as city}
+					<option value="0" selected>All Cities</option>
+					{#each data.cities.filter((city) => city.state === selectedState) as city (city.id)}
 						<option value={city.id}>{city.city}</option>
 					{/each}
 				</select>
