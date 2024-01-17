@@ -20,11 +20,12 @@
 
 	$: currentPage = Number($page.url.searchParams.get('page')) || 1;
 	$: maxPrice = Number($page.url.searchParams.get('maxPrice')) || PRICE_RANGE_MAX;
-	$: cityId = $page.url.searchParams.get('cityId');
+	$: cityId = $page.url.searchParams.get('cityId') || 0;
 
 	$: selectedMaxPrice = maxPrice;
+	$: selectedCity = cityId;
 
-	$: paramString = `maxPrice=${selectedMaxPrice}&cityId=${cityId}`;
+	$: paramString = `maxPrice=${selectedMaxPrice}&cityId=${selectedCity}`;
 
 	let filtersModal;
 
@@ -110,7 +111,7 @@
 				</div>
 				<input
 					type="range"
-					min="0"
+					min={0}
 					max={PRICE_RANGE_MAX}
 					class="range"
 					bind:value={selectedMaxPrice}

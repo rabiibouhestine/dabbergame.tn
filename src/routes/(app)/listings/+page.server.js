@@ -14,7 +14,7 @@ export async function load({ url, locals }) {
     .from('listings')
     .select('id, game_cover, listing_platform_family, listing_platform, listing_price, profiles (id, first_name, last_name, cities (id, state, city))', { count: 'exact' })
   
-    if (cityId) {
+    if (cityId && cityId !== '0') {
         listingsQuery = listingsQuery.eq('city_id', cityId);
     }
 
