@@ -20,6 +20,7 @@
 
 	$: currentPage = Number($page.url.searchParams.get('page')) || 1;
 	$: maxPrice = Number($page.url.searchParams.get('maxPrice')) || PRICE_RANGE_MAX;
+	$: cityId = $page.url.searchParams.get('cityId');
 
 	$: selectedMaxPrice = maxPrice;
 

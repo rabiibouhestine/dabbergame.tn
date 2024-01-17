@@ -2,7 +2,7 @@
 export async function load({ url, locals }) {
 
     const maxPrice = Number(url.searchParams.get('maxPrice')) || 300;
-    const cityId = Number(url.searchParams.get('cityId')) || 0;
+    const cityId = Number(url.searchParams.get('cityId')) || "0";
 
     const page = Number(url.searchParams.get('page')) || 1;
     const limit = 6;
