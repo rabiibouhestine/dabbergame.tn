@@ -24,7 +24,7 @@
 
 	$: selectedMaxPrice = maxPrice;
 
-	$: paramString = `maxPrice=${selectedMaxPrice}`;
+	$: paramString = `maxPrice=${selectedMaxPrice}&cityId=${cityId}`;
 
 	let filtersModal;
 
