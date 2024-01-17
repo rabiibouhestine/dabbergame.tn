@@ -13,17 +13,16 @@
 
 	const uniqueStates = [...new Set(data.cities.map((city) => city.state))];
 	let selectedState;
-	let selectedCity;
 	let selectedPlatform;
 	let selectedSellers;
 	let selectedSort;
 
 	$: currentPage = Number($page.url.searchParams.get('page')) || 1;
 	$: maxPrice = Number($page.url.searchParams.get('maxPrice')) || PRICE_RANGE_MAX;
-	$: cityId = $page.url.searchParams.get('cityId') || 0;
+	let cityId = $page.url.searchParams.get('cityId') || 0;
 
 	$: selectedMaxPrice = maxPrice;
-	$: selectedCity = cityId;
+	let selectedCity = cityId;
 
 	$: paramString = `maxPrice=${selectedMaxPrice}&cityId=${selectedCity}`;
 
@@ -44,7 +43,7 @@
 			<p class="mt-2 text-neutral-content text-xs sm:text-sm">
 				{selectedState +
 					', ' +
-					selectedCity +
+					data.cities.filter((city) => city.id === Number(cityId))[0].city +
 					', ' +
 					selectedPlatform +
 					', ' +
