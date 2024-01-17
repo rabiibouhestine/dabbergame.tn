@@ -23,6 +23,7 @@
 
 	$: selectedMaxPrice = maxPrice;
 	$: selectedCityId = Number(cityId);
+	$: selectedState = data.cities.filter((city) => city.id === Number(cityId))[0].state;
 
 	$: paramString = `maxPrice=${selectedMaxPrice}&cityId=${selectedCityId}`;
 
@@ -127,6 +128,16 @@
 						<option>{state}</option>
 					{/each}
 				</select> -->
+				<select
+					class="select select-bordered rounded-full"
+					on:change={() => (selectedCityId = 0)}
+					bind:value={selectedState}
+				>
+					<option selected>All States</option>
+					{#each uniqueStates as state}
+						<option>{state}</option>
+					{/each}
+				</select>
 				<select
 					class="select select-bordered rounded-full"
 					name="city_id"
