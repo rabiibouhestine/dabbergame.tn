@@ -20,6 +20,7 @@
 	$: currentPage = Number($page.url.searchParams.get('page')) || 1;
 	$: maxPrice = Number($page.url.searchParams.get('maxPrice')) || PRICE_RANGE_MAX;
 	$: cityId = Number($page.url.searchParams.get('cityId'));
+
 	$: state = cityId ? data.cities.filter((city) => city.id === cityId)[0].state : 'All States';
 	$: city = cityId ? data.cities.filter((city) => city.id === cityId)[0].city : 'All Cities';
 
