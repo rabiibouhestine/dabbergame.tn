@@ -1,5 +1,6 @@
 <script>
 	import { goto } from '$app/navigation';
+	import { page } from '$app/stores';
 
 	import ListingCard from '$lib/components/ListingCard.svelte';
 
@@ -14,13 +15,19 @@
 	let selectedPlatform;
 	let selectedSellers;
 	let selectedSort;
-	let maxPrice = 300;
+
+	$: currentPage = Number($page.url.searchParams.get('page')) || 1;
+	$: maxPrice = Number($page.url.searchParams.get('maxPrice')) || 300;
+
+	$: selectedMaxPrice = maxPrice;
+
+	$: paramString = `maxPrice=${selectedMaxPrice}`;
 
 	let filtersModal;
 
 	function applyFilters() {
 		filtersModal.close();
-		goto('/listings?page=2');
+		goto(`/listings?${paramString}`);
 	}
 </script>
 
@@ -59,25 +66,28 @@
 	</div>
 	<div class="join flex mt-8">
 		<a
-			href="listings/?page={data.currentPage - 1}"
-			class="join-item btn {data.currentPage > 1 ? '' : 'btn-disabled'} btn-neutral w-16"
+			href="/listings/?page={currentPage - 1}&{paramString}"
+			class="join-item btn btn-neutral w-16"
+			class:btn-disabled={currentPage <= 1}
 		>
 			«
 		</a>
-		<a href="listings/?page=1" class="join-item btn btn-neutral w-16"> 1 </a>
+		<a href="/listings/?page=1&{paramString}" class="join-item btn btn-neutral w-16"> 1 </a>
 		<div
 			class="flex flex-1 justify-center items-center text-sm text-neutral-content bg-base-100 rounded-none"
 		>
-			Page {data.currentPage + ' / ' + data.totalPages}
+			Page {currentPage + ' / ' + data.totalPages}
 		</div>
-		<a href="listings/?page={data.totalPages}" class="join-item btn btn-neutral w-16">
+		<a
+			href="/listings/?page={data.totalPages}&{paramString}"
+			class="join-item btn btn-neutral w-16"
+		>
 			{data.totalPages}
 		</a>
 		<a
-			href="listings/?page={data.currentPage + 1}"
-			class="join-item btn {data.currentPage < data.totalPages
-				? ''
-				: 'btn-disabled'} btn-neutral w-16"
+			href="/listings/?page={currentPage + 1}&{paramString}"
+			class="join-item btn btn-neutral w-16"
+			class:btn-disabled={currentPage >= data.totalPages}
 		>
 			»
 		</a>
@@ -93,9 +103,9 @@
 			<label class="form-control w-full">
 				<div class="label">
 					<span class="label-text">Max Price</span>
-					<span class="label-text-alt">{maxPrice} DT</span>
+					<span class="label-text-alt">{selectedMaxPrice} DT</span>
 				</div>
-				<input type="range" min="0" max="300" bind:value={maxPrice} class="range" />
+				<input type="range" min="0" max="300" bind:value={selectedMaxPrice} class="range" />
 			</label>
 			<div class="flex flex-col gap-3">
 				<select
