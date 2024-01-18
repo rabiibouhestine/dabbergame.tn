@@ -11,30 +11,39 @@
 	$: profile = data.profile;
 </script>
 
-<div class="flex flex-col gap-8">
-	<div class="rounded-container flex flex-col justify-between gap-8">
-		<div class="flex flex-col gap-4 items-center">
+<div class="flex flex-col gap-10">
+	<div class="bg-base-100 rounded-3xl overflow-hidden">
+		<div class="w-full h-[250px] relative">
+			<a href="/user-settings" class="absolute right-4 top-4 btn btn-neutral btn-circle">
+				<Cog class="text-xl" />
+			</a>
+			<img
+				src="https://vojislavd.com/ta-template-demo/assets/img/profile-background.jpg"
+				alt="profile"
+				class="w-full h-full"
+			/>
+		</div>
+		<div class="flex flex-col justify-between items-center gap-4 pb-8 -mt-20">
 			<div class="avatar placeholder">
-				<div class="bg-neutral text-neutral-content rounded-full w-24">
-					<span class="text-3xl font-bold">{profile?.first_name[0] + profile?.last_name[0]}</span>
+				<div
+					class="bg-neutral text-neutral-content rounded-full w-40 outline outline-8 outline-base-100"
+				>
+					<span class="text-6xl font-bold">{profile?.first_name[0] + profile?.last_name[0]}</span>
 				</div>
 			</div>
 			<div class="text-center">
 				<h2 class="text-4xl font-bold">{profile?.first_name + ' ' + profile?.last_name}</h2>
-				<p class="text-lg">{profile?.cities.state + ', ' + profile?.cities.city}</p>
-				<p class="text-lg text-neutral-content">Joined 1 month ago</p>
+				<p class="text-slate-300">{profile?.cities.state + ', ' + profile?.cities.city}</p>
+				<p class="text-sm text-slate-400">Joined 1 month ago</p>
 			</div>
-		</div>
-		<div class="flex justify-center gap-3">
-			<a href="/listings" class="btn btn-neutral btn-circle">
-				<Phone class="text-xl" />
-			</a>
-			<a href="/listings" class="btn btn-neutral btn-circle">
-				<Facebook class="text-xl" />
-			</a>
-			<a href="/user-settings" class="btn btn-outline btn-accent btn-circle">
-				<Cog class="text-xl" />
-			</a>
+			<div class="flex justify-center gap-3">
+				<a href="/listings" class="btn btn-neutral btn-circle">
+					<Phone class="text-xl" />
+				</a>
+				<a href="/listings" class="btn btn-neutral btn-circle">
+					<Facebook class="text-xl" />
+				</a>
+			</div>
 		</div>
 	</div>
 	<div
