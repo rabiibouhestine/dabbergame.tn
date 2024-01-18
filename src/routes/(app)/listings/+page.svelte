@@ -88,11 +88,11 @@
 		{/each}
 	</div>
 	<div class="join flex mt-8">
-		<a href="/listings/?page=1&{paramString}" class="join-item btn btn-neutral w-16">
+		<a href="/listings/?{paramString}&page=1" class="join-item btn btn-neutral w-16">
 			<FirstPageIcon />
 		</a>
 		<a
-			href="/listings/?page={currentPage - 1}&{paramString}"
+			href="/listings/?{paramString}&page={currentPage - 1}"
 			class="join-item btn btn-neutral w-16"
 			class:btn-disabled={currentPage <= 1}
 		>
@@ -104,14 +104,14 @@
 			Page {currentPage + ' / ' + data.totalPages}
 		</div>
 		<a
-			href="/listings/?page={currentPage + 1}&{paramString}"
+			href="/listings/?{paramString}&page={currentPage + 1}"
 			class="join-item btn btn-neutral w-16"
 			class:btn-disabled={currentPage >= data.totalPages}
 		>
 			<NextPAgeIcon />
 		</a>
 		<a
-			href="/listings/?page={data.totalPages}&{paramString}"
+			href="/listings/?{paramString}&page={data.totalPages}"
 			class="join-item btn btn-neutral w-16"
 		>
 			<LastPageIcon />
