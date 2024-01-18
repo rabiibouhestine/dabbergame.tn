@@ -14,12 +14,12 @@
 	export let data;
 </script>
 
-<div class="flex flex-col items-center gap-y-10">
+<div class="flex flex-col items-center gap-y-10 relative">
 	<div class="flex flex-col justify-center gap-10 items-center my-32">
 		<div class="flex flex-col gap-6 text-center">
 			<h2 class="text-6xl md:text-7xl font-bold">Dabber Game</h2>
 			<p
-				class="text-2xl md:text-4xl bg-gradient-to-tr from-accent via-primary to-secondary inline-block text-transparent bg-clip-text"
+				class="text-2xl md:text-4xl font-bold bg-gradient-to-tr from-accent via-primary to-secondary inline-block text-transparent bg-clip-text"
 			>
 				Best place to buy, sell and trade video games in Tunisia!
 			</p>
