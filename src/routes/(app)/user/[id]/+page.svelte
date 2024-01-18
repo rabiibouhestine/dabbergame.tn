@@ -13,7 +13,7 @@
 
 <div class="flex flex-col gap-10">
 	<div class="bg-base-100 rounded-3xl overflow-hidden">
-		<div class="w-full h-[250px] relative bg-base-200">
+		<div class="w-full h-[250px] relative bg-gradient-to-tr from-accent via-primary to-secondary">
 			{#if data.session && data.session.user.id === data.profile.id}
 				<a href="/user-settings" class="absolute right-4 top-4 btn btn-neutral btn-circle">
 					<Cog class="text-xl" />
