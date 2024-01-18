@@ -10,10 +10,10 @@
 	export let lastName = 'Doe';
 	export let state = 'State';
 	export let city = 'City';
-	export let phone = '';
-	export let facebookLink = '';
-	export let instagramLink = '';
-	export let storeLink = '';
+	// export let phone = '';
+	// export let facebookLink = '';
+	// export let instagramLink = '';
+	// export let storeLink = '';
 </script>
 
 <div class="rounded-container flex flex-col justify-between items-center gap-8">
