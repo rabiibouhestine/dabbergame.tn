@@ -9,19 +9,22 @@
 
 	export let data;
 	$: profile = data.profile;
+	$: console.log(data.profile);
 </script>
 
 <div class="flex flex-col gap-10">
 	<div class="bg-base-100 rounded-3xl overflow-hidden">
-		<div class="w-full h-[250px] relative">
+		<div class="w-full h-[250px] relative bg-base-200">
 			<a href="/user-settings" class="absolute right-4 top-4 btn btn-neutral btn-circle">
 				<Cog class="text-xl" />
 			</a>
-			<img
-				src="https://vojislavd.com/ta-template-demo/assets/img/profile-background.jpg"
-				alt="profile"
-				class="w-full h-full object-cover"
-			/>
+			{#if profile.is_store}
+				<img
+					src="https://vojislavd.com/ta-template-demo/assets/img/profile-background.jpg"
+					alt="profile"
+					class="w-full h-full object-cover"
+				/>
+			{/if}
 		</div>
 		<div class="flex flex-col justify-between items-center gap-4 pb-8 -mt-20">
 			<div class="avatar placeholder">
