@@ -15,7 +15,7 @@
 </script>
 
 <div class="bg-base-100 rounded-3xl overflow-hidden">
-	<div class="w-full h-[250px] relative bg-gradient-to-tr from-accent via-primary to-secondary">
+	<div class="w-full h-[150px] relative bg-gradient-to-tr from-accent via-primary to-secondary">
 		<img
 			src="https://vojislavd.com/ta-template-demo/assets/img/profile-background.jpg"
 			alt="profile"
@@ -25,7 +25,7 @@
 	<div class="flex flex-col justify-between items-center gap-4 pb-8 -mt-14">
 		<div class="avatar placeholder indicator">
 			<span
-				class="indicator-item indicator-top indicator-start rounded-full bg-secondary text-base-100 text-4xl p-3 m-4"
+				class="indicator-item indicator-top indicator-start rounded-full bg-secondary text-base-100 text-2xl p-2 m-4"
 			>
 				<StoreIcon />
 			</span>
