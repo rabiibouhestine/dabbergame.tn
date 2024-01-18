@@ -1,6 +1,7 @@
 <script>
 	import ListingCard from '$lib/components/ListingCard.svelte';
 
+	import SortIcon from '~icons/mdi/sort';
 	import StoreIcon from '~icons/mdi/store';
 	import ListingsIcon from '~icons/mdi/tag-multiple';
 	import Facebook from '~icons/mdi/facebook';
@@ -59,9 +60,25 @@
 			</div>
 		</div>
 	</div>
-	<h2 class="flex gap-2 text-4xl font-bold pb-3 border-b border-neutral">
-		<ListingsIcon />Listings
-	</h2>
+	<div
+		class="w-full flex gap-4 flex-col sm:flex-row justify-between sm:items-end pb-3 border-b border-neutral"
+	>
+		<div>
+			<h2 class="flex gap-2 text-4xl font-bold"><ListingsIcon />Listings</h2>
+			<p class="mt-2 text-neutral-content text-xs sm:text-sm">
+				{'All Platforms' + ', ' + 'getSortLabel(sort)'}
+			</p>
+		</div>
+		<button
+			class="btn btn-outline rounded-full"
+			on:click={() => {
+				'filtersModal.showModal();';
+			}}
+		>
+			<SortIcon />
+			Sort & Filter
+		</button>
+	</div>
 	<div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-6">
 		{#each data.listings as listing (listing.id)}
 			<ListingCard
