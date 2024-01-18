@@ -11,6 +11,10 @@
 	export let state = 'State';
 	export let city = 'City';
 
+	export let facebookLink;
+	export let instagramLink;
+	export let storeLink;
+
 	export let showSettingsButton = false;
 </script>
 
@@ -52,18 +56,26 @@
 			{/if}
 		</div>
 		<div class="flex justify-center gap-3">
-			<a href="/listings" class="btn btn-neutral btn-circle">
+			<a href="/" class="btn btn-neutral btn-circle">
 				<PhoneIcon class="text-xl" />
 			</a>
-			<a href="/listings" class="btn btn-neutral btn-circle">
-				<FacebookIcon class="text-xl" />
-			</a>
-			<a href="/user-settings" class="btn btn-neutral btn-circle">
-				<Instagram class="text-xl" />
-			</a>
-			<a href="/user-settings" class="btn btn-neutral btn-circle">
-				<StoreIcon class="text-xl" />
-			</a>
+			{#if isStore}
+				{#if facebookLink}
+					<a href="/" class="btn btn-neutral btn-circle">
+						<FacebookIcon class="text-xl" />
+					</a>
+				{/if}
+				{#if instagramLink}
+					<a href="/" class="btn btn-neutral btn-circle">
+						<Instagram class="text-xl" />
+					</a>
+				{/if}
+				{#if storeLink}
+					<a href="/" class="btn btn-neutral btn-circle">
+						<StoreIcon class="text-xl" />
+					</a>
+				{/if}
+			{/if}
 		</div>
 	</div>
 </div>
