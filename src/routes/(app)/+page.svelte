@@ -21,7 +21,7 @@
 			<p
 				class="text-2xl md:text-4xl font-bold bg-gradient-to-tr from-accent via-primary to-secondary inline-block text-transparent bg-clip-text"
 			>
-				Best place to buy, sell and trade video games in Tunisia!
+				The Best Place to Buy, Sell, and Trade Video Games in Tunisia!
 			</p>
 		</div>
 		<div class="w-full px-6 flex gap-10 justify-center items-center text-4xl md:text-4xl">
