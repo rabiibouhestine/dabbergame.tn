@@ -37,9 +37,9 @@
 		<div class="avatar placeholder" class:indicator={isStore}>
 			{#if isStore}
 				<span
-					class="indicator-item indicator-top indicator-start rounded-full bg-secondary text-base-100 text-4xl p-3 m-4"
+					class="indicator-item indicator-bottom indicator-center badge badge-secondary font-bold py-4"
 				>
-					<StoreIcon />
+					<StoreIcon /> Store
 				</span>
 			{/if}
 			<div

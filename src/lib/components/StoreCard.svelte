@@ -23,14 +23,12 @@
 			class="w-full h-full object-cover"
 		/>
 	</div>
-	<div class="flex flex-col justify-between items-center gap-4 pb-8 -mt-14">
-		<a href="/user/{id}" class="flex flex-col items-center transition ease-in-out hover:scale-105">
-			<div class="avatar placeholder indicator">
-				<span
-					class="indicator-item indicator-top indicator-start rounded-full bg-secondary text-base-100 text-2xl p-2 m-4"
-				>
-					<StoreIcon />
-				</span>
+	<div class="flex flex-col justify-between items-center gap-4 pb-4 -mt-14">
+		<a
+			href="/user/{id}"
+			class="flex flex-col gap-2 items-center transition ease-in-out hover:scale-105"
+		>
+			<div class="avatar placeholder">
 				<div
 					class="bg-neutral text-neutral-content rounded-full w-28 outline outline-8 outline-base-100"
 				>
