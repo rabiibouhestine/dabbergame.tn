@@ -16,30 +16,32 @@
 
 <div class="flex flex-col items-center gap-y-10">
 	<div class="flex flex-col justify-center gap-10 items-center my-32">
-		<div class="text-center">
+		<div class="flex flex-col gap-6 text-center">
 			<h2 class="text-6xl md:text-7xl font-bold">Dabber Game</h2>
-			<p class="text-md md:text-3xl text-neutral-content">
+			<p
+				class="text-2xl md:text-4xl bg-gradient-to-tr from-accent via-primary to-secondary inline-block text-transparent bg-clip-text"
+			>
 				Best place to buy, sell and trade video games in Tunisia!
 			</p>
 		</div>
-		<div class="w-full px-6 flex justify-between items-center text-4xl md:text-6xl">
-			<a
-				href="/listings?platform=PC (Microsoft Windows)"
-				class="hover:text-windows transition ease-in-out hover:scale-125"
-			>
-				<Windows />
-			</a>
-			<a
-				href="/listings?platform=PlayStation 5"
-				class="hover:text-playstation transition ease-in-out hover:scale-125 text-5xl md:text-7xl"
-			>
-				<Playstation />
-			</a>
+		<div class="w-full px-6 flex gap-10 justify-center items-center text-4xl md:text-4xl">
 			<a
 				href="/listings?platform=Xbox Series X|S"
 				class="hover:text-xbox transition ease-in-out hover:scale-125"
 			>
 				<Xbox />
+			</a>
+			<a
+				href="/listings?platform=PlayStation 5"
+				class="hover:text-playstation transition ease-in-out hover:scale-125 text-5xl md:text-5xl"
+			>
+				<Playstation />
+			</a>
+			<a
+				href="/listings?platform=PC (Microsoft Windows)"
+				class="hover:text-windows transition ease-in-out hover:scale-125"
+			>
+				<Windows />
 			</a>
 			<a
 				href="/listings?platform=Nintendo Switch"
