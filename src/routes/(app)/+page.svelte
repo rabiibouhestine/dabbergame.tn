@@ -76,7 +76,7 @@
 			</div>
 		</div>
 	</div>
-	<div class="w-full flex justify-between pb-1 border-b border-neutral mt-8">
+	<div class="w-full flex justify-between pb-3 border-b border-neutral mt-8">
 		<h2 class="flex gap-2 text-4xl font-bold"><TagMultiple />Latest Listings</h2>
 		<a href="/listings" class="btn btn-circle btn-ghost text-3xl font-bold">
 			<ArrowRight />
