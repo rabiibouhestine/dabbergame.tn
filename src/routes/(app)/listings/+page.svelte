@@ -15,6 +15,24 @@
 
 	const uniqueStates = [...new Set(data.cities.map((city) => city.state))];
 	const PRICE_RANGE_MAX = 300;
+	const sortOptions = [
+		{
+			id: '1',
+			label: 'Sorted by Descending Date'
+		},
+		{
+			id: '2',
+			label: 'Sorted by Ascending Date'
+		},
+		{
+			id: '3',
+			label: 'Sorted by Descending Price'
+		},
+		{
+			id: '4',
+			label: 'Sorted by Ascending Price'
+		}
+	];
 
 	let selectedSellers;
 	let selectedSort;
@@ -159,10 +177,9 @@
 					<option>Stores</option>
 				</select>
 				<select class="select select-bordered rounded-full" bind:value={selectedSort}>
-					<option value="1" selected>Sorted by descending date</option>
-					<option value="2">Sorted by ascending date</option>
-					<option value="3">Sorted by descending price</option>
-					<option value="4">Sorted by ascending price</option>
+					{#each sortOptions as sortOption}
+						<option value={sortOption.id}>{sortOption.label}</option>
+					{/each}
 				</select>
 			</div>
 			<button class="btn btn-neutral rounded-full" on:click={applyFilters}> Apply </button>
