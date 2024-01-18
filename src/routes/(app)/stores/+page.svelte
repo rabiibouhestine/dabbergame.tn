@@ -7,8 +7,8 @@
 
 <div class="flex flex-col gap-y-10">
 	<h2 class="flex gap-2 text-4xl font-bold pb-1 border-b border-neutral"><StoreIcon />Stores</h2>
-	<div class="flex flex-col gap-y-8">
-		{#each [1, 2, 3, 4, 5, 6] as listing}
+	<div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">
+		{#each [1, 2, 3] as listing}
 			<StoreCard />
 		{/each}
 	</div>

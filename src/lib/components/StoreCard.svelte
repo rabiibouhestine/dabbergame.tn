@@ -7,16 +7,18 @@
 	export let profile;
 </script>
 
-<div class="rounded-container flex flex-col md:flex-row justify-between items-center gap-8">
-	<div class="flex flex-col md:flex-row gap-4 items-center">
+<div class="rounded-container flex flex-col justify-between items-center gap-8">
+	<div class="flex flex-col gap-4 items-center">
 		<div class="avatar placeholder">
-			<div class="bg-neutral text-neutral-content rounded-full w-12">
+			<div class="bg-neutral text-neutral-content rounded-full w-24">
 				<span class="font-bold">{profile?.first_name[0] + profile?.last_name[0]}</span>
 			</div>
 		</div>
-		<div class="text-center md:text-start">
-			<h2 class="text-xl font-bold">{profile?.first_name + ' ' + profile?.last_name}</h2>
-			<p class="text-lg font-bold">{profile?.cities.state + ', ' + profile?.cities.city}</p>
+		<div class="text-center">
+			<h2 class="text-3xl font-bold">{profile?.first_name + ' ' + profile?.last_name}</h2>
+			<p class="text-lg text-neutral-content">
+				{profile?.cities.state + ', ' + profile?.cities.city}
+			</p>
 		</div>
 	</div>
 	<div class="flex justify-center gap-3">
