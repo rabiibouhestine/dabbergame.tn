@@ -25,12 +25,14 @@
 	$: maxPrice = Number($page.url.searchParams.get('maxPrice')) || PRICE_RANGE_MAX;
 	$: state = $page.url.searchParams.get('state') || 'All States';
 	$: city = $page.url.searchParams.get('city') || 'All Cities';
+	$: platform = $page.url.searchParams.get('platform') || 'All Platforms';
 
 	$: selectedMaxPrice = maxPrice;
 	$: selectedState = state;
 	$: selectedCity = city;
+	$: selectedPlatform = platform;
 
-	$: paramString = `maxPrice=${selectedMaxPrice}&state=${selectedState}&city=${selectedCity}`;
+	$: paramString = `maxPrice=${selectedMaxPrice}&state=${selectedState}&city=${selectedCity}&platform=${selectedPlatform}`;
 
 	let filtersModal;
 
@@ -47,15 +49,7 @@
 		<div>
 			<h2 class="flex gap-2 text-4xl font-bold"><ListingsIcon />All Listings</h2>
 			<p class="mt-2 text-neutral-content text-xs sm:text-sm">
-				{state +
-					', ' +
-					city +
-					', ' +
-					selectedPlatform +
-					', ' +
-					selectedSellers +
-					', ' +
-					selectedSort}
+				{state + ', ' + city + ', ' + platform + ', ' + selectedSellers + ', ' + selectedSort}
 			</p>
 		</div>
 		<button
@@ -153,7 +147,7 @@
 					{/each}
 				</select>
 				<select class="select select-bordered rounded-full" bind:value={selectedPlatform}>
-					<option disabled selected>All Platforms</option>
+					<option selected>All Platforms</option>
 					<option>PlayStation 5</option>
 					<option>Xbox Series X|S</option>
 				</select>
