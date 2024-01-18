@@ -68,7 +68,7 @@
 
 <div class="flex flex-col gap-y-8">
 	<div
-		class="w-full flex gap-4 flex-col sm:flex-row justify-between sm:items-end pb-4 border-b border-neutral"
+		class="w-full flex gap-4 flex-col sm:flex-row justify-between sm:items-end pb-3 border-b border-neutral"
 	>
 		<div>
 			<h2 class="flex gap-2 text-4xl font-bold"><ListingsIcon />All Listings</h2>

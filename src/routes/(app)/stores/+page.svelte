@@ -6,7 +6,7 @@
 </script>
 
 <div class="flex flex-col gap-y-8">
-	<h2 class="flex gap-2 text-4xl font-bold pb-1 border-b border-neutral"><StoreIcon />Stores</h2>
+	<h2 class="flex gap-2 text-4xl font-bold pb-3 border-b border-neutral"><StoreIcon />Stores</h2>
 	<div role="alert" class="alert bg-base-100 text-neutral-content">
 		<InfoIcon />
 		<span>
