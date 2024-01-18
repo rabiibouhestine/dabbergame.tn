@@ -136,17 +136,11 @@
 				/>
 			</label>
 			<div class="flex flex-col gap-3">
-				<!-- <select
+				<select
 					class="select select-bordered rounded-full"
-					on:change={() => (selectedCityId = 0)}
 					bind:value={selectedState}
+					on:change={() => (selectedCity = 'All Cities')}
 				>
-					<option selected>All States</option>
-					{#each uniqueStates as state}
-						<option>{state}</option>
-					{/each}
-				</select> -->
-				<select class="select select-bordered rounded-full" bind:value={selectedState}>
 					<option selected>All States</option>
 					{#each uniqueStates as state}
 						<option>{state}</option>
@@ -154,7 +148,7 @@
 				</select>
 				<select class="select select-bordered rounded-full" bind:value={selectedCity}>
 					<option selected>All Cities</option>
-					{#each data.cities as city (city.id)}
+					{#each data.cities.filter((city) => city.state === selectedState) as city (city.id)}
 						<option>{city.city}</option>
 					{/each}
 				</select>
