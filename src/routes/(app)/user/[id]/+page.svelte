@@ -10,14 +10,14 @@
 </script>
 
 <div class="flex flex-col gap-8">
-	<div class="rounded-container flex flex-col md:flex-row justify-between gap-8">
-		<div class="flex flex-col md:flex-row gap-4 items-center">
+	<div class="rounded-container flex flex-col justify-between gap-8">
+		<div class="flex flex-col gap-4 items-center">
 			<div class="avatar placeholder">
 				<div class="bg-neutral text-neutral-content rounded-full w-24">
 					<span class="text-3xl font-bold">{profile?.first_name[0] + profile?.last_name[0]}</span>
 				</div>
 			</div>
-			<div class="text-center md:text-start">
+			<div class="text-center">
 				<h2 class="text-4xl font-bold">{profile?.first_name + ' ' + profile?.last_name}</h2>
 				<p class="text-lg">{profile?.cities.state + ', ' + profile?.cities.city}</p>
 				<p class="text-lg text-neutral-content">Joined 1 month ago</p>
