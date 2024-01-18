@@ -45,7 +45,9 @@
 			<div class="text-center">
 				<h2 class="text-4xl font-bold">{profile?.first_name + ' ' + profile?.last_name}</h2>
 				<p class="text-slate-300">{profile?.cities.state + ', ' + profile?.cities.city}</p>
-				<p class="text-sm text-slate-400">Joined 1 month ago</p>
+				{#if !profile.is_store}
+					<p class="text-sm text-slate-400">Joined 1 month ago</p>
+				{/if}
 			</div>
 			<div class="flex justify-center gap-3">
 				<a href="/listings" class="btn btn-neutral btn-circle">
