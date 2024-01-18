@@ -39,10 +39,10 @@ export async function load({ url, locals }) {
 
     switch (sort) {
         case "1":
-            listingsViewQuery = listingsViewQuery.order('listing_price', { ascending: false });
+            listingsViewQuery = listingsViewQuery.order('created_at', { ascending: false });
             break;
         case "2":
-            listingsViewQuery = listingsViewQuery.order('listing_price', { ascending: true });
+            listingsViewQuery = listingsViewQuery.order('created_at', { ascending: true });
             break;
         case "3":
             listingsViewQuery = listingsViewQuery.order('listing_price', { ascending: false });
