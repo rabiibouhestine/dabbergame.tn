@@ -4,8 +4,6 @@
 	import Phone from '~icons/mdi/phone';
 	import Store from '~icons/mdi/store';
 
-	export let profile;
-
 	export let firstName = 'John';
 	export let lastName = 'Doe';
 	export let state = 'State';
