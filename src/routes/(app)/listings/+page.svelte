@@ -23,15 +23,17 @@
 
 	$: currentPage = Number($page.url.searchParams.get('page')) || 1;
 	$: maxPrice = Number($page.url.searchParams.get('maxPrice')) || PRICE_RANGE_MAX;
+	$: state = $page.url.searchParams.get('state') || 'All States';
 	$: city = $page.url.searchParams.get('city') || 'All Cities';
 
 	$: selectedMaxPrice = maxPrice;
+	$: selectedState = state;
 	$: selectedCity = city;
 	// $: selectedState = cityId
 	// 	? data.cities.filter((city) => city.id === cityId)[0].state
 	// 	: 'All States';
 
-	$: paramString = `maxPrice=${selectedMaxPrice}&city=${selectedCity}`;
+	$: paramString = `maxPrice=${selectedMaxPrice}&state=${selectedState}&city=${selectedCity}`;
 
 	let filtersModal;
 
@@ -147,11 +149,13 @@
 						<option>{state}</option>
 					{/each}
 				</select> -->
-				<select
-					class="select select-bordered rounded-full"
-					name="city_id"
-					bind:value={selectedCity}
-				>
+				<select class="select select-bordered rounded-full" bind:value={selectedState}>
+					<option selected>All States</option>
+					{#each uniqueStates as state}
+						<option>{state}</option>
+					{/each}
+				</select>
+				<select class="select select-bordered rounded-full" bind:value={selectedCity}>
 					<option selected>All Cities</option>
 					{#each data.cities as city (city.id)}
 						<option>{city.city}</option>
