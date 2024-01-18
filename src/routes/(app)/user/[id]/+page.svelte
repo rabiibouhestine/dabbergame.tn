@@ -1,7 +1,7 @@
 <script>
 	import ListingCard from '$lib/components/ListingCard.svelte';
 
-	import SortIcon from '~icons/mdi/sort';
+	import StoreIcon from '~icons/mdi/store';
 	import ListingsIcon from '~icons/mdi/tag-multiple';
 	import Facebook from '~icons/mdi/facebook';
 	import Phone from '~icons/mdi/phone';
@@ -27,7 +27,14 @@
 			{/if}
 		</div>
 		<div class="flex flex-col justify-between items-center gap-4 pb-8 -mt-20">
-			<div class="avatar placeholder">
+			<div class="avatar placeholder" class:indicator={profile.is_store}>
+				{#if profile.is_store}
+					<span
+						class="indicator-item indicator-top indicator-start rounded-full bg-secondary text-base-100 text-4xl p-3 m-4"
+					>
+						<StoreIcon />
+					</span>
+				{/if}
 				<div
 					class="bg-neutral text-neutral-content rounded-full w-40 outline outline-8 outline-base-100"
 				>
