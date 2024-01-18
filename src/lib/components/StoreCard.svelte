@@ -15,7 +15,7 @@
 </script>
 
 <div class="rounded-container flex flex-col justify-between items-center gap-8">
-	<div class="flex flex-col gap-4 items-center">
+	<a href="/" class="flex flex-col gap-4 items-center transition ease-in-out hover:scale-105">
 		<div class="avatar placeholder">
 			<div class="bg-neutral text-neutral-content rounded-full w-24">
 				<span class="font-bold text-3xl">{firstName[0] + lastName[0]}</span>
@@ -27,7 +27,7 @@
 				{state + ', ' + city}
 			</p>
 		</div>
-	</div>
+	</a>
 	<div class="flex justify-center gap-3">
 		<a href="/listings" class="btn btn-neutral btn-circle">
 			<Phone class="text-xl" />
