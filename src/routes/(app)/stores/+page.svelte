@@ -1,10 +1,12 @@
 <script>
 	import StoreCard from '$lib/components/StoreCard.svelte';
+
 	import InfoIcon from '~icons/mdi/information-slab-circle-outline';
+	import StoreIcon from '~icons/mdi/store';
 </script>
 
 <div class="flex flex-col gap-y-10">
-	<div class="divider divider-start text-4xl font-bold">Stores</div>
+	<h2 class="flex gap-2 text-4xl font-bold pb-1 border-b border-neutral"><StoreIcon />Stores</h2>
 	<div class="flex flex-col gap-y-8">
 		{#each [1, 2, 3, 4, 5, 6] as listing}
 			<StoreCard />
