@@ -1,6 +1,4 @@
 <script>
-	import StoreCard from '$lib/components/StoreCard.svelte';
-
 	import ProfileCard from '$lib/components/ProfileCard.svelte';
 
 	import InfoIcon from '~icons/mdi/information-slab-circle-outline';
