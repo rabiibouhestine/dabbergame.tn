@@ -13,7 +13,7 @@
 	<div class="avatar placeholder" class:indicator={isStore}>
 		{#if isStore}
 			<span
-				class="indicator-item indicator-top indicator-start badge badge-secondary text-xs badge-xs text-base-100 p-0.5 py-2"
+				class="indicator-item indicator-bottom indicator-center badge badge-secondary text-xs badge-xs text-base-100 p-0.5 py-2"
 			>
 				<StoreIcon />
 			</span>
