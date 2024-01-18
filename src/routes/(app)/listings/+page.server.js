@@ -5,6 +5,7 @@ export async function load({ url, locals }) {
     const state = url.searchParams.get('state') || 'All States';
     const city = url.searchParams.get('city') || 'All Cities';
     const platform = url.searchParams.get('platform') || 'All Platforms';
+    const sellers = url.searchParams.get('sellers') || 'All Sellers';
 
     const page = Number(url.searchParams.get('page')) || 1;
     const limit = 6;
@@ -28,6 +29,10 @@ export async function load({ url, locals }) {
 
     if (platform && platform !== 'All Platforms') {
         listingsViewQuery = listingsViewQuery.eq('listing_platform', platform);
+    }
+
+    if (sellers && sellers !== 'All Sellers') {
+        listingsViewQuery = listingsViewQuery.eq('is_store', sellers === 'Stores');
     }
 
     listingsViewQuery = listingsViewQuery
