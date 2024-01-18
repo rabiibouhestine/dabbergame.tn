@@ -23,19 +23,28 @@
 			</p>
 		</div>
 		<div class="w-full px-6 flex justify-between items-center text-4xl md:text-6xl">
-			<a href="/listings" class="hover:text-windows transition ease-in-out hover:scale-125">
+			<a
+				href="/listings?platform=PC (Microsoft Windows)"
+				class="hover:text-windows transition ease-in-out hover:scale-125"
+			>
 				<Windows />
 			</a>
 			<a
-				href="/listings"
+				href="/listings?platform=PlayStation 5"
 				class="hover:text-playstation transition ease-in-out hover:scale-125 text-5xl md:text-7xl"
 			>
 				<Playstation />
 			</a>
-			<a href="/listings" class="hover:text-xbox transition ease-in-out hover:scale-125">
+			<a
+				href="/listings?platform=Xbox Series X|S"
+				class="hover:text-xbox transition ease-in-out hover:scale-125"
+			>
 				<Xbox />
 			</a>
-			<a href="/listings" class="hover:text-nintendo transition ease-in-out hover:scale-125">
+			<a
+				href="/listings?platform=Nintendo Switch"
+				class="hover:text-nintendo transition ease-in-out hover:scale-125"
+			>
 				<NintendoSwitch />
 			</a>
 		</div>
