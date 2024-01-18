@@ -1,5 +1,5 @@
 <script>
-	import ProfileCard from '$lib/components/ProfileCard.svelte';
+	import StoreCard from '$lib/components/StoreCard.svelte';
 
 	import InfoIcon from '~icons/mdi/information-slab-circle-outline';
 	import StoreIcon from '~icons/mdi/store';
@@ -16,7 +16,7 @@
 	</div>
 	<div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">
 		{#each [1, 2, 3] as listing}
-			<ProfileCard />
+			<StoreCard />
 		{/each}
 	</div>
 </div>
