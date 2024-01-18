@@ -11,11 +11,10 @@
 	import LastPageIcon from '~icons/mdi/chevron-triple-right';
 	import FirstPageIcon from '~icons/mdi/chevron-triple-left';
 
-	const PRICE_RANGE_MAX = 300;
-
 	export let data;
 
 	const uniqueStates = [...new Set(data.cities.map((city) => city.state))];
+	const PRICE_RANGE_MAX = 300;
 
 	let selectedSellers;
 	let selectedSort;
