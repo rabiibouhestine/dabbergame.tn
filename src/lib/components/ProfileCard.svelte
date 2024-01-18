@@ -1,8 +1,9 @@
 <script>
 	import StoreIcon from '~icons/mdi/store';
-	import Facebook from '~icons/mdi/facebook';
-	import Phone from '~icons/mdi/phone';
-	import Cog from '~icons/mdi/cog';
+	import FacebookIcon from '~icons/mdi/facebook';
+	import PhoneIcon from '~icons/mdi/phone';
+	import CogIcon from '~icons/mdi/cog';
+	import Instagram from '~icons/mdi/instagram';
 
 	export let isStore = false;
 	export let firstName = 'John';
@@ -17,7 +18,7 @@
 	<div class="w-full h-[250px] relative bg-gradient-to-tr from-accent via-primary to-secondary">
 		{#if showSettingsButton}
 			<a href="/user-settings" class="absolute right-4 top-4 btn btn-neutral btn-circle">
-				<Cog class="text-xl" />
+				<CogIcon class="text-xl" />
 			</a>
 		{/if}
 		{#if isStore}
@@ -52,10 +53,16 @@
 		</div>
 		<div class="flex justify-center gap-3">
 			<a href="/listings" class="btn btn-neutral btn-circle">
-				<Phone class="text-xl" />
+				<PhoneIcon class="text-xl" />
 			</a>
 			<a href="/listings" class="btn btn-neutral btn-circle">
-				<Facebook class="text-xl" />
+				<FacebookIcon class="text-xl" />
+			</a>
+			<a href="/user-settings" class="btn btn-neutral btn-circle">
+				<Instagram class="text-xl" />
+			</a>
+			<a href="/user-settings" class="btn btn-neutral btn-circle">
+				<StoreIcon class="text-xl" />
 			</a>
 		</div>
 	</div>
