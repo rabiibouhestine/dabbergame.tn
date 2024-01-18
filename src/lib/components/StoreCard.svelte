@@ -4,6 +4,7 @@
 	import PhoneIcon from '~icons/mdi/phone';
 	import Instagram from '~icons/mdi/instagram';
 
+	export let id = '';
 	export let firstName = 'John';
 	export let lastName = 'Doe';
 	export let state = 'State';
@@ -35,10 +36,10 @@
 				<span class="text-5xl font-bold">{firstName[0] + lastName[0]}</span>
 			</div>
 		</div>
-		<div class="text-center">
+		<a href="/user/{id}" class="text-center transition ease-in-out hover:scale-105">
 			<h2 class="text-4xl font-bold">{firstName + ' ' + lastName}</h2>
 			<p class="text-slate-300">{state + ', ' + city}</p>
-		</div>
+		</a>
 		<div class="flex justify-center gap-3">
 			<a href="/" class="btn btn-neutral btn-circle">
 				<PhoneIcon class="text-xl" />
