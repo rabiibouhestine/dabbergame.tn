@@ -17,7 +17,6 @@
 
 	const uniqueStates = [...new Set(data.cities.map((city) => city.state))];
 
-	let selectedPlatform;
 	let selectedSellers;
 	let selectedSort;
 
