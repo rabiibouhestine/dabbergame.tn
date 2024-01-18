@@ -9,7 +9,6 @@
 
 	export let data;
 	$: profile = data.profile;
-	$: console.log(data.profile);
 </script>
 
 <div class="flex flex-col gap-10">
