@@ -29,12 +29,20 @@ export async function load({ url, locals }) {
 
     listingsQuery = await listingsQuery;
 
-    let listingsViewQuery = await supabase
+    let listingsViewQuery = supabase
     .from('listings_full')
     .select('*', { count: 'exact' })
+
+    if (city && city !== 'All Cities') {
+        listingsViewQuery = listingsViewQuery.eq('city', city);
+    }
+
+    listingsViewQuery = listingsViewQuery
     .lte('listing_price', maxPrice)
     .order('listing_price', { ascending: false })
     .range(skip, skip + limit - 1);
+
+    listingsViewQuery = await listingsViewQuery;
 
     return {
         cities: citiesQuery.data,
