@@ -90,11 +90,11 @@
 				platformFamily={listing.listing_platform_family}
 				coverImageId={listing.game_cover}
 				price={listing.listing_price}
-				userId={listing?.profiles?.id}
-				userFirstName={listing?.profiles?.first_name}
-				userLastName={listing?.profiles?.last_name}
-				userState={listing?.profiles?.cities?.state}
-				userCity={listing?.profiles?.cities?.city}
+				userId={listing.profile_id}
+				userFirstName={listing.first_name}
+				userLastName={listing.last_name}
+				userState={listing.state}
+				userCity={listing.city}
 			/>
 		{/each}
 	</div>
