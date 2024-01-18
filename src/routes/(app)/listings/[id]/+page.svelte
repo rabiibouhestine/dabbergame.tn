@@ -26,11 +26,11 @@
 				release_date={new Date(game.first_release_date * 1000).toISOString().split('T')[0]}
 				genres={game.genres}
 				platforms={game.platforms}
-				website={game.websites.find((site) => site.category === 1)?.url}
-				wikipedia={game.websites.find((site) => site.category === 3)?.url}
-				youtube={game.websites.find((site) => site.category === 9)?.url}
-				steam={game.websites.find((site) => site.category === 13)?.url}
-				epicgames={game.websites.find((site) => site.category === 16)?.url}
+				website={game.websites?.find((site) => site.category === 1)?.url}
+				wikipedia={game.websites?.find((site) => site.category === 3)?.url}
+				youtube={game.websites?.find((site) => site.category === 9)?.url}
+				steam={game.websites?.find((site) => site.category === 13)?.url}
+				epicgames={game.websites?.find((site) => site.category === 16)?.url}
 				rating={Math.round(game.aggregated_rating)}
 			/>
 		</div>
