@@ -14,8 +14,8 @@
 			from an elevated experience filled with premium features tailored for professionals.
 		</span>
 	</div>
-	<div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">
-		{#each [1, 2, 3] as listing}
+	<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+		{#each [1, 2, 3, 4] as listing}
 			<StoreCard />
 		{/each}
 	</div>
