@@ -45,7 +45,15 @@
 			<div
 				class="bg-neutral text-neutral-content rounded-full w-40 outline outline-8 outline-base-100"
 			>
-				<span class="text-6xl font-bold">{firstName[0] + lastName[0]}</span>
+				{#if isStore}
+					<img
+						src="https://vojislavd.com/ta-template-demo/assets/img/profile-background.jpg"
+						alt="profile"
+						class="w-full h-full object-cover"
+					/>
+				{:else}
+					<span class="text-6xl font-bold">{firstName[0] + lastName[0]}</span>
+				{/if}
 			</div>
 		</div>
 		<div class="text-center">
