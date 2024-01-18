@@ -95,6 +95,7 @@
 				userLastName={listing.last_name}
 				userState={listing.state}
 				userCity={listing.city}
+				isStore={listing.is_store}
 			/>
 		{/each}
 	</div>
