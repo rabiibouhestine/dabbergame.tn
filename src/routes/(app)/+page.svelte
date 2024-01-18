@@ -14,7 +14,7 @@
 	export let data;
 </script>
 
-<div class="flex flex-col items-center gap-y-10 relative">
+<div class="flex flex-col items-center gap-y-10">
 	<div class="flex flex-col justify-center gap-10 items-center my-32">
 		<div class="flex flex-col gap-6 text-center">
 			<h2 class="text-6xl md:text-7xl font-bold">Dabber Game</h2>
