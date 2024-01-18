@@ -25,14 +25,16 @@
 	$: city = $page.url.searchParams.get('city') || 'All Cities';
 	$: platform = $page.url.searchParams.get('platform') || 'All Platforms';
 	$: sellers = $page.url.searchParams.get('sellers') || 'All Sellers';
+	$: sort = $page.url.searchParams.get('sort') || '1';
 
 	$: selectedMaxPrice = maxPrice;
 	$: selectedState = state;
 	$: selectedCity = city;
 	$: selectedPlatform = platform;
 	$: selectedSellers = sellers;
+	$: selectedSort = sort;
 
-	$: paramString = `maxPrice=${selectedMaxPrice}&state=${selectedState}&city=${selectedCity}&platform=${selectedPlatform}&sellers=${selectedSellers}`;
+	$: paramString = `maxPrice=${selectedMaxPrice}&state=${selectedState}&city=${selectedCity}&platform=${selectedPlatform}&sellers=${selectedSellers}&sort=${selectedSort}`;
 
 	let filtersModal;
 
@@ -49,7 +51,7 @@
 		<div>
 			<h2 class="flex gap-2 text-4xl font-bold"><ListingsIcon />All Listings</h2>
 			<p class="mt-2 text-neutral-content text-xs sm:text-sm">
-				{state + ', ' + city + ', ' + platform + ', ' + sellers + ', ' + selectedSort}
+				{state + ', ' + city + ', ' + platform + ', ' + sellers + ', ' + sort}
 			</p>
 		</div>
 		<button
@@ -157,10 +159,10 @@
 					<option>Stores</option>
 				</select>
 				<select class="select select-bordered rounded-full" bind:value={selectedSort}>
-					<option selected>Sorted by descending date</option>
-					<option>Sorted by ascending date</option>
-					<option>Sorted by descending price</option>
-					<option>Sorted by ascending price</option>
+					<option value="1" selected>Sorted by descending date</option>
+					<option value="2">Sorted by ascending date</option>
+					<option value="3">Sorted by descending price</option>
+					<option value="4">Sorted by ascending price</option>
 				</select>
 			</div>
 			<button class="btn btn-neutral rounded-full" on:click={applyFilters}> Apply </button>
