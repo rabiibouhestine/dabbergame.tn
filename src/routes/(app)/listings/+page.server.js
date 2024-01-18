@@ -32,7 +32,7 @@ export async function load({ url, locals }) {
     let listingsViewQuery = await supabase
     .from('listings_full')
     .select('*', { count: 'exact' })
-    .lt('listing_price', maxPrice)
+    .lte('listing_price', maxPrice)
     .order('listing_price', { ascending: false })
     .range(skip, skip + limit - 1);
 
