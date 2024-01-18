@@ -1,4 +1,5 @@
 <script>
+	import ProfileCard from '$lib/components/ProfileCard.svelte';
 	import ListingCard from '$lib/components/ListingCard.svelte';
 
 	import SortIcon from '~icons/mdi/sort';
@@ -13,53 +14,14 @@
 </script>
 
 <div class="flex flex-col gap-10">
-	<div class="bg-base-100 rounded-3xl overflow-hidden">
-		<div class="w-full h-[250px] relative bg-gradient-to-tr from-accent via-primary to-secondary">
-			{#if data.session && data.session.user.id === data.profile.id}
-				<a href="/user-settings" class="absolute right-4 top-4 btn btn-neutral btn-circle">
-					<Cog class="text-xl" />
-				</a>
-			{/if}
-			{#if profile.is_store}
-				<img
-					src="https://vojislavd.com/ta-template-demo/assets/img/profile-background.jpg"
-					alt="profile"
-					class="w-full h-full object-cover"
-				/>
-			{/if}
-		</div>
-		<div class="flex flex-col justify-between items-center gap-4 pb-8 -mt-20">
-			<div class="avatar placeholder" class:indicator={profile.is_store}>
-				{#if profile.is_store}
-					<span
-						class="indicator-item indicator-top indicator-start rounded-full bg-secondary text-base-100 text-4xl p-3 m-4"
-					>
-						<StoreIcon />
-					</span>
-				{/if}
-				<div
-					class="bg-neutral text-neutral-content rounded-full w-40 outline outline-8 outline-base-100"
-				>
-					<span class="text-6xl font-bold">{profile?.first_name[0] + profile?.last_name[0]}</span>
-				</div>
-			</div>
-			<div class="text-center">
-				<h2 class="text-4xl font-bold">{profile?.first_name + ' ' + profile?.last_name}</h2>
-				<p class="text-slate-300">{profile?.cities.state + ', ' + profile?.cities.city}</p>
-				{#if !profile.is_store}
-					<p class="text-sm text-slate-400">Joined 1 month ago</p>
-				{/if}
-			</div>
-			<div class="flex justify-center gap-3">
-				<a href="/listings" class="btn btn-neutral btn-circle">
-					<Phone class="text-xl" />
-				</a>
-				<a href="/listings" class="btn btn-neutral btn-circle">
-					<Facebook class="text-xl" />
-				</a>
-			</div>
-		</div>
-	</div>
+	<ProfileCard
+		isStore={profile.is_store}
+		firstName={profile.first_name}
+		lastName={profile.last_name}
+		state={profile.cities.state}
+		city={profile?.cities.city}
+		showSettingsButton={data.session && data.session.user.id === data.profile.id}
+	/>
 	<div
 		class="w-full flex gap-4 flex-col sm:flex-row justify-between sm:items-end pb-3 border-b border-neutral"
 	>
