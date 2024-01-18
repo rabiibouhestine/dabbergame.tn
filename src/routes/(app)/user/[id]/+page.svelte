@@ -20,7 +20,7 @@
 			<img
 				src="https://vojislavd.com/ta-template-demo/assets/img/profile-background.jpg"
 				alt="profile"
-				class="w-full h-full"
+				class="w-full h-full object-cover"
 			/>
 		</div>
 		<div class="flex flex-col justify-between items-center gap-4 pb-8 -mt-20">
