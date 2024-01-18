@@ -24,21 +24,23 @@
 		/>
 	</div>
 	<div class="flex flex-col justify-between items-center gap-4 pb-8 -mt-14">
-		<div class="avatar placeholder indicator">
-			<span
-				class="indicator-item indicator-top indicator-start rounded-full bg-secondary text-base-100 text-2xl p-2 m-4"
-			>
-				<StoreIcon />
-			</span>
-			<div
-				class="bg-neutral text-neutral-content rounded-full w-28 outline outline-8 outline-base-100"
-			>
-				<span class="text-5xl font-bold">{firstName[0] + lastName[0]}</span>
+		<a href="/user/{id}" class="flex flex-col items-center transition ease-in-out hover:scale-105">
+			<div class="avatar placeholder indicator">
+				<span
+					class="indicator-item indicator-top indicator-start rounded-full bg-secondary text-base-100 text-2xl p-2 m-4"
+				>
+					<StoreIcon />
+				</span>
+				<div
+					class="bg-neutral text-neutral-content rounded-full w-28 outline outline-8 outline-base-100"
+				>
+					<span class="text-5xl font-bold">{firstName[0] + lastName[0]}</span>
+				</div>
 			</div>
-		</div>
-		<a href="/user/{id}" class="text-center transition ease-in-out hover:scale-105">
-			<h2 class="text-4xl font-bold">{firstName + ' ' + lastName}</h2>
-			<p class="text-slate-300">{state + ', ' + city}</p>
+			<div class="text-center">
+				<h2 class="text-4xl font-bold">{firstName + ' ' + lastName}</h2>
+				<p class="text-slate-300">{state + ', ' + city}</p>
+			</div>
 		</a>
 		<div class="flex justify-center gap-3">
 			<a href="/" class="btn btn-neutral btn-circle">
