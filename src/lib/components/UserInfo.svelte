@@ -13,16 +13,12 @@
 	<div class="avatar placeholder" class:indicator={isStore}>
 		{#if isStore}
 			<span
-				class="indicator-item indicator-bottom indicator-center badge badge-secondary text-xs badge-xs text-base-100 p-0.5"
+				class="indicator-item indicator-top indicator-start badge badge-secondary text-xs badge-xs text-base-100 p-0.5 py-2"
 			>
 				<StoreIcon />
 			</span>
 		{/if}
-		<div
-			class="bg-neutral text-neutral-content rounded-full w-8"
-			class:outline={isStore}
-			class:outline-secondary={isStore}
-		>
+		<div class="bg-neutral text-neutral-content rounded-full w-8">
 			<span class="font-bold text-sm">{firstName[0] + lastName[0]}</span>
 		</div>
 	</div>
