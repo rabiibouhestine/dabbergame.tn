@@ -59,6 +59,7 @@
 					>
 						<div class="transition ease-in-out group-hover:scale-105">
 							<UserInfo
+								isStore={true}
 								firstName={store.first_name}
 								lastName={store.last_name}
 								state={store.state}
