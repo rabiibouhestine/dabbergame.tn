@@ -12,9 +12,9 @@
 	$: listing = data.listing;
 </script>
 
-<div class="flex items-center md:items-start flex-col md:flex-row gap-10">
+<div class="flex items-center md:items-stretch flex-col md:flex-row gap-10">
 	<div
-		class="w-full md:w-52 md:min-w-52 flex md:flex-col justify-center items-start md:items-center gap-3"
+		class="w-full md:w-52 md:min-w-52 flex md:flex-col justify-start items-start md:items-center gap-3"
 	>
 		<a href="/listings" class="min-w-44 transition ease-in-out hover:scale-105">
 			<GameCover
@@ -38,7 +38,10 @@
 		</div>
 	</div>
 	<div class="flex flex-col gap-6 flex-grow">
-		<div class="rounded-container flex flex-col justify-between gap-6">
+		<div
+			class="rounded-container flex flex-col gap-6"
+			class:h-full={!JSON.parse(listing.listing_trade).length}
+		>
 			<h2 class="text-4xl font-bold">{listing.game_name}</h2>
 			<div class="flex flex-wrap gap-3 justify-between">
 				<div class="flex flex-wrap gap-3">
