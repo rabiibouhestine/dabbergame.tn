@@ -38,7 +38,7 @@
 						class="w-full h-full object-cover"
 					/>
 				{:else}
-					<span class="text-3xl font-bold">{firstName[0] + lastName[0]}</span>
+					<span class="text-2xl font-bold">{firstName[0] + lastName[0]}</span>
 				{/if}
 			</div>
 		</div>
