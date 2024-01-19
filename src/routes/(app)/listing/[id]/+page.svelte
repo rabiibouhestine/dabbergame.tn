@@ -13,10 +13,8 @@
 </script>
 
 <div class="flex items-center md:items-stretch flex-col md:flex-row gap-10">
-	<div
-		class="w-full md:w-52 md:min-w-52 flex md:flex-col justify-start items-start md:items-center gap-3"
-	>
-		<a href="/listings" class="min-w-44 transition ease-in-out hover:scale-105">
+	<div class="w-full md:w-52 md:min-w-52 flex flex-col items-center justify-start gap-3">
+		<a href="/listings" class="w-52 min-w-52 transition ease-in-out hover:scale-105">
 			<GameCover
 				platform={listing.listing_platform}
 				platformFamily={listing.listing_platform_family}
