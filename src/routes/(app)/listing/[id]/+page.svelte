@@ -16,7 +16,7 @@
 	<div
 		class="w-full md:w-52 md:min-w-52 flex md:flex-col justify-center items-start md:items-center gap-3"
 	>
-		<a href="/listings" class="transition ease-in-out hover:scale-105">
+		<a href="/listings" class="min-w-44 transition ease-in-out hover:scale-105">
 			<GameCover
 				platform={listing.listing_platform}
 				platformFamily={listing.listing_platform_family}
