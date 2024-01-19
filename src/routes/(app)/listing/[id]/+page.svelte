@@ -22,7 +22,7 @@
 					coverImageId={listing.game_cover}
 				/>
 			</a>
-			<a href="/listings" class="transition ease-in-out hover:scale-105">
+			<a href="/user/{listing.profiles.id}" class="transition ease-in-out hover:scale-105">
 				<UserCard
 					firstName={listing.profiles.first_name}
 					lastName={listing.profiles.last_name}

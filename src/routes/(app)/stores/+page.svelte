@@ -1,5 +1,5 @@
 <script>
-	import StoreCard from '$lib/components/StoreCard.svelte';
+	import UserCard from '$lib/components/UserCard.svelte';
 
 	import InfoIcon from '~icons/mdi/information-slab-circle-outline';
 	import StoreIcon from '~icons/mdi/store';
@@ -16,30 +16,9 @@
 	</div>
 	<div class="grid grid-cols-1 md:grid-cols-4 gap-8">
 		{#each [1, 2, 3, 4] as listing}
-			<div class="bg-base-100 rounded-xl overflow-hidden">
-				<div
-					class="w-full h-[80px] relative bg-gradient-to-tr from-accent via-primary to-secondary"
-				>
-					<!-- <img
-					src="https://vojislavd.com/ta-template-demo/assets/img/profile-background.jpg"
-					alt="profile"
-					class="w-full h-full object-cover"
-				/> -->
-				</div>
-				<div class="flex flex-col gap-2 items-center pb-4 -mt-8">
-					<div class="avatar placeholder">
-						<div
-							class="bg-neutral text-neutral-content rounded-full w-16 outline outline-8 outline-base-100"
-						>
-							<span class="text-3xl font-bold">{'firstName'[0] + 'lastName'[0]}</span>
-						</div>
-					</div>
-					<div class="text-center">
-						<h2 class="text-xl font-bold">{'Rabii' + ' ' + 'Bouhestine'}</h2>
-						<p class="text-sm text-slate-300">{'Ben Arous' + ', ' + 'El Mourouj'}</p>
-					</div>
-				</div>
-			</div>
+			<a href="/listings" class="transition ease-in-out hover:scale-105">
+				<UserCard isStore={true} />
+			</a>
 		{/each}
 	</div>
 </div>
