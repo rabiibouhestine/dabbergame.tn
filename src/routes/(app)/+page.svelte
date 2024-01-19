@@ -74,6 +74,7 @@
 								lastName={store.last_name}
 								state={store.state}
 								city={store.city}
+								isStore={true}
 							/>
 						</div>
 						<div
