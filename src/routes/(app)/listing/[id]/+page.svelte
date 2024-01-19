@@ -1,6 +1,6 @@
 <script>
 	import GameCover from '$lib/components/GameCover.svelte';
-	import UserInfo from '$lib/components/UserInfo.svelte';
+	import UserCard from '$lib/components/UserCard.svelte';
 	import GameDetails from '$lib/components/GameDetails.svelte';
 
 	import { getGameCover } from '$lib/utils/igdbUtils';
@@ -23,39 +23,14 @@
 				/>
 			</a>
 			<a href="/listings" class="transition ease-in-out hover:scale-105">
-				<div class="bg-base-100 rounded-xl overflow-hidden">
-					<div
-						class="w-full h-[80px] relative bg-gradient-to-tr from-accent via-primary to-secondary"
-					>
-						<!-- <img
-							src="https://vojislavd.com/ta-template-demo/assets/img/profile-background.jpg"
-							alt="profile"
-							class="w-full h-full object-cover"
-						/> -->
-					</div>
-					<div class="flex flex-col gap-2 items-center pb-4 -mt-8">
-						<div class="avatar placeholder">
-							<div
-								class="bg-neutral text-neutral-content rounded-full w-16 outline outline-8 outline-base-100"
-							>
-								<span class="text-3xl font-bold">{'firstName'[0] + 'lastName'[0]}</span>
-							</div>
-						</div>
-						<div class="text-center">
-							<h2 class="text-xl font-bold">{'Rabii' + ' ' + 'Bouhestine'}</h2>
-							<p class="text-sm text-slate-300">{'Ben Arous' + ', ' + 'El Mourouj'}</p>
-						</div>
-					</div>
-				</div>
-			</a>
-			<!-- <a href="/user/{listing.profiles.id}" class="transition ease-in-out hover:scale-105">
-				<UserInfo
+				<UserCard
 					firstName={listing.profiles.first_name}
 					lastName={listing.profiles.last_name}
 					state={listing.profiles.cities.state}
 					city={listing.profiles.cities.city}
+					isStore={listing.profiles.is_store}
 				/>
-			</a> -->
+			</a>
 		</div>
 		<div class="w-full flex flex-col gap-3">
 			<span class="btn btn-outline btn-secondary rounded-full text-lg font-bold"> Phone </span>
