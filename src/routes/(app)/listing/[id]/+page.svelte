@@ -12,8 +12,8 @@
 	$: listing = data.listing;
 </script>
 
-<div class="flex items-center md:items-stretch flex-col md:flex-row gap-10">
-	<div class="w-52 min-w-52 flex flex-col items-center justify-start gap-3">
+<div class="flex flex-col md:flex-row items-center md:items-start gap-10">
+	<div class="w-52 min-w-52 flex flex-col gap-3 items-center">
 		<a href="/listings" class="transition ease-in-out hover:scale-105">
 			<GameCover
 				platform={listing.listing_platform}
