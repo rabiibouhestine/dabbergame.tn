@@ -3,11 +3,7 @@
 	import ListingCard from '$lib/components/ListingCard.svelte';
 
 	import SortIcon from '~icons/mdi/sort';
-	import StoreIcon from '~icons/mdi/store';
 	import ListingsIcon from '~icons/mdi/tag-multiple';
-	import Facebook from '~icons/mdi/facebook';
-	import Phone from '~icons/mdi/phone';
-	import Cog from '~icons/mdi/cog';
 
 	export let data;
 	$: profile = data.profile;

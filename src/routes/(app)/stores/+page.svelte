@@ -14,7 +14,7 @@
 			from an elevated experience filled with premium features tailored for professionals.
 		</span>
 	</div>
-	<div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-8">
+	<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
 		{#each [1, 2, 3, 4] as listing}
 			<a href="/listings" class="transition ease-in-out hover:scale-105">
 				<UserCard isStore={true} />

@@ -22,15 +22,6 @@
 			/>
 		</a>
 		<div class="w-full flex flex-col gap-3">
-			<a href="/user/{listing.profiles.id}" class="transition ease-in-out hover:scale-105">
-				<UserCard
-					firstName={listing.profiles.first_name}
-					lastName={listing.profiles.last_name}
-					state={listing.profiles.cities.state}
-					city={listing.profiles.cities.city}
-					isStore={listing.profiles.is_store}
-				/>
-			</a>
 			<span class="btn btn-outline btn-secondary rounded-full text-lg font-bold"> Phone </span>
 			<span class="btn btn-outline btn-primary rounded-full text-lg font-bold"> Buy Now </span>
 		</div>
@@ -92,5 +83,14 @@
 				</div>
 			</div>
 		{/if}
+		<a href="/user/{listing.profiles.id}" class="transition ease-in-out hover:scale-105">
+			<UserCard
+				firstName={listing.profiles.first_name}
+				lastName={listing.profiles.last_name}
+				state={listing.profiles.cities.state}
+				city={listing.profiles.cities.city}
+				isStore={listing.profiles.is_store}
+			/>
+		</a>
 	</div>
 </div>
