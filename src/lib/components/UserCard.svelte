@@ -10,7 +10,7 @@
 </script>
 
 <div class="bg-base-100 rounded-xl overflow-hidden">
-	<div class="w-full h-[80px] relative bg-gradient-to-tr from-accent via-primary to-secondary">
+	<div class="w-full h-[100px] relative bg-gradient-to-tr from-accent via-primary to-secondary">
 		{#if isStore}
 			<img
 				src="https://vojislavd.com/ta-template-demo/assets/img/profile-background.jpg"
