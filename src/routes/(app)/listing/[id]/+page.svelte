@@ -13,15 +13,15 @@
 </script>
 
 <div class="flex items-center md:items-start flex-col md:flex-row gap-10">
-	<div class="w-52 min-w-52 flex flex-col justify-center items-center gap-4">
-		<div class="flex flex-col gap-3">
-			<a href="/listings" class="transition ease-in-out hover:scale-105">
-				<GameCover
-					platform={listing.listing_platform}
-					platformFamily={listing.listing_platform_family}
-					coverImageId={listing.game_cover}
-				/>
-			</a>
+	<div class="w-52 min-w-52 flex flex-col justify-center items-center gap-3">
+		<a href="/listings" class="transition ease-in-out hover:scale-105">
+			<GameCover
+				platform={listing.listing_platform}
+				platformFamily={listing.listing_platform_family}
+				coverImageId={listing.game_cover}
+			/>
+		</a>
+		<div class="w-full flex flex-col gap-3">
 			<a href="/user/{listing.profiles.id}" class="transition ease-in-out hover:scale-105">
 				<UserCard
 					firstName={listing.profiles.first_name}
@@ -31,8 +31,6 @@
 					isStore={listing.profiles.is_store}
 				/>
 			</a>
-		</div>
-		<div class="w-full flex flex-col gap-3">
 			<span class="btn btn-outline btn-secondary rounded-full text-lg font-bold"> Phone </span>
 			<span class="btn btn-outline btn-primary rounded-full text-lg font-bold"> Buy Now </span>
 		</div>
