@@ -81,7 +81,7 @@
 							class="badge badge-neutral gap-1 p-4 font-bold transition ease-in-out group-hover:scale-105"
 						>
 							<TagMultiple />
-							<span class="font-bold">{store.num_listings} listings</span>
+							<span class="font-bold">{store.num_listings}</span>
 						</div>
 					</a>
 				{/each}
