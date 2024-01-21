@@ -16,7 +16,7 @@
 		<img
 			src="https://images.igdb.com/igdb/image/upload/t_cover_big/{game.cover.image_id}.jpg"
 			alt="game"
-			class="rounded-xl w-60 min-w-60 h-full"
+			class="rounded-xl w-60 h-full"
 		/>
 		<div class="flex-grow flex flex-col gap-6">
 			<h2 class="text-4xl font-bold">
