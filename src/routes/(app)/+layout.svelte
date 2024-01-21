@@ -25,10 +25,12 @@
 <div class="flex flex-col min-h-screen bg-base-300">
 	<div class="navbar bg-base-100 py-3">
 		<div class="flex-1 flex gap-2 justify-between max-w-6xl mx-auto px-4">
-			<a href="/" class="btn btn-neutral btn-circle text-3xl">
-				<GamepadIcon />
+			<a href="/" class="flex items-center gap-2">
+				<div class="btn btn-neutral btn-circle text-3xl">
+					<GamepadIcon />
+				</div>
+				<p class="text-2xl font-bold hidden md:flex">DabberGame</p>
 			</a>
-			<p class="text-2xl font-bold hidden md:flex">DabberGame</p>
 			<div class="w-full">
 				<SearchBar on:click={handleSearchClick} />
 			</div>
