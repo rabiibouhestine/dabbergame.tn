@@ -3,6 +3,8 @@
 
 	import InfoIcon from '~icons/mdi/information-slab-circle-outline';
 	import StoreIcon from '~icons/mdi/store';
+
+	export let data;
 </script>
 
 <div class="flex flex-col gap-y-8">
@@ -15,9 +17,15 @@
 		</span>
 	</div>
 	<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-		{#each [1, 2, 3, 4] as listing}
+		{#each data.stores as store}
 			<a href="/listings" class="transition ease-in-out hover:scale-105">
-				<UserCard isStore={true} />
+				<UserCard
+					firstName={store.first_name}
+					lastName={store.last_name}
+					state={store.cities.state}
+					city={store.cities.city}
+					isStore={true}
+				/>
 			</a>
 		{/each}
 	</div>
