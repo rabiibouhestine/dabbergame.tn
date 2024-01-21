@@ -10,7 +10,10 @@
 	export let isStore = false;
 </script>
 
-<a href="/user/{id}" class="bg-base-100 rounded-xl overflow-hidden group">
+<a
+	href="/user/{id}"
+	class="bg-base-100 rounded-xl overflow-hidden transition ease-in-out hover:scale-105 hover:shadow-md hover:shadow-secondary/50"
+>
 	<div class="w-full h-[110px] relative bg-gradient-to-tr from-neutral to-base-200">
 		{#if isStore}
 			<img
@@ -20,9 +23,7 @@
 			/>
 		{/if}
 	</div>
-	<div
-		class="flex flex-col gap-2 items-center pb-4 -mt-8 transition ease-in-out group-hover:scale-105"
-	>
+	<div class="flex flex-col gap-2 items-center pb-4 -mt-8">
 		<div class="avatar placeholder" class:indicator={isStore}>
 			{#if isStore}
 				<span
