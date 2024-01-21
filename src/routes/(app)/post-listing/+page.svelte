@@ -43,7 +43,7 @@
 								src="https://images.igdb.com/igdb/image/upload/t_cover_big/{selectedGameDetails
 									.cover.image_id}.jpg"
 								alt="game"
-								class="rounded-md w-full"
+								class="rounded-xl w-full"
 							/>
 						{:else}
 							<img src="https://placehold.co/90x120" alt="game" class="rounded-md" />
@@ -54,7 +54,7 @@
 							<div class="label">
 								<span class="label-text">Platform</span>
 							</div>
-							<select class="select select-bordered" name="platform">
+							<select class="select select-bordered rounded-full" name="platform">
 								{#each selectedGameDetails.platforms as platform}
 									<option value={JSON.stringify(platform)}>{platform.name}</option>
 								{/each}
@@ -64,7 +64,7 @@
 							<div class="label">
 								<span class="label-text">Condition</span>
 							</div>
-							<select class="select select-bordered" name="condition">
+							<select class="select select-bordered rounded-full" name="condition">
 								<option selected value={0}>New</option>
 								<option value={1}>Open</option>
 								<option value={2}>Used</option>
@@ -74,7 +74,7 @@
 							<div class="label">
 								<span class="label-text">Delivery</span>
 							</div>
-							<select class="select select-bordered" name="delivery">
+							<select class="select select-bordered rounded-full" name="delivery">
 								<option selected value={true}>Yes</option>
 								<option value={false}>No</option>
 							</select>
@@ -87,7 +87,7 @@
 								name="price"
 								type="text"
 								placeholder="100 DT"
-								class="input input-bordered w-full"
+								class="input input-bordered rounded-full w-full"
 								value={0}
 							/>
 						</label>
@@ -97,7 +97,12 @@
 					<div class="label">
 						<span class="label-text">Store Link</span>
 					</div>
-					<input name="store_link" type="text" placeholder="" class="input input-bordered w-full" />
+					<input
+						name="store_link"
+						type="text"
+						placeholder=""
+						class="input input-bordered rounded-full w-full"
+					/>
 				</label>
 			</div>
 			<div class="w-full flex flex-col gap-6 rounded-container">
@@ -120,7 +125,7 @@
 			</div>
 			<input name="game_id" type="text" class="hidden" bind:value={selectedGameDetails.id} />
 			<input name="trade" type="text" class="hidden" value={JSON.stringify(tradeGames)} />
-			<button type="submit" class="btn btn-neutral rounded-full">Publish Listing</button>
+			<button type="submit" class="btn btn-outline rounded-full">Publish Listing</button>
 		</form>
 	{/if}
 </div>
