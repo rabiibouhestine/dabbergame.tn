@@ -31,7 +31,6 @@
 				youtube={game.websites?.find((site) => site.category === 9)?.url}
 				steam={game.websites?.find((site) => site.category === 13)?.url}
 				epicgames={game.websites?.find((site) => site.category === 16)?.url}
-				rating={Math.round(game.aggregated_rating)}
 			/>
 		</div>
 	</div>

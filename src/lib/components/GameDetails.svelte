@@ -14,7 +14,6 @@
 	export let youtube;
 	export let steam;
 	export let epicgames;
-	export let rating;
 </script>
 
 <div class="h-full flex flex-col gap-6 justify-between">
@@ -37,36 +36,31 @@
 			</span>
 		</p>
 	</div>
-	<div class="flex flex-wrap justify-between items-end">
-		<div class="flex flex-wrap gap-3">
-			{#if website}
-				<a href={website} target="_blank" class="btn btn-neutral btn-circle">
-					<Launch class="text-xl" />
-				</a>
-			{/if}
-			{#if wikipedia}
-				<a href={wikipedia} target="_blank" class="btn btn-neutral btn-circle">
-					<Wikipedia class="text-xl" />
-				</a>
-			{/if}
-			{#if youtube}
-				<a href={youtube} target="_blank" class="btn btn-neutral btn-circle">
-					<Youtube class="text-xl" />
-				</a>
-			{/if}
-			{#if steam}
-				<a href={steam} target="_blank" class="btn btn-neutral btn-circle">
-					<Steam class="text-xl" />
-				</a>
-			{/if}
-			{#if epicgames}
-				<a href={epicgames} target="_blank" class="btn btn-neutral btn-circle">
-					<Epicgames class="text-xl" />
-				</a>
-			{/if}
-		</div>
-		<div class="badge badge-neutral p-4 font-bold">
-			Rating: {Math.round(rating)}
-		</div>
+	<div class="flex justify-end gap-3">
+		{#if website}
+			<a href={website} target="_blank" class="btn btn-neutral btn-circle">
+				<Launch class="text-xl" />
+			</a>
+		{/if}
+		{#if wikipedia}
+			<a href={wikipedia} target="_blank" class="btn btn-neutral btn-circle">
+				<Wikipedia class="text-xl" />
+			</a>
+		{/if}
+		{#if youtube}
+			<a href={youtube} target="_blank" class="btn btn-neutral btn-circle">
+				<Youtube class="text-xl" />
+			</a>
+		{/if}
+		{#if steam}
+			<a href={steam} target="_blank" class="btn btn-neutral btn-circle">
+				<Steam class="text-xl" />
+			</a>
+		{/if}
+		{#if epicgames}
+			<a href={epicgames} target="_blank" class="btn btn-neutral btn-circle">
+				<Epicgames class="text-xl" />
+			</a>
+		{/if}
 	</div>
 </div>

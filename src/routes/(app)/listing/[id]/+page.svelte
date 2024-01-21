@@ -14,12 +14,19 @@
 
 <div class="flex flex-col md:flex-row items-center md:items-start gap-10">
 	<div class="w-52 min-w-52 flex flex-col gap-3 items-center">
-		<a href="/listings" class="transition ease-in-out hover:scale-105">
-			<GameCover
-				platform={listing.listing_platform}
-				platformFamily={listing.listing_platform_family}
-				coverImageId={listing.game_cover}
-			/>
+		<a href="/listings" class="flex flex-col gap-3 group">
+			<div class="transition ease-in-out group-hover:scale-105">
+				<GameCover
+					platform={listing.listing_platform}
+					platformFamily={listing.listing_platform_family}
+					coverImageId={listing.game_cover}
+				/>
+			</div>
+			<span
+				class="w-full badge badge-secondary rounded-full text-lg font-bold h-12 transition ease-in-out group-hover:-translate-y-4"
+			>
+				{listing.listing_price} DT
+			</span>
 		</a>
 		<span class="w-full btn btn-outline btn-secondary rounded-full text-lg font-bold"> Phone </span>
 		<span class="w-full btn btn-outline btn-primary rounded-full text-lg font-bold"> Buy Now </span>
@@ -30,30 +37,25 @@
 			class:h-full={!JSON.parse(listing.listing_trade).length}
 		>
 			<h2 class="text-4xl font-bold">{listing.game_name}</h2>
-			<div class="flex flex-wrap gap-3 justify-between">
-				<div class="flex flex-wrap gap-3">
-					<div class="badge badge-neutral p-4 font-bold">
-						Condition: {listing.listing_condition}
-					</div>
-					<div class="badge badge-neutral gap-1 p-4 font-bold">
-						{#if listing.listing_delivery}
-							<CheckCircleOutlineRounded />
-						{:else}
-							<CancelOutlineRounded />
-						{/if}
-						Delivery
-					</div>
-					<div class="badge badge-neutral gap-1 p-4 font-bold">
-						{#if JSON.parse(listing.listing_trade).length}
-							<CheckCircleOutlineRounded />
-						{:else}
-							<CancelOutlineRounded />
-						{/if}
-						Trade
-					</div>
-				</div>
+			<div class="flex flex-wrap gap-3">
 				<div class="badge badge-neutral p-4 font-bold">
-					{listing.listing_price} DT
+					Condition: {listing.listing_condition}
+				</div>
+				<div class="badge badge-neutral gap-1 p-4 font-bold">
+					{#if listing.listing_delivery}
+						<CheckCircleOutlineRounded />
+					{:else}
+						<CancelOutlineRounded />
+					{/if}
+					Delivery
+				</div>
+				<div class="badge badge-neutral gap-1 p-4 font-bold">
+					{#if JSON.parse(listing.listing_trade).length}
+						<CheckCircleOutlineRounded />
+					{:else}
+						<CancelOutlineRounded />
+					{/if}
+					Trade
 				</div>
 			</div>
 			<GameDetails
@@ -66,7 +68,6 @@
 				youtube={listing.game_youtube}
 				steam={listing.game_steam}
 				epicgames={listing.game_epicgames}
-				rating={Math.round(listing.game_rating)}
 			/>
 		</div>
 		{#if JSON.parse(listing.listing_trade).length}
