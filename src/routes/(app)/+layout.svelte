@@ -6,7 +6,7 @@
 	// Custom Components imports
 	import SearchBar from '$lib/components/SearchBar.svelte';
 	// Icons imports
-	import GamepadVariantOutline from '~icons/mdi/gamepad-variant-outline';
+	import GamepadIcon from '~icons/mdi/gamepad-variant';
 	import TagMultiple from '~icons/mdi/tag-multiple';
 	import Store from '~icons/mdi/store';
 	import TagPlus from '~icons/mdi/tag-plus';
@@ -25,13 +25,10 @@
 <div class="flex flex-col min-h-screen bg-base-300">
 	<div class="navbar bg-base-100 py-3">
 		<div class="flex-1 flex gap-2 justify-between max-w-6xl mx-auto px-4">
-			<a href="/" class="btn btn-neutral rounded-full hidden md:flex">
-				<GamepadVariantOutline class="text-xl" />
-				DabberGame
+			<a href="/" class="btn btn-neutral btn-circle text-3xl">
+				<GamepadIcon />
 			</a>
-			<a href="/" class="btn btn-neutral btn-circle flex md:hidden">
-				<GamepadVariantOutline class="text-xl" />
-			</a>
+			<p class="text-2xl font-bold hidden md:flex">DabberGame</p>
 			<div class="w-full">
 				<SearchBar on:click={handleSearchClick} />
 			</div>

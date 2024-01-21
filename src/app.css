@@ -6,4 +6,8 @@
 	.rounded-container {
 		@apply bg-base-100 p-6 rounded-3xl;
 	}
+
+	.gradient-bg {
+		@apply bg-gradient-to-tr from-accent via-primary to-secondary;
+	}
 }
