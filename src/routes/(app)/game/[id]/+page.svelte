@@ -12,15 +12,13 @@
 </script>
 
 <div class="flex flex-col gap-y-8">
-	<div class="rounded-container grid grid-cols-1 sm:grid-cols-4 gap-10">
-		<div class="col-span-1 flex flex-col justify-center md:justify-start items-center gap-4">
-			<img
-				src="https://images.igdb.com/igdb/image/upload/t_cover_big/{game.cover.image_id}.jpg"
-				alt="game"
-				class="rounded-xl w-full"
-			/>
-		</div>
-		<div class="col-span-3 flex flex-col gap-6">
+	<div class="rounded-container flex flex-col md:flex-row items-center md:items-start gap-6">
+		<img
+			src="https://images.igdb.com/igdb/image/upload/t_cover_big/{game.cover.image_id}.jpg"
+			alt="game"
+			class="rounded-xl w-60 min-w-60 h-full"
+		/>
+		<div class="flex-grow flex flex-col gap-6">
 			<h2 class="text-4xl font-bold">
 				{game.name}
 			</h2>
