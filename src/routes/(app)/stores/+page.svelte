@@ -12,8 +12,8 @@
 	<div role="alert" class="alert bg-base-100 text-neutral-content">
 		<InfoIcon />
 		<span>
-			Upgrade to a <a href="/" class="link link-secondary">Store Account</a> for free (forever) and benefit
-			from an elevated experience filled with premium features tailored for professionals.
+			Upgrade to a <a href="/about-stores" class="link link-secondary">Store Account</a> for free (forever)
+			and benefit from an elevated experience filled with premium features tailored for professionals.
 		</span>
 	</div>
 	<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
