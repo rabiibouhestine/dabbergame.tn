@@ -107,10 +107,10 @@
 
 	<footer class="footer footer-center p-10 bg-base-100 text-base-content rounded">
 		<nav class="grid grid-flow-col gap-4">
-			<a href="/" class="link link-hover">About us</a>
-			<a href="/" class="link link-hover">Contact</a>
-			<a href="/" class="link link-hover">Jobs</a>
-			<a href="/" class="link link-hover">Press kit</a>
+			<a href="/about" class="link link-hover">About Us</a>
+			<a href="/terms" class="link link-hover">Terms of Use</a>
+			<a href="/" class="link link-hover">Privacy Policy</a>
+			<a href="/" class="link link-hover">Disclaimer</a>
 		</nav>
 		<aside>
 			<p>Copyright © {new Date().getFullYear()} - All rights reserved by dabbergame.tn</p>
