@@ -29,7 +29,7 @@
 	<h2 class="text-4xl font-bold">Featured Games</h2>
 	<div class="grid grid-cols-2 sm:grid-cols-4 gap-4">
 		{#each featuredGames as game}
-			<a href="/listings/{game.id}" class="relative flex justify-center items-end group">
+			<a href="/game/{game.id}" class="relative flex justify-center items-end group">
 				<img
 					src={getGameCover(game.cover)}
 					alt="game"

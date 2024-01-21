@@ -1,0 +1,85 @@
+<script>
+	import GameDetails from '$lib/components/GameDetails.svelte';
+	import ListingBanner from '$lib/components/ListingBanner.svelte';
+
+	export let data;
+	$: game = data.game;
+
+	let listings = Array.from({ length: 15 }, (_, index) => index + 1);
+</script>
+
+<div class="flex flex-col gap-y-8">
+	<div class="rounded-container grid grid-cols-1 sm:grid-cols-4 gap-10">
+		<div class="col-span-1 flex flex-col justify-center md:justify-start items-center gap-4">
+			<img
+				src="https://images.igdb.com/igdb/image/upload/t_cover_big/{game.cover.image_id}.jpg"
+				alt="game"
+				class="rounded-xl w-full"
+			/>
+		</div>
+		<div class="col-span-3 flex flex-col gap-6">
+			<h2 class="text-4xl font-bold">
+				{game.name}
+			</h2>
+			<GameDetails
+				summary={game.summary}
+				release_date={new Date(game.first_release_date * 1000).toISOString().split('T')[0]}
+				genres={game.genres}
+				platforms={game.platforms}
+				website={game.websites?.find((site) => site.category === 1)?.url}
+				wikipedia={game.websites?.find((site) => site.category === 3)?.url}
+				youtube={game.websites?.find((site) => site.category === 9)?.url}
+				steam={game.websites?.find((site) => site.category === 13)?.url}
+				epicgames={game.websites?.find((site) => site.category === 16)?.url}
+			/>
+		</div>
+	</div>
+	<h2 class="w-full flex justify-between pb-2 border-b border-neutral text-4xl font-bold">
+		Listings
+	</h2>
+	<div class="flex flex-col md:flex-row gap-3 justify-between -mt-4">
+		<div class="flex flex-col md:flex-row gap-3">
+			<select class="select select-bordered rounded-full">
+				<option disabled selected>All States</option>
+				<option>Tunis</option>
+				<option>Sousse</option>
+			</select>
+			<select class="select select-bordered rounded-full">
+				<option disabled selected>All Cities</option>
+				<option>Tunis</option>
+				<option>Sousse</option>
+			</select>
+			<select class="select select-bordered rounded-full">
+				<option disabled selected>All Platforms</option>
+				<option>PS5</option>
+				<option>XBSX</option>
+			</select>
+			<select class="select select-bordered rounded-full">
+				<option disabled selected>All Sellers</option>
+				<option>People</option>
+				<option>Stores</option>
+			</select>
+		</div>
+		<select class="select select-bordered rounded-full">
+			<option disabled selected>Sort by date</option>
+			<option>Sort by price</option>
+			<option>Sort by date</option>
+		</select>
+	</div>
+	<div class="flex flex-col justify-center gap-4">
+		{#each listings as listing}
+			<ListingBanner />
+		{/each}
+	</div>
+	<div class="join flex mt-8">
+		<button class="join-item btn">«</button>
+		<div class="flex flex-1 justify-center bg-neutral rounded-none">
+			<button class="join-item btn">1</button>
+			<button class="join-item btn">2</button>
+			<button class="join-item btn btn-disabled">...</button>
+			<button class="join-item btn">99</button>
+			<button class="join-item btn">100</button>
+		</div>
+		<button class="join-item btn">»</button>
+	</div>
+</div>
