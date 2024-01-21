@@ -1,5 +1,5 @@
 <h2 class="flex gap-2 text-4xl font-bold mb-8 pb-3 border-b border-neutral">
-	Terms and Conditions
+	About Stores
 </h2>
 <div class="flex flex-col gap-3">
 	<p>1. <b>Introduction</b></p>

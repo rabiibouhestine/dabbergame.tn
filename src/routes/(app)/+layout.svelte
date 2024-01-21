@@ -107,7 +107,7 @@
 
 	<footer class="footer footer-center p-10 bg-base-100 text-base-content rounded">
 		<nav class="flex flex-wrap justify-center gap-4">
-			<a href="/" class="link link-hover">About Stores</a>
+			<a href="/about-stores" class="link link-hover">About Stores</a>
 			<a href="/terms-of-use" class="link link-hover">Terms of Use</a>
 			<a href="/" class="link link-hover">Privacy Policy</a>
 			<a href="/" class="link link-hover">Disclaimer</a>
