@@ -62,11 +62,11 @@
 					<ArrowRight />
 				</a>
 			</div>
-			<div class="flex flex-col gap-2">
+			<div class="flex flex-col gap-3">
 				{#each data.featured as store}
 					<a
 						href="/user/{store.id}"
-						class="flex items-center justify-between border-neutral border-b last:border-0 pb-2 last:pb-0 group"
+						class="flex items-center justify-between border-neutral border-b last:border-0 pb-3 last:pb-0 group"
 					>
 						<div class="transition ease-in-out group-hover:scale-105">
 							<UserInfo
