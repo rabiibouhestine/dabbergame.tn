@@ -2,6 +2,9 @@
 	import GameDetails from '$lib/components/GameDetails.svelte';
 	import ListingBanner from '$lib/components/ListingBanner.svelte';
 
+	import SortIcon from '~icons/mdi/sort';
+	import ListingsIcon from '~icons/mdi/tag-multiple';
+
 	export let data;
 	$: game = data.game;
 
@@ -34,52 +37,66 @@
 			/>
 		</div>
 	</div>
-	<h2 class="w-full flex justify-between pb-2 border-b border-neutral text-4xl font-bold">
-		Listings
-	</h2>
-	<div class="flex flex-col md:flex-row gap-3 justify-between -mt-4">
-		<div class="flex flex-col md:flex-row gap-3">
-			<select class="select select-bordered rounded-full">
-				<option disabled selected>All States</option>
-				<option>Tunis</option>
-				<option>Sousse</option>
-			</select>
-			<select class="select select-bordered rounded-full">
-				<option disabled selected>All Cities</option>
-				<option>Tunis</option>
-				<option>Sousse</option>
-			</select>
-			<select class="select select-bordered rounded-full">
-				<option disabled selected>All Platforms</option>
-				<option>PS5</option>
-				<option>XBSX</option>
-			</select>
-			<select class="select select-bordered rounded-full">
-				<option disabled selected>All Sellers</option>
-				<option>People</option>
-				<option>Stores</option>
-			</select>
+	<div
+		class="w-full flex gap-4 flex-col sm:flex-row justify-between sm:items-end pb-3 border-b border-neutral"
+	>
+		<div>
+			<h2 class="flex gap-2 text-4xl font-bold"><ListingsIcon />Listings</h2>
+			<p class="mt-2 text-neutral-content text-xs sm:text-sm">
+				{'state' +
+					', ' +
+					'city' +
+					', ' +
+					'platform' +
+					', ' +
+					'sellers' +
+					', ' +
+					'getSortLabel(sort)'}
+			</p>
 		</div>
-		<select class="select select-bordered rounded-full">
-			<option disabled selected>Sort by date</option>
-			<option>Sort by price</option>
-			<option>Sort by date</option>
-		</select>
+		<button
+			class="btn btn-outline rounded-full"
+			on:click={() => {
+				'filtersModal.showModal();';
+			}}
+		>
+			<SortIcon />
+			Sort & Filter
+		</button>
 	</div>
 	<div class="flex flex-col justify-center gap-4">
 		{#each listings as listing}
 			<ListingBanner />
 		{/each}
 	</div>
-	<div class="join flex mt-8">
-		<button class="join-item btn">«</button>
-		<div class="flex flex-1 justify-center bg-neutral rounded-none">
-			<button class="join-item btn">1</button>
-			<button class="join-item btn">2</button>
-			<button class="join-item btn btn-disabled">...</button>
-			<button class="join-item btn">99</button>
-			<button class="join-item btn">100</button>
+	<!-- <div class="join flex mt-8">
+		<a href="/listings/?{paramString}&page=1" class="join-item btn btn-neutral w-16">
+			<FirstPageIcon />
+		</a>
+		<a
+			href="/listings/?{paramString}&page={currentPage - 1}"
+			class="join-item btn btn-neutral w-16"
+			class:btn-disabled={currentPage <= 1}
+		>
+			<PreviousPageIcon />
+		</a>
+		<div
+			class="flex flex-1 justify-center items-center text-sm text-neutral-content bg-base-100 rounded-none"
+		>
+			Page {currentPage + ' / ' + data.totalPages}
 		</div>
-		<button class="join-item btn">»</button>
-	</div>
+		<a
+			href="/listings/?{paramString}&page={currentPage + 1}"
+			class="join-item btn btn-neutral w-16"
+			class:btn-disabled={currentPage >= data.totalPages}
+		>
+			<NextPAgeIcon />
+		</a>
+		<a
+			href="/listings/?{paramString}&page={data.totalPages}"
+			class="join-item btn btn-neutral w-16"
+		>
+			<LastPageIcon />
+		</a>
+	</div> -->
 </div>
