@@ -6,7 +6,7 @@
 	export let state = 'Tunis';
 	export let city = 'Tunis';
 
-	export let isStore = true;
+	export let isStore = false;
 </script>
 
 <a
