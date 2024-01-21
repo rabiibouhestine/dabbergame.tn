@@ -25,7 +25,7 @@
 		</div>
 		{#if showPrice}
 			<div
-				class="badge badge-neutral p-4 w-full text-xl font-bold transition ease-in-out group-hover:-translate-y-4"
+				class="badge badge-neutral p-4 w-full text-xl font-bold transition ease-in-out group-hover:badge-secondary group-hover:-translate-y-4"
 			>
 				{price} DT
 			</div>
