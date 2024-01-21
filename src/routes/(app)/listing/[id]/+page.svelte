@@ -14,7 +14,7 @@
 
 <div class="flex flex-col md:flex-row items-center md:items-start gap-10">
 	<div class="w-52 min-w-52 flex flex-col gap-3 items-center">
-		<a href="/listings" class="flex flex-col gap-3 group">
+		<a href="/game/{listing.game_id}" class="flex flex-col gap-3 group">
 			<div class="transition ease-in-out group-hover:scale-105">
 				<GameCover
 					platform={listing.listing_platform}
@@ -82,14 +82,13 @@
 				</div>
 			</div>
 		{/if}
-		<a href="/user/{listing.profiles.id}" class="transition ease-in-out hover:scale-105">
-			<UserCard
-				firstName={listing.profiles.first_name}
-				lastName={listing.profiles.last_name}
-				state={listing.profiles.cities.state}
-				city={listing.profiles.cities.city}
-				isStore={listing.profiles.is_store}
-			/>
-		</a>
+		<UserCard
+			id={listing.profiles.id}
+			firstName={listing.profiles.first_name}
+			lastName={listing.profiles.last_name}
+			state={listing.profiles.cities.state}
+			city={listing.profiles.cities.city}
+			isStore={listing.profiles.is_store}
+		/>
 	</div>
 </div>

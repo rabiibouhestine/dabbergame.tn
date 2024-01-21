@@ -1,6 +1,7 @@
 <script>
 	import StoreIcon from '~icons/mdi/store';
 
+	export let id = '';
 	export let firstName = 'John';
 	export let lastName = 'Doe';
 	export let state = 'State';
@@ -9,7 +10,7 @@
 	export let isStore = false;
 </script>
 
-<div class="bg-base-100 rounded-xl overflow-hidden">
+<a href="/user/{id}" class="bg-base-100 rounded-xl overflow-hidden group">
 	<div class="w-full h-[110px] relative bg-gradient-to-tr from-neutral to-base-200">
 		{#if isStore}
 			<img
@@ -19,7 +20,9 @@
 			/>
 		{/if}
 	</div>
-	<div class="flex flex-col gap-2 items-center pb-4 -mt-8">
+	<div
+		class="flex flex-col gap-2 items-center pb-4 -mt-8 transition ease-in-out group-hover:scale-105"
+	>
 		<div class="avatar placeholder" class:indicator={isStore}>
 			{#if isStore}
 				<span
@@ -47,4 +50,4 @@
 			<p class="text-sm text-slate-300">{state + ', ' + city}</p>
 		</div>
 	</div>
-</div>
+</a>

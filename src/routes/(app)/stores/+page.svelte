@@ -18,15 +18,14 @@
 	</div>
 	<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
 		{#each data.stores as store}
-			<a href="/listings" class="transition ease-in-out hover:scale-105">
-				<UserCard
-					firstName={store.first_name}
-					lastName={store.last_name}
-					state={store.cities.state}
-					city={store.cities.city}
-					isStore={true}
-				/>
-			</a>
+			<UserCard
+				id={store.id}
+				firstName={store.first_name}
+				lastName={store.last_name}
+				state={store.cities.state}
+				city={store.cities.city}
+				isStore={true}
+			/>
 		{/each}
 	</div>
 </div>
