@@ -43,17 +43,17 @@
 				</div>
 				<div class="badge badge-neutral gap-1 p-4 font-bold">
 					{#if listing.listing_delivery}
-						<CheckCircleOutlineRounded />
+						<CheckCircleOutlineRounded class="text-success" />
 					{:else}
-						<CancelOutlineRounded />
+						<CancelOutlineRounded class="text-error" />
 					{/if}
 					Delivery
 				</div>
 				<div class="badge badge-neutral gap-1 p-4 font-bold">
 					{#if JSON.parse(listing.listing_trade).length}
-						<CheckCircleOutlineRounded />
+						<CheckCircleOutlineRounded class="text-success" />
 					{:else}
-						<CancelOutlineRounded />
+						<CancelOutlineRounded class="text-error" />
 					{/if}
 					Trade
 				</div>
