@@ -10,6 +10,8 @@
 	import PreviousPageIcon from '~icons/mdi/chevron-left';
 	import LastPageIcon from '~icons/mdi/chevron-triple-right';
 	import FirstPageIcon from '~icons/mdi/chevron-triple-left';
+	import NoListingsIcon from '~icons/mdi/tag-off';
+	import AddListingIcon from '~icons/mdi/tag-plus';
 
 	export let data;
 
@@ -110,7 +112,15 @@
 		{/each}
 	</div>
 	{#if data.totalPages < 1}
-		<h1>Sorry no listings</h1>
+		<div class="flex flex-col gap-6 justify-center items-center">
+			<NoListingsIcon class="text-6xl" />
+			<div class="text-center">
+				<p class="text-2xl font-bold">No listings</p>
+				<p class="text-2xl font-bold text-neutral-content">Be the first to create one!</p>
+			</div>
+			<a href="/post-listing" class="btn btn-outline rounded-full"><AddListingIcon /> Add Listing</a
+			>
+		</div>
 	{/if}
 	{#if data.totalPages > 0}
 		<div class="join flex mt-8">
