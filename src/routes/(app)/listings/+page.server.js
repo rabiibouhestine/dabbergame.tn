@@ -10,7 +10,7 @@ export async function load({ url, locals }) {
     const sort = url.searchParams.get('sort') || '1';
 
     const page = Number(url.searchParams.get('page')) || 1;
-    const limit = 6;
+    const limit = 12;
     const skip = limit * (page - 1);
 
     const supabase = locals.supabase;
