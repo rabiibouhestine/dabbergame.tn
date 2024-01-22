@@ -107,36 +107,43 @@
 			/>
 		{/each}
 	</div>
-	<div class="join flex mt-8">
-		<a href="/listings/?{paramString}&page=1" class="join-item btn btn-neutral w-16">
-			<FirstPageIcon />
-		</a>
-		<a
-			href="/listings/?{paramString}&page={currentPage - 1}"
-			class="join-item btn btn-neutral w-16"
-			class:btn-disabled={currentPage <= 1}
-		>
-			<PreviousPageIcon />
-		</a>
-		<div
-			class="flex flex-1 justify-center items-center text-sm text-neutral-content bg-base-100 rounded-none"
-		>
-			Page {currentPage + ' / ' + data.totalPages}
+	{#if data.totalPages > 0}
+		<div class="join flex mt-8">
+			<a
+				href="/listings/?{paramString}&page=1"
+				class="join-item btn btn-neutral w-16"
+				class:btn-disabled={data.totalPages <= 1}
+			>
+				<FirstPageIcon />
+			</a>
+			<a
+				href="/listings/?{paramString}&page={currentPage - 1}"
+				class="join-item btn btn-neutral w-16"
+				class:btn-disabled={currentPage <= 1}
+			>
+				<PreviousPageIcon />
+			</a>
+			<div
+				class="flex flex-1 justify-center items-center text-sm text-neutral-content bg-base-100 rounded-none"
+			>
+				Page {currentPage + ' / ' + data.totalPages}
+			</div>
+			<a
+				href="/listings/?{paramString}&page={currentPage + 1}"
+				class="join-item btn btn-neutral w-16"
+				class:btn-disabled={currentPage >= data.totalPages}
+			>
+				<NextPAgeIcon />
+			</a>
+			<a
+				href="/listings/?{paramString}&page={data.totalPages}"
+				class="join-item btn btn-neutral w-16"
+				class:btn-disabled={data.totalPages <= 1}
+			>
+				<LastPageIcon />
+			</a>
 		</div>
-		<a
-			href="/listings/?{paramString}&page={currentPage + 1}"
-			class="join-item btn btn-neutral w-16"
-			class:btn-disabled={currentPage >= data.totalPages}
-		>
-			<NextPAgeIcon />
-		</a>
-		<a
-			href="/listings/?{paramString}&page={data.totalPages}"
-			class="join-item btn btn-neutral w-16"
-		>
-			<LastPageIcon />
-		</a>
-	</div>
+	{/if}
 </div>
 
 <dialog bind:this={filtersModal} class="modal">
