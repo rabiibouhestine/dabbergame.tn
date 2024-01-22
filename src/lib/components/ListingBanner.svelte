@@ -64,7 +64,7 @@
 
 <a
 	href="/listing/{id}"
-	class="flex flex-col lg:flex-row justify-between items-center gap-6 rounded-container transition ease-in-out hover:scale-105 hover:shadow-md hover:shadow-secondary/50"
+	class="flex flex-col md:flex-row justify-between items-center gap-6 rounded-container transition ease-in-out hover:scale-105 hover:shadow-md hover:shadow-secondary/50"
 >
 	<div class="flex gap-2 items-center">
 		<div class="avatar placeholder" class:indicator={isStore}>
