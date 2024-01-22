@@ -4,7 +4,6 @@
 
 	import ListingCard from '$lib/components/ListingCard.svelte';
 
-	import SortIcon from '~icons/mdi/sort';
 	import ListingsIcon from '~icons/mdi/tag-multiple';
 	import NextPAgeIcon from '~icons/mdi/chevron-right';
 	import PreviousPageIcon from '~icons/mdi/chevron-left';
@@ -12,6 +11,11 @@
 	import FirstPageIcon from '~icons/mdi/chevron-triple-left';
 	import NoListingsIcon from '~icons/mdi/tag-off';
 	import AddListingIcon from '~icons/mdi/tag-plus';
+	import MarkerIcon from '~icons/mdi/map-marker-radius';
+	import GamepadIcon from '~icons/mdi/gamepad-variant';
+	import UsersIcon from '~icons/mdi/account-group';
+	import SortIcon from '~icons/mdi/sort';
+	import FilterIcon from '~icons/mdi/filter-cog';
 
 	export let data;
 
@@ -77,12 +81,46 @@
 		class="w-full flex gap-4 flex-col sm:flex-row justify-between sm:items-end pb-3 border-b border-neutral"
 	>
 		<div>
-			<h2 class="flex gap-2 text-4xl font-bold" class:text-secondary={gameName}>
+			<h2 class="flex gap-2 text-4xl font-bold mb-3" class:text-secondary={gameName}>
 				<ListingsIcon />{gameName || 'All Listings'}
 			</h2>
-			<p class="mt-2 text-neutral-content text-xs sm:text-sm">
+			<div class="flex flex-wrap gap-4 text-sm">
+				<p
+					class="flex gap-1 items-center"
+					class:font-bold={state !== 'All States'}
+					class:text-secondary={state !== 'All States'}
+				>
+					<MarkerIcon />
+					{state}, {city}
+				</p>
+				<p
+					class="flex gap-1 items-center"
+					class:font-bold={platform !== 'All Platforms'}
+					class:text-secondary={platform !== 'All Platforms'}
+				>
+					<GamepadIcon />
+					{platform}
+				</p>
+				<p
+					class="flex gap-1 items-center"
+					class:font-bold={sellers !== 'All Sellers'}
+					class:text-secondary={sellers !== 'All Sellers'}
+				>
+					<UsersIcon />
+					{sellers}
+				</p>
+				<p
+					class="flex gap-1 items-center"
+					class:font-bold={sort !== '1'}
+					class:text-secondary={sort !== '1'}
+				>
+					<SortIcon />
+					{getSortLabel(sort)}
+				</p>
+			</div>
+			<!-- <p class="mt-2 text-neutral-content text-xs sm:text-sm">
 				{state + ', ' + city + ', ' + platform + ', ' + sellers + ', ' + getSortLabel(sort)}
-			</p>
+			</p> -->
 		</div>
 		<button
 			class="btn btn-outline rounded-full"
@@ -90,7 +128,7 @@
 				filtersModal.showModal();
 			}}
 		>
-			<SortIcon />
+			<FilterIcon />
 			Sort & Filter
 		</button>
 	</div>
