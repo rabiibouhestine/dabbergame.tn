@@ -40,7 +40,7 @@
 	$: currentPage = Number($page.url.searchParams.get('page')) || 1;
 
 	$: gameId = $page.url.searchParams.get('gameId') || '';
-	$: gameName = $page.url.searchParams.get('gameName');
+	$: gameName = $page.url.searchParams.get('gameName') || '';
 
 	$: maxPrice = Number($page.url.searchParams.get('maxPrice')) || PRICE_RANGE_MAX;
 	$: state = $page.url.searchParams.get('state') || 'All States';
@@ -75,7 +75,9 @@
 		class="w-full flex gap-4 flex-col sm:flex-row justify-between sm:items-end pb-3 border-b border-neutral"
 	>
 		<div>
-			<h2 class="flex gap-2 text-4xl font-bold"><ListingsIcon />{gameName || 'All Listings'}</h2>
+			<h2 class="flex gap-2 text-4xl font-bold">
+				<ListingsIcon />{gameName !== '' ? gameName : 'All Listings'}
+			</h2>
 			<p class="mt-2 text-neutral-content text-xs sm:text-sm">
 				{state + ', ' + city + ', ' + platform + ', ' + sellers + ', ' + getSortLabel(sort)}
 			</p>
@@ -107,6 +109,9 @@
 			/>
 		{/each}
 	</div>
+	{#if data.totalPages < 1}
+		<h1>Sorry no listings</h1>
+	{/if}
 	{#if data.totalPages > 0}
 		<div class="join flex mt-8">
 			<a
