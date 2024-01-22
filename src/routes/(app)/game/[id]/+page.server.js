@@ -1,30 +1,87 @@
 import { IGDB_CLIENT_ID, IGDB_TOKEN } from '$env/static/private';
 
-export async function load({ params }) {
-    const id = params.id;
-
-	// URL of the API endpoint
+export async function load({ params, url, locals }) {
+    
+	// Get Game Details from IGDB API
+	const id = params.id;
 	const apiUrl = "https://api.igdb.com/v4/games";
-
-	// Headers to be set in the request
 	const headers = {
 		'Accept': 'application/json',
         'Authorization': 'Bearer ' + IGDB_TOKEN,
         'Client-ID': IGDB_CLIENT_ID
 	};
-
-	// Body
 	const body = "fields id,cover.image_id,name,first_release_date,summary,genres.name,platforms.name,aggregated_rating,websites.category,websites.url;\nwhere id = " + id + ";"
-	
 	const response = await fetch(apiUrl, {
 		method: 'POST',
 		headers: headers,
 		body: body
 	})
+	const gameData = await response.json();
 
-	const data = await response.json();
-		
-	return {
-		game: data[0]
-	};
+
+	// Get Game Listings from DB
+    const maxPrice = Number(url.searchParams.get('maxPrice')) || 300;
+    const state = url.searchParams.get('state') || 'All States';
+    const city = url.searchParams.get('city') || 'All Cities';
+    const platform = url.searchParams.get('platform') || 'All Platforms';
+    const sellers = url.searchParams.get('sellers') || 'All Sellers';
+    const sort = url.searchParams.get('sort') || '1';
+
+    const page = Number(url.searchParams.get('page')) || 1;
+    const limit = 6;
+    const skip = limit * (page - 1);
+
+    const supabase = locals.supabase;
+
+    const citiesQuery = await supabase.from("cities").select();
+
+    let listingsViewQuery = supabase
+    .from('listings_full')
+    .select('*', { count: 'exact' })
+	.eq('game_id', id)
+    .lte('listing_price', maxPrice)
+
+    if (state && state !== 'All States') {
+        listingsViewQuery = listingsViewQuery.eq('state', state);
+    }
+
+    if (city && city !== 'All Cities') {
+        listingsViewQuery = listingsViewQuery.eq('city', city);
+    }
+
+    if (platform && platform !== 'All Platforms') {
+        listingsViewQuery = listingsViewQuery.eq('listing_platform', platform);
+    }
+
+    if (sellers && sellers !== 'All Sellers') {
+        listingsViewQuery = listingsViewQuery.eq('is_store', sellers === 'Stores');
+    }
+
+    switch (sort) {
+        case "1":
+            listingsViewQuery = listingsViewQuery.order('created_at', { ascending: false });
+            break;
+        case "2":
+            listingsViewQuery = listingsViewQuery.order('created_at', { ascending: true });
+            break;
+        case "3":
+            listingsViewQuery = listingsViewQuery.order('listing_price', { ascending: false });
+            break;
+        case "4":
+            listingsViewQuery = listingsViewQuery.order('listing_price', { ascending: true });
+            break;
+        default:
+            break;
+    }
+
+    listingsViewQuery = listingsViewQuery.range(skip, skip + limit - 1);
+
+    listingsViewQuery = await listingsViewQuery;
+
+    return {
+		game: gameData[0],
+        cities: citiesQuery.data,
+        totalPages: Math.ceil(listingsViewQuery.count / limit),
+        listings: listingsViewQuery.data
+    };
 }
