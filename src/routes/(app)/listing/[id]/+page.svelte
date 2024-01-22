@@ -39,7 +39,12 @@
 			class="rounded-container flex flex-col gap-6"
 			class:h-full={!JSON.parse(listing.listing_trade).length}
 		>
-			<h2 class="text-4xl font-bold">{listing.game_name}</h2>
+			<a
+				href="/listings?gameId={listing.game_id}&gameName={listing.game_name}"
+				class="w-fit text-4xl font-bold hover:link hover:text-primary"
+			>
+				{listing.game_name}
+			</a>
 			<div class="flex flex-wrap gap-3">
 				<div class="badge badge-neutral p-4 font-bold">
 					Condition: {listing.listing_condition}
