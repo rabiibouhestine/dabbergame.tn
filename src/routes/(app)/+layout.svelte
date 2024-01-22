@@ -42,7 +42,7 @@
 					class="menu menu-lg dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
 				>
 					{#if data.session}
-						<li><a href="/add-listing"><TagPlus class="text-lg" />Post Listing</a></li>
+						<li><a href="/add-listing"><TagPlus class="text-lg" />Add Listing</a></li>
 					{/if}
 					<li><a href="/listings"><TagMultiple class="text-lg" />Listings</a></li>
 					<li><a href="/stores"><Store class="text-lg" />Stores</a></li>
