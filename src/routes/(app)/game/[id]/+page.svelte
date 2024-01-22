@@ -7,8 +7,7 @@
 
 	export let data;
 	$: game = data.game;
-
-	let listings = Array.from({ length: 15 }, (_, index) => index + 1);
+	$: listings = data.listings;
 </script>
 
 <div class="flex flex-col gap-y-8">
@@ -64,7 +63,17 @@
 	</div>
 	<div class="flex flex-col justify-center gap-4">
 		{#each listings as listing}
-			<ListingBanner />
+			<ListingBanner
+				id={listing.id}
+				platform={listing.listing_platform}
+				platformFamily={listing.listing_platform_family}
+				price={listing.listing_price}
+				firstName={listing.first_name}
+				lastName={listing.last_name}
+				state={listing.state}
+				city={listing.city}
+				isStore={listing.is_store}
+			/>
 		{/each}
 	</div>
 	<!-- <div class="join flex mt-8">

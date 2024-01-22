@@ -1,16 +1,20 @@
 <script>
 	import StoreIcon from '~icons/mdi/store';
 
+	export let id = '';
+
 	export let firstName = 'John';
 	export let lastName = 'Doe';
 	export let state = 'Tunis';
 	export let city = 'Tunis';
 
+	export let price = 0;
+
 	export let isStore = false;
 </script>
 
 <a
-	href="/listing/1"
+	href="/listing/{id}"
 	class="flex flex-col lg:flex-row justify-between items-center gap-6 rounded-container transition ease-in-out hover:scale-105 hover:shadow-md hover:shadow-secondary/50"
 >
 	<div class="flex gap-2 items-center">
@@ -34,10 +38,7 @@
 		</div>
 	</div>
 	<div class="flex flex-wrap justify-center items-center gap-3">
-		<div class="badge badge-neutral p-4 font-bold">Condition: New</div>
-		<div class="badge badge-neutral p-4 font-bold">Delivery</div>
-		<div class="badge badge-neutral p-4 font-bold">Trade</div>
 		<div class="badge bg-playstation p-4 font-bold">Playstation 5</div>
-		<div class="badge badge-secondary p-4 font-bold">200 DT</div>
+		<div class="badge badge-secondary p-4 font-extrabold">{price} DT</div>
 	</div>
 </a>
