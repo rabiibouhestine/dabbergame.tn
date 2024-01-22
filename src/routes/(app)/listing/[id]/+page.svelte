@@ -14,7 +14,10 @@
 
 <div class="flex flex-col md:flex-row items-center md:items-start gap-10">
 	<div class="w-52 min-w-52 flex flex-col gap-3 items-center">
-		<a href="/game/{listing.game_id}" class="flex flex-col gap-3 group">
+		<a
+			href="/game/{listing.game_id}?platform={listing.listing_platform}"
+			class="flex flex-col gap-3 group"
+		>
 			<div class="transition ease-in-out group-hover:scale-105">
 				<GameCover
 					platform={listing.listing_platform}
