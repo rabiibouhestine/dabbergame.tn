@@ -87,7 +87,10 @@
 		</div>
 	</div>
 	<div class="flex flex-wrap justify-center items-center gap-3">
-		<div class="badge {BackgoundColor} p-4 font-bold gap-2"><Logo /> {platform}</div>
+		<div class="badge {BackgoundColor} p-4 font-bold gap-2">
+			<Logo />
+			{platform}
+		</div>
 		<div class="badge badge-secondary p-4 font-extrabold">{price} DT</div>
 	</div>
 </a>
