@@ -76,7 +76,7 @@
 	>
 		<div>
 			<h2 class="flex gap-2 text-4xl font-bold">
-				<ListingsIcon />{gameName !== '' ? gameName : 'All Listings'}
+				<ListingsIcon />{gameName || 'All Listings'}
 			</h2>
 			<p class="mt-2 text-neutral-content text-xs sm:text-sm">
 				{state + ', ' + city + ', ' + platform + ', ' + sellers + ', ' + getSortLabel(sort)}
