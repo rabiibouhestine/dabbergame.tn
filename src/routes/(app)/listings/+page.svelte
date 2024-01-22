@@ -118,9 +118,6 @@
 					{getSortLabel(sort)}
 				</p>
 			</div>
-			<!-- <p class="mt-2 text-neutral-content text-xs sm:text-sm">
-				{state + ', ' + city + ', ' + platform + ', ' + sellers + ', ' + getSortLabel(sort)}
-			</p> -->
 		</div>
 		<button
 			class="btn btn-outline rounded-full"
