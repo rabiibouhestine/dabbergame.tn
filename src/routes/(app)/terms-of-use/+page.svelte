@@ -8,7 +8,7 @@
 		These Terms of Service (“Terms”, “Terms of Service”) govern your use of our website located at <b
 			>dabbergame.tn</b
 		>
-		(together or individually “Service”) operated by <b>Gamer Gate</b>.
+		(together or individually “Service”) operated by <b>Dabber Game</b>.
 	</p>
 	<p>
 		Our Privacy Policy also governs your use of our Service and explains how we collect, safeguard
@@ -41,7 +41,7 @@
 
 	<p>4. <b>Content</b></p>
 	<p>
-		Content found on or through this Service are the property of Gamer Gate or used with permission.
+		Content found on or through this Service are the property of Dabber Game or used with permission.
 		You may not distribute, modify, transmit, reuse, download, repost, copy, or use said Content,
 		whether in whole or in part, for commercial purposes or for personal gain, without express
 		advance written permission from us.
@@ -142,10 +142,10 @@
 	<p>9. <b>Intellectual Property</b></p>
 	<p>
 		Service and its original content (excluding Content provided by users), features and
-		functionality are and will remain the exclusive property of Gamer Gate and its licensors.
+		functionality are and will remain the exclusive property of Dabber Game and its licensors.
 		Service is protected by copyright, trademark, and other laws of and foreign countries. Our
 		trademarks may not be used in connection with any product or service without the prior written
-		consent of Gamer Gate.
+		consent of Dabber Game.
 	</p>
 	<p>10. <b>Copyright Policy</b></p>
 	<p>
@@ -213,10 +213,10 @@
 	<p>13. <b>Links To Other Web Sites</b></p>
 	<p>
 		Our Service may contain links to third party web sites or services that are not owned or
-		controlled by Gamer Gate.
+		controlled by Dabber Game.
 	</p>
 	<p>
-		Gamer Gate has no control over, and assumes no responsibility for the content, privacy policies,
+		Dabber Game has no control over, and assumes no responsibility for the content, privacy policies,
 		or practices of any third party web sites or services. We do not warrant the offerings of any of
 		these entities/individuals or their websites.
 	</p>
