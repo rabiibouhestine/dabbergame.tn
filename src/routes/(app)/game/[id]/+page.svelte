@@ -195,8 +195,9 @@
 				</select>
 				<select class="select select-bordered rounded-full" bind:value={selectedPlatform}>
 					<option selected>All Platforms</option>
-					<option>PlayStation 5</option>
-					<option>Xbox Series X|S</option>
+					{#each data.game.platforms as platform (platform.id)}
+						<option>{platform.name}</option>
+					{/each}
 				</select>
 				<select class="select select-bordered rounded-full" bind:value={selectedSellers}>
 					<option selected>All Sellers</option>
