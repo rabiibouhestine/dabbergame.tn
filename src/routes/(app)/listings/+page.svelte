@@ -24,19 +24,19 @@
 	const sortOptions = [
 		{
 			id: '1',
-			label: 'Sorted by Descending Date'
+			label: 'Descending Date'
 		},
 		{
 			id: '2',
-			label: 'Sorted by Ascending Date'
+			label: 'Ascending Date'
 		},
 		{
 			id: '3',
-			label: 'Sorted by Descending Price'
+			label: 'Descending Price'
 		},
 		{
 			id: '4',
-			label: 'Sorted by Ascending Price'
+			label: 'Ascending Price'
 		}
 	];
 
