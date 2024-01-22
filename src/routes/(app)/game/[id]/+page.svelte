@@ -103,7 +103,7 @@
 		<button
 			class="btn btn-outline rounded-full"
 			on:click={() => {
-				'filtersModal.showModal();';
+				filtersModal.showModal();
 			}}
 		>
 			<SortIcon />
@@ -156,3 +156,60 @@
 		</a>
 	</div>
 </div>
+
+<dialog bind:this={filtersModal} class="modal">
+	<div class="modal-box">
+		<form method="dialog">
+			<button class="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</button>
+		</form>
+		<div class="flex flex-col gap-6 mt-6">
+			<label class="form-control w-full">
+				<div class="label">
+					<span class="label-text">Max Price</span>
+					<span class="label-text-alt">{selectedMaxPrice} DT</span>
+				</div>
+				<input
+					type="range"
+					min={0}
+					max={PRICE_RANGE_MAX}
+					class="range"
+					bind:value={selectedMaxPrice}
+				/>
+			</label>
+			<div class="flex flex-col gap-3">
+				<select
+					class="select select-bordered rounded-full"
+					bind:value={selectedState}
+					on:change={() => (selectedCity = 'All Cities')}
+				>
+					<option selected>All States</option>
+					{#each uniqueStates as state}
+						<option>{state}</option>
+					{/each}
+				</select>
+				<select class="select select-bordered rounded-full" bind:value={selectedCity}>
+					<option selected>All Cities</option>
+					{#each data.cities.filter((city) => city.state === selectedState) as city (city.id)}
+						<option>{city.city}</option>
+					{/each}
+				</select>
+				<select class="select select-bordered rounded-full" bind:value={selectedPlatform}>
+					<option selected>All Platforms</option>
+					<option>PlayStation 5</option>
+					<option>Xbox Series X|S</option>
+				</select>
+				<select class="select select-bordered rounded-full" bind:value={selectedSellers}>
+					<option selected>All Sellers</option>
+					<option>People</option>
+					<option>Stores</option>
+				</select>
+				<select class="select select-bordered rounded-full" bind:value={selectedSort}>
+					{#each sortOptions as sortOption}
+						<option value={sortOption.id}>{sortOption.label}</option>
+					{/each}
+				</select>
+			</div>
+			<button class="btn btn-neutral rounded-full" on:click={applyFilters}> Apply </button>
+		</div>
+	</div>
+</dialog>
