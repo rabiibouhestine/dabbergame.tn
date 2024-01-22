@@ -20,7 +20,6 @@
 	export let data;
 
 	const uniqueStates = [...new Set(data.cities.map((city) => city.state))];
-	const PRICE_RANGE_MAX = 300;
 	const sortOptions = [
 		{
 			id: '1',
@@ -48,21 +47,19 @@
 	$: gameId = $page.url.searchParams.get('gameId') || '';
 	$: gameName = $page.url.searchParams.get('gameName') || '';
 
-	$: maxPrice = Number($page.url.searchParams.get('maxPrice')) || PRICE_RANGE_MAX;
 	$: state = $page.url.searchParams.get('state') || 'All States';
 	$: city = $page.url.searchParams.get('city') || 'All Cities';
 	$: platform = $page.url.searchParams.get('platform') || 'All Platforms';
 	$: sellers = $page.url.searchParams.get('sellers') || 'All Sellers';
 	$: sort = $page.url.searchParams.get('sort') || '1';
 
-	$: selectedMaxPrice = maxPrice;
 	$: selectedState = state;
 	$: selectedCity = city;
 	$: selectedPlatform = platform;
 	$: selectedSellers = sellers;
 	$: selectedSort = sort;
 
-	$: paramString = `gameId=${gameId}&gameName=${gameName}&maxPrice=${selectedMaxPrice}&state=${selectedState}&city=${selectedCity}&platform=${selectedPlatform}&sellers=${selectedSellers}&sort=${selectedSort}`;
+	$: paramString = `gameId=${gameId}&gameName=${gameName}&state=${selectedState}&city=${selectedCity}&platform=${selectedPlatform}&sellers=${selectedSellers}&sort=${selectedSort}`;
 
 	let filtersModal;
 
@@ -201,19 +198,6 @@
 			<button class="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</button>
 		</form>
 		<div class="flex flex-col gap-6 mt-6">
-			<label class="form-control w-full">
-				<div class="label">
-					<span class="label-text">Max Price</span>
-					<span class="label-text-alt">{selectedMaxPrice} DT</span>
-				</div>
-				<input
-					type="range"
-					min={0}
-					max={PRICE_RANGE_MAX}
-					class="range"
-					bind:value={selectedMaxPrice}
-				/>
-			</label>
 			<div class="flex flex-col gap-3">
 				<select
 					class="select select-bordered rounded-full"
