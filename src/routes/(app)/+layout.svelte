@@ -18,7 +18,7 @@
 	export let data;
 
 	function handleSearchClick(event) {
-		goto('/game/' + event.detail.id);
+		goto('/listings?gameId=' + event.detail.id);
 	}
 </script>
 

@@ -38,6 +38,8 @@
 	let selectedSort;
 
 	$: currentPage = Number($page.url.searchParams.get('page')) || 1;
+
+	$: gameId = $page.url.searchParams.get('gameId') || '';
 	$: maxPrice = Number($page.url.searchParams.get('maxPrice')) || PRICE_RANGE_MAX;
 	$: state = $page.url.searchParams.get('state') || 'All States';
 	$: city = $page.url.searchParams.get('city') || 'All Cities';
@@ -52,7 +54,7 @@
 	$: selectedSellers = sellers;
 	$: selectedSort = sort;
 
-	$: paramString = `maxPrice=${selectedMaxPrice}&state=${selectedState}&city=${selectedCity}&platform=${selectedPlatform}&sellers=${selectedSellers}&sort=${selectedSort}`;
+	$: paramString = `gameId=${gameId}&maxPrice=${selectedMaxPrice}&state=${selectedState}&city=${selectedCity}&platform=${selectedPlatform}&sellers=${selectedSellers}&sort=${selectedSort}`;
 
 	let filtersModal;
 

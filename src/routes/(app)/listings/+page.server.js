@@ -1,6 +1,8 @@
 
 export async function load({ url, locals }) {
 
+    const gameId = url.searchParams.get('gameId') || '';
+
     const maxPrice = Number(url.searchParams.get('maxPrice')) || 300;
     const state = url.searchParams.get('state') || 'All States';
     const city = url.searchParams.get('city') || 'All Cities';
@@ -20,6 +22,10 @@ export async function load({ url, locals }) {
     .from('listings_full')
     .select('*', { count: 'exact' })
     .lte('listing_price', maxPrice)
+
+    if (gameId && gameId !== '') {
+        listingsViewQuery = listingsViewQuery.eq('game_id', gameId);
+    }
 
     if (state && state !== 'All States') {
         listingsViewQuery = listingsViewQuery.eq('state', state);
