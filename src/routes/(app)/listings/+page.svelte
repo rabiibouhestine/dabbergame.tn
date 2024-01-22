@@ -88,13 +88,13 @@
 
 <div class="flex flex-col gap-y-8">
 	<div
-		class="w-full flex gap-4 flex-col sm:flex-row justify-between sm:items-end pb-3 border-b border-neutral"
+		class="w-full flex gap-4 flex-col lg:flex-row justify-between lg:items-end pb-3 border-b border-neutral"
 	>
 		<div>
 			<h2 class="flex gap-2 text-4xl font-bold mb-3" class:text-primary={gameName}>
 				<ListingsIcon />{gameName || 'All Listings'}
 			</h2>
-			<div class="flex flex-wrap gap-4 text-sm">
+			<div class="flex flex-col md:flex-row gap-4 text-sm">
 				<p
 					class="flex gap-1 items-center"
 					class:font-bold={state !== 'All States'}
@@ -129,7 +129,7 @@
 				</p>
 			</div>
 		</div>
-		<div class="flex gap-3">
+		<div class="flex gap-3 self-end">
 			{#if filtersUsed}
 				<a
 					href="/listings?gameId={gameId}&gameName={gameName}"
