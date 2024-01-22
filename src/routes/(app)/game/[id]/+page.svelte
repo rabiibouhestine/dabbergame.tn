@@ -59,7 +59,7 @@
 
 	function applyFilters() {
 		filtersModal.close();
-		goto(`/listings?${paramString}`);
+		goto(`/game/${data.game.id}?${paramString}`);
 	}
 
 	function getSortLabel(id) {
@@ -125,12 +125,12 @@
 			/>
 		{/each}
 	</div>
-	<!-- <div class="join flex mt-8">
-		<a href="/listings/?{paramString}&page=1" class="join-item btn btn-neutral w-16">
+	<div class="join flex mt-8">
+		<a href="/game/{data.game.id}?{paramString}&page=1" class="join-item btn btn-neutral w-16">
 			<FirstPageIcon />
 		</a>
 		<a
-			href="/listings/?{paramString}&page={currentPage - 1}"
+			href="/game/{data.game.id}?{paramString}&page={currentPage - 1}"
 			class="join-item btn btn-neutral w-16"
 			class:btn-disabled={currentPage <= 1}
 		>
@@ -142,17 +142,17 @@
 			Page {currentPage + ' / ' + data.totalPages}
 		</div>
 		<a
-			href="/listings/?{paramString}&page={currentPage + 1}"
+			href="/game/{data.game.id}?{paramString}&page={currentPage + 1}"
 			class="join-item btn btn-neutral w-16"
 			class:btn-disabled={currentPage >= data.totalPages}
 		>
 			<NextPAgeIcon />
 		</a>
 		<a
-			href="/listings/?{paramString}&page={data.totalPages}"
+			href="/game/{data.game.id}?{paramString}&page={data.totalPages}"
 			class="join-item btn btn-neutral w-16"
 		>
 			<LastPageIcon />
 		</a>
-	</div> -->
+	</div>
 </div>
