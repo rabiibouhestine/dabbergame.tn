@@ -16,6 +16,7 @@
 	import UsersIcon from '~icons/mdi/account-group';
 	import SortIcon from '~icons/mdi/sort';
 	import FilterIcon from '~icons/mdi/filter-cog';
+	import ClearFilterIcon from '~icons/mdi/filter-off';
 
 	export let data;
 
@@ -41,6 +42,7 @@
 
 	let selectedSellers;
 	let selectedSort;
+	let filtersUsed;
 
 	$: currentPage = Number($page.url.searchParams.get('page')) || 1;
 
@@ -52,6 +54,17 @@
 	$: platform = $page.url.searchParams.get('platform') || 'All Platforms';
 	$: sellers = $page.url.searchParams.get('sellers') || 'All Sellers';
 	$: sort = $page.url.searchParams.get('sort') || '1';
+
+	$: if (
+		state !== 'All States' ||
+		platform !== 'All Platforms' ||
+		sellers !== 'All Sellers' ||
+		sort !== '1'
+	) {
+		filtersUsed = true;
+	} else {
+		filtersUsed = false;
+	}
 
 	$: selectedState = state;
 	$: selectedCity = city;
@@ -78,7 +91,7 @@
 		class="w-full flex gap-4 flex-col sm:flex-row justify-between sm:items-end pb-3 border-b border-neutral"
 	>
 		<div>
-			<h2 class="flex gap-2 text-4xl font-bold mb-3" class:text-secondary={gameName}>
+			<h2 class="flex gap-2 text-4xl font-bold mb-3" class:text-primary={gameName}>
 				<ListingsIcon />{gameName || 'All Listings'}
 			</h2>
 			<div class="flex flex-wrap gap-4 text-sm">
@@ -116,15 +129,26 @@
 				</p>
 			</div>
 		</div>
-		<button
-			class="btn btn-outline rounded-full"
-			on:click={() => {
-				filtersModal.showModal();
-			}}
-		>
-			<FilterIcon />
-			Sort & Filter
-		</button>
+		<div class="flex gap-3">
+			{#if filtersUsed}
+				<a
+					href="/listings?gameId={gameId}&gameName={gameName}"
+					class="btn btn-outline btn-secondary rounded-full"
+				>
+					<ClearFilterIcon />
+					Clear
+				</a>
+			{/if}
+			<button
+				class="btn btn-outline rounded-full"
+				on:click={() => {
+					filtersModal.showModal();
+				}}
+			>
+				<FilterIcon />
+				Sort & Filter
+			</button>
+		</div>
 	</div>
 	<div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-6">
 		{#each data.listings as listing (listing.id)}
