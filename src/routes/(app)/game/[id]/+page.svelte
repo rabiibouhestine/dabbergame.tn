@@ -62,7 +62,7 @@
 		</button>
 	</div>
 	<div class="flex flex-col justify-center gap-4">
-		{#each listings as listing}
+		{#each listings as listing (listing.id)}
 			<ListingBanner
 				id={listing.id}
 				platform={listing.listing_platform}

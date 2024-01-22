@@ -1,5 +1,11 @@
 <script>
 	import StoreIcon from '~icons/mdi/store';
+	import Other from '~icons/ion/game-controller';
+	import Playstation from '~icons/cib/playstation';
+	import Xbox from '~icons/cib/xbox';
+	import Nintendo from '~icons/simple-icons/nintendo';
+	import NintendoSwitch from '~icons/cib/nintendo-switch';
+	import Windows from '~icons/cib/windows';
 
 	export let id = '';
 
@@ -11,6 +17,49 @@
 	export let price = 0;
 
 	export let isStore = false;
+	export let platform = '';
+	export let platformFamily = '';
+
+	$: Logo = getLogo(platform, platformFamily);
+	$: BackgoundColor = getBG(platformFamily);
+
+	function getLogo(platform, platformFamily) {
+		switch (platformFamily) {
+			case 'PlayStation':
+				return Playstation;
+			case 'Xbox':
+				return Xbox;
+			case 'Nintendo':
+				if (platform === 'Nintendo Switch') {
+					return NintendoSwitch;
+				} else {
+					return Nintendo;
+				}
+			default:
+				if (platform === 'PC (Microsoft Windows)') {
+					return Windows;
+				} else {
+					return Other;
+				}
+		}
+	}
+
+	function getBG(platformFamily) {
+		switch (platformFamily) {
+			case 'PlayStation':
+				return 'bg-playstation';
+			case 'Xbox':
+				return 'bg-xbox';
+			case 'Nintendo':
+				return 'bg-nintendo';
+			default:
+				if (platform === 'PC (Microsoft Windows)') {
+					return 'bg-windows';
+				} else {
+					return 'bg-yellow-700';
+				}
+		}
+	}
 </script>
 
 <a
@@ -38,7 +87,7 @@
 		</div>
 	</div>
 	<div class="flex flex-wrap justify-center items-center gap-3">
-		<div class="badge bg-playstation p-4 font-bold">Playstation 5</div>
+		<div class="badge {BackgoundColor} p-4 font-bold gap-2"><Logo /> {platform}</div>
 		<div class="badge badge-secondary p-4 font-extrabold">{price} DT</div>
 	</div>
 </a>
