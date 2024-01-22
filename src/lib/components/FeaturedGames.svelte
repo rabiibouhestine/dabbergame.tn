@@ -4,21 +4,25 @@
 	let featuredGames = [
 		{
 			id: 119171,
+			name: "Baldur's Gate 3",
 			cover: 'co670h',
 			rating: 95
 		},
 		{
 			id: 127044,
+			name: "Marvel's Spider-Man 2",
 			cover: 'co79vq',
 			rating: 92
 		},
 		{
 			id: 119388,
+			name: 'The Legend of Zelda: Tears of the Kingdom',
 			cover: 'co5vmg',
 			rating: 95
 		},
 		{
 			id: 185246,
+			name: 'Alan Wake 2',
 			cover: 'co6jar',
 			rating: 91
 		}
@@ -29,7 +33,10 @@
 	<h2 class="text-4xl font-bold">Featured Games</h2>
 	<div class="grid grid-cols-2 sm:grid-cols-4 gap-4">
 		{#each featuredGames as game}
-			<a href="/listings?gameId={game.id}" class="relative flex justify-center items-end group">
+			<a
+				href="/listings?gameId={game.id}&gameName={game.name}"
+				class="relative flex justify-center items-end group"
+			>
 				<img
 					src={getGameCover(game.cover)}
 					alt="game"
