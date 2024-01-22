@@ -118,8 +118,7 @@
 				<p class="text-2xl font-bold">No listings</p>
 				<p class="text-2xl font-bold text-neutral-content">Be the first to create one!</p>
 			</div>
-			<a href="/post-listing" class="btn btn-outline rounded-full"><AddListingIcon /> Add Listing</a
-			>
+			<a href="/add-listing" class="btn btn-outline rounded-full"><AddListingIcon /> Add Listing</a>
 		</div>
 	{/if}
 	{#if data.totalPages > 0}

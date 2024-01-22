@@ -24,13 +24,13 @@
 
 <div class="flex flex-col gap-4 max-w-2xl mx-auto">
 	<div class="w-full flex flex-col gap-6 rounded-container">
-		<h2 class="text-4xl font-bold">Create Listing</h2>
+		<h2 class="text-4xl font-bold">Add Listing</h2>
 		<SearchBar on:click={handleGameSelection} />
 	</div>
 	{#if !gameSelected}
 		<FeaturedGames />
 	{:else}
-		<form class="flex flex-col gap-4" method="POST" action="/post-listing">
+		<form class="flex flex-col gap-4" method="POST" action="/add-listing">
 			<div class="flex flex-col gap-6 rounded-container">
 				<h2 class="text-3xl font-bold">
 					{selectedGameDetails.name}
