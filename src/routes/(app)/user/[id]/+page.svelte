@@ -2,11 +2,19 @@
 	import ProfileCard from '$lib/components/ProfileCard.svelte';
 	import ListingCard from '$lib/components/ListingCard.svelte';
 
-	import SortIcon from '~icons/mdi/sort';
 	import ListingsIcon from '~icons/mdi/tag-multiple';
 
 	export let data;
 	$: profile = data.profile;
+	$: listings = data.listings;
+
+	let selectedPlatform = 'All Platforms';
+
+	$: if (selectedPlatform === 'All Platforms') {
+		listings = data.listings;
+	} else {
+		listings = data.listings.filter((listing) => listing.listing_platform === selectedPlatform);
+	}
 </script>
 
 <div class="flex flex-col gap-10">
@@ -21,24 +29,15 @@
 	<div
 		class="w-full flex gap-4 flex-col sm:flex-row justify-between sm:items-end pb-3 border-b border-neutral"
 	>
-		<div>
-			<h2 class="flex gap-2 text-4xl font-bold"><ListingsIcon />Listings</h2>
-			<p class="mt-2 text-neutral-content text-xs sm:text-sm">
-				{'All Platforms' + ', ' + 'getSortLabel(sort)'}
-			</p>
-		</div>
-		<button
-			class="btn btn-outline rounded-full"
-			on:click={() => {
-				'filtersModal.showModal();';
-			}}
-		>
-			<SortIcon />
-			Sort & Filter
-		</button>
+		<h2 class="flex gap-2 text-4xl font-bold"><ListingsIcon />Listings</h2>
+		<select class="select select-bordered rounded-full" bind:value={selectedPlatform}>
+			<option selected>All Platforms</option>
+			<option>PlayStation 5</option>
+			<option>Xbox Series X|S</option>
+		</select>
 	</div>
 	<div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-6">
-		{#each data.listings as listing (listing.id)}
+		{#each listings as listing (listing.id)}
 			<ListingCard
 				showUserInfo={false}
 				id={listing.id}

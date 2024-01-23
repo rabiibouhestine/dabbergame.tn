@@ -251,7 +251,7 @@
 				</select>
 				<select class="select select-bordered rounded-full" bind:value={selectedSort}>
 					{#each sortOptions as sortOption}
-						<option value={sortOption.id}>{sortOption.label}</option>
+						<option value={sortOption.id}>Sort by {sortOption.label}</option>
 					{/each}
 				</select>
 			</div>
