@@ -35,8 +35,7 @@
 		</a>
 		<span class="w-full btn btn-outline btn-secondary rounded-full text-lg font-bold"> Phone </span>
 		<span class="w-full btn btn-outline btn-primary rounded-full text-lg font-bold"> Buy Now </span>
-		<!-- {#if data.session && data.session.user.id === data.profile.id} -->
-		{#if data.session}
+		{#if data.session && data.session.user.id === listing.profiles.id}
 			<button class="w-full btn btn-outline btn-info rounded-full text-lg font-bold">
 				<ListingEditIcon /> Edit
 			</button>
