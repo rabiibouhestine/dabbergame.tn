@@ -7,6 +7,8 @@
 
 	import CheckCircleOutlineRounded from '~icons/material-symbols/check-circle-outline-rounded';
 	import CancelOutlineRounded from '~icons/material-symbols/cancel-outline-rounded';
+	import ListingEditIcon from '~icons/mdi/tag-edit-outline';
+	import ListingDeleteIcon from '~icons/mdi/tag-minus-outline';
 
 	export let data;
 	$: listing = data.listing;
@@ -33,6 +35,15 @@
 		</a>
 		<span class="w-full btn btn-outline btn-secondary rounded-full text-lg font-bold"> Phone </span>
 		<span class="w-full btn btn-outline btn-primary rounded-full text-lg font-bold"> Buy Now </span>
+		<!-- {#if data.session && data.session.user.id === data.profile.id} -->
+		{#if data.session}
+			<button class="w-full btn btn-outline btn-info rounded-full text-lg font-bold">
+				<ListingEditIcon /> Edit
+			</button>
+			<button class="w-full btn btn-outline btn-warning rounded-full text-lg font-bold">
+				<ListingDeleteIcon /> Delete
+			</button>
+		{/if}
 	</div>
 	<div class="flex flex-col gap-6 flex-grow">
 		<div

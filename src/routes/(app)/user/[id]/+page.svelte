@@ -3,8 +3,6 @@
 	import ListingCard from '$lib/components/ListingCard.svelte';
 
 	import ListingsIcon from '~icons/mdi/tag-multiple';
-	import ListingEditIcon from '~icons/mdi/tag-edit-outline';
-	import ListingDeleteIcon from '~icons/mdi/tag-minus-outline';
 
 	export let data;
 	$: profile = data.profile;
@@ -54,16 +52,6 @@
 					userState={listing?.profiles?.cities?.state}
 					userCity={listing?.profiles?.cities?.city}
 				/>
-				{#if data.session && data.session.user.id === data.profile.id}
-					<div class="flex flex-col gap-2">
-						<button class="w-full btn btn-sm btn-outline btn-info rounded-full font-bold">
-							<ListingEditIcon /> Edit
-						</button>
-						<button class="w-full btn btn-sm btn-outline btn-warning rounded-full font-bold">
-							<ListingDeleteIcon /> Delete
-						</button>
-					</div>
-				{/if}
 			</div>
 		{/each}
 	</div>
