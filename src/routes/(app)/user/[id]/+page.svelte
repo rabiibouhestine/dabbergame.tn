@@ -3,6 +3,8 @@
 	import ListingCard from '$lib/components/ListingCard.svelte';
 
 	import ListingsIcon from '~icons/mdi/tag-multiple';
+	import ListingEditIcon from '~icons/mdi/tag-edit-outline';
+	import ListingDeleteIcon from '~icons/mdi/tag-minus-outline';
 
 	export let data;
 	$: profile = data.profile;
@@ -38,19 +40,29 @@
 	</div>
 	<div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-6">
 		{#each listings as listing (listing.id)}
-			<ListingCard
-				showUserInfo={false}
-				id={listing.id}
-				platform={listing.listing_platform}
-				platformFamily={listing.listing_platform_family}
-				coverImageId={listing.game_cover}
-				price={listing.listing_price}
-				userId={listing?.profiles?.id}
-				userFirstName={listing?.profiles?.first_name}
-				userLastName={listing?.profiles?.last_name}
-				userState={listing?.profiles?.cities?.state}
-				userCity={listing?.profiles?.cities?.city}
-			/>
+			<div class="flex flex-col">
+				<ListingCard
+					showUserInfo={false}
+					id={listing.id}
+					platform={listing.listing_platform}
+					platformFamily={listing.listing_platform_family}
+					coverImageId={listing.game_cover}
+					price={listing.listing_price}
+					userId={listing?.profiles?.id}
+					userFirstName={listing?.profiles?.first_name}
+					userLastName={listing?.profiles?.last_name}
+					userState={listing?.profiles?.cities?.state}
+					userCity={listing?.profiles?.cities?.city}
+				/>
+				<div class="flex flex-col gap-2">
+					<button class="w-full btn btn-sm btn-outline btn-info rounded-full font-bold">
+						<ListingEditIcon /> Edit
+					</button>
+					<button class="w-full btn btn-sm btn-outline btn-warning rounded-full font-bold">
+						<ListingDeleteIcon /> Delete
+					</button>
+				</div>
+			</div>
 		{/each}
 	</div>
 </div>
