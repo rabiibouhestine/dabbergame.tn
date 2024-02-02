@@ -137,7 +137,7 @@
 			/>
 		</label>
 		{#if form?.error}<p class="error">Invalid credentials!</p>{/if}
-		<button type="submit" class="btn btn-neutral">Signup</button>
+		<button type="submit" class="btn btn-neutral">Update Password</button>
 	</form>
 	<div class="divider"></div>
 	<form action="?/logout" method="POST">
