@@ -34,9 +34,13 @@
 			</span>
 		</a>
 		<span class="w-full btn btn-outline btn-secondary rounded-full text-lg font-bold"> Phone </span>
-		<span class="w-full btn btn-outline btn-success rounded-full text-lg font-bold">
+		<a
+			href="/"
+			target="_blank"
+			class="w-full btn btn-outline btn-success rounded-full text-lg font-bold"
+		>
 			Whatsapp
-		</span>
+		</a>
 		<span class="w-full btn btn-outline btn-primary rounded-full text-lg font-bold"> Buy Now </span>
 		{#if data.session && data.session.user.id === listing.profiles.id}
 			<button class="w-full btn btn-outline btn-info rounded-full text-lg font-bold">
