@@ -4,7 +4,7 @@
 	export let form;
 	export let data;
 
-	const isStore = true;
+	const isStore = false;
 	const firstName = 'John';
 	const lastName = 'Doe';
 	const state = 'Ben Arous';
@@ -15,7 +15,7 @@
 </script>
 
 <div class="bg-base-100 rounded-3xl overflow-hidden max-w-4xl mx-auto mb-6">
-	<div class="w-full h-[110px] relative bg-gradient-to-tr from-neutral to-base-200">
+	<div class="w-full h-[180px] relative bg-gradient-to-tr from-neutral to-base-200">
 		{#if isStore}
 			<img
 				src="https://scontent.ftun7-1.fna.fbcdn.net/v/t39.30808-6/392928542_879903553693124_7845734790687133584_n.jpg?stp=dst-jpg_s2048x2048&_nc_cat=110&ccb=1-7&_nc_sid=783fdb&_nc_ohc=JBQdL-dIZ1sAX9X0_3y&_nc_ht=scontent.ftun7-1.fna&oh=00_AfA5LSBpQbB0fM-Xb1pFrQdOBEt_Gcsyf7t3IYdgDD8MNA&oe=65AF1B1C"
@@ -24,7 +24,7 @@
 			/>
 		{/if}
 	</div>
-	<div class="flex flex-col gap-2 items-center pb-4 -mt-8">
+	<div class="flex flex-col gap-2 items-center pb-4 -mt-10">
 		<div class="avatar placeholder" class:indicator={isStore}>
 			{#if isStore}
 				<span
@@ -34,7 +34,7 @@
 				</span>
 			{/if}
 			<div
-				class="bg-neutral text-neutral-content rounded-full w-16 outline outline-8 outline-base-100"
+				class="bg-neutral text-neutral-content rounded-full w-20 outline outline-8 outline-base-100"
 			>
 				{#if isStore}
 					<img
@@ -47,11 +47,11 @@
 				{/if}
 			</div>
 		</div>
-		<div class="text-center">
+		<div class="text-center mb-4">
 			<h2 class="text-xl font-bold">{firstName + ' ' + lastName}</h2>
 			<p class="text-sm text-slate-300">{state + ', ' + city}</p>
 			<p class="text-sm text-slate-300">rabiibouhestine@outlook.com</p>
-			<a href="/" class="btn btn-sm btn-secondary mt-4">Upgrade to Store Account</a>
+			<a href="/" class="btn btn-secondary mt-4">Upgrade to Store Account</a>
 		</div>
 	</div>
 </div>
@@ -141,6 +141,6 @@
 	</form>
 	<div class="divider"></div>
 	<form action="?/logout" method="POST">
-		<button type="submit" class="btn btn-primary">Logout</button>
+		<button type="submit" class="btn btn-error">Logout</button>
 	</form>
 </div>
