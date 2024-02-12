@@ -1,19 +1,12 @@
 <script>
-	import StoreIcon from '~icons/mdi/store';
-	import FacebookIcon from '~icons/mdi/facebook';
 	import PhoneIcon from '~icons/mdi/phone';
 	import CogIcon from '~icons/mdi/cog';
-	import Instagram from '~icons/mdi/instagram';
 
 	export let isStore = false;
 	export let firstName = 'John';
 	export let lastName = 'Doe';
 	export let state = 'State';
 	export let city = 'City';
-
-	export let facebookLink;
-	export let instagramLink;
-	export let storeLink;
 
 	export let showSettingsButton = false;
 </script>
@@ -35,13 +28,6 @@
 	</div>
 	<div class="flex flex-col justify-between items-center gap-4 pb-8 -mt-20">
 		<div class="avatar placeholder" class:indicator={isStore}>
-			{#if isStore}
-				<span
-					class="indicator-item indicator-bottom indicator-center badge badge-secondary font-bold text-base-100 py-4"
-				>
-					<StoreIcon /> Store
-				</span>
-			{/if}
 			<div
 				class="bg-neutral text-neutral-content rounded-full w-40 outline outline-8 outline-base-100"
 			>
@@ -59,31 +45,11 @@
 		<div class="text-center">
 			<h2 class="text-4xl font-bold">{firstName + ' ' + lastName}</h2>
 			<p class="text-slate-300">{state + ', ' + city}</p>
-			{#if !isStore}
-				<p class="text-sm text-slate-400">Joined 1 month ago</p>
-			{/if}
 		</div>
 		<div class="flex justify-center gap-3">
 			<a href="/" class="btn btn-neutral btn-circle">
 				<PhoneIcon class="text-xl" />
 			</a>
-			{#if isStore}
-				{#if facebookLink}
-					<a href="/" class="btn btn-neutral btn-circle">
-						<FacebookIcon class="text-xl" />
-					</a>
-				{/if}
-				{#if instagramLink}
-					<a href="/" class="btn btn-neutral btn-circle">
-						<Instagram class="text-xl" />
-					</a>
-				{/if}
-				{#if storeLink}
-					<a href="/" class="btn btn-neutral btn-circle">
-						<StoreIcon class="text-xl" />
-					</a>
-				{/if}
-			{/if}
 		</div>
 	</div>
 </div>
