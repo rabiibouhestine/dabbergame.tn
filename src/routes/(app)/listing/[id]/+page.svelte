@@ -121,7 +121,7 @@
 		<h3 class="font-bold text-lg">Deleting Listing!</h3>
 		<p class="py-4">Are you sure you want to delete your listing?</p>
 		<div class="modal-action">
-			<form method="dialog">
+			<form method="POST" action="?/delete">
 				<!-- if there is a button in form, it will close the modal -->
 				<button class="btn rounded-full btn-accent">Delete</button>
 			</form>
