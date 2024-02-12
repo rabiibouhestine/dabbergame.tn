@@ -34,13 +34,6 @@
 			</span>
 		</a>
 		<span class="w-full btn btn-outline btn-secondary rounded-full text-lg font-bold"> Phone </span>
-		<a
-			href="/"
-			target="_blank"
-			class="w-full btn btn-outline btn-success rounded-full text-lg font-bold"
-		>
-			Whatsapp
-		</a>
 		{#if data.session && data.session.user.id === listing.profiles.id}
 			<button class="w-full btn btn-outline btn-info rounded-full text-lg font-bold">
 				<ListingEditIcon /> Edit
