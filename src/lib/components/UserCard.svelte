@@ -10,7 +10,7 @@
 
 <a
 	href="/user/{id}"
-	class="bg-base-100 rounded-xl overflow-hidden transition ease-in-out hover:scale-105 hover:shadow-md hover:shadow-secondary/50"
+	class="bg-base-100 rounded-xl overflow-hidden transition ease-in-out hover:outline hover:outline-2 hover:outline-secondary"
 >
 	<div class="w-full h-[110px] relative bg-gradient-to-tr from-neutral to-base-200"></div>
 	<div class="flex flex-col gap-2 items-center pb-4 -mt-8">
