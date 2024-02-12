@@ -12,6 +12,8 @@
 
 	export let data;
 	$: listing = data.listing;
+
+	let deleteModal;
 </script>
 
 <div class="flex flex-col md:flex-row items-center md:items-start gap-10">
@@ -38,7 +40,12 @@
 			<button class="w-full btn btn-outline btn-info rounded-full text-lg font-bold">
 				<ListingEditIcon /> Edit
 			</button>
-			<button class="w-full btn btn-outline btn-warning rounded-full text-lg font-bold">
+			<button
+				on:click={() => {
+					deleteModal.showModal();
+				}}
+				class="w-full btn btn-outline btn-warning rounded-full text-lg font-bold"
+			>
 				<ListingDeleteIcon /> Delete
 			</button>
 		{/if}
@@ -108,3 +115,22 @@
 		/>
 	</div>
 </div>
+
+<dialog bind:this={deleteModal} class="modal">
+	<div class="modal-box">
+		<h3 class="font-bold text-lg">Deleting Listing!</h3>
+		<p class="py-4">Are you sure you want to delete your listing?</p>
+		<div class="modal-action">
+			<form method="dialog">
+				<!-- if there is a button in form, it will close the modal -->
+				<button class="btn rounded-full btn-accent">Delete</button>
+			</form>
+			<button
+				on:click={() => {
+					deleteModal.close();
+				}}
+				class="btn rounded-full">Cancel</button
+			>
+		</div>
+	</div>
+</dialog>
