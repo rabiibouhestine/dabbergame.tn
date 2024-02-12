@@ -19,11 +19,11 @@
 
 <div class="flex flex-col gap-10">
 	<ProfileCard
-		isStore={profile.is_store}
 		firstName={profile.first_name}
 		lastName={profile.last_name}
 		state={profile.cities.state}
 		city={profile?.cities.city}
+		showButtons={true}
 		showSettingsButton={data.session && data.session.user.id === data.profile.id}
 	/>
 	<div
