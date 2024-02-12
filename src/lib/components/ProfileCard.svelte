@@ -12,13 +12,7 @@
 </script>
 
 <div class="bg-base-100 rounded-3xl overflow-hidden">
-	<div class="w-full h-[250px] relative bg-gradient-to-tr from-neutral to-base-200">
-		{#if showSettingsButton}
-			<a href="/user-settings" class="absolute right-4 top-4 btn btn-neutral btn-circle">
-				<CogIcon class="text-xl" />
-			</a>
-		{/if}
-	</div>
+	<div class="w-full h-[250px] relative bg-gradient-to-tr from-neutral to-base-200"></div>
 	<div class="flex flex-col justify-between items-center gap-4 pb-8 -mt-20">
 		<div class="avatar placeholder">
 			<div
@@ -43,6 +37,11 @@
 			<a href="/" class="btn btn-neutral btn-circle">
 				<PhoneIcon class="text-xl" />
 			</a>
+			{#if showSettingsButton}
+				<a href="/user-settings" class="btn btn-neutral btn-circle">
+					<CogIcon class="text-xl" />
+				</a>
+			{/if}
 		</div>
 	</div>
 </div>
