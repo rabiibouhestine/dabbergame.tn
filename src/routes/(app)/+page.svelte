@@ -51,43 +51,7 @@
 			</a>
 		</div>
 	</div>
-	<div class="grid grid-cols-1 lg:grid-cols-6 gap-5">
-		<div class="lg:col-span-4">
-			<FeaturedGames />
-		</div>
-		<div class="lg:col-span-2 flex flex-col gap-6 rounded-container">
-			<div class="flex justify-between">
-				<h2 class="text-4xl font-bold">Stores</h2>
-				<a href="/stores" class="btn btn-circle btn-ghost text-3xl font-bold">
-					<ArrowRight />
-				</a>
-			</div>
-			<div class="flex flex-col gap-3">
-				{#each data.featured as store}
-					<a
-						href="/user/{store.id}"
-						class="flex items-center justify-between border-neutral border-b last:border-0 pb-3 last:pb-0 group"
-					>
-						<div class="transition ease-in-out group-hover:scale-105">
-							<UserInfo
-								firstName={store.first_name}
-								lastName={store.last_name}
-								state={store.state}
-								city={store.city}
-								isStore={true}
-							/>
-						</div>
-						<div
-							class="badge badge-neutral gap-1 p-4 font-bold transition ease-in-out group-hover:scale-105"
-						>
-							<TagMultiple />
-							<span class="font-bold">{store.num_listings}</span>
-						</div>
-					</a>
-				{/each}
-			</div>
-		</div>
-	</div>
+	<FeaturedGames />
 	<div class="w-full flex justify-between pb-3 border-b border-neutral mt-8">
 		<h2 class="flex gap-2 text-4xl font-bold"><TagMultiple />Latest Listings</h2>
 		<a href="/listings" class="btn btn-circle btn-ghost text-3xl font-bold">

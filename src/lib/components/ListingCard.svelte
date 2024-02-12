@@ -15,7 +15,6 @@
 
 	export let showPrice = true;
 	export let showUserInfo = true;
-	export let isStore = false;
 </script>
 
 <div class="flex flex-col gap-3">
@@ -38,7 +37,6 @@
 				lastName={userLastName}
 				state={userState}
 				city={userCity}
-				{isStore}
 			/>
 		{/if}
 	</a>

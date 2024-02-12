@@ -45,7 +45,6 @@
 						<li><a href="/add-listing"><TagPlus class="text-lg" />Add Listing</a></li>
 					{/if}
 					<li><a href="/listings"><TagMultiple class="text-lg" />Listings</a></li>
-					<li><a href="/stores"><Store class="text-lg" />Stores</a></li>
 					{#if data.session}
 						<li>
 							<a href={'/user/' + data.session.user.id}><Account class="text-lg" />Account</a>
@@ -69,9 +68,6 @@
 				{/if}
 				<a href="/listings" class="btn btn-circle btn-neutral">
 					<TagMultiple class="text-xl" />
-				</a>
-				<a href="/stores" class="btn btn-circle btn-neutral">
-					<Store class="text-xl" />
 				</a>
 				{#if data.session}
 					<a href={'/user/' + data.session.user.id} class="btn btn-circle btn-neutral">

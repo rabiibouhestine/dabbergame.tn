@@ -1,6 +1,6 @@
 <script>
 	import SearchBar from '$lib/components/SearchBar.svelte';
-	import FeaturedGames from '$lib/components/FeaturedGames.svelte';
+	import SuggestedGames from '$lib/components/SuggestedGames.svelte';
 
 	import { getGameCover } from '$lib/utils/igdbUtils';
 
@@ -28,7 +28,7 @@
 		<SearchBar on:click={handleGameSelection} />
 	</div>
 	{#if !gameSelected}
-		<FeaturedGames />
+		<SuggestedGames />
 	{:else}
 		<form class="flex flex-col gap-4" method="POST" action="/add-listing">
 			<div class="flex flex-col gap-6 rounded-container">

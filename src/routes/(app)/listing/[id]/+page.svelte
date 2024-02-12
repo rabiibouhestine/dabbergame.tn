@@ -41,7 +41,6 @@
 		>
 			Whatsapp
 		</a>
-		<span class="w-full btn btn-outline btn-primary rounded-full text-lg font-bold"> Buy Now </span>
 		{#if data.session && data.session.user.id === listing.profiles.id}
 			<button class="w-full btn btn-outline btn-info rounded-full text-lg font-bold">
 				<ListingEditIcon /> Edit
@@ -113,7 +112,6 @@
 			lastName={listing.profiles.last_name}
 			state={listing.profiles.cities.state}
 			city={listing.profiles.cities.city}
-			isStore={listing.profiles.is_store}
 		/>
 	</div>
 </div>
