@@ -37,9 +37,12 @@
 		</a>
 		<span class="w-full btn btn-outline btn-secondary rounded-full text-lg font-bold"> Phone </span>
 		{#if data.session && data.session.user.id === listing.profiles.id}
-			<button class="w-full btn btn-outline btn-info rounded-full text-lg font-bold">
+			<a
+				href="/edit-listing?gameId={listing.game_id}"
+				class="w-full btn btn-outline btn-info rounded-full text-lg font-bold"
+			>
 				<ListingEditIcon /> Edit
-			</button>
+			</a>
 			<button
 				on:click={() => {
 					deleteModal.showModal();
