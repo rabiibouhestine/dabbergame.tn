@@ -34,15 +34,16 @@
 	</div>
 	{#if showButtons}
 		<div class="flex justify-center gap-3">
-			<a href="/" class="btn btn-neutral btn-circle">
-				<PhoneIcon class="text-xl" />
-			</a>
 			{#if showSettingsButton}
 				<form action="?/logout" method="POST">
-					<button type="submit" class="btn btn-error btn-circle">
-						<LogoutIcon class="text-xl" />
+					<button type="submit" class="btn btn-error rounded-full text-lg font-bold">
+						<LogoutIcon /> Logout
 					</button>
 				</form>
+			{:else}
+				<a href="/" class="btn btn-neutral rounded-full text-lg font-bold">
+					<PhoneIcon /> Phone
+				</a>
 			{/if}
 		</div>
 	{/if}
