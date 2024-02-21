@@ -7,7 +7,6 @@
 
 	import CheckCircleOutlineRounded from '~icons/material-symbols/check-circle-outline-rounded';
 	import CancelOutlineRounded from '~icons/material-symbols/cancel-outline-rounded';
-	import ListingEditIcon from '~icons/mdi/tag-edit-outline';
 	import ListingDeleteIcon from '~icons/mdi/tag-minus-outline';
 
 	export let data;
@@ -37,12 +36,6 @@
 		</a>
 		<span class="w-full btn btn-outline btn-secondary rounded-full text-lg font-bold"> Phone </span>
 		{#if data.session && data.session.user.id === listing.profiles.id}
-			<a
-				href="/edit-listing?gameId={listing.game_id}"
-				class="w-full btn btn-outline btn-info rounded-full text-lg font-bold"
-			>
-				<ListingEditIcon /> Edit
-			</a>
 			<button
 				on:click={() => {
 					deleteModal.showModal();

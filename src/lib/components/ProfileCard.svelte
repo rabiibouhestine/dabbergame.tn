@@ -1,6 +1,6 @@
 <script>
 	import PhoneIcon from '~icons/mdi/phone';
-	import CogIcon from '~icons/mdi/cog';
+	import LogoutIcon from '~icons/mdi/logout';
 
 	export let hasProfileImage = false;
 	export let firstName = 'John';
@@ -38,9 +38,11 @@
 				<PhoneIcon class="text-xl" />
 			</a>
 			{#if showSettingsButton}
-				<a href="/user-settings" class="btn btn-neutral btn-circle">
-					<CogIcon class="text-xl" />
-				</a>
+				<form action="?/logout" method="POST">
+					<button type="submit" class="btn btn-error btn-circle">
+						<LogoutIcon class="text-xl" />
+					</button>
+				</form>
 			{/if}
 		</div>
 	{/if}

@@ -1,3 +1,5 @@
+import { AuthApiError } from "@supabase/supabase-js";
+import { fail, redirect } from "@sveltejs/kit";
 
 export async function load({ params, locals }) {
     const id = params.id;
@@ -18,4 +20,20 @@ export async function load({ params, locals }) {
         profile: profileQuery.data,
         listings: listingsQuery.data
     };
+}
+
+export const actions = {
+	logout: async (event) => {
+		const { request, url, locals: { supabase } } = event;
+
+        const { error } = await supabase.auth.signOut();
+
+        if (error) {
+            return fail(500, {
+                message: "Something went wrong logging you out.",
+            })
+        }
+    
+        throw redirect(303, "/");
+    }
 }
