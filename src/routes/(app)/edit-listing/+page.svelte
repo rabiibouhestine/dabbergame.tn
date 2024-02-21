@@ -1,7 +1,9 @@
 <script>
 	import SearchBar from '$lib/components/SearchBar.svelte';
-
 	import { getGameCover } from '$lib/utils/igdbUtils';
+
+	export let data;
+	$: listing = data.listing;
 
 	let gameSelected = false;
 	let selectedGameDetails = {};

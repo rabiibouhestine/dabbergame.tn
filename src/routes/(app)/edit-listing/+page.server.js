@@ -1,6 +1,20 @@
-import { AuthApiError } from "@supabase/supabase-js";
 import { fail, redirect } from "@sveltejs/kit";
 import { IGDB_CLIENT_ID, IGDB_TOKEN } from '$env/static/private';
+
+export async function load({ params, locals }) {
+    const id = params.id;
+    const supabase = locals.supabase;
+
+    const listingQuery = await supabase
+    .from('listings')
+    .select(`*, profiles (id, first_name, last_name, is_store, cities (id, state, city))`)
+    .eq('id', id)
+    .single()
+
+    return {
+        listing: listingQuery.data
+    };
+}
 
 export const actions = {
 	default: async (event) => {
