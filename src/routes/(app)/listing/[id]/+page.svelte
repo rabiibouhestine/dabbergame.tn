@@ -8,6 +8,7 @@
 	import CheckCircleOutlineRounded from '~icons/material-symbols/check-circle-outline-rounded';
 	import CancelOutlineRounded from '~icons/material-symbols/cancel-outline-rounded';
 	import ListingDeleteIcon from '~icons/mdi/tag-minus-outline';
+	import PhoneIcon from '~icons/mdi/phone';
 
 	export let data;
 	$: listing = data.listing;
@@ -34,7 +35,9 @@
 				{listing.listing_price} DT
 			</span>
 		</a>
-		<span class="w-full btn btn-outline btn-secondary rounded-full text-lg font-bold"> Phone </span>
+		<span class="w-full btn btn-outline btn-secondary rounded-full text-lg font-bold">
+			<PhoneIcon /> Phone
+		</span>
 		{#if data.session && data.session.user.id === listing.profiles.id}
 			<button
 				on:click={() => {
