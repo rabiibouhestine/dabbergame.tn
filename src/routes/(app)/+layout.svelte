@@ -105,7 +105,6 @@
 			<a href="/terms-of-use" class="link link-hover">Terms of Use</a>
 			<a href="/" class="link link-hover">Privacy Policy</a>
 			<a href="/" class="link link-hover">Disclaimer</a>
-			<a href="/" class="link link-hover">Contact</a>
 		</nav>
 		<aside>
 			<p>Copyright © {new Date().getFullYear()} - All rights reserved by dabbergame.tn</p>
