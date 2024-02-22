@@ -9,11 +9,14 @@
 	import CancelOutlineRounded from '~icons/material-symbols/cancel-outline-rounded';
 	import ListingDeleteIcon from '~icons/mdi/tag-minus-outline';
 	import PhoneIcon from '~icons/mdi/phone';
+	import AccountArrowRight from '~icons/mdi/account-arrow-right';
+	import AccountPlus from '~icons/mdi/account-plus';
 
 	export let data;
 	$: listing = data.listing;
 
 	let deleteModal;
+	let phoneModal;
 </script>
 
 <div class="flex flex-col md:flex-row items-center md:items-start gap-10">
@@ -35,9 +38,14 @@
 				{listing.listing_price} DT
 			</span>
 		</a>
-		<span class="w-full btn btn-outline btn-secondary rounded-full text-lg font-bold">
+		<button
+			on:click={() => {
+				phoneModal.showModal();
+			}}
+			class="w-full btn btn-outline btn-secondary rounded-full text-lg font-bold"
+		>
 			<PhoneIcon /> Phone
-		</span>
+		</button>
 		{#if data.session && data.session.user.id === listing.profiles.id}
 			<button
 				on:click={() => {
@@ -132,4 +140,28 @@
 			>
 		</div>
 	</div>
+</dialog>
+
+<dialog bind:this={phoneModal} class="modal">
+	<div class="modal-box">
+		{#if data.session}
+			<h3 class="font-bold text-lg text-center">+216 {listing.profiles.phone}</h3>
+		{:else}
+			<h3 class="font-bold text-lg">Sign in to see the phone number</h3>
+			<div class="modal-action">
+				<div class="flex">
+					<a href="/login" class="btn rounded-l-full px-3">
+						<AccountArrowRight class="text-xl" />Sign in
+					</a>
+					<a href="/register" class="btn rounded-r-full btn-neutral px-3">
+						<AccountPlus class="text-xl" />
+					</a>
+				</div>
+			</div>
+		{/if}
+	</div>
+
+	<form method="dialog" class="modal-backdrop">
+		<button>close</button>
+	</form>
 </dialog>

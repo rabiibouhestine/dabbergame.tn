@@ -40,10 +40,6 @@
 						<LogoutIcon /> Logout
 					</button>
 				</form>
-			{:else}
-				<a href="/" class="btn btn-neutral rounded-full text-lg font-bold">
-					<PhoneIcon /> Phone
-				</a>
 			{/if}
 		</div>
 	{/if}

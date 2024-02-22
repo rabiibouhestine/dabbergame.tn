@@ -27,16 +27,16 @@
 			rating: 91
 		},
 		{
-			id: 119388,
-			name: 'The Legend of Zelda: Tears of the Kingdom',
-			cover: 'co5vmg',
-			rating: 95
+			id: 119133,
+			name: 'Elden Ring',
+			cover: 'co4jni',
+			rating: 97
 		},
 		{
-			id: 185246,
-			name: 'Alan Wake 2',
-			cover: 'co6jar',
-			rating: 91
+			id: 250616,
+			name: 'Helldivers 2',
+			cover: 'co741o',
+			rating: 88
 		}
 	];
 </script>
