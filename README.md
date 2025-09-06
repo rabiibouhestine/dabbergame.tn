@@ -1,38 +1,61 @@
-# create-svelte
+# dabbergame.tn
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/main/packages/create-svelte).
+dabbergame.tn is a modern, lightweight videogames marketplace built with [Svelte](https://svelte.dev/), [Tailwind CSS](https://tailwindcss.com/), and [Vite](https://vitejs.dev/). The platform offers a seamless and responsive user experience for browsing and purchasing games.
 
-## Creating a project
+![dabbergame.tn Screenshot](preview.png)
 
-If you're seeing this, you've probably already done this step. Congrats!
+## 🚀 Quick Start
+
+To get started with dabbergame.tn locally, follow these steps:
+
+### Prerequisites
+
+Ensure you have the following installed:
+
+- [Node.js](https://nodejs.org/) (version 16 or higher)
+- [npm](https://npmjs.com/) (comes with Node.js)
+
+### Installation
+
+Clone the repository and install dependencies:
 
 ```bash
-# create a new project in the current directory
-npm create svelte@latest
-
-# create a new project in my-app
-npm create svelte@latest my-app
+git clone https://github.com/rabiibouhestine/dabbergame.tn.git
+cd dabbergame.tn
+npm install
 ```
 
-## Developing
+### Development
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+Start the development server:
 
 ```bash
 npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
 ```
 
-## Building
+Your application will be available at [http://localhost:5173](http://localhost:5173).
 
-To create a production version of your app:
+### Build
+
+To create a production build:
 
 ```bash
 npm run build
 ```
 
-You can preview the production build with `npm run preview`.
+The build artifacts will be output to the `dist/` directory.
 
-> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
+## 🌍 Technologies Used
+
+- **Svelte**: A modern JavaScript framework for building fast and reactive user interfaces.
+- **Tailwind CSS**: A utility-first CSS framework for rapid UI development.
+- **Vite**: A next-generation, fast build tool and development server.
+
+## 📜 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## 📣 Contact
+
+For inquiries or contributions, please open an issue or submit a pull request on the [GitHub repository](https://github.com/rabiibouhestine/dabbergame.tn).
+
